@@ -1,0 +1,4372 @@
+[
+  {
+    "channel": "todaycode",
+    "videos": [
+      {
+        "title": "71.5배 토큰 절감, Graphify가 LLM 토큰 비용은 낮추고 답변 정확도는 높이는 방법",
+        "publishedAt": "2026-04-17T07:12:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/Ma8e25AOtao/hqdefault.jpg",
+        "viewCount": "21796",
+        "likeCount": "830",
+        "commentCount": "41",
+        "url": "https://www.youtube.com/watch?v=Ma8e25AOtao"
+      },
+      {
+        "title": "안드레이 카파시가 경고한 \"소프트웨어 호러\"에 대비하기 위한 필수 설정 - 3시간 만에 수천 명 감염, 패키지 설치의 무게가 달라졌다.",
+        "publishedAt": "2026-04-02T03:34:25Z",
+        "thumbnail": "https://i.ytimg.com/vi/raiBJeEsQGU/hqdefault.jpg",
+        "viewCount": "7058",
+        "likeCount": "207",
+        "commentCount": "15",
+        "url": "https://www.youtube.com/watch?v=raiBJeEsQGU"
+      },
+      {
+        "title": "하루만에 만개의 깃허브 스타를 받은 gstack - YC CEO Garry Tan 의 뇌를 빌려 딸깍! Claude Code skills",
+        "publishedAt": "2026-03-19T22:48:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/vfn_Ezu1qfk/hqdefault.jpg",
+        "viewCount": "32041",
+        "likeCount": "1389",
+        "commentCount": "50",
+        "url": "https://www.youtube.com/watch?v=vfn_Ezu1qfk"
+      },
+      {
+        "title": "Harness Engineering 안티그래비티에 앤트로픽 클로드 스킬 적용하기",
+        "publishedAt": "2026-03-18T06:22:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/2ThXWO3-Db4/hqdefault.jpg",
+        "viewCount": "10581",
+        "likeCount": "320",
+        "commentCount": "17",
+        "url": "https://www.youtube.com/watch?v=2ThXWO3-Db4"
+      },
+      {
+        "title": "Claude Skill : AI로 슬라이드를 만들면 AI로 만든 티가 너무 많이 나는게 고민이었다면? 토큰과 시간 태우며 만든 디자인 스킬 공개!",
+        "publishedAt": "2026-03-12T02:51:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/5qxrY88lW_Q/hqdefault.jpg",
+        "viewCount": "4104",
+        "likeCount": "180",
+        "commentCount": "6",
+        "url": "https://www.youtube.com/watch?v=5qxrY88lW_Q"
+      },
+      {
+        "title": "클로드 코워크 스킬, 서브에이전트, 브라우저제어 코딩 환경 설정없이도 대시보드, 웹앱, 엑셀 전처리, 파워포인트 슬라이드 자동 생성, 로컬에서 읽고 쓰고 자동화까지",
+        "publishedAt": "2026-03-06T07:23:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/p8vD3XgE5Qk/hqdefault.jpg",
+        "viewCount": "2760",
+        "likeCount": "89",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=p8vD3XgE5Qk"
+      },
+      {
+        "title": "딸깍! 안티그래비티로 네이버API 사용해서 비즈니스 보고서와 대시보드 만들고 무료 배포하기",
+        "publishedAt": "2026-03-03T07:30:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/C8WxCXHSiko/hqdefault.jpg",
+        "viewCount": "5679",
+        "likeCount": "170",
+        "commentCount": "11",
+        "url": "https://www.youtube.com/watch?v=C8WxCXHSiko"
+      },
+      {
+        "title": "구글 안티그래비티 기본 설정 및 사용방법, 코덱스 앱, 클로드 코워크와 비교 Google Antigravity, Codex App, Claude Cowork",
+        "publishedAt": "2026-02-23T07:30:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/v3m-QXMCZ6M/hqdefault.jpg",
+        "viewCount": "17048",
+        "likeCount": "480",
+        "commentCount": "23",
+        "url": "https://www.youtube.com/watch?v=v3m-QXMCZ6M"
+      },
+      {
+        "title": "65줄의 스킬에 깃허브 스타 6500개, 단순하지만 직관적 가이드라인으로 성능을 끌어올린 사례 - 안티그래비티에 적용하기 feat : 생활형 계산기 10개",
+        "publishedAt": "2026-02-20T05:53:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/tcDoacn64Lo/hqdefault.jpg",
+        "viewCount": "15756",
+        "likeCount": "580",
+        "commentCount": "20",
+        "url": "https://www.youtube.com/watch?v=tcDoacn64Lo"
+      },
+      {
+        "title": "인프런 강의 소개 - 딸깍! AI로 전문가처럼 웹 크롤링 & 데이터 분석(w. GEMINI CLI)",
+        "publishedAt": "2025-12-10T06:51:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/HmeZgtOgWnU/hqdefault.jpg",
+        "viewCount": "1969",
+        "likeCount": "37",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=HmeZgtOgWnU"
+      }
+    ]
+  },
+  {
+    "channel": "평범한 사업가",
+    "videos": [
+      {
+        "title": "186k 깃헙 트렌딩 1위 Claw Code의 개발자와 하네스 엔지니어링에 대해 이야기 합니다. l OMC OMX 개발자 허예찬(AI 팟캐스트 #80)",
+        "publishedAt": "2026-04-19T02:29:13Z",
+        "thumbnail": "https://i.ytimg.com/vi/-p0e03kVdBI/hqdefault.jpg",
+        "viewCount": "7386",
+        "likeCount": "215",
+        "commentCount": "30",
+        "url": "https://www.youtube.com/watch?v=-p0e03kVdBI"
+      },
+      {
+        "title": "클로드 코드를 사용하는데 컨텍스트 엔지니어링과 옵시디언을 모르신다면 잘못 사용하시는 중입니다 l 지식관리 전문가 구요한님과 드라이브 토크 @SalonMUJE",
+        "publishedAt": "2026-04-12T13:02:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/z9fvSwE8JrY/hqdefault.jpg",
+        "viewCount": "6023",
+        "likeCount": "105",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=z9fvSwE8JrY"
+      },
+      {
+        "title": "젠슨 황 GTC 2026 기조연설 총정리 |  OpenClaw를 도입하지 않는 기업들은....",
+        "publishedAt": "2026-03-23T09:43:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/79el3RAFTek/hqdefault.jpg",
+        "viewCount": "406",
+        "likeCount": "9",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=79el3RAFTek"
+      },
+      {
+        "title": "[한글자막]OpenClaw 창시자 피터가 직접 밝힌 성공 비하인드부터 AI 빌더 조언까지!",
+        "publishedAt": "2026-02-27T03:41:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/gY3MFw7RwVc/hqdefault.jpg",
+        "viewCount": "552",
+        "likeCount": "15",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=gY3MFw7RwVc"
+      },
+      {
+        "title": "[1시간 완벽] 맥미니 몰트봇(openclaw) 설치 - 초보도 성공하는 전과정 공개",
+        "publishedAt": "2026-02-06T09:31:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/flJ0nZlowKc/hqdefault.jpg",
+        "viewCount": "23000",
+        "likeCount": "334",
+        "commentCount": "56",
+        "url": "https://www.youtube.com/watch?v=flJ0nZlowKc"
+      },
+      {
+        "title": "아이와 함께 바이브 코딩으로 AI 앱 만들어봤어요.",
+        "publishedAt": "2026-02-04T06:24:22Z",
+        "thumbnail": "https://i.ytimg.com/vi/As3l_LPFMRM/hqdefault.jpg",
+        "viewCount": "424",
+        "likeCount": "12",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=As3l_LPFMRM"
+      },
+      {
+        "title": "클로드 코드부터 옵시디언까지.AI로 기회를 잡은 평범한 사람들의 활용사례를 공개합니다.",
+        "publishedAt": "2026-02-03T10:02:57Z",
+        "thumbnail": "https://i.ytimg.com/vi/i78Oaaj4lsw/hqdefault.jpg",
+        "viewCount": "2197",
+        "likeCount": "29",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=i78Oaaj4lsw"
+      },
+      {
+        "title": "Oh my open code.클로드 코드보다 강력한 자동화 에이전트.대한민국 최초 개발자 인터뷰.꿀팁 공개! l 울트라워크 엔지니어 김연규(AI 팟캐스트 #78)",
+        "publishedAt": "2026-01-22T04:56:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/o-rE93-nLpY/hqdefault.jpg",
+        "viewCount": "38549",
+        "likeCount": "846",
+        "commentCount": "106",
+        "url": "https://www.youtube.com/watch?v=o-rE93-nLpY"
+      },
+      {
+        "title": "이제는 옵시디언 플러그인도 만들어 씁니다.옵시디언 100배 활용 플러그인 만들기 (AI 팟캐스트 #77)",
+        "publishedAt": "2025-12-29T06:59:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/DNLqry5jfd8/hqdefault.jpg",
+        "viewCount": "5619",
+        "likeCount": "153",
+        "commentCount": "23",
+        "url": "https://www.youtube.com/watch?v=DNLqry5jfd8"
+      },
+      {
+        "title": "250억 투자유치한 AI스타트업은 25년도 어떤 AI 에이전트를 기업들에게 가장 많이 구축하였을까?(AI 팟캐스트 #76)",
+        "publishedAt": "2025-12-24T07:52:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/8r1pIKSWiPY/hqdefault.jpg",
+        "viewCount": "3362",
+        "likeCount": "53",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=8r1pIKSWiPY"
+      }
+    ]
+  },
+  {
+    "channel": "오후5시",
+    "videos": [
+      {
+        "title": "GPT Images 2 충격🔥 클로드 실험으로 입증! 이렇게 쓰세요! AI 이미지 모델 활용 전략! Claude Code | 나노바나나  | 오후다섯씨",
+        "publishedAt": "2026-04-22T21:15:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/Qug5Evt1Img/hqdefault.jpg",
+        "viewCount": "3344",
+        "likeCount": "64",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=Qug5Evt1Img"
+      },
+      {
+        "title": "클로드 공개! 노가다 그만하셔야죠? 클로드 Live Artifact 직접 써봤습니다 — 한 번 설계하면 토큰 안 쓰고 계속 작동 (Claud Cowork) | 오후다섯씨",
+        "publishedAt": "2026-04-21T20:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/6iRdb-N8T-A/hqdefault.jpg",
+        "viewCount": "5056",
+        "likeCount": "112",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=6iRdb-N8T-A"
+      },
+      {
+        "title": "Claude Design — Hand off to Claude Code가 진짜 키커 | 오후다섯씨 #Shorts",
+        "publishedAt": "2026-04-21T13:44:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/hlxiBSmujFw/hqdefault.jpg",
+        "viewCount": "3010",
+        "likeCount": "22",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=hlxiBSmujFw"
+      },
+      {
+        "title": "Claude Design — AI 기다림이 행복으로 바뀌는 순간 | 오후다섯씨 #Shorts",
+        "publishedAt": "2026-04-20T15:39:30Z",
+        "thumbnail": "https://i.ytimg.com/vi/j_oMv7ZU9EA/hqdefault.jpg",
+        "viewCount": "1683",
+        "likeCount": "15",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=j_oMv7ZU9EA"
+      },
+      {
+        "title": "🔥 클로드 AI 디자인 마법이 시작된다! Claude Design Opus 4.7 | 오후다섯씨",
+        "publishedAt": "2026-04-20T14:25:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/eCXBWdR7gNk/hqdefault.jpg",
+        "viewCount": "4026",
+        "likeCount": "63",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=eCXBWdR7gNk"
+      },
+      {
+        "title": "충격📌 실제 결과! 놀랍지만 슬프다! Claude Opus 4.7 vs 4.6 | 오후다섯씨",
+        "publishedAt": "2026-04-18T00:42:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/yJ_gVyqcWWE/hqdefault.jpg",
+        "viewCount": "12441",
+        "likeCount": "168",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=yJ_gVyqcWWE"
+      },
+      {
+        "title": "VS Code를 클로드 오렌지로 바꾸는 법 | Claude Theme | 오후다섯씨",
+        "publishedAt": "2026-04-16T02:03:58Z",
+        "thumbnail": "https://i.ytimg.com/vi/9hahLW6gqa0/hqdefault.jpg",
+        "viewCount": "3228",
+        "likeCount": "29",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=9hahLW6gqa0"
+      },
+      {
+        "title": "플랜모드 vs 울트라 플랜 차이점 | Claude Code | 오후다섯씨",
+        "publishedAt": "2026-04-12T09:01:13Z",
+        "thumbnail": "https://i.ytimg.com/vi/vqK_2xPiNnY/hqdefault.jpg",
+        "viewCount": "5092",
+        "likeCount": "39",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=vqK_2xPiNnY"
+      },
+      {
+        "title": "이걸 공개? 클로드가 미쳤다? Claude Advisor 전략 — Haiku + Opus, OpusPlan | 오후다섯씨",
+        "publishedAt": "2026-04-10T06:08:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/tkRYgkC7t84/hqdefault.jpg",
+        "viewCount": "6511",
+        "likeCount": "152",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=tkRYgkC7t84"
+      },
+      {
+        "title": "AI 4명이 동시에 기획하면 생기는 일 | Claude Code Ultra Plan | 오후다섯씨",
+        "publishedAt": "2026-04-08T10:33:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/FGev2wgb__4/hqdefault.jpg",
+        "viewCount": "4580",
+        "likeCount": "43",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=FGev2wgb__4"
+      }
+    ]
+  },
+  {
+    "channel": "코드깎는 노인",
+    "videos": [
+      {
+        "title": "초거대 AI모델들 무료 API로 경험해보세요 | NVIDIA",
+        "publishedAt": "2026-04-23T09:28:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/cUHe3_7HGhI/hqdefault.jpg",
+        "viewCount": "2085",
+        "likeCount": "78",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=cUHe3_7HGhI"
+      },
+      {
+        "title": "이제는 AI로 디자인이 이렇게까지 됩니다 | 클로드 디자인",
+        "publishedAt": "2026-04-19T23:25:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/23dXz5RZj-4/hqdefault.jpg",
+        "viewCount": "4451",
+        "likeCount": "160",
+        "commentCount": "17",
+        "url": "https://www.youtube.com/watch?v=23dXz5RZj-4"
+      },
+      {
+        "title": "나만의 인공지능 AI 변호사를 가져보세요",
+        "publishedAt": "2026-04-04T13:37:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/GX0qaErlZuY/hqdefault.jpg",
+        "viewCount": "17958",
+        "likeCount": "844",
+        "commentCount": "96",
+        "url": "https://www.youtube.com/watch?v=GX0qaErlZuY"
+      },
+      {
+        "title": "클로드코드 채널 설정방법 초보자용 | AI 바이브코딩",
+        "publishedAt": "2026-03-22T07:04:45Z",
+        "thumbnail": "https://i.ytimg.com/vi/m2DdbzLlq0s/hqdefault.jpg",
+        "viewCount": "10285",
+        "likeCount": "273",
+        "commentCount": "25",
+        "url": "https://www.youtube.com/watch?v=m2DdbzLlq0s"
+      },
+      {
+        "title": "언제 어디서든 나를 위해 대기하는 AI 에이전트 팀 만들기 | 클로드코드 코덱스",
+        "publishedAt": "2026-03-20T01:01:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/SIZ1qeZWBTY/hqdefault.jpg",
+        "viewCount": "14272",
+        "likeCount": "456",
+        "commentCount": "134",
+        "url": "https://www.youtube.com/watch?v=SIZ1qeZWBTY"
+      },
+      {
+        "title": "AI시대에 CLI가 다시 뜨는 이유 | 클로드코드 바이브코딩",
+        "publishedAt": "2026-03-10T09:51:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/TtaJRj5Ck0U/hqdefault.jpg",
+        "viewCount": "39243",
+        "likeCount": "899",
+        "commentCount": "50",
+        "url": "https://www.youtube.com/watch?v=TtaJRj5Ck0U"
+      },
+      {
+        "title": "AI 바이브 코딩으로 프로그래밍 언어를 만들어봤습니다 | ChatGPT Codex",
+        "publishedAt": "2026-03-05T23:17:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/JcqsqFNFiWw/hqdefault.jpg",
+        "viewCount": "4257",
+        "likeCount": "99",
+        "commentCount": "18",
+        "url": "https://www.youtube.com/watch?v=JcqsqFNFiWw"
+      },
+      {
+        "title": "바이브코딩 AI 클로드코드의 대박 신기능 |  Auto Memory",
+        "publishedAt": "2026-02-27T14:03:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/QoU5WyCihJQ/hqdefault.jpg",
+        "viewCount": "10248",
+        "likeCount": "265",
+        "commentCount": "19",
+        "url": "https://www.youtube.com/watch?v=QoU5WyCihJQ"
+      },
+      {
+        "title": "새로운 바이브코딩 방식, 미래의 사람들은 AI를 이렇게 활용한다 | 클로드코드 AI",
+        "publishedAt": "2026-02-26T15:56:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/h0yWXw38nms/hqdefault.jpg",
+        "viewCount": "4676",
+        "likeCount": "128",
+        "commentCount": "26",
+        "url": "https://www.youtube.com/watch?v=h0yWXw38nms"
+      },
+      {
+        "title": "클로드코드 AI를 텔레그램으로 어디서든 사용하세요 | 진짜 쉬움",
+        "publishedAt": "2026-02-21T03:18:37Z",
+        "thumbnail": "https://i.ytimg.com/vi/rGdyCUhmkqc/hqdefault.jpg",
+        "viewCount": "30733",
+        "likeCount": "924",
+        "commentCount": "215",
+        "url": "https://www.youtube.com/watch?v=rGdyCUhmkqc"
+      }
+    ]
+  },
+  {
+    "channel": "@Oppadu",
+    "videos": [
+      {
+        "title": "드디어 나왔습니다! 엑셀 IMPORT 함수 '파일 취합' 자동화 | 15분 완벽 정리",
+        "publishedAt": "2026-04-23T11:30:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/3tHXrMg9GeA/hqdefault.jpg",
+        "viewCount": "5541",
+        "likeCount": "153",
+        "commentCount": "12",
+        "url": "https://www.youtube.com/watch?v=3tHXrMg9GeA"
+      },
+      {
+        "title": "VLOOKUP 여러 시트 한 번에 검색하는 법 (10초면 됩니다)⚡ #shorts",
+        "publishedAt": "2026-04-08T14:25:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/oY7xX8z85wY/hqdefault.jpg",
+        "viewCount": "229244",
+        "likeCount": "2136",
+        "commentCount": "21",
+        "url": "https://www.youtube.com/watch?v=oY7xX8z85wY"
+      },
+      {
+        "title": "드디어 완전 무료로 풀렸습니다! 서식 깨짐 없이, 엑셀 통째로 번역하는 법",
+        "publishedAt": "2026-04-03T12:55:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/toZIlPVDeRo/hqdefault.jpg",
+        "viewCount": "19386",
+        "likeCount": "371",
+        "commentCount": "14",
+        "url": "https://www.youtube.com/watch?v=toZIlPVDeRo"
+      },
+      {
+        "title": "파워포인트에 추가된 역대급 'AI 기능' 활용법 #shorts",
+        "publishedAt": "2026-04-02T11:50:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/zdjcnSykoh4/hqdefault.jpg",
+        "viewCount": "56300",
+        "likeCount": "538",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=zdjcnSykoh4"
+      },
+      {
+        "title": "AI 영상 제작, 이거 하나면 충분합니다! HiggsField AI 실전 활용법 9가지",
+        "publishedAt": "2026-03-30T10:00:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/mIuF61HgXnM/hqdefault.jpg",
+        "viewCount": "32759",
+        "likeCount": "946",
+        "commentCount": "441",
+        "url": "https://www.youtube.com/watch?v=mIuF61HgXnM"
+      },
+      {
+        "title": "이걸 무료로 쓴다고? \"노트북LM 슬라이드\" 역대급 업데이트 | 9가지 실전 예제 + 50종 템플릿",
+        "publishedAt": "2026-03-25T14:22:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/vjT43Qy0M4k/hqdefault.jpg",
+        "viewCount": "157021",
+        "likeCount": "7885",
+        "commentCount": "5849",
+        "url": "https://www.youtube.com/watch?v=vjT43Qy0M4k"
+      },
+      {
+        "title": "PPT 인물소개 슬라이드, 1분이면 충분합니다⚡️#shorts",
+        "publishedAt": "2026-03-19T14:43:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/4xEjYkQut3A/hqdefault.jpg",
+        "viewCount": "517569",
+        "likeCount": "5736",
+        "commentCount": "20",
+        "url": "https://www.youtube.com/watch?v=4xEjYkQut3A"
+      },
+      {
+        "title": "명함 200장 → 엑셀로 10초만에 정리하는 법⚡#shorts",
+        "publishedAt": "2026-03-12T12:15:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/iQM_M3XYL7c/hqdefault.jpg",
+        "viewCount": "205575",
+        "likeCount": "1501",
+        "commentCount": "42",
+        "url": "https://www.youtube.com/watch?v=iQM_M3XYL7c"
+      },
+      {
+        "title": "PPT에 클로드가 들어왔다! | 회사 서식 그대로, 보고서 자동화 하는 법 (ft. 슬라이드 마스터)",
+        "publishedAt": "2026-03-06T11:15:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/kmADXRnkdQg/hqdefault.jpg",
+        "viewCount": "245895",
+        "likeCount": "7086",
+        "commentCount": "1559",
+        "url": "https://www.youtube.com/watch?v=kmADXRnkdQg"
+      },
+      {
+        "title": "아직도 ChatGPT만 쓰세요? 진짜 고수는 이렇게 씁니다 #shorts",
+        "publishedAt": "2026-02-25T12:40:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/rb-JgbT90jU/hqdefault.jpg",
+        "viewCount": "187333",
+        "likeCount": "2624",
+        "commentCount": "25",
+        "url": "https://www.youtube.com/watch?v=rb-JgbT90jU"
+      }
+    ]
+  },
+  {
+    "channel": "@chester_roh",
+    "videos": [
+      {
+        "title": "EP 94. Claude Opus 4.7 과 낮게 열린 과실들",
+        "publishedAt": "2026-04-21T22:00:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/DU6gHtt8UZM/hqdefault.jpg",
+        "viewCount": "9420",
+        "likeCount": "223",
+        "commentCount": "33",
+        "url": "https://www.youtube.com/watch?v=DU6gHtt8UZM"
+      },
+      {
+        "title": "EP93. Claude Code 소스코드 유출 이후 (ft. 사이오닉 고석현 대표)",
+        "publishedAt": "2026-04-07T04:09:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/jH3IzdDamcM/hqdefault.jpg",
+        "viewCount": "12575",
+        "likeCount": "242",
+        "commentCount": "85",
+        "url": "https://www.youtube.com/watch?v=jH3IzdDamcM"
+      },
+      {
+        "title": "EP 92. 루프를 닫아라",
+        "publishedAt": "2026-03-29T22:00:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/xTYTA8dLTko/hqdefault.jpg",
+        "viewCount": "11169",
+        "likeCount": "296",
+        "commentCount": "25",
+        "url": "https://www.youtube.com/watch?v=xTYTA8dLTko"
+      },
+      {
+        "title": "EP 91. 26.1Q 비즈니스 관점에서의 AI",
+        "publishedAt": "2026-03-21T13:23:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/FPYOVt2B5EM/hqdefault.jpg",
+        "viewCount": "14829",
+        "likeCount": "379",
+        "commentCount": "38",
+        "url": "https://www.youtube.com/watch?v=FPYOVt2B5EM"
+      },
+      {
+        "title": "EP 90. 알파고 이후, 10년 (feat. HyperAccel 이진원 CTO)",
+        "publishedAt": "2026-03-15T03:00:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/oxbFDE-Z2vw/hqdefault.jpg",
+        "viewCount": "5538",
+        "likeCount": "130",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=oxbFDE-Z2vw"
+      },
+      {
+        "title": "EP 89. 딸깍과 덜컹",
+        "publishedAt": "2026-03-14T23:00:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/E-19gxHeBRU/hqdefault.jpg",
+        "viewCount": "7804",
+        "likeCount": "191",
+        "commentCount": "18",
+        "url": "https://www.youtube.com/watch?v=E-19gxHeBRU"
+      },
+      {
+        "title": "EP 88. 비결은 없다",
+        "publishedAt": "2026-03-04T13:21:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/D_l1PQ3hIOg/hqdefault.jpg",
+        "viewCount": "8483",
+        "likeCount": "178",
+        "commentCount": "17",
+        "url": "https://www.youtube.com/watch?v=D_l1PQ3hIOg"
+      },
+      {
+        "title": "EP 87. '딸깍'의 시대, 슬픔과 기쁨 사이",
+        "publishedAt": "2026-02-24T12:51:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/k3pZRrSmrtk/hqdefault.jpg",
+        "viewCount": "11526",
+        "likeCount": "303",
+        "commentCount": "35",
+        "url": "https://www.youtube.com/watch?v=k3pZRrSmrtk"
+      },
+      {
+        "title": "EP 86. 진짜 내 일을 해결하는 Agentic Workflow (Lablup 신정규 대표)",
+        "publishedAt": "2026-02-18T12:10:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/EQ-Rnx-k-Ec/hqdefault.jpg",
+        "viewCount": "30831",
+        "likeCount": "942",
+        "commentCount": "60",
+        "url": "https://www.youtube.com/watch?v=EQ-Rnx-k-Ec"
+      },
+      {
+        "title": "EP 85. OpenClaw와 2026년 2월의 신호들",
+        "publishedAt": "2026-02-11T11:29:45Z",
+        "thumbnail": "https://i.ytimg.com/vi/bRsZH4CbhB4/hqdefault.jpg",
+        "viewCount": "13927",
+        "likeCount": "386",
+        "commentCount": "31",
+        "url": "https://www.youtube.com/watch?v=bRsZH4CbhB4"
+      }
+    ]
+  },
+  {
+    "channel": "실밸개발자",
+    "videos": [
+      {
+        "title": "메타 시니어 엔지니어가 써본 클로드 vs 코덱스, 그리고 결론 | 코덱스 앱 풀가이드",
+        "publishedAt": "2026-04-21T10:10:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZkD6nE3JopY/hqdefault.jpg",
+        "viewCount": "12021",
+        "likeCount": "333",
+        "commentCount": "89",
+        "url": "https://www.youtube.com/watch?v=ZkD6nE3JopY"
+      },
+      {
+        "title": "메타 시니어 엔지니어가 알려주는 하네스 세팅 | 빈 프로젝트에서 하네스 직접 만들기",
+        "publishedAt": "2026-04-14T07:00:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/AQOvNx87Urs/hqdefault.jpg",
+        "viewCount": "20659",
+        "likeCount": "764",
+        "commentCount": "148",
+        "url": "https://www.youtube.com/watch?v=AQOvNx87Urs"
+      },
+      {
+        "title": "AI가 다 해주는 시대, 메타 개발자가 알려주는 지금 당장 해야할일 | 구독자 1만 Q&A",
+        "publishedAt": "2026-04-08T06:45:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/6cDkoawDw1Q/hqdefault.jpg",
+        "viewCount": "63181",
+        "likeCount": "2176",
+        "commentCount": "204",
+        "url": "https://www.youtube.com/watch?v=6cDkoawDw1Q"
+      },
+      {
+        "title": "프롬프트 엔지니어링은 끝났습니다: 이제 '하네스'의 시대입니다",
+        "publishedAt": "2026-04-01T22:30:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/6gvnDSAcZww/hqdefault.jpg",
+        "viewCount": "74336",
+        "likeCount": "2536",
+        "commentCount": "233",
+        "url": "https://www.youtube.com/watch?v=6gvnDSAcZww"
+      },
+      {
+        "title": "내가 자는 동안 AI가 일하게 만드는 법 | 클로드 코워크 완벽 가이드",
+        "publishedAt": "2026-03-26T07:00:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/Dl6R3IUnajE/hqdefault.jpg",
+        "viewCount": "20480",
+        "likeCount": "611",
+        "commentCount": "99",
+        "url": "https://www.youtube.com/watch?v=Dl6R3IUnajE"
+      },
+      {
+        "title": "[전체강의 통합본] 클로드 코드 2시간  안에 마스터하기 | 입문→실전→심화 완전 정복 (풀버전)",
+        "publishedAt": "2026-03-22T06:15:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/vxEvo2BLM6A/hqdefault.jpg",
+        "viewCount": "70133",
+        "likeCount": "2923",
+        "commentCount": "206",
+        "url": "https://www.youtube.com/watch?v=vxEvo2BLM6A"
+      },
+      {
+        "title": "클로드코드로 PPT 스킬 만들기",
+        "publishedAt": "2026-03-20T02:30:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/cHlaOPVL4QA/hqdefault.jpg",
+        "viewCount": "7778",
+        "likeCount": "174",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=cHlaOPVL4QA"
+      },
+      {
+        "title": "클로드코드 유닛 테스트 서브 에이전트 만들기",
+        "publishedAt": "2026-03-20T02:00:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/Gynk2kYlKSY/hqdefault.jpg",
+        "viewCount": "4830",
+        "likeCount": "86",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=Gynk2kYlKSY"
+      },
+      {
+        "title": "클로드코드 Hook 으로 자동으로 알림 오게 하기",
+        "publishedAt": "2026-03-20T01:30:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/3LvgAC77Jz8/hqdefault.jpg",
+        "viewCount": "5860",
+        "likeCount": "118",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=3LvgAC77Jz8"
+      },
+      {
+        "title": "나만의 MCP 만들어서 Gemini  + 클로드 조합하기",
+        "publishedAt": "2026-03-20T01:01:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/s12BfuhvdW8/hqdefault.jpg",
+        "viewCount": "4555",
+        "likeCount": "95",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=s12BfuhvdW8"
+      }
+    ]
+  },
+  {
+    "channel": "윤자동",
+    "videos": [
+      {
+        "title": "클로드코드 고수의 노하우를 모두 공개합니다. 바로 쓸 수 있는 자료 전부 가져가세요! | 목요일 저녁 8시 윤자동 라이브",
+        "publishedAt": "2026-04-23T13:41:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/qYSNj2TmfZc/hqdefault.jpg",
+        "viewCount": "3958",
+        "likeCount": "184",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=qYSNj2TmfZc"
+      },
+      {
+        "title": "클로드코드 X 나노바나나 2 = 200만원 짜리 웹사이트 뚝딱",
+        "publishedAt": "2026-04-23T06:30:52Z",
+        "thumbnail": "https://i.ytimg.com/vi/03rW1ZtYgfc/hqdefault.jpg",
+        "viewCount": "2501",
+        "likeCount": "114",
+        "commentCount": "5",
+        "url": "https://www.youtube.com/watch?v=03rW1ZtYgfc"
+      },
+      {
+        "title": "클로드코드 X 구글 워크스페스 연동 튜토리얼 완벽정리 | Claude code X google workspace tutorial",
+        "publishedAt": "2026-04-19T09:00:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/2xRl3tiR5uM/hqdefault.jpg",
+        "viewCount": "2223",
+        "likeCount": "56",
+        "commentCount": "5",
+        "url": "https://www.youtube.com/watch?v=2xRl3tiR5uM"
+      },
+      {
+        "title": "클로드코드로 뻘짓하기 1탄 #나루토 #나선환 #naruto",
+        "publishedAt": "2026-04-19T05:16:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/5EDMrxJgY74/hqdefault.jpg",
+        "viewCount": "2103",
+        "likeCount": "5",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=5EDMrxJgY74"
+      },
+      {
+        "title": "클로드코드 초보자를 위한, 생산성 200% 올리는 꿀팁 대방출! | 목요일 저녁 8시 윤자동 라이브",
+        "publishedAt": "2026-04-16T13:08:49Z",
+        "thumbnail": "https://i.ytimg.com/vi/GllmdvH2MpE/hqdefault.jpg",
+        "viewCount": "2317",
+        "likeCount": "82",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=GllmdvH2MpE"
+      },
+      {
+        "title": "자동화 회사의 플라우드 노트 리뷰",
+        "publishedAt": "2026-04-15T22:01:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/kDFCHZfRiSY/hqdefault.jpg",
+        "viewCount": "1735",
+        "likeCount": "3",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=kDFCHZfRiSY"
+      },
+      {
+        "title": "AI 자동화 회사는 어떻게 일할까?",
+        "publishedAt": "2026-04-14T22:00:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/bDCUX4xsTas/hqdefault.jpg",
+        "viewCount": "1094",
+        "likeCount": "12",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=bDCUX4xsTas"
+      },
+      {
+        "title": "당신의 시행착오를 줄여 줄 영상 | 사업가, 마케터 필수시청",
+        "publishedAt": "2026-04-12T22:00:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/8zKg9ZBDk7w/hqdefault.jpg",
+        "viewCount": "418",
+        "likeCount": "9",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=8zKg9ZBDk7w"
+      },
+      {
+        "title": "CEO가 밝히는, 이러면 면접도 안봐도 채용합니다. | AI시대에 취업하는 사람은 뭐가 다를까?",
+        "publishedAt": "2026-04-10T00:44:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/RE-x5uSZYow/hqdefault.jpg",
+        "viewCount": "996",
+        "likeCount": "31",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=RE-x5uSZYow"
+      },
+      {
+        "title": "윤자동 회사의 첫 번째 직원을 소개합니다. | 경력, 스팩 없어도 사장님이 붙잡는 직원의 특징",
+        "publishedAt": "2026-04-09T06:32:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/PPw3Oqff7u0/hqdefault.jpg",
+        "viewCount": "472",
+        "likeCount": "8",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=PPw3Oqff7u0"
+      }
+    ]
+  },
+  {
+    "channel": "jeff su",
+    "videos": [
+      {
+        "title": "Stop perfecting your prompt. Do this instead",
+        "publishedAt": "2026-04-18T13:15:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/jxHIw_OA8_I/hqdefault.jpg",
+        "viewCount": "26290",
+        "likeCount": "727",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=jxHIw_OA8_I"
+      },
+      {
+        "title": "Most people get these 3 AI terms wrong",
+        "publishedAt": "2026-04-10T13:01:29Z",
+        "thumbnail": "https://i.ytimg.com/vi/gbI7THwqEjk/hqdefault.jpg",
+        "viewCount": "17678",
+        "likeCount": "517",
+        "commentCount": "26",
+        "url": "https://www.youtube.com/watch?v=gbI7THwqEjk"
+      },
+      {
+        "title": "Learn 80% of Claude Cowork in Under 20 Minutes",
+        "publishedAt": "2026-04-07T13:02:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/z9rdrNrkvDY/hqdefault.jpg",
+        "viewCount": "500257",
+        "likeCount": "11519",
+        "commentCount": "576",
+        "url": "https://www.youtube.com/watch?v=z9rdrNrkvDY"
+      },
+      {
+        "title": "#claude Chat vs. Cowork: Biggest 3 differences",
+        "publishedAt": "2026-04-02T13:29:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/6PZCZWvNVHc/hqdefault.jpg",
+        "viewCount": "40876",
+        "likeCount": "926",
+        "commentCount": "29",
+        "url": "https://www.youtube.com/watch?v=6PZCZWvNVHc"
+      },
+      {
+        "title": "Claude Cowork: The #1 Thing To Know",
+        "publishedAt": "2026-03-26T13:00:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/KS-p0e-KwBA/hqdefault.jpg",
+        "viewCount": "113085",
+        "likeCount": "2394",
+        "commentCount": "36",
+        "url": "https://www.youtube.com/watch?v=KS-p0e-KwBA"
+      },
+      {
+        "title": "This NotebookLM feature cuts my workload by 50%",
+        "publishedAt": "2026-03-20T14:05:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/kCxlQcKsoZg/hqdefault.jpg",
+        "viewCount": "43667",
+        "likeCount": "1173",
+        "commentCount": "11",
+        "url": "https://www.youtube.com/watch?v=kCxlQcKsoZg"
+      },
+      {
+        "title": "NotebookLM Changed Completely: Here's What Matters (in 2026)",
+        "publishedAt": "2026-03-17T13:01:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/_uXnyhrqmsU/hqdefault.jpg",
+        "viewCount": "291308",
+        "likeCount": "7834",
+        "commentCount": "400",
+        "url": "https://www.youtube.com/watch?v=_uXnyhrqmsU"
+      },
+      {
+        "title": "NotebookLM is now bigger than Gemini",
+        "publishedAt": "2026-03-11T12:11:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/Nfe5OCLeD38/hqdefault.jpg",
+        "viewCount": "77921",
+        "likeCount": "2419",
+        "commentCount": "52",
+        "url": "https://www.youtube.com/watch?v=Nfe5OCLeD38"
+      },
+      {
+        "title": "The Top 1% Build AI Presentations Differently. Here's How.",
+        "publishedAt": "2026-03-03T13:01:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZpXN9M0WLQ4/hqdefault.jpg",
+        "viewCount": "65048",
+        "likeCount": "1507",
+        "commentCount": "97",
+        "url": "https://www.youtube.com/watch?v=ZpXN9M0WLQ4"
+      },
+      {
+        "title": "When to use #ChatGPT, #Gemini, and #Claude",
+        "publishedAt": "2026-02-27T13:01:41Z",
+        "thumbnail": "https://i.ytimg.com/vi/sfwax2dVPvI/hqdefault.jpg",
+        "viewCount": "167711",
+        "likeCount": "4526",
+        "commentCount": "70",
+        "url": "https://www.youtube.com/watch?v=sfwax2dVPvI"
+      }
+    ]
+  },
+  {
+    "channel": "Greg Isenberg",
+    "videos": [
+      {
+        "title": "Hermes Agent: The New OpenClaw?",
+        "publishedAt": "2026-04-20T18:00:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/Qn2c_U-cWQs/hqdefault.jpg",
+        "viewCount": "54214",
+        "likeCount": "1332",
+        "commentCount": "161",
+        "url": "https://www.youtube.com/watch?v=Qn2c_U-cWQs"
+      },
+      {
+        "title": "Claude Design: Full Walkthrough. I'm blown away.",
+        "publishedAt": "2026-04-18T21:20:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/vyLaimDeK_g/hqdefault.jpg",
+        "viewCount": "33304",
+        "likeCount": "768",
+        "commentCount": "78",
+        "url": "https://www.youtube.com/watch?v=vyLaimDeK_g"
+      },
+      {
+        "title": "5 tips for OpenClaw",
+        "publishedAt": "2026-04-16T20:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/qYLDENqtpiY/hqdefault.jpg",
+        "viewCount": "19662",
+        "likeCount": "548",
+        "commentCount": "10",
+        "url": "https://www.youtube.com/watch?v=qYLDENqtpiY"
+      },
+      {
+        "title": "My Claude Code workflow no one knows about",
+        "publishedAt": "2026-04-13T17:45:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/YiitvyQGbkc/hqdefault.jpg",
+        "viewCount": "37914",
+        "likeCount": "836",
+        "commentCount": "56",
+        "url": "https://www.youtube.com/watch?v=YiitvyQGbkc"
+      },
+      {
+        "title": "How AI agents & Claude skills work (Clearly Explained)",
+        "publishedAt": "2026-04-08T19:00:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/S_oN3vlzpMw/hqdefault.jpg",
+        "viewCount": "175819",
+        "likeCount": "5383",
+        "commentCount": "229",
+        "url": "https://www.youtube.com/watch?v=S_oN3vlzpMw"
+      },
+      {
+        "title": "How to turn iMessage into an AI executive assistant with Lindy",
+        "publishedAt": "2026-04-07T15:00:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/DirGcMXm4zw/hqdefault.jpg",
+        "viewCount": "10411",
+        "likeCount": "281",
+        "commentCount": "3",
+        "url": "https://www.youtube.com/watch?v=DirGcMXm4zw"
+      },
+      {
+        "title": "How I use iMessage and AI to run my life",
+        "publishedAt": "2026-04-06T18:31:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/dNASCxGFoHg/hqdefault.jpg",
+        "viewCount": "247278",
+        "likeCount": "432",
+        "commentCount": "50",
+        "url": "https://www.youtube.com/watch?v=dNASCxGFoHg"
+      },
+      {
+        "title": "23 AI Trends keeping me up at night",
+        "publishedAt": "2026-04-01T18:52:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/lyqk7zxbCKs/hqdefault.jpg",
+        "viewCount": "76682",
+        "likeCount": "2085",
+        "commentCount": "127",
+        "url": "https://www.youtube.com/watch?v=lyqk7zxbCKs"
+      },
+      {
+        "title": "How to 10x your Claude with 4 .md files",
+        "publishedAt": "2026-03-31T16:50:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/ovLAIhbk3ek/hqdefault.jpg",
+        "viewCount": "328653",
+        "likeCount": "16589",
+        "commentCount": "139",
+        "url": "https://www.youtube.com/watch?v=ovLAIhbk3ek"
+      },
+      {
+        "title": "Stop Vibe Coding. Start Getting Customers.",
+        "publishedAt": "2026-03-30T19:00:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/YeoGehNsrLc/hqdefault.jpg",
+        "viewCount": "155281",
+        "likeCount": "6003",
+        "commentCount": "281",
+        "url": "https://www.youtube.com/watch?v=YeoGehNsrLc"
+      }
+    ]
+  },
+  {
+    "channel": "Ali Abdaal",
+    "videos": [
+      {
+        "title": "The Only Investing Video You’ll Ever Need (Start With $0)",
+        "publishedAt": "2026-04-23T13:01:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/bfENsVP77VQ/hqdefault.jpg",
+        "viewCount": "13117",
+        "likeCount": "551",
+        "commentCount": "55",
+        "url": "https://www.youtube.com/watch?v=bfENsVP77VQ"
+      },
+      {
+        "title": "The biggest myth in business",
+        "publishedAt": "2026-04-22T10:01:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/f1rK6WfCjCQ/hqdefault.jpg",
+        "viewCount": "21625",
+        "likeCount": "625",
+        "commentCount": "13",
+        "url": "https://www.youtube.com/watch?v=f1rK6WfCjCQ"
+      },
+      {
+        "title": "The Ultimate Beginner's Guide to Claude Code",
+        "publishedAt": "2026-04-18T12:01:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/qLMYOhaKcZs/hqdefault.jpg",
+        "viewCount": "120986",
+        "likeCount": "3704",
+        "commentCount": "183",
+        "url": "https://www.youtube.com/watch?v=qLMYOhaKcZs"
+      },
+      {
+        "title": "If I Wanted to Make My First $100K in 2026, I’d Do This",
+        "publishedAt": "2026-04-09T14:30:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/XIhc7_Ptrpk/hqdefault.jpg",
+        "viewCount": "231732",
+        "likeCount": "7340",
+        "commentCount": "262",
+        "url": "https://www.youtube.com/watch?v=XIhc7_Ptrpk"
+      },
+      {
+        "title": "My surprising energy lesson",
+        "publishedAt": "2026-04-04T10:00:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/3HWvOdAcd18/hqdefault.jpg",
+        "viewCount": "37535",
+        "likeCount": "1227",
+        "commentCount": "17",
+        "url": "https://www.youtube.com/watch?v=3HWvOdAcd18"
+      },
+      {
+        "title": "I outsource THIS to buy time",
+        "publishedAt": "2026-04-03T10:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/a2_MXgBdhxI/hqdefault.jpg",
+        "viewCount": "35434",
+        "likeCount": "715",
+        "commentCount": "15",
+        "url": "https://www.youtube.com/watch?v=a2_MXgBdhxI"
+      },
+      {
+        "title": "Claude's new features are insane #ad",
+        "publishedAt": "2026-04-02T14:30:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/W8XNHsZWFSo/hqdefault.jpg",
+        "viewCount": "121614",
+        "likeCount": "3953",
+        "commentCount": "92",
+        "url": "https://www.youtube.com/watch?v=W8XNHsZWFSo"
+      },
+      {
+        "title": "How to Read More Books",
+        "publishedAt": "2026-04-02T13:30:44Z",
+        "thumbnail": "https://i.ytimg.com/vi/f5_mihqjOGw/hqdefault.jpg",
+        "viewCount": "81624",
+        "likeCount": "2778",
+        "commentCount": "159",
+        "url": "https://www.youtube.com/watch?v=f5_mihqjOGw"
+      },
+      {
+        "title": "How to effortlessly read 50 books a year",
+        "publishedAt": "2026-04-01T10:00:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/hA7_WVO1lWo/hqdefault.jpg",
+        "viewCount": "22818",
+        "likeCount": "887",
+        "commentCount": "12",
+        "url": "https://www.youtube.com/watch?v=hA7_WVO1lWo"
+      },
+      {
+        "title": "The Strategic Imbalance Paradox",
+        "publishedAt": "2026-03-31T10:00:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/6iIBRvdJfgk/hqdefault.jpg",
+        "viewCount": "20706",
+        "likeCount": "685",
+        "commentCount": "6",
+        "url": "https://www.youtube.com/watch?v=6iIBRvdJfgk"
+      }
+    ]
+  },
+  {
+    "channel": "Lenny's Podcast",
+    "videos": [
+      {
+        "title": "How Anthropic’s product team moves faster than anyone else | Cat Wu (Head of Product, Claude Code)",
+        "publishedAt": "2026-04-23T15:00:43Z",
+        "thumbnail": "https://i.ytimg.com/vi/PplmzlgE0kg/hqdefault.jpg",
+        "viewCount": "24153",
+        "likeCount": "663",
+        "commentCount": "56",
+        "url": "https://www.youtube.com/watch?v=PplmzlgE0kg"
+      },
+      {
+        "title": "The PM job market has split",
+        "publishedAt": "2026-04-23T11:01:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/pqPgEOYzp9w/hqdefault.jpg",
+        "viewCount": "1543",
+        "likeCount": "22",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=pqPgEOYzp9w"
+      },
+      {
+        "title": "The current state of the PM industry",
+        "publishedAt": "2026-04-22T11:01:42Z",
+        "thumbnail": "https://i.ytimg.com/vi/vR3tw1_v-js/hqdefault.jpg",
+        "viewCount": "1264",
+        "likeCount": "24",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=vR3tw1_v-js"
+      },
+      {
+        "title": "Are tech jobs safe in 2026?",
+        "publishedAt": "2026-04-21T18:00:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/TqQniw2xgck/hqdefault.jpg",
+        "viewCount": "2399",
+        "likeCount": "26",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=TqQniw2xgck"
+      },
+      {
+        "title": "Why half of product managers are in trouble | Nikhyl Singhal (Meta, Google)",
+        "publishedAt": "2026-04-19T12:31:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/yUohoaC8_Hs/hqdefault.jpg",
+        "viewCount": "51183",
+        "likeCount": "924",
+        "commentCount": "75",
+        "url": "https://www.youtube.com/watch?v=yUohoaC8_Hs"
+      },
+      {
+        "title": "Hire barrels, not ammunition",
+        "publishedAt": "2026-04-16T11:01:30Z",
+        "thumbnail": "https://i.ytimg.com/vi/pZqVAvFg0UQ/hqdefault.jpg",
+        "viewCount": "2561",
+        "likeCount": "55",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=pZqVAvFg0UQ"
+      },
+      {
+        "title": "You shouldn't talk to customers",
+        "publishedAt": "2026-04-15T11:01:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/m6B95EUX7-0/hqdefault.jpg",
+        "viewCount": "2931",
+        "likeCount": "43",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=m6B95EUX7-0"
+      },
+      {
+        "title": "Do we still need PMs?",
+        "publishedAt": "2026-04-14T11:00:55Z",
+        "thumbnail": "https://i.ytimg.com/vi/Z_AoFoWkROg/hqdefault.jpg",
+        "viewCount": "4140",
+        "likeCount": "70",
+        "commentCount": "7",
+        "url": "https://www.youtube.com/watch?v=Z_AoFoWkROg"
+      },
+      {
+        "title": "Hard truths about building in the AI era | Keith Rabois (Khosla Ventures)",
+        "publishedAt": "2026-04-12T12:31:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/xCd9ykretlg/hqdefault.jpg",
+        "viewCount": "64141",
+        "likeCount": "1026",
+        "commentCount": "150",
+        "url": "https://www.youtube.com/watch?v=xCd9ykretlg"
+      },
+      {
+        "title": "Rapid growth causes success disasters",
+        "publishedAt": "2026-04-12T11:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/0r_oVtEPLSY/hqdefault.jpg",
+        "viewCount": "2980",
+        "likeCount": "35",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=0r_oVtEPLSY"
+      }
+    ]
+  },
+  {
+    "channel": "Nate B Jones",
+    "videos": [
+      {
+        "title": "Your Apps Don't Need an API Anymore. Codex Just Proved It.",
+        "publishedAt": "2026-04-23T14:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/2d9ZmA-4QzU/hqdefault.jpg",
+        "viewCount": "56815",
+        "likeCount": "1826",
+        "commentCount": "268",
+        "url": "https://www.youtube.com/watch?v=2d9ZmA-4QzU"
+      },
+      {
+        "title": "Dark factories vs everyone else: the real AI divide #ai #engineering",
+        "publishedAt": "2026-04-23T03:01:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/pXxl_-B81b8/hqdefault.jpg",
+        "viewCount": "3689",
+        "likeCount": "87",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=pXxl_-B81b8"
+      },
+      {
+        "title": "Karpathy's Wiki vs. Open Brain. One Fails When You Need It Most.",
+        "publishedAt": "2026-04-22T14:01:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/dxq7WtWxi44/hqdefault.jpg",
+        "viewCount": "49736",
+        "likeCount": "1784",
+        "commentCount": "244",
+        "url": "https://www.youtube.com/watch?v=dxq7WtWxi44"
+      },
+      {
+        "title": "Why Manual Testing Is Dead (This Architecture Proves It) #AI #Testing",
+        "publishedAt": "2026-04-22T03:00:42Z",
+        "thumbnail": "https://i.ytimg.com/vi/_iWauZ6KL6I/hqdefault.jpg",
+        "viewCount": "4755",
+        "likeCount": "122",
+        "commentCount": "10",
+        "url": "https://www.youtube.com/watch?v=_iWauZ6KL6I"
+      },
+      {
+        "title": "Your Prompts Didn't Change. Opus 4.7 Did.",
+        "publishedAt": "2026-04-21T14:01:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/tJB_8mfRgCo/hqdefault.jpg",
+        "viewCount": "62175",
+        "likeCount": "2152",
+        "commentCount": "309",
+        "url": "https://www.youtube.com/watch?v=tJB_8mfRgCo"
+      },
+      {
+        "title": "AI Tools Got Faster But Developers Didn't #ai #productivity #shorts",
+        "publishedAt": "2026-04-21T03:00:45Z",
+        "thumbnail": "https://i.ytimg.com/vi/kp4quCdtvXI/hqdefault.jpg",
+        "viewCount": "8753",
+        "likeCount": "254",
+        "commentCount": "11",
+        "url": "https://www.youtube.com/watch?v=kp4quCdtvXI"
+      },
+      {
+        "title": "Nobody Knows What You're Worth Anymore | The AI Job Market Reality",
+        "publishedAt": "2026-04-20T14:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/-dJ9WrTG6zQ/hqdefault.jpg",
+        "viewCount": "53867",
+        "likeCount": "1791",
+        "commentCount": "229",
+        "url": "https://www.youtube.com/watch?v=-dJ9WrTG6zQ"
+      },
+      {
+        "title": "Why Nothing Going Wrong Is Actually the Scariest Part #AIWakeUp #Implications",
+        "publishedAt": "2026-04-20T03:00:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/VYC5WrlRlmw/hqdefault.jpg",
+        "viewCount": "13409",
+        "likeCount": "255",
+        "commentCount": "14",
+        "url": "https://www.youtube.com/watch?v=VYC5WrlRlmw"
+      },
+      {
+        "title": "Block Laid Off Half Its Company for AI. AI Can't Do the Job.",
+        "publishedAt": "2026-04-19T17:00:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/fm6mYqFAM5c/hqdefault.jpg",
+        "viewCount": "45258",
+        "likeCount": "1258",
+        "commentCount": "137",
+        "url": "https://www.youtube.com/watch?v=fm6mYqFAM5c"
+      },
+      {
+        "title": "The web is about to look completely different #AI #WebDevelopment #FutureOfTech",
+        "publishedAt": "2026-04-19T03:00:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/Gmbj8sTJsRo/hqdefault.jpg",
+        "viewCount": "13659",
+        "likeCount": "403",
+        "commentCount": "17",
+        "url": "https://www.youtube.com/watch?v=Gmbj8sTJsRo"
+      }
+    ]
+  },
+  {
+    "channel": "Julian Goldie",
+    "videos": [
+      {
+        "title": "LIVE: China's DeepSeek V4 is HERE!",
+        "publishedAt": "2026-04-24T03:51:44Z",
+        "thumbnail": "https://i.ytimg.com/vi/b8gTYPBZ-UA/hqdefault_live.jpg",
+        "viewCount": "213",
+        "likeCount": "11",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=b8gTYPBZ-UA"
+      },
+      {
+        "title": "Hermes Agent v0.11 Just Changed AI Agents Forever",
+        "publishedAt": "2026-04-24T03:34:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/B8v5RNx-Xqg/hqdefault.jpg",
+        "viewCount": "89",
+        "likeCount": "5",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=B8v5RNx-Xqg"
+      },
+      {
+        "title": "OpenClaw 4.22 AI Update Just Changed Everything",
+        "publishedAt": "2026-04-24T02:00:39Z",
+        "thumbnail": "https://i.ytimg.com/vi/dEe9XBqzK10/hqdefault.jpg",
+        "viewCount": "1115",
+        "likeCount": "71",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=dEe9XBqzK10"
+      },
+      {
+        "title": "Build Anything With GPT 5.5, Here's How...",
+        "publishedAt": "2026-04-23T22:30:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/O-Pu6HXXoCU/hqdefault.jpg",
+        "viewCount": "895",
+        "likeCount": "32",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=O-Pu6HXXoCU"
+      },
+      {
+        "title": "New GPT 5.5 is INSANE!",
+        "publishedAt": "2026-04-23T22:26:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/3RJxhwe42r8/hqdefault.jpg",
+        "viewCount": "437",
+        "likeCount": "12",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=3RJxhwe42r8"
+      },
+      {
+        "title": "NEW GPT 5.5 is INSANE!",
+        "publishedAt": "2026-04-23T21:25:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/Qwr1Z0P741Q/hqdefault.jpg",
+        "viewCount": "2771",
+        "likeCount": "54",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=Qwr1Z0P741Q"
+      },
+      {
+        "title": "NEW ChatGPT Workspace Agents Update!",
+        "publishedAt": "2026-04-23T21:11:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/wxNFtjEd3lg/hqdefault.jpg",
+        "viewCount": "3759",
+        "likeCount": "61",
+        "commentCount": "3",
+        "url": "https://www.youtube.com/watch?v=wxNFtjEd3lg"
+      },
+      {
+        "title": "LIVE: GPT 5.5 is HERE!",
+        "publishedAt": "2026-04-23T20:19:52Z",
+        "thumbnail": "https://i.ytimg.com/vi/VyW-sn5z7mA/hqdefault_live.jpg",
+        "viewCount": "934",
+        "likeCount": "23",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=VyW-sn5z7mA"
+      },
+      {
+        "title": "New Chinese FREE Xiaomi MiMo v2 5 Pro AI Agent is INSANE!",
+        "publishedAt": "2026-04-23T20:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/2EMhqZQDUs0/hqdefault.jpg",
+        "viewCount": "503",
+        "likeCount": "14",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=2EMhqZQDUs0"
+      },
+      {
+        "title": "New ChatGPT Workspace Agents are INSANE!",
+        "publishedAt": "2026-04-23T18:01:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/oVSwEq-7QZs/hqdefault.jpg",
+        "viewCount": "1426",
+        "likeCount": "36",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=oVSwEq-7QZs"
+      }
+    ]
+  },
+  {
+    "channel": "Nick Saraev",
+    "videos": [
+      {
+        "title": "Claude Opus-4.7 Just Dropped, And...",
+        "publishedAt": "2026-04-16T14:52:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/WVQ0lPiWsHQ/hqdefault.jpg",
+        "viewCount": "95011",
+        "likeCount": "2934",
+        "commentCount": "345",
+        "url": "https://www.youtube.com/watch?v=WVQ0lPiWsHQ"
+      },
+      {
+        "title": "Claude Routines Just Dropped, And It's Perfect",
+        "publishedAt": "2026-04-14T19:08:20Z",
+        "thumbnail": "https://i.ytimg.com/vi/j3aXJNu9804/hqdefault.jpg",
+        "viewCount": "188316",
+        "likeCount": "4313",
+        "commentCount": "359",
+        "url": "https://www.youtube.com/watch?v=j3aXJNu9804"
+      },
+      {
+        "title": "Claude Managed Agents Just Dropped, And It Kills n8n",
+        "publishedAt": "2026-04-08T18:42:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/Ob5Vu-gD3mo/hqdefault.jpg",
+        "viewCount": "167147",
+        "likeCount": "4598",
+        "commentCount": "385",
+        "url": "https://www.youtube.com/watch?v=Ob5Vu-gD3mo"
+      },
+      {
+        "title": "Claude Mythos Preview: Everything You Need to Know",
+        "publishedAt": "2026-04-07T21:24:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/oCuttuCQmZg/hqdefault.jpg",
+        "viewCount": "89706",
+        "likeCount": "2816",
+        "commentCount": "321",
+        "url": "https://www.youtube.com/watch?v=oCuttuCQmZg"
+      },
+      {
+        "title": "Paperclip Sucks, Actually",
+        "publishedAt": "2026-03-29T16:28:16Z",
+        "thumbnail": "https://i.ytimg.com/vi/QufcrM79snw/hqdefault.jpg",
+        "viewCount": "71342",
+        "likeCount": "2670",
+        "commentCount": "539",
+        "url": "https://www.youtube.com/watch?v=QufcrM79snw"
+      },
+      {
+        "title": "CLAUDE CODE ADVANCED COURSE — 3 HOURS",
+        "publishedAt": "2026-03-28T18:59:16Z",
+        "thumbnail": "https://i.ytimg.com/vi/UPtmKh1vMN8/hqdefault.jpg",
+        "viewCount": "138188",
+        "likeCount": "4234",
+        "commentCount": "268",
+        "url": "https://www.youtube.com/watch?v=UPtmKh1vMN8"
+      },
+      {
+        "title": "Claude Computer Use Just Dropped, Here's How to Hack It",
+        "publishedAt": "2026-03-24T17:51:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/2u93VTYvG5U/hqdefault.jpg",
+        "viewCount": "63144",
+        "likeCount": "1830",
+        "commentCount": "208",
+        "url": "https://www.youtube.com/watch?v=2u93VTYvG5U"
+      },
+      {
+        "title": "Claude Channels Just Dropped, And It Kills OpenClaw (Again)",
+        "publishedAt": "2026-03-20T16:49:29Z",
+        "thumbnail": "https://i.ytimg.com/vi/ot3NM5OVFmc/hqdefault.jpg",
+        "viewCount": "59177",
+        "likeCount": "1640",
+        "commentCount": "226",
+        "url": "https://www.youtube.com/watch?v=ot3NM5OVFmc"
+      },
+      {
+        "title": "COLD EMAIL COPYWRITING & OUTREACH Full Course 2026",
+        "publishedAt": "2026-03-19T01:00:58Z",
+        "thumbnail": "https://i.ytimg.com/vi/uSTGNHGFOAo/hqdefault.jpg",
+        "viewCount": "41509",
+        "likeCount": "1721",
+        "commentCount": "190",
+        "url": "https://www.youtube.com/watch?v=uSTGNHGFOAo"
+      },
+      {
+        "title": "Claude Dispatch Just Dropped, And It Kills OpenClaw",
+        "publishedAt": "2026-03-18T16:58:57Z",
+        "thumbnail": "https://i.ytimg.com/vi/NF10evwkefM/hqdefault.jpg",
+        "viewCount": "119658",
+        "likeCount": "3447",
+        "commentCount": "321",
+        "url": "https://www.youtube.com/watch?v=NF10evwkefM"
+      }
+    ]
+  },
+  {
+    "channel": "Fireship",
+    "videos": [
+      {
+        "title": "I finally found a use case for OpenClaw…",
+        "publishedAt": "2026-04-23T18:26:39Z",
+        "thumbnail": "https://i.ytimg.com/vi/FM5-R4VPArw/hqdefault.jpg",
+        "viewCount": "194237",
+        "likeCount": "9714",
+        "commentCount": "506",
+        "url": "https://www.youtube.com/watch?v=FM5-R4VPArw"
+      },
+      {
+        "title": "Claude just got another superpower...",
+        "publishedAt": "2026-04-21T17:35:43Z",
+        "thumbnail": "https://i.ytimg.com/vi/jeA-KBv0b68/hqdefault.jpg",
+        "viewCount": "747973",
+        "likeCount": "24521",
+        "commentCount": "1197",
+        "url": "https://www.youtube.com/watch?v=jeA-KBv0b68"
+      },
+      {
+        "title": "Millions of WordPress sites just got hacked... again",
+        "publishedAt": "2026-04-16T15:29:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/piah4fV_o2Q/hqdefault.jpg",
+        "viewCount": "448849",
+        "likeCount": "14281",
+        "commentCount": "950",
+        "url": "https://www.youtube.com/watch?v=piah4fV_o2Q"
+      },
+      {
+        "title": "Claude Mythos is too dangerous for public consumption...",
+        "publishedAt": "2026-04-10T19:29:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/d3Qq-rkp_to/hqdefault.jpg",
+        "viewCount": "1032974",
+        "likeCount": "35229",
+        "commentCount": "2239",
+        "url": "https://www.youtube.com/watch?v=d3Qq-rkp_to"
+      },
+      {
+        "title": "Google just casually disrupted the open-source AI narrative…",
+        "publishedAt": "2026-04-08T19:00:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/-01ZCTt-CJw/hqdefault.jpg",
+        "viewCount": "1294641",
+        "likeCount": "43891",
+        "commentCount": "1471",
+        "url": "https://www.youtube.com/watch?v=-01ZCTt-CJw"
+      },
+      {
+        "title": "Cursor ditches VS Code, but not everyone is happy...",
+        "publishedAt": "2026-04-06T18:37:57Z",
+        "thumbnail": "https://i.ytimg.com/vi/JSuS-zXMVwE/hqdefault.jpg",
+        "viewCount": "842436",
+        "likeCount": "24108",
+        "commentCount": "1117",
+        "url": "https://www.youtube.com/watch?v=JSuS-zXMVwE"
+      },
+      {
+        "title": "He just crawled through hell to fix the browser…",
+        "publishedAt": "2026-04-02T19:18:38Z",
+        "thumbnail": "https://i.ytimg.com/vi/vd14EElCRvs/hqdefault.jpg",
+        "viewCount": "1244688",
+        "likeCount": "50054",
+        "commentCount": "1494",
+        "url": "https://www.youtube.com/watch?v=vd14EElCRvs"
+      },
+      {
+        "title": "Tragic mistake... Anthropic leaks Claude’s source code",
+        "publishedAt": "2026-04-01T17:27:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/mBHRPeg8zPU/hqdefault.jpg",
+        "viewCount": "3168518",
+        "likeCount": "99205",
+        "commentCount": "4973",
+        "url": "https://www.youtube.com/watch?v=mBHRPeg8zPU"
+      },
+      {
+        "title": "Millions of JS devs just got penetrated by a RAT…",
+        "publishedAt": "2026-03-31T18:58:40Z",
+        "thumbnail": "https://i.ytimg.com/vi/o7NYXvYohYk/hqdefault.jpg",
+        "viewCount": "676857",
+        "likeCount": "23844",
+        "commentCount": "1347",
+        "url": "https://www.youtube.com/watch?v=o7NYXvYohYk"
+      },
+      {
+        "title": "Anthropic just released the real Claude Bot...",
+        "publishedAt": "2026-03-26T18:11:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/wfeiCZK0mNs/hqdefault.jpg",
+        "viewCount": "1047113",
+        "likeCount": "32022",
+        "commentCount": "1085",
+        "url": "https://www.youtube.com/watch?v=wfeiCZK0mNs"
+      }
+    ]
+  },
+  {
+    "channel": "Andrej Karpathy",
+    "videos": [
+      {
+        "title": "How I use LLMs",
+        "publishedAt": "2025-02-27T22:29:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/EWvNQjAaOHw/hqdefault.jpg",
+        "viewCount": "2379651",
+        "likeCount": "61999",
+        "commentCount": "2258",
+        "url": "https://www.youtube.com/watch?v=EWvNQjAaOHw"
+      },
+      {
+        "title": "Deep Dive into LLMs like ChatGPT",
+        "publishedAt": "2025-02-05T18:23:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/7xTGNNLPyMI/hqdefault.jpg",
+        "viewCount": "6141549",
+        "likeCount": "109926",
+        "commentCount": "3749",
+        "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI"
+      },
+      {
+        "title": "Let's reproduce GPT-2 (124M)",
+        "publishedAt": "2024-06-09T23:31:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/l8pRSuU81PU/hqdefault.jpg",
+        "viewCount": "1056699",
+        "likeCount": "30579",
+        "commentCount": "1172",
+        "url": "https://www.youtube.com/watch?v=l8pRSuU81PU"
+      },
+      {
+        "title": "Let's build the GPT Tokenizer",
+        "publishedAt": "2024-02-20T17:11:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/zduSFxRajkE/hqdefault.jpg",
+        "viewCount": "1078333",
+        "likeCount": "27067",
+        "commentCount": "1169",
+        "url": "https://www.youtube.com/watch?v=zduSFxRajkE"
+      },
+      {
+        "title": "[1hr Talk] Intro to Large Language Models",
+        "publishedAt": "2023-11-23T02:27:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/zjkBMFhNj_g/hqdefault.jpg",
+        "viewCount": "3587501",
+        "likeCount": "94419",
+        "commentCount": "4958",
+        "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g"
+      },
+      {
+        "title": "Let's build GPT: from scratch, in code, spelled out.",
+        "publishedAt": "2023-01-17T16:33:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/kCc8FmEb1nY/hqdefault.jpg",
+        "viewCount": "7129397",
+        "likeCount": "156226",
+        "commentCount": "3116",
+        "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+      },
+      {
+        "title": "Building makemore Part 5: Building a WaveNet",
+        "publishedAt": "2022-11-21T00:32:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/t3YJ5hKiMQ0/hqdefault.jpg",
+        "viewCount": "270585",
+        "likeCount": "4574",
+        "commentCount": "236",
+        "url": "https://www.youtube.com/watch?v=t3YJ5hKiMQ0"
+      },
+      {
+        "title": "Building makemore Part 4: Becoming a Backprop Ninja",
+        "publishedAt": "2022-10-11T17:56:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/q8SA3rM6ckI/hqdefault.jpg",
+        "viewCount": "337790",
+        "likeCount": "5570",
+        "commentCount": "415",
+        "url": "https://www.youtube.com/watch?v=q8SA3rM6ckI"
+      },
+      {
+        "title": "Building makemore Part 3: Activations & Gradients, BatchNorm",
+        "publishedAt": "2022-10-04T16:41:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/P6sfmUTpUmc/hqdefault.jpg",
+        "viewCount": "492727",
+        "likeCount": "8429",
+        "commentCount": "461",
+        "url": "https://www.youtube.com/watch?v=P6sfmUTpUmc"
+      },
+      {
+        "title": "Building makemore Part 2: MLP",
+        "publishedAt": "2022-09-12T14:43:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/TCH_1BHY58I/hqdefault.jpg",
+        "viewCount": "528535",
+        "likeCount": "8851",
+        "commentCount": "472",
+        "url": "https://www.youtube.com/watch?v=TCH_1BHY58I"
+      }
+    ]
+  },
+  {
+    "channel": "t3dotgg",
+    "videos": [
+      {
+        "title": "I don’t really like GPT-5.5…",
+        "publishedAt": "2026-04-24T03:35:49Z",
+        "thumbnail": "https://i.ytimg.com/vi/HUsDzyJ3H64/hqdefault.jpg",
+        "viewCount": "4644",
+        "likeCount": "227",
+        "commentCount": "36",
+        "url": "https://www.youtube.com/watch?v=HUsDzyJ3H64"
+      },
+      {
+        "title": "Open source is dead now?",
+        "publishedAt": "2026-04-22T13:54:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/YY04jVCKeB4/hqdefault.jpg",
+        "viewCount": "68817",
+        "likeCount": "1983",
+        "commentCount": "333",
+        "url": "https://www.youtube.com/watch?v=YY04jVCKeB4"
+      },
+      {
+        "title": "Did Anthropic just kill Figma?",
+        "publishedAt": "2026-04-21T10:19:39Z",
+        "thumbnail": "https://i.ytimg.com/vi/wDgq9aiuL-w/hqdefault.jpg",
+        "viewCount": "110254",
+        "likeCount": "3191",
+        "commentCount": "280",
+        "url": "https://www.youtube.com/watch?v=wDgq9aiuL-w"
+      },
+      {
+        "title": "Did Claude really get dumber again?",
+        "publishedAt": "2026-04-20T14:50:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/KFisvc-AMII/hqdefault.jpg",
+        "viewCount": "105483",
+        "likeCount": "3343",
+        "commentCount": "509",
+        "url": "https://www.youtube.com/watch?v=KFisvc-AMII"
+      },
+      {
+        "title": "This model is kind of a disaster.",
+        "publishedAt": "2026-04-17T08:57:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/zd6tBbCwkks/hqdefault.jpg",
+        "viewCount": "161353",
+        "likeCount": "4795",
+        "commentCount": "707",
+        "url": "https://www.youtube.com/watch?v=zd6tBbCwkks"
+      },
+      {
+        "title": "Claude's new Cursor killer just dropped",
+        "publishedAt": "2026-04-16T08:34:42Z",
+        "thumbnail": "https://i.ytimg.com/vi/WkHdkwDQJ5o/hqdefault.jpg",
+        "viewCount": "119861",
+        "likeCount": "3425",
+        "commentCount": "530",
+        "url": "https://www.youtube.com/watch?v=WkHdkwDQJ5o"
+      },
+      {
+        "title": "A letter to tech CEOs",
+        "publishedAt": "2026-04-15T19:37:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/G1xqTjoihfo/hqdefault.jpg",
+        "viewCount": "56291",
+        "likeCount": "2172",
+        "commentCount": "355",
+        "url": "https://www.youtube.com/watch?v=G1xqTjoihfo"
+      },
+      {
+        "title": "Anthropic thinks they're Apple. They're actually hypocrites.",
+        "publishedAt": "2026-04-14T18:09:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/ysS8GDwsaK8/hqdefault.jpg",
+        "viewCount": "116834",
+        "likeCount": "4117",
+        "commentCount": "444",
+        "url": "https://www.youtube.com/watch?v=ysS8GDwsaK8"
+      },
+      {
+        "title": "How does Claude Code *actually* work?",
+        "publishedAt": "2026-04-13T07:13:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/I82j7AzMU80/hqdefault.jpg",
+        "viewCount": "155838",
+        "likeCount": "7471",
+        "commentCount": "558",
+        "url": "https://www.youtube.com/watch?v=I82j7AzMU80"
+      },
+      {
+        "title": "I’m scared about the future of security",
+        "publishedAt": "2026-04-10T09:09:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/ND9CSuzvrIY/hqdefault.jpg",
+        "viewCount": "60385",
+        "likeCount": "1997",
+        "commentCount": "324",
+        "url": "https://www.youtube.com/watch?v=ND9CSuzvrIY"
+      }
+    ]
+  },
+  {
+    "channel": "Matt Wolfe",
+    "videos": [
+      {
+        "title": "My most controversial opinion....",
+        "publishedAt": "2026-04-23T14:24:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/jaRCRd0NjcA/hqdefault.jpg",
+        "viewCount": "5809",
+        "likeCount": "280",
+        "commentCount": "32",
+        "url": "https://www.youtube.com/watch?v=jaRCRd0NjcA"
+      },
+      {
+        "title": "How Much Does YouTube Pay Me? 💰",
+        "publishedAt": "2026-04-22T12:33:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/Gl83QXGRfnk/hqdefault.jpg",
+        "viewCount": "6538",
+        "likeCount": "121",
+        "commentCount": "7",
+        "url": "https://www.youtube.com/watch?v=Gl83QXGRfnk"
+      },
+      {
+        "title": "Canva's AI Features Got A MAJOR Upgrade",
+        "publishedAt": "2026-04-21T12:51:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/z5sL3nXPsss/hqdefault.jpg",
+        "viewCount": "6678",
+        "likeCount": "200",
+        "commentCount": "11",
+        "url": "https://www.youtube.com/watch?v=z5sL3nXPsss"
+      },
+      {
+        "title": "Claude's Opus 4.7 Review",
+        "publishedAt": "2026-04-20T14:14:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/0L-OsXGIJnc/hqdefault.jpg",
+        "viewCount": "8601",
+        "likeCount": "168",
+        "commentCount": "14",
+        "url": "https://www.youtube.com/watch?v=0L-OsXGIJnc"
+      },
+      {
+        "title": "This Is NOT Investment Advice, But...",
+        "publishedAt": "2026-04-19T13:10:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/ViJa2KJnO3M/hqdefault.jpg",
+        "viewCount": "11979",
+        "likeCount": "254",
+        "commentCount": "12",
+        "url": "https://www.youtube.com/watch?v=ViJa2KJnO3M"
+      },
+      {
+        "title": "Testing OpenAI's New \"Super App\"",
+        "publishedAt": "2026-04-18T13:17:37Z",
+        "thumbnail": "https://i.ytimg.com/vi/BLdY1fqy8FE/hqdefault.jpg",
+        "viewCount": "17085",
+        "likeCount": "339",
+        "commentCount": "22",
+        "url": "https://www.youtube.com/watch?v=BLdY1fqy8FE"
+      },
+      {
+        "title": "AI News: Huge Updates From Anthropic, OpenAI and Google",
+        "publishedAt": "2026-04-17T15:00:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/bIrzOQtnp8w/hqdefault.jpg",
+        "viewCount": "115201",
+        "likeCount": "3787",
+        "commentCount": "188",
+        "url": "https://www.youtube.com/watch?v=bIrzOQtnp8w"
+      },
+      {
+        "title": "The Easiest Way To Edit YouTube Videos",
+        "publishedAt": "2026-04-17T14:26:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/bRecJsl3dHQ/hqdefault.jpg",
+        "viewCount": "17608",
+        "likeCount": "626",
+        "commentCount": "19",
+        "url": "https://www.youtube.com/watch?v=bRecJsl3dHQ"
+      },
+      {
+        "title": "Can You Monetize AI Videos?",
+        "publishedAt": "2026-04-16T12:45:30Z",
+        "thumbnail": "https://i.ytimg.com/vi/WRdCJ0aNXU0/hqdefault.jpg",
+        "viewCount": "6751",
+        "likeCount": "209",
+        "commentCount": "11",
+        "url": "https://www.youtube.com/watch?v=WRdCJ0aNXU0"
+      },
+      {
+        "title": "AI Editing Hack For Crazy Intros",
+        "publishedAt": "2026-04-16T01:01:53Z",
+        "thumbnail": "https://i.ytimg.com/vi/7z8n8rUsHpQ/hqdefault.jpg",
+        "viewCount": "15110",
+        "likeCount": "421",
+        "commentCount": "11",
+        "url": "https://www.youtube.com/watch?v=7z8n8rUsHpQ"
+      }
+    ]
+  },
+  {
+    "channel": "Dan Koe",
+    "videos": [
+      {
+        "title": "It doesn’t matter how long it takes",
+        "publishedAt": "2026-04-11T16:26:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/Bw9EkEKFY9k/hqdefault.jpg",
+        "viewCount": "28155",
+        "likeCount": "2457",
+        "commentCount": "32",
+        "url": "https://www.youtube.com/watch?v=Bw9EkEKFY9k"
+      },
+      {
+        "title": "I'm begging you to start writing essays (even if you hate writing)",
+        "publishedAt": "2026-04-05T18:03:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/3rNqNvwNcrM/hqdefault.jpg",
+        "viewCount": "128512",
+        "likeCount": "6481",
+        "commentCount": "303",
+        "url": "https://www.youtube.com/watch?v=3rNqNvwNcrM"
+      },
+      {
+        "title": "If you've lost your creative genius, watch this",
+        "publishedAt": "2026-03-28T20:02:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/vRsO_SmCYbQ/hqdefault.jpg",
+        "viewCount": "45465",
+        "likeCount": "1834",
+        "commentCount": "97",
+        "url": "https://www.youtube.com/watch?v=vRsO_SmCYbQ"
+      },
+      {
+        "title": "I’m begging you to just figure it out",
+        "publishedAt": "2026-03-25T17:32:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZM6JkNnOPbg/hqdefault.jpg",
+        "viewCount": "59727",
+        "likeCount": "5257",
+        "commentCount": "78",
+        "url": "https://www.youtube.com/watch?v=ZM6JkNnOPbg"
+      },
+      {
+        "title": "How To Build A $1M One-Person Business Faster With AI",
+        "publishedAt": "2026-03-15T16:14:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/VXgusdDbsQE/hqdefault.jpg",
+        "viewCount": "96285",
+        "likeCount": "3616",
+        "commentCount": "195",
+        "url": "https://www.youtube.com/watch?v=VXgusdDbsQE"
+      },
+      {
+        "title": "You need to know what you want",
+        "publishedAt": "2026-03-12T18:46:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/-tOGvxmjPkk/hqdefault.jpg",
+        "viewCount": "24610",
+        "likeCount": "1612",
+        "commentCount": "23",
+        "url": "https://www.youtube.com/watch?v=-tOGvxmjPkk"
+      },
+      {
+        "title": "How To Think Like A Strategic Genius (5-Dimensional Thinking)",
+        "publishedAt": "2026-02-22T16:58:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/TY8IVSQnwlk/hqdefault.jpg",
+        "viewCount": "93867",
+        "likeCount": "3337",
+        "commentCount": "176",
+        "url": "https://www.youtube.com/watch?v=TY8IVSQnwlk"
+      },
+      {
+        "title": "The Future Of Work (& The New High-Income Skill Stack)",
+        "publishedAt": "2026-02-12T20:59:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/vCoGfisdS8Y/hqdefault.jpg",
+        "viewCount": "175196",
+        "likeCount": "6313",
+        "commentCount": "376",
+        "url": "https://www.youtube.com/watch?v=vCoGfisdS8Y"
+      },
+      {
+        "title": "If you have multiple interests, do not waste the next 2-3 years",
+        "publishedAt": "2026-01-20T16:26:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/ExNWGF-q64M/hqdefault.jpg",
+        "viewCount": "306311",
+        "likeCount": "12417",
+        "commentCount": "721",
+        "url": "https://www.youtube.com/watch?v=ExNWGF-q64M"
+      },
+      {
+        "title": "How I'd build a one-person business (if I started over in 2026)",
+        "publishedAt": "2026-01-03T20:16:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/VyR8nqD3sQ8/hqdefault.jpg",
+        "viewCount": "248473",
+        "likeCount": "9125",
+        "commentCount": "430",
+        "url": "https://www.youtube.com/watch?v=VyR8nqD3sQ8"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidadam",
+    "videos": [
+      {
+        "title": "Talk about Puberty and Body Changes in English",
+        "publishedAt": "2026-04-15T03:54:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/Hf6U626mSoM/hqdefault.jpg",
+        "viewCount": "7966",
+        "likeCount": "572",
+        "commentCount": "28",
+        "url": "https://www.youtube.com/watch?v=Hf6U626mSoM"
+      },
+      {
+        "title": "10 English Expressions: “Rusty”, “Fit as a Fiddle”, “Spaced Out”...",
+        "publishedAt": "2026-03-31T20:08:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/KXHrJrEehhE/hqdefault.jpg",
+        "viewCount": "16113",
+        "likeCount": "1268",
+        "commentCount": "37",
+        "url": "https://www.youtube.com/watch?v=KXHrJrEehhE"
+      },
+      {
+        "title": "What is Idiomatic Language? Should you use it?",
+        "publishedAt": "2026-03-19T03:59:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/TSEnpGl7hck/hqdefault.jpg",
+        "viewCount": "10840",
+        "likeCount": "755",
+        "commentCount": "16",
+        "url": "https://www.youtube.com/watch?v=TSEnpGl7hck"
+      },
+      {
+        "title": "10 English Idioms with Meanings You CAN’T Guess",
+        "publishedAt": "2026-03-03T04:44:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/_cNXTne8dcE/hqdefault.jpg",
+        "viewCount": "15798",
+        "likeCount": "1068",
+        "commentCount": "35",
+        "url": "https://www.youtube.com/watch?v=_cNXTne8dcE"
+      },
+      {
+        "title": "Advanced English: “She is to be...”, “He was to go...”",
+        "publishedAt": "2026-02-16T04:54:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/1E3xcx8cUAw/hqdefault.jpg",
+        "viewCount": "85599",
+        "likeCount": "5780",
+        "commentCount": "177",
+        "url": "https://www.youtube.com/watch?v=1E3xcx8cUAw"
+      },
+      {
+        "title": "15 ENGLISH PHRASAL VERBS: stick up, stick out, stick to, stick with...",
+        "publishedAt": "2026-01-31T04:24:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/64reC911eKY/hqdefault.jpg",
+        "viewCount": "17682",
+        "likeCount": "1148",
+        "commentCount": "34",
+        "url": "https://www.youtube.com/watch?v=64reC911eKY"
+      },
+      {
+        "title": "The Complete Guide to ADJECTIVES in English",
+        "publishedAt": "2026-01-18T05:30:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/kOPUQHnitB4/hqdefault.jpg",
+        "viewCount": "41494",
+        "likeCount": "1787",
+        "commentCount": "52",
+        "url": "https://www.youtube.com/watch?v=kOPUQHnitB4"
+      },
+      {
+        "title": "Understand Real English: Movie References (That You’ll Hear ALL the Time!)",
+        "publishedAt": "2025-12-31T07:53:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/RXWcmVRWP0g/hqdefault.jpg",
+        "viewCount": "15250",
+        "likeCount": "909",
+        "commentCount": "47",
+        "url": "https://www.youtube.com/watch?v=RXWcmVRWP0g"
+      },
+      {
+        "title": "What do MUST, SHOULD, and WOULD Really Mean in Writing?",
+        "publishedAt": "2025-12-04T03:09:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/ahsryPvWF_I/hqdefault.jpg",
+        "viewCount": "23533",
+        "likeCount": "1075",
+        "commentCount": "39",
+        "url": "https://www.youtube.com/watch?v=ahsryPvWF_I"
+      },
+      {
+        "title": "Speak English Naturally: Use Stress & Pauses to Communicate More Clearly",
+        "publishedAt": "2025-11-11T07:32:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/t20vX5Mm7dQ/hqdefault.jpg",
+        "viewCount": "25753",
+        "likeCount": "1353",
+        "commentCount": "50",
+        "url": "https://www.youtube.com/watch?v=t20vX5Mm7dQ"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidalex",
+    "videos": [
+      {
+        "title": "English Listening & Fluency | Read, Listen, Speak | Little Red Riding Hood (B1 Shadowing Practice)",
+        "publishedAt": "2026-04-18T03:52:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/jOHNUGuNIXw/hqdefault.jpg",
+        "viewCount": "12295",
+        "likeCount": "906",
+        "commentCount": "77",
+        "url": "https://www.youtube.com/watch?v=jOHNUGuNIXw"
+      },
+      {
+        "title": "\"I have a lot on my plate\" #learnenglish #expressions",
+        "publishedAt": "2026-04-03T19:47:58Z",
+        "thumbnail": "https://i.ytimg.com/vi/muXtsKxsjyE/hqdefault.jpg",
+        "viewCount": "21187",
+        "likeCount": "969",
+        "commentCount": "28",
+        "url": "https://www.youtube.com/watch?v=muXtsKxsjyE"
+      },
+      {
+        "title": "English Beginner? Watch Peppa Pig. Here Are 7 Reasons Why.",
+        "publishedAt": "2026-03-28T03:34:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/X67FWMPRosc/hqdefault.jpg",
+        "viewCount": "11982",
+        "likeCount": "769",
+        "commentCount": "56",
+        "url": "https://www.youtube.com/watch?v=X67FWMPRosc"
+      },
+      {
+        "title": "Speak like a Pro! 12 High-Level Phrases | Advanced English",
+        "publishedAt": "2026-03-15T03:37:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/iG6aQVLY6aY/hqdefault.jpg",
+        "viewCount": "23889",
+        "likeCount": "1536",
+        "commentCount": "67",
+        "url": "https://www.youtube.com/watch?v=iG6aQVLY6aY"
+      },
+      {
+        "title": "Present Perfect? Past Simple? Avoid These 6 English Mistakes",
+        "publishedAt": "2026-02-28T04:55:43Z",
+        "thumbnail": "https://i.ytimg.com/vi/8gNzzogwFEY/hqdefault.jpg",
+        "viewCount": "26873",
+        "likeCount": "1772",
+        "commentCount": "95",
+        "url": "https://www.youtube.com/watch?v=8gNzzogwFEY"
+      },
+      {
+        "title": "What’s Your Daily Routine? | How to Talk about Your Day in English",
+        "publishedAt": "2026-02-14T04:57:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/pX91MG83Etc/hqdefault.jpg",
+        "viewCount": "63577",
+        "likeCount": "4656",
+        "commentCount": "337",
+        "url": "https://www.youtube.com/watch?v=pX91MG83Etc"
+      },
+      {
+        "title": "23 Easy English Phrasal Verbs for Beginners",
+        "publishedAt": "2026-01-27T04:44:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/vqrWUxPlxPY/hqdefault.jpg",
+        "viewCount": "601056",
+        "likeCount": "38581",
+        "commentCount": "1258",
+        "url": "https://www.youtube.com/watch?v=vqrWUxPlxPY"
+      },
+      {
+        "title": "Speak English with Confidence! How to Make Appointments",
+        "publishedAt": "2026-01-13T04:55:40Z",
+        "thumbnail": "https://i.ytimg.com/vi/2TxMvdyXtUY/hqdefault.jpg",
+        "viewCount": "59072",
+        "likeCount": "3770",
+        "commentCount": "323",
+        "url": "https://www.youtube.com/watch?v=2TxMvdyXtUY"
+      },
+      {
+        "title": "Want to Learn English with Movies? Here is What You Need to Know",
+        "publishedAt": "2025-12-25T04:58:12Z",
+        "thumbnail": "https://i.ytimg.com/vi/3KWvGnitHE0/hqdefault.jpg",
+        "viewCount": "69355",
+        "likeCount": "3481",
+        "commentCount": "285",
+        "url": "https://www.youtube.com/watch?v=3KWvGnitHE0"
+      },
+      {
+        "title": "Survival ENGLISH: 'Keep an Eye Out' 🧟‍♂️",
+        "publishedAt": "2025-12-02T05:39:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/skJO4riiNac/hqdefault.jpg",
+        "viewCount": "10833",
+        "likeCount": "387",
+        "commentCount": "14",
+        "url": "https://www.youtube.com/watch?v=skJO4riiNac"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidronnie",
+    "videos": [
+      {
+        "title": "Talk to Anyone with Confidence (Even If You’re Nervous)",
+        "publishedAt": "2026-04-21T03:58:29Z",
+        "thumbnail": "https://i.ytimg.com/vi/H-09G80-ktQ/hqdefault.jpg",
+        "viewCount": "8150",
+        "likeCount": "657",
+        "commentCount": "30",
+        "url": "https://www.youtube.com/watch?v=H-09G80-ktQ"
+      },
+      {
+        "title": "8 Things You Should NEVER Do to a Dog 🚫🐕",
+        "publishedAt": "2026-04-03T03:58:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/Mxm3gdlV-2s/hqdefault.jpg",
+        "viewCount": "9080",
+        "likeCount": "489",
+        "commentCount": "30",
+        "url": "https://www.youtube.com/watch?v=Mxm3gdlV-2s"
+      },
+      {
+        "title": "18 Driving Phrasal Verbs in English (back up, pull into, drop off...)",
+        "publishedAt": "2026-03-17T03:58:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/QqeECC13HcM/hqdefault.jpg",
+        "viewCount": "20512",
+        "likeCount": "1384",
+        "commentCount": "49",
+        "url": "https://www.youtube.com/watch?v=QqeECC13HcM"
+      },
+      {
+        "title": "“AH” or “UH”? Say These 10 Common Verbs CORRECTLY",
+        "publishedAt": "2026-02-26T04:45:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/H_cKdT18-LM/hqdefault.jpg",
+        "viewCount": "36403",
+        "likeCount": "2175",
+        "commentCount": "79",
+        "url": "https://www.youtube.com/watch?v=H_cKdT18-LM"
+      },
+      {
+        "title": "Same Word 😐 — Opposite Meanings 🤯",
+        "publishedAt": "2026-02-12T03:24:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/HGZ79FOkg34/hqdefault.jpg",
+        "viewCount": "20139",
+        "likeCount": "1245",
+        "commentCount": "83",
+        "url": "https://www.youtube.com/watch?v=HGZ79FOkg34"
+      },
+      {
+        "title": "English for Beginners & Children: AND, OR, BUT",
+        "publishedAt": "2026-01-29T04:59:29Z",
+        "thumbnail": "https://i.ytimg.com/vi/iYlYJDPh_g8/hqdefault.jpg",
+        "viewCount": "17584",
+        "likeCount": "803",
+        "commentCount": "36",
+        "url": "https://www.youtube.com/watch?v=iYlYJDPh_g8"
+      },
+      {
+        "title": "The TOP 5 English Mistakes I See",
+        "publishedAt": "2026-01-15T04:43:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/vwPE6ak61RY/hqdefault.jpg",
+        "viewCount": "25866",
+        "likeCount": "1601",
+        "commentCount": "74",
+        "url": "https://www.youtube.com/watch?v=vwPE6ak61RY"
+      },
+      {
+        "title": "“TAKE IT OFF!” Learn English Phrasal Verbs for Clothes & Shopping",
+        "publishedAt": "2025-12-29T02:02:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/LSQ5xi0Biyk/hqdefault.jpg",
+        "viewCount": "67457",
+        "likeCount": "4318",
+        "commentCount": "173",
+        "url": "https://www.youtube.com/watch?v=LSQ5xi0Biyk"
+      },
+      {
+        "title": "\"Spill the Beans\"???",
+        "publishedAt": "2025-12-06T04:14:29Z",
+        "thumbnail": "https://i.ytimg.com/vi/Skx1P_8lbzw/hqdefault.jpg",
+        "viewCount": "13466",
+        "likeCount": "461",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=Skx1P_8lbzw"
+      },
+      {
+        "title": "EASY ENGLISH: 7 Common Expressions",
+        "publishedAt": "2025-11-30T04:59:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/5RCk5MFSbS0/hqdefault.jpg",
+        "viewCount": "29623",
+        "likeCount": "1418",
+        "commentCount": "67",
+        "url": "https://www.youtube.com/watch?v=5RCk5MFSbS0"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidrebecca",
+    "videos": [
+      {
+        "title": "ENGLISH GRAMMAR CHALLENGE: AT, ON, or IN? | Prepositions",
+        "publishedAt": "2026-04-10T03:06:41Z",
+        "thumbnail": "https://i.ytimg.com/vi/32vMzgr8dUM/hqdefault.jpg",
+        "viewCount": "22000",
+        "likeCount": "1344",
+        "commentCount": "37",
+        "url": "https://www.youtube.com/watch?v=32vMzgr8dUM"
+      },
+      {
+        "title": "SPEAK ENGLISH POWERFULLY: Helping Verbs | Free English Course",
+        "publishedAt": "2026-03-26T01:38:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/KSCZqpnC6q8/hqdefault.jpg",
+        "viewCount": "31373",
+        "likeCount": "1597",
+        "commentCount": "76",
+        "url": "https://www.youtube.com/watch?v=KSCZqpnC6q8"
+      },
+      {
+        "title": "20 Jobs in English: Are You Saying Them Correctly?",
+        "publishedAt": "2026-03-11T03:55:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/lQkAjVa126E/hqdefault.jpg",
+        "viewCount": "25442",
+        "likeCount": "1333",
+        "commentCount": "35",
+        "url": "https://www.youtube.com/watch?v=lQkAjVa126E"
+      },
+      {
+        "title": "Use Body Nouns as Verbs in English!",
+        "publishedAt": "2026-02-21T04:54:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/lK6T-0nDlB4/hqdefault.jpg",
+        "viewCount": "41454",
+        "likeCount": "2363",
+        "commentCount": "92",
+        "url": "https://www.youtube.com/watch?v=lK6T-0nDlB4"
+      },
+      {
+        "title": "SPEAK ENGLISH POWERFULLY: Just Add ONE Word! | Free English Course",
+        "publishedAt": "2026-02-08T04:58:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/u-eYRIyCQwc/hqdefault.jpg",
+        "viewCount": "59913",
+        "likeCount": "3058",
+        "commentCount": "93",
+        "url": "https://www.youtube.com/watch?v=u-eYRIyCQwc"
+      },
+      {
+        "title": "12 Confusing English QUESTIONS",
+        "publishedAt": "2026-01-22T04:53:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/jaQa_-HdVWg/hqdefault.jpg",
+        "viewCount": "127942",
+        "likeCount": "6192",
+        "commentCount": "147",
+        "url": "https://www.youtube.com/watch?v=jaQa_-HdVWg"
+      },
+      {
+        "title": "Say the MONTHS of the Year Correctly in English",
+        "publishedAt": "2026-01-09T04:29:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/z4CqR3E8ovA/hqdefault.jpg",
+        "viewCount": "34249",
+        "likeCount": "1489",
+        "commentCount": "52",
+        "url": "https://www.youtube.com/watch?v=z4CqR3E8ovA"
+      },
+      {
+        "title": "Improve Your English Pronunciation: FAMILY",
+        "publishedAt": "2025-12-22T08:39:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/q52T7aAMmtQ/hqdefault.jpg",
+        "viewCount": "52840",
+        "likeCount": "2222",
+        "commentCount": "97",
+        "url": "https://www.youtube.com/watch?v=q52T7aAMmtQ"
+      },
+      {
+        "title": "SPEAK ENGLISH POWERFULLY: Lesson 1 | Free English Course",
+        "publishedAt": "2025-11-22T03:30:54Z",
+        "thumbnail": "https://i.ytimg.com/vi/vbJJql7dbrw/hqdefault.jpg",
+        "viewCount": "69346",
+        "likeCount": "3032",
+        "commentCount": "98",
+        "url": "https://www.youtube.com/watch?v=vbJJql7dbrw"
+      },
+      {
+        "title": "Power Up Your Work English Vocabulary",
+        "publishedAt": "2025-11-09T00:46:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/NA1v9nElKxw/hqdefault.jpg",
+        "viewCount": "70958",
+        "likeCount": "2973",
+        "commentCount": "118",
+        "url": "https://www.youtube.com/watch?v=NA1v9nElKxw"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidemma",
+    "videos": [
+      {
+        "title": "What's the most popular baby name in Canada?",
+        "publishedAt": "2026-04-19T16:51:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/Y456WVoJ3tk/hqdefault.jpg",
+        "viewCount": "19194",
+        "likeCount": "410",
+        "commentCount": "34",
+        "url": "https://www.youtube.com/watch?v=Y456WVoJ3tk"
+      },
+      {
+        "title": "EASY ENGLISH CONVERSATION: Talk About the Weekend!",
+        "publishedAt": "2026-04-05T03:41:13Z",
+        "thumbnail": "https://i.ytimg.com/vi/1txW3y3F2Fo/hqdefault.jpg",
+        "viewCount": "30694",
+        "likeCount": "1679",
+        "commentCount": "75",
+        "url": "https://www.youtube.com/watch?v=1txW3y3F2Fo"
+      },
+      {
+        "title": "“Help! I’m stuck in my language learning.”",
+        "publishedAt": "2026-03-24T01:15:40Z",
+        "thumbnail": "https://i.ytimg.com/vi/bLksi7Wt0yE/hqdefault.jpg",
+        "viewCount": "54808",
+        "likeCount": "2840",
+        "commentCount": "102",
+        "url": "https://www.youtube.com/watch?v=bLksi7Wt0yE"
+      },
+      {
+        "title": "Do You Struggle with English in Meetings? Watch this.",
+        "publishedAt": "2026-03-08T04:59:52Z",
+        "thumbnail": "https://i.ytimg.com/vi/uzAjQqQupiQ/hqdefault.jpg",
+        "viewCount": "58214",
+        "likeCount": "2675",
+        "commentCount": "88",
+        "url": "https://www.youtube.com/watch?v=uzAjQqQupiQ"
+      },
+      {
+        "title": "Easy Everyday English: Stay in, Go out, Dine in, Night out...",
+        "publishedAt": "2026-02-19T04:47:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/W1lfpU6LekA/hqdefault.jpg",
+        "viewCount": "49411",
+        "likeCount": "2443",
+        "commentCount": "102",
+        "url": "https://www.youtube.com/watch?v=W1lfpU6LekA"
+      },
+      {
+        "title": "Understand and Remember What You Read!",
+        "publishedAt": "2026-02-05T22:43:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/VX-zgpcXU6Q/hqdefault.jpg",
+        "viewCount": "88920",
+        "likeCount": "5249",
+        "commentCount": "109",
+        "url": "https://www.youtube.com/watch?v=VX-zgpcXU6Q"
+      },
+      {
+        "title": "Easy English Conversation: “What do you do?”",
+        "publishedAt": "2026-01-24T04:21:25Z",
+        "thumbnail": "https://i.ytimg.com/vi/sf-7js2_kL0/hqdefault.jpg",
+        "viewCount": "87483",
+        "likeCount": "3993",
+        "commentCount": "125",
+        "url": "https://www.youtube.com/watch?v=sf-7js2_kL0"
+      },
+      {
+        "title": "TOP 10 MYTHS about Learning English",
+        "publishedAt": "2026-01-02T04:59:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/xBabA7yATLg/hqdefault.jpg",
+        "viewCount": "70893",
+        "likeCount": "3222",
+        "commentCount": "131",
+        "url": "https://www.youtube.com/watch?v=xBabA7yATLg"
+      },
+      {
+        "title": "Santa Claus is Coming to Town – World's Best Performance",
+        "publishedAt": "2025-12-25T17:23:13Z",
+        "thumbnail": "https://i.ytimg.com/vi/FT3s-fHYBtg/hqdefault.jpg",
+        "viewCount": "26213",
+        "likeCount": "616",
+        "commentCount": "27",
+        "url": "https://www.youtube.com/watch?v=FT3s-fHYBtg"
+      },
+      {
+        "title": "Sing Christmas Songs in ENGLISH with Emma 🎵☃🎄🎅",
+        "publishedAt": "2025-12-23T01:59:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/zoJEMDQI7nA/hqdefault.jpg",
+        "viewCount": "42642",
+        "likeCount": "1316",
+        "commentCount": "88",
+        "url": "https://www.youtube.com/watch?v=zoJEMDQI7nA"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidjames",
+    "videos": [
+      {
+        "title": "Do you have a question about ENGLISH? #AskEngVidJames",
+        "publishedAt": "2026-04-12T23:28:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/wzjdgtFQm1k/hqdefault.jpg",
+        "viewCount": "16877",
+        "likeCount": "380",
+        "commentCount": "47",
+        "url": "https://www.youtube.com/watch?v=wzjdgtFQm1k"
+      },
+      {
+        "title": "5 Confusing English Word Pairs",
+        "publishedAt": "2026-04-06T23:04:49Z",
+        "thumbnail": "https://i.ytimg.com/vi/BNLHwHaocqs/hqdefault.jpg",
+        "viewCount": "17738",
+        "likeCount": "960",
+        "commentCount": "36",
+        "url": "https://www.youtube.com/watch?v=BNLHwHaocqs"
+      },
+      {
+        "title": "Understanding Others: Honest Communication",
+        "publishedAt": "2026-04-03T19:42:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/PU0HdA2mDyo/hqdefault.jpg",
+        "viewCount": "11217",
+        "likeCount": "320",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=PU0HdA2mDyo"
+      },
+      {
+        "title": "THIS or THAT? THESE or THOSE? Master English Demonstratives!",
+        "publishedAt": "2026-03-21T22:14:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/8qNYkYfQKZw/hqdefault.jpg",
+        "viewCount": "17373",
+        "likeCount": "923",
+        "commentCount": "53",
+        "url": "https://www.youtube.com/watch?v=8qNYkYfQKZw"
+      },
+      {
+        "title": "Stop Confusing People: Use Question Words Properly in English",
+        "publishedAt": "2026-02-24T04:21:44Z",
+        "thumbnail": "https://i.ytimg.com/vi/DsFT8exiG5o/hqdefault.jpg",
+        "viewCount": "19004",
+        "likeCount": "936",
+        "commentCount": "48",
+        "url": "https://www.youtube.com/watch?v=DsFT8exiG5o"
+      },
+      {
+        "title": "You Have to Write Every Day. ChatGPT Won’t Save You.",
+        "publishedAt": "2026-02-03T04:56:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/D6nvyilkTF0/hqdefault.jpg",
+        "viewCount": "223098",
+        "likeCount": "13399",
+        "commentCount": "324",
+        "url": "https://www.youtube.com/watch?v=D6nvyilkTF0"
+      },
+      {
+        "title": "Smart People Learn Languages Differently. And You Can Too.",
+        "publishedAt": "2026-01-07T04:26:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/GeXp4sfYoiQ/hqdefault.jpg",
+        "viewCount": "56449",
+        "likeCount": "3165",
+        "commentCount": "126",
+        "url": "https://www.youtube.com/watch?v=GeXp4sfYoiQ"
+      },
+      {
+        "title": "Learn Faster by Reading ACTIVELY",
+        "publishedAt": "2025-12-18T04:57:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/y89OLiozqNY/hqdefault.jpg",
+        "viewCount": "49385",
+        "likeCount": "2803",
+        "commentCount": "55",
+        "url": "https://www.youtube.com/watch?v=y89OLiozqNY"
+      },
+      {
+        "title": "Learn Grammar and Syntax Effortlessly",
+        "publishedAt": "2025-12-07T14:00:40Z",
+        "thumbnail": "https://i.ytimg.com/vi/LYjuv6LqAsY/hqdefault.jpg",
+        "viewCount": "28149",
+        "likeCount": "700",
+        "commentCount": "7",
+        "url": "https://www.youtube.com/watch?v=LYjuv6LqAsY"
+      },
+      {
+        "title": "Set Boundaries Kindly: Respect Yourself & Others",
+        "publishedAt": "2025-12-05T15:01:16Z",
+        "thumbnail": "https://i.ytimg.com/vi/YERAQaIQuMc/hqdefault.jpg",
+        "viewCount": "22761",
+        "likeCount": "1203",
+        "commentCount": "20",
+        "url": "https://www.youtube.com/watch?v=YERAQaIQuMc"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidjade",
+    "videos": [
+      {
+        "title": "Learn British English: Vocabulary, slang, grammar, pronunciation, accent, culture",
+        "publishedAt": "2026-04-20T00:09:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/L8LPvwBsRug/hqdefault_live.jpg",
+        "viewCount": "27996",
+        "likeCount": "1845",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=L8LPvwBsRug"
+      },
+      {
+        "title": "WTF is a GLOTTAL STOP??? #english #learnenglish",
+        "publishedAt": "2025-12-24T19:01:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/xl0o0qXhbXA/hqdefault.jpg",
+        "viewCount": "8636",
+        "likeCount": "407",
+        "commentCount": "23",
+        "url": "https://www.youtube.com/watch?v=xl0o0qXhbXA"
+      },
+      {
+        "title": "London Slang: 'th' turns to 'd'",
+        "publishedAt": "2025-12-17T11:30:12Z",
+        "thumbnail": "https://i.ytimg.com/vi/7sHWuZH45RM/hqdefault.jpg",
+        "viewCount": "14107",
+        "likeCount": "234",
+        "commentCount": "15",
+        "url": "https://www.youtube.com/watch?v=7sHWuZH45RM"
+      },
+      {
+        "title": "London English: 'Innit'",
+        "publishedAt": "2025-12-10T08:15:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/sak-GVLdzmc/hqdefault.jpg",
+        "viewCount": "9960",
+        "likeCount": "321",
+        "commentCount": "3",
+        "url": "https://www.youtube.com/watch?v=sak-GVLdzmc"
+      },
+      {
+        "title": "'Oh What Fun' & 'Chin-Chin!': Old and Useless English Phrases",
+        "publishedAt": "2025-12-08T10:45:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/7Z0i1qxcec0/hqdefault.jpg",
+        "viewCount": "8617",
+        "likeCount": "222",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=7Z0i1qxcec0"
+      },
+      {
+        "title": "How to use \"ain't\" in English",
+        "publishedAt": "2025-12-05T11:30:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/FsA1i4jWj5c/hqdefault.jpg",
+        "viewCount": "16747",
+        "likeCount": "289",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=FsA1i4jWj5c"
+      },
+      {
+        "title": "Glottal Stops: The Missing T Sound in London",
+        "publishedAt": "2025-12-02T05:55:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/uGPkkfaHhkc/hqdefault.jpg",
+        "viewCount": "25789",
+        "likeCount": "391",
+        "commentCount": "23",
+        "url": "https://www.youtube.com/watch?v=uGPkkfaHhkc"
+      },
+      {
+        "title": "How do posh people speak? Learn about language and social class in England",
+        "publishedAt": "2020-11-20T21:11:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/gPqh9-gEYTY/hqdefault.jpg",
+        "viewCount": "496404",
+        "likeCount": "12364",
+        "commentCount": "1434",
+        "url": "https://www.youtube.com/watch?v=gPqh9-gEYTY"
+      },
+      {
+        "title": "Australian English",
+        "publishedAt": "2020-10-15T04:29:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/R5qNf-GKGUk/hqdefault.jpg",
+        "viewCount": "136048",
+        "likeCount": "hidden",
+        "commentCount": "disabled",
+        "url": "https://www.youtube.com/watch?v=R5qNf-GKGUk"
+      },
+      {
+        "title": "GROUP JOB INTERVIEW: What to say and do to succeed",
+        "publishedAt": "2020-06-19T22:45:49Z",
+        "thumbnail": "https://i.ytimg.com/vi/kf-9CUI0mm8/hqdefault.jpg",
+        "viewCount": "91555",
+        "likeCount": "2218",
+        "commentCount": "127",
+        "url": "https://www.youtube.com/watch?v=kf-9CUI0mm8"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidgill",
+    "videos": [
+      {
+        "title": "Learn English Vocabulary: SHAPES & GEOMETRY",
+        "publishedAt": "2026-03-05T05:00:08Z",
+        "thumbnail": "https://i.ytimg.com/vi/rjG09p1fKpk/hqdefault.jpg",
+        "viewCount": "21504",
+        "likeCount": "1488",
+        "commentCount": "78",
+        "url": "https://www.youtube.com/watch?v=rjG09p1fKpk"
+      },
+      {
+        "title": "Speak English: How to Ask for Directions and Understand the Answer",
+        "publishedAt": "2025-12-13T04:47:25Z",
+        "thumbnail": "https://i.ytimg.com/vi/I8PqBxVmpE4/hqdefault.jpg",
+        "viewCount": "47077",
+        "likeCount": "2695",
+        "commentCount": "120",
+        "url": "https://www.youtube.com/watch?v=I8PqBxVmpE4"
+      },
+      {
+        "title": "Say it correctly in English! The Confusing “ERR” Pronunciation",
+        "publishedAt": "2025-10-14T03:52:52Z",
+        "thumbnail": "https://i.ytimg.com/vi/WA9Gs7aeY3Q/hqdefault.jpg",
+        "viewCount": "39078",
+        "likeCount": "2106",
+        "commentCount": "116",
+        "url": "https://www.youtube.com/watch?v=WA9Gs7aeY3Q"
+      },
+      {
+        "title": "Learn 23 BIG Expressions in English",
+        "publishedAt": "2025-09-04T04:27:37Z",
+        "thumbnail": "https://i.ytimg.com/vi/zsZwHnOoMFE/hqdefault.jpg",
+        "viewCount": "37552",
+        "likeCount": "2023",
+        "commentCount": "89",
+        "url": "https://www.youtube.com/watch?v=zsZwHnOoMFE"
+      },
+      {
+        "title": "“Regime”, “sabotage”, “silhouette”: 26 French Words We Use in ENGLISH",
+        "publishedAt": "2025-07-15T03:56:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/YAwId6lUgKY/hqdefault.jpg",
+        "viewCount": "40975",
+        "likeCount": "2105",
+        "commentCount": "123",
+        "url": "https://www.youtube.com/watch?v=YAwId6lUgKY"
+      },
+      {
+        "title": "Learn 11 Odd Metaphors in English (What do they mean???)",
+        "publishedAt": "2025-05-28T03:59:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/KzPIt0n9K1M/hqdefault.jpg",
+        "viewCount": "45589",
+        "likeCount": "2368",
+        "commentCount": "120",
+        "url": "https://www.youtube.com/watch?v=KzPIt0n9K1M"
+      },
+      {
+        "title": "Confusing English Words: COST, PRICE, WORTH, VALUE 🤔",
+        "publishedAt": "2025-03-21T20:28:29Z",
+        "thumbnail": "https://i.ytimg.com/vi/WMrox8Z3_Zw/hqdefault.jpg",
+        "viewCount": "51861",
+        "likeCount": "3063",
+        "commentCount": "145",
+        "url": "https://www.youtube.com/watch?v=WMrox8Z3_Zw"
+      },
+      {
+        "title": "ALL the VOWEL SOUNDS in ENGLISH",
+        "publishedAt": "2025-02-07T04:34:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/8SuRGJXT2Lk/hqdefault.jpg",
+        "viewCount": "126067",
+        "likeCount": "4661",
+        "commentCount": "157",
+        "url": "https://www.youtube.com/watch?v=8SuRGJXT2Lk"
+      },
+      {
+        "title": "Learn English: LESS, FEWER, FEW, LITTLE, A FEW, A LITTLE, MORE",
+        "publishedAt": "2024-12-04T00:12:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/6GT51x1VtAs/hqdefault.jpg",
+        "viewCount": "66211",
+        "likeCount": "3807",
+        "commentCount": "204",
+        "url": "https://www.youtube.com/watch?v=6GT51x1VtAs"
+      },
+      {
+        "title": "Confusing English Words: NO, KNOW, NOW",
+        "publishedAt": "2024-10-22T03:24:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/JpmUjDlMNpA/hqdefault.jpg",
+        "viewCount": "52715",
+        "likeCount": "2798",
+        "commentCount": "201",
+        "url": "https://www.youtube.com/watch?v=JpmUjDlMNpA"
+      }
+    ]
+  },
+  {
+    "channel": "@engvidbenjamin",
+    "videos": [
+      {
+        "title": "Make Your English More EXPRESSIVE with these Phrases",
+        "publishedAt": "2026-01-11T05:00:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/TMveSzhDdyo/hqdefault.jpg",
+        "viewCount": "8823",
+        "likeCount": "324",
+        "commentCount": "15",
+        "url": "https://www.youtube.com/watch?v=TMveSzhDdyo"
+      },
+      {
+        "title": "Say More Than “Nice”: Vocabulary for Price, Quality, and Fashion",
+        "publishedAt": "2025-09-10T03:59:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/ryPIoGMxFfc/hqdefault.jpg",
+        "viewCount": "8157",
+        "likeCount": "289",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=ryPIoGMxFfc"
+      },
+      {
+        "title": "Speak Better English at Work: Practical English for Waiters, Servers, Baristas, and more!",
+        "publishedAt": "2025-08-08T03:47:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/PsWY8y4MpMs/hqdefault.jpg",
+        "viewCount": "11599",
+        "likeCount": "312",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=PsWY8y4MpMs"
+      },
+      {
+        "title": "Workplace English: Talking about Problems and Solutions",
+        "publishedAt": "2025-07-03T03:53:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/ilsU45d27uQ/hqdefault.jpg",
+        "viewCount": "10776",
+        "likeCount": "296",
+        "commentCount": "11",
+        "url": "https://www.youtube.com/watch?v=ilsU45d27uQ"
+      },
+      {
+        "title": "English for Meetings: How to Present New Ideas Strongly",
+        "publishedAt": "2025-05-18T03:59:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZAEvg_mAoGA/hqdefault.jpg",
+        "viewCount": "8523",
+        "likeCount": "238",
+        "commentCount": "5",
+        "url": "https://www.youtube.com/watch?v=ZAEvg_mAoGA"
+      },
+      {
+        "title": "Business English: How to get a meeting – *EXACTLY* what to write and say",
+        "publishedAt": "2025-04-25T03:57:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/gXXY3JCCrZ4/hqdefault.jpg",
+        "viewCount": "8608",
+        "likeCount": "191",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=gXXY3JCCrZ4"
+      },
+      {
+        "title": "English for Living in the UK: Setting up Internet, Mobile, TV Services",
+        "publishedAt": "2025-04-05T03:59:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/WhMCIFyI2g8/hqdefault.jpg",
+        "viewCount": "5713",
+        "likeCount": "179",
+        "commentCount": "7",
+        "url": "https://www.youtube.com/watch?v=WhMCIFyI2g8"
+      },
+      {
+        "title": "Professional English Vocabulary for Sales",
+        "publishedAt": "2025-03-11T03:57:38Z",
+        "thumbnail": "https://i.ytimg.com/vi/rpSf0O2zP5U/hqdefault.jpg",
+        "viewCount": "8405",
+        "likeCount": "232",
+        "commentCount": "7",
+        "url": "https://www.youtube.com/watch?v=rpSf0O2zP5U"
+      },
+      {
+        "title": "How to Ask for Payment in English: Polite & Professional Phrases",
+        "publishedAt": "2025-02-20T04:08:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/UNvVpzDIF1Q/hqdefault.jpg",
+        "viewCount": "11887",
+        "likeCount": "235",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=UNvVpzDIF1Q"
+      },
+      {
+        "title": "How to Remember Names: The F.R.L.R. Method",
+        "publishedAt": "2025-01-07T04:23:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/Sl-Jt9vevpQ/hqdefault.jpg",
+        "viewCount": "6238",
+        "likeCount": "157",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=Sl-Jt9vevpQ"
+      }
+    ]
+  },
+  {
+    "channel": "@bbclearningenglish",
+    "videos": [
+      {
+        "title": "Why are we all so stressed? ⏲️ 6 Minute English",
+        "publishedAt": "2026-04-23T13:29:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/QdE63sYqwd8/hqdefault.jpg",
+        "viewCount": "17487",
+        "likeCount": "1026",
+        "commentCount": "27",
+        "url": "https://www.youtube.com/watch?v=QdE63sYqwd8"
+      },
+      {
+        "title": "Future intentions: 'will do',  'going to do' or 'doing'? 🧐 Live English Class",
+        "publishedAt": "2026-04-23T13:14:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/2Ppnzg9isEE/hqdefault.jpg",
+        "viewCount": "11470",
+        "likeCount": "708",
+        "commentCount": "65",
+        "url": "https://www.youtube.com/watch?v=2Ppnzg9isEE"
+      },
+      {
+        "title": "Teotihuacan: Columbine-inspired shooting at Mexican pyramids: BBC Learning English from the News",
+        "publishedAt": "2026-04-22T13:33:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/2KtceipHusQ/hqdefault.jpg",
+        "viewCount": "13635",
+        "likeCount": "794",
+        "commentCount": "31",
+        "url": "https://www.youtube.com/watch?v=2KtceipHusQ"
+      },
+      {
+        "title": "🗣️ Pronunciation hack – ‘literally’ #shorts",
+        "publishedAt": "2026-04-22T09:01:12Z",
+        "thumbnail": "https://i.ytimg.com/vi/PgWPaMA3wfI/hqdefault.jpg",
+        "viewCount": "44471",
+        "likeCount": "1541",
+        "commentCount": "57",
+        "url": "https://www.youtube.com/watch?v=PgWPaMA3wfI"
+      },
+      {
+        "title": "BOX SET: English In A Minute 30 – TEN English lessons in 10 minutes!",
+        "publishedAt": "2026-04-21T09:00:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/irsx_Be019E/hqdefault.jpg",
+        "viewCount": "19942",
+        "likeCount": "930",
+        "commentCount": "31",
+        "url": "https://www.youtube.com/watch?v=irsx_Be019E"
+      },
+      {
+        "title": "English at the hairdresser’s #english #shorts",
+        "publishedAt": "2026-04-20T08:59:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/tX1kBhdf24I/hqdefault.jpg",
+        "viewCount": "50009",
+        "likeCount": "1223",
+        "commentCount": "39",
+        "url": "https://www.youtube.com/watch?v=tX1kBhdf24I"
+      },
+      {
+        "title": "Talking about confidence 💃😎🕺Real Easy English",
+        "publishedAt": "2026-04-19T10:00:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/gL6DT-PdLoQ/hqdefault.jpg",
+        "viewCount": "75158",
+        "likeCount": "3613",
+        "commentCount": "86",
+        "url": "https://www.youtube.com/watch?v=gL6DT-PdLoQ"
+      },
+      {
+        "title": "🇺🇸 American English and 🇬🇧 British English: vocabulary #shorts #vocabulary",
+        "publishedAt": "2026-04-17T10:15:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/gTp4mCWTNGI/hqdefault.jpg",
+        "viewCount": "118322",
+        "likeCount": "3867",
+        "commentCount": "144",
+        "url": "https://www.youtube.com/watch?v=gTp4mCWTNGI"
+      },
+      {
+        "title": "What have you been up to lately? 💬 Live English class",
+        "publishedAt": "2026-04-16T13:10:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/p2biQ9BnKF8/hqdefault.jpg",
+        "viewCount": "44229",
+        "likeCount": "1915",
+        "commentCount": "250",
+        "url": "https://www.youtube.com/watch?v=p2biQ9BnKF8"
+      },
+      {
+        "title": "Love the food you hate ⏲️ 6 Minute English",
+        "publishedAt": "2026-04-16T09:54:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/qI2LxF5sR2c/hqdefault.jpg",
+        "viewCount": "87892",
+        "likeCount": "2481",
+        "commentCount": "90",
+        "url": "https://www.youtube.com/watch?v=qI2LxF5sR2c"
+      }
+    ]
+  },
+  {
+    "channel": "@rachelsenglish",
+    "videos": [
+      {
+        "title": "How to Pronounce Tragic 😞",
+        "publishedAt": "2026-04-20T13:00:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/QtlbqjG4p2Q/hqdefault.jpg",
+        "viewCount": "11296",
+        "likeCount": "377",
+        "commentCount": "24",
+        "url": "https://www.youtube.com/watch?v=QtlbqjG4p2Q"
+      },
+      {
+        "title": "How to Pronounce Naked 🙈",
+        "publishedAt": "2026-04-18T13:00:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/1muzIPXP-zs/hqdefault.jpg",
+        "viewCount": "36852",
+        "likeCount": "666",
+        "commentCount": "69",
+        "url": "https://www.youtube.com/watch?v=1muzIPXP-zs"
+      },
+      {
+        "title": "Faux vs Foe: Same Pronunciation 🗣️",
+        "publishedAt": "2026-04-17T13:02:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/ybByOj0_Z9U/hqdefault.jpg",
+        "viewCount": "12131",
+        "likeCount": "243",
+        "commentCount": "37",
+        "url": "https://www.youtube.com/watch?v=ybByOj0_Z9U"
+      },
+      {
+        "title": "Speaking English: Critical Phrases and Pronunciation Secrets",
+        "publishedAt": "2026-04-14T13:01:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/chASjW5YYww/hqdefault.jpg",
+        "viewCount": "14556",
+        "likeCount": "562",
+        "commentCount": "61",
+        "url": "https://www.youtube.com/watch?v=chASjW5YYww"
+      },
+      {
+        "title": "How to Make the IH Sound ˒﹚)",
+        "publishedAt": "2026-04-13T13:00:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/H--y1strB_g/hqdefault.jpg",
+        "viewCount": "18361",
+        "likeCount": "555",
+        "commentCount": "28",
+        "url": "https://www.youtube.com/watch?v=H--y1strB_g"
+      },
+      {
+        "title": "Different Spellings for the AI Sound 🗣📢",
+        "publishedAt": "2026-04-11T13:00:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/60g19VarlYU/hqdefault.jpg",
+        "viewCount": "20777",
+        "likeCount": "563",
+        "commentCount": "21",
+        "url": "https://www.youtube.com/watch?v=60g19VarlYU"
+      },
+      {
+        "title": "Tuckered Out vs Tucked In — What’s the Difference? 🤷‍♂️",
+        "publishedAt": "2026-04-10T13:01:52Z",
+        "thumbnail": "https://i.ytimg.com/vi/uL_VMgn9XAQ/hqdefault.jpg",
+        "viewCount": "13941",
+        "likeCount": "515",
+        "commentCount": "25",
+        "url": "https://www.youtube.com/watch?v=uL_VMgn9XAQ"
+      },
+      {
+        "title": "Don’t Say This Wrong: Jejune 🙃",
+        "publishedAt": "2026-04-06T13:01:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/owNdAUGFfQ4/hqdefault.jpg",
+        "viewCount": "23294",
+        "likeCount": "516",
+        "commentCount": "37",
+        "url": "https://www.youtube.com/watch?v=owNdAUGFfQ4"
+      },
+      {
+        "title": "How to pronounce GIRLFRIEND 👧🏻",
+        "publishedAt": "2026-04-04T13:00:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/BQPe-2S_6vE/hqdefault.jpg",
+        "viewCount": "36394",
+        "likeCount": "1197",
+        "commentCount": "79",
+        "url": "https://www.youtube.com/watch?v=BQPe-2S_6vE"
+      },
+      {
+        "title": "Are you gonna get GONNA right?!?",
+        "publishedAt": "2026-03-31T13:00:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/CZF1oWJ4_sE/hqdefault.jpg",
+        "viewCount": "29838",
+        "likeCount": "1188",
+        "commentCount": "89",
+        "url": "https://www.youtube.com/watch?v=CZF1oWJ4_sE"
+      }
+    ]
+  },
+  {
+    "channel": "@speakenglishwithvanessa",
+    "videos": [
+      {
+        "title": "THINK and SPEAK in English: Your Weekend Plans",
+        "publishedAt": "2026-04-17T13:01:43Z",
+        "thumbnail": "https://i.ytimg.com/vi/qfumAs6o-xc/hqdefault.jpg",
+        "viewCount": "67629",
+        "likeCount": "3140",
+        "commentCount": "112",
+        "url": "https://www.youtube.com/watch?v=qfumAs6o-xc"
+      },
+      {
+        "title": "90% FAIL this Vocabulary Test, will you?",
+        "publishedAt": "2026-04-10T12:59:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/Wd_m0ugpcTs/hqdefault.jpg",
+        "viewCount": "43883",
+        "likeCount": "2077",
+        "commentCount": "71",
+        "url": "https://www.youtube.com/watch?v=Wd_m0ugpcTs"
+      },
+      {
+        "title": "Real English Conversation: English listening practice",
+        "publishedAt": "2026-04-03T12:59:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/N5dKOWSHils/hqdefault.jpg",
+        "viewCount": "101221",
+        "likeCount": "3727",
+        "commentCount": "132",
+        "url": "https://www.youtube.com/watch?v=N5dKOWSHils"
+      },
+      {
+        "title": "Listen and Repeat: Speak with me in English",
+        "publishedAt": "2026-03-27T12:59:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/9QhCQapgmFk/hqdefault.jpg",
+        "viewCount": "102065",
+        "likeCount": "4895",
+        "commentCount": "156",
+        "url": "https://www.youtube.com/watch?v=9QhCQapgmFk"
+      },
+      {
+        "title": "Speak With Me: English Speaking Practice",
+        "publishedAt": "2026-03-20T12:58:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/tnHANfZHKqQ/hqdefault.jpg",
+        "viewCount": "90838",
+        "likeCount": "3535",
+        "commentCount": "122",
+        "url": "https://www.youtube.com/watch?v=tnHANfZHKqQ"
+      },
+      {
+        "title": "Daily Life Vocabulary You NEED to Know",
+        "publishedAt": "2026-03-13T12:59:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/N_FFrgEioFM/hqdefault.jpg",
+        "viewCount": "86478",
+        "likeCount": "3699",
+        "commentCount": "98",
+        "url": "https://www.youtube.com/watch?v=N_FFrgEioFM"
+      },
+      {
+        "title": "Speak With Me in English: Intermediate Speaking Lesson",
+        "publishedAt": "2026-03-06T13:58:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/FlAyCnxwEEQ/hqdefault.jpg",
+        "viewCount": "67279",
+        "likeCount": "3248",
+        "commentCount": "154",
+        "url": "https://www.youtube.com/watch?v=FlAyCnxwEEQ"
+      },
+      {
+        "title": "Daily Life Vocabulary You NEED to Know",
+        "publishedAt": "2026-02-27T13:58:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/y2_BbVC5CBc/hqdefault.jpg",
+        "viewCount": "85197",
+        "likeCount": "3610",
+        "commentCount": "115",
+        "url": "https://www.youtube.com/watch?v=y2_BbVC5CBc"
+      },
+      {
+        "title": "My Morning Routine: English Vocabulary Lesson",
+        "publishedAt": "2026-02-20T13:59:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/HrG3WXJheyQ/hqdefault.jpg",
+        "viewCount": "165856",
+        "likeCount": "8568",
+        "commentCount": "230",
+        "url": "https://www.youtube.com/watch?v=HrG3WXJheyQ"
+      },
+      {
+        "title": "1 Hour English Vocabulary Lesson",
+        "publishedAt": "2026-02-13T13:59:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/QdEhMAlQ8wI/hqdefault.jpg",
+        "viewCount": "82765",
+        "likeCount": "3018",
+        "commentCount": "108",
+        "url": "https://www.youtube.com/watch?v=QdEhMAlQ8wI"
+      }
+    ]
+  },
+  {
+    "channel": "@englishclass101",
+    "videos": [
+      {
+        "title": "Key Phrases for Eating at a Restaurant with a Friend in English",
+        "publishedAt": "2026-04-23T14:48:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/DEo3KL53JaE/hqdefault.jpg",
+        "viewCount": "4112",
+        "likeCount": "281",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=DEo3KL53JaE"
+      },
+      {
+        "title": "Get Your FREE PDF Lessons for English Beginners",
+        "publishedAt": "2026-04-23T09:30:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/UgxVDIf-DZ0/hqdefault.jpg",
+        "viewCount": "2040",
+        "likeCount": "81",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=UgxVDIf-DZ0"
+      },
+      {
+        "title": "Next 100 of the Core 2000 Words – Build Real English Vocabulary Fast!",
+        "publishedAt": "2026-04-21T09:56:41Z",
+        "thumbnail": "https://i.ytimg.com/vi/d1gGr4xW0vA/hqdefault.jpg",
+        "viewCount": "6303",
+        "likeCount": "309",
+        "commentCount": "21",
+        "url": "https://www.youtube.com/watch?v=d1gGr4xW0vA"
+      },
+      {
+        "title": "Ends Tonight! Just $6/Month for Unlimited English Learning",
+        "publishedAt": "2026-04-21T02:06:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/gYqmPmkQILk/hqdefault.jpg",
+        "viewCount": "2962",
+        "likeCount": "76",
+        "commentCount": "5",
+        "url": "https://www.youtube.com/watch?v=gYqmPmkQILk"
+      },
+      {
+        "title": "6 Ways to Use the Word \"As\" | Learn English Grammar for Beginners",
+        "publishedAt": "2026-04-19T09:30:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/_fjRek2wiQ0/hqdefault.jpg",
+        "viewCount": "6651",
+        "likeCount": "450",
+        "commentCount": "22",
+        "url": "https://www.youtube.com/watch?v=_fjRek2wiQ0"
+      },
+      {
+        "title": "Learn English with Alisha (Past Livestreams) - Want to Deliver Nuance",
+        "publishedAt": "2026-04-18T09:30:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/bmjHGN5mk6M/hqdefault.jpg",
+        "viewCount": "5759",
+        "likeCount": "216",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=bmjHGN5mk6M"
+      },
+      {
+        "title": "Your Monthly Dose of English - Best of March 2026",
+        "publishedAt": "2026-04-17T09:37:45Z",
+        "thumbnail": "https://i.ytimg.com/vi/X6LUepxhs_A/hqdefault.jpg",
+        "viewCount": "4502",
+        "likeCount": "173",
+        "commentCount": "2",
+        "url": "https://www.youtube.com/watch?v=X6LUepxhs_A"
+      },
+      {
+        "title": "English Reading Practice: The Wolf in Sheep's Clothing 🇺🇸",
+        "publishedAt": "2026-04-16T14:57:54Z",
+        "thumbnail": "https://i.ytimg.com/vi/LVUCxqszvw4/hqdefault.jpg",
+        "viewCount": "5764",
+        "likeCount": "274",
+        "commentCount": "24",
+        "url": "https://www.youtube.com/watch?v=LVUCxqszvw4"
+      },
+      {
+        "title": "Want to Learn English Anywhere, Anytime on Your Mobile and For FREE?",
+        "publishedAt": "2026-04-16T10:20:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/dHbt_TBL0YE/hqdefault.jpg",
+        "viewCount": "2822",
+        "likeCount": "91",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=dHbt_TBL0YE"
+      },
+      {
+        "title": "Learn English Words with 100s of Free Vocabulary & Phrase Lists",
+        "publishedAt": "2026-04-13T10:52:40Z",
+        "thumbnail": "https://i.ytimg.com/vi/mwAU2Jl09rI/hqdefault.jpg",
+        "viewCount": "3715",
+        "likeCount": "141",
+        "commentCount": "6",
+        "url": "https://www.youtube.com/watch?v=mwAU2Jl09rI"
+      }
+    ]
+  },
+  {
+    "channel": "@englishwithlucy",
+    "videos": [
+      {
+        "title": "Don't just 'eat'... try these 5 delicious verbs instead!",
+        "publishedAt": "2026-04-23T12:31:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/u0WoiWEhvRs/hqdefault.jpg",
+        "viewCount": "76651",
+        "likeCount": "2680",
+        "commentCount": "57",
+        "url": "https://www.youtube.com/watch?v=u0WoiWEhvRs"
+      },
+      {
+        "title": "Unclear time expressions that British people use constantly 🇬🇧",
+        "publishedAt": "2026-04-20T12:30:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/UOEAy2Swwho/hqdefault.jpg",
+        "viewCount": "67451",
+        "likeCount": "2605",
+        "commentCount": "41",
+        "url": "https://www.youtube.com/watch?v=UOEAy2Swwho"
+      },
+      {
+        "title": "Confusing English pairs: flammable vs inflammable explained!",
+        "publishedAt": "2026-04-17T12:30:00Z",
+        "thumbnail": "https://i.ytimg.com/vi/a0XrCYk17kc/hqdefault.jpg",
+        "viewCount": "309640",
+        "likeCount": "8732",
+        "commentCount": "286",
+        "url": "https://www.youtube.com/watch?v=a0XrCYk17kc"
+      },
+      {
+        "title": "Are YOU Saying it WRONG? 5 Highly Common Mistakes in English",
+        "publishedAt": "2026-04-16T13:27:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/5ESnb5R1SBA/hqdefault.jpg",
+        "viewCount": "122175",
+        "likeCount": "5238",
+        "commentCount": "207",
+        "url": "https://www.youtube.com/watch?v=5ESnb5R1SBA"
+      },
+      {
+        "title": "Cooking vocabulary challenge: Can you name these actions?",
+        "publishedAt": "2026-04-14T12:32:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/s5MQS0PfK_k/hqdefault.jpg",
+        "viewCount": "179451",
+        "likeCount": "5660",
+        "commentCount": "82",
+        "url": "https://www.youtube.com/watch?v=s5MQS0PfK_k"
+      },
+      {
+        "title": "Watch how the same idea transforms from B1 to C2!",
+        "publishedAt": "2026-04-10T12:30:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/Kl2TjRvnBtQ/hqdefault.jpg",
+        "viewCount": "312232",
+        "likeCount": "9251",
+        "commentCount": "223",
+        "url": "https://www.youtube.com/watch?v=Kl2TjRvnBtQ"
+      },
+      {
+        "title": "SOME and ANY - Complete English Grammar Guide",
+        "publishedAt": "2026-04-09T11:41:53Z",
+        "thumbnail": "https://i.ytimg.com/vi/1UFou72pWWc/hqdefault.jpg",
+        "viewCount": "57043",
+        "likeCount": "3263",
+        "commentCount": "190",
+        "url": "https://www.youtube.com/watch?v=1UFou72pWWc"
+      },
+      {
+        "title": "Quick family vocab check!",
+        "publishedAt": "2026-04-07T13:01:40Z",
+        "thumbnail": "https://i.ytimg.com/vi/fc7wDYNPwZw/hqdefault.jpg",
+        "viewCount": "139977",
+        "likeCount": "3301",
+        "commentCount": "124",
+        "url": "https://www.youtube.com/watch?v=fc7wDYNPwZw"
+      },
+      {
+        "title": "6 British adjectives you need to start using!",
+        "publishedAt": "2026-04-04T12:30:58Z",
+        "thumbnail": "https://i.ytimg.com/vi/k-S0mAybyco/hqdefault.jpg",
+        "viewCount": "228459",
+        "likeCount": "7578",
+        "commentCount": "153",
+        "url": "https://www.youtube.com/watch?v=k-S0mAybyco"
+      },
+      {
+        "title": "If you know these 75 words and phrases, your English is OUTSTANDING.",
+        "publishedAt": "2026-04-02T08:07:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/4jt5kFM3MJY/hqdefault.jpg",
+        "viewCount": "103091",
+        "likeCount": "4598",
+        "commentCount": "184",
+        "url": "https://www.youtube.com/watch?v=4jt5kFM3MJY"
+      }
+    ]
+  },
+  {
+    "channel": "@mmmenglish_emma",
+    "videos": [
+      {
+        "title": "BY FROM OF - what’s the difference? English prepositions",
+        "publishedAt": "2023-12-05T00:29:55Z",
+        "thumbnail": "https://i.ytimg.com/vi/h2ZNCKp44R8/hqdefault.jpg",
+        "viewCount": "240457",
+        "likeCount": "8541",
+        "commentCount": "145",
+        "url": "https://www.youtube.com/watch?v=h2ZNCKp44R8"
+      },
+      {
+        "title": "What's The Difference? English Prepositions BY | FROM | OF",
+        "publishedAt": "2023-11-28T12:00:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZiMhsXhtBOs/hqdefault.jpg",
+        "viewCount": "669709",
+        "likeCount": "15831",
+        "commentCount": "808",
+        "url": "https://www.youtube.com/watch?v=ZiMhsXhtBOs"
+      },
+      {
+        "title": "Australian vs. American English Pronunciation 🇦🇺🇺🇸 Part 2!",
+        "publishedAt": "2023-11-23T12:00:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/F4eSac4uRNc/hqdefault.jpg",
+        "viewCount": "151503",
+        "likeCount": "5682",
+        "commentCount": "102",
+        "url": "https://www.youtube.com/watch?v=F4eSac4uRNc"
+      },
+      {
+        "title": "Common English Phrases to Keep Your Conversation Going!",
+        "publishedAt": "2023-11-21T12:34:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/Wwv4IgL0aJY/hqdefault.jpg",
+        "viewCount": "612110",
+        "likeCount": "21254",
+        "commentCount": "599",
+        "url": "https://www.youtube.com/watch?v=Wwv4IgL0aJY"
+      },
+      {
+        "title": "50 TONGUE TWISTERS in English for Pronunciation Practice!",
+        "publishedAt": "2023-11-13T12:00:49Z",
+        "thumbnail": "https://i.ytimg.com/vi/xPXu5GoUHH0/hqdefault.jpg",
+        "viewCount": "985421",
+        "likeCount": "26417",
+        "commentCount": "816",
+        "url": "https://www.youtube.com/watch?v=xPXu5GoUHH0"
+      },
+      {
+        "title": "How to start a conversation | 3 important questions!",
+        "publishedAt": "2023-11-07T12:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/6pqTTy7WpRM/hqdefault.jpg",
+        "viewCount": "197205",
+        "likeCount": "5261",
+        "commentCount": "244",
+        "url": "https://www.youtube.com/watch?v=6pqTTy7WpRM"
+      },
+      {
+        "title": "English Listening Practice | Story + Dictation",
+        "publishedAt": "2023-10-31T12:11:09Z",
+        "thumbnail": "https://i.ytimg.com/vi/JtSagQoXdZI/hqdefault.jpg",
+        "viewCount": "181253",
+        "likeCount": "4305",
+        "commentCount": "239",
+        "url": "https://www.youtube.com/watch?v=JtSagQoXdZI"
+      },
+      {
+        "title": "Australian vs American English #Pronunciation",
+        "publishedAt": "2023-10-24T12:00:42Z",
+        "thumbnail": "https://i.ytimg.com/vi/oouPqmLbYro/hqdefault.jpg",
+        "viewCount": "162539",
+        "likeCount": "6406",
+        "commentCount": "147",
+        "url": "https://www.youtube.com/watch?v=oouPqmLbYro"
+      },
+      {
+        "title": "How to OVERCOME SHYNESS & speak confidently in English",
+        "publishedAt": "2023-10-17T12:00:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/6vug8bnKbfQ/hqdefault.jpg",
+        "viewCount": "95345",
+        "likeCount": "3566",
+        "commentCount": "279",
+        "url": "https://www.youtube.com/watch?v=6vug8bnKbfQ"
+      },
+      {
+        "title": "3 ways English learners shoot themselves in the foot!",
+        "publishedAt": "2023-10-10T12:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/aJX5jg7cW5M/hqdefault.jpg",
+        "viewCount": "78898",
+        "likeCount": "2286",
+        "commentCount": "193",
+        "url": "https://www.youtube.com/watch?v=aJX5jg7cW5M"
+      }
+    ]
+  },
+  {
+    "channel": "@voalearningenglish",
+    "videos": [
+      {
+        "title": "Everyday Grammar Video: Ramen, A Popular Food in Japan",
+        "publishedAt": "2025-04-29T22:09:16Z",
+        "thumbnail": "https://i.ytimg.com/vi/q4PkX8_xUYk/hqdefault.jpg",
+        "viewCount": "98948",
+        "likeCount": "2365",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=q4PkX8_xUYk"
+      },
+      {
+        "title": "How to Pronounce: Fun Practice - Exaggeration Activities",
+        "publishedAt": "2025-04-27T22:05:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/YfvD3KpHY2A/hqdefault.jpg",
+        "viewCount": "23846",
+        "likeCount": "541",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=YfvD3KpHY2A"
+      },
+      {
+        "title": "Everyday Grammar Video: A Popular Person in Turkey",
+        "publishedAt": "2025-04-22T22:10:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/41jE1ijuf_4/hqdefault.jpg",
+        "viewCount": "12381",
+        "likeCount": "344",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=41jE1ijuf_4"
+      },
+      {
+        "title": "How to Pronounce: Self-monitoring and improvement",
+        "publishedAt": "2025-04-20T22:05:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/eieV6WIz-YM/hqdefault.jpg",
+        "viewCount": "10789",
+        "likeCount": "254",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=eieV6WIz-YM"
+      },
+      {
+        "title": "How to Pronounce: Studying pauses and connections",
+        "publishedAt": "2025-04-13T22:06:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/uuYpEPqCYYs/hqdefault.jpg",
+        "viewCount": "13892",
+        "likeCount": "320",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=uuYpEPqCYYs"
+      },
+      {
+        "title": "How to Pronounce: Difficult terms - Artificial General Intelligence",
+        "publishedAt": "2025-04-06T22:08:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/3xdy_2SUo4Q/hqdefault.jpg",
+        "viewCount": "11855",
+        "likeCount": "328",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=3xdy_2SUo4Q"
+      },
+      {
+        "title": "How to Pronounce: Stress and listening - Artificial intelligence",
+        "publishedAt": "2025-03-30T22:10:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/VFhlD8kt6sQ/hqdefault.jpg",
+        "viewCount": "15291",
+        "likeCount": "327",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=VFhlD8kt6sQ"
+      },
+      {
+        "title": "Everyday Grammar Video: Feedback on Writing Submissions",
+        "publishedAt": "2025-03-25T22:05:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/0q6nFVaJ2MY/hqdefault.jpg",
+        "viewCount": "7325",
+        "likeCount": "231",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=0q6nFVaJ2MY"
+      },
+      {
+        "title": "How to Pronounce: Science and Technology: 'Asteroid'",
+        "publishedAt": "2025-03-23T22:03:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/MJUKtPaGlSQ/hqdefault.jpg",
+        "viewCount": "7914",
+        "likeCount": "229",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=MJUKtPaGlSQ"
+      },
+      {
+        "title": "Everyday Grammar Video: 'Population' in Sentences",
+        "publishedAt": "2025-03-18T22:01:16Z",
+        "thumbnail": "https://i.ytimg.com/vi/vyPofYmxIJA/hqdefault.jpg",
+        "viewCount": "27673",
+        "likeCount": "558",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=vyPofYmxIJA"
+      }
+    ]
+  },
+  {
+    "channel": "Thomas Frank",
+    "videos": [
+      {
+        "title": "I never dread this workout",
+        "publishedAt": "2024-06-30T23:40:52Z",
+        "thumbnail": "https://i.ytimg.com/vi/vhqq4U3mnNQ/hqdefault.jpg",
+        "viewCount": "26081",
+        "likeCount": "812",
+        "commentCount": "26",
+        "url": "https://www.youtube.com/watch?v=vhqq4U3mnNQ"
+      },
+      {
+        "title": "The ultimate guide to YouTube sponsorships and brand deals",
+        "publishedAt": "2024-03-22T15:39:14Z",
+        "thumbnail": "https://i.ytimg.com/vi/A5oYUQ-pmQQ/hqdefault.jpg",
+        "viewCount": "38878",
+        "likeCount": "981",
+        "commentCount": "103",
+        "url": "https://www.youtube.com/watch?v=A5oYUQ-pmQQ"
+      },
+      {
+        "title": "Why are you scrolling your phone in bed AGAIN?",
+        "publishedAt": "2024-03-20T14:19:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/uED1nKnLBYo/hqdefault.jpg",
+        "viewCount": "73291",
+        "likeCount": "4555",
+        "commentCount": "250",
+        "url": "https://www.youtube.com/watch?v=uED1nKnLBYo"
+      },
+      {
+        "title": "How to get everything you want this year",
+        "publishedAt": "2024-01-26T15:56:40Z",
+        "thumbnail": "https://i.ytimg.com/vi/QUiXERZGLXA/hqdefault.jpg",
+        "viewCount": "159514",
+        "likeCount": "5912",
+        "commentCount": "208",
+        "url": "https://www.youtube.com/watch?v=QUiXERZGLXA"
+      },
+      {
+        "title": "I learned to code from scratch in 1 year. Here's how.",
+        "publishedAt": "2023-11-24T18:03:38Z",
+        "thumbnail": "https://i.ytimg.com/vi/NpUuuT_EzSs/hqdefault.jpg",
+        "viewCount": "456336",
+        "likeCount": "17898",
+        "commentCount": "422",
+        "url": "https://www.youtube.com/watch?v=NpUuuT_EzSs"
+      },
+      {
+        "title": "I left my 2 million-subscriber channel. My income doubled.",
+        "publishedAt": "2023-10-20T16:25:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/EGoiYHUvwSQ/hqdefault.jpg",
+        "viewCount": "237267",
+        "likeCount": "9003",
+        "commentCount": "656",
+        "url": "https://www.youtube.com/watch?v=EGoiYHUvwSQ"
+      },
+      {
+        "title": "How to Break Your Phone Addiction",
+        "publishedAt": "2022-03-01T02:11:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/j3Thqrcw_Ag/hqdefault.jpg",
+        "viewCount": "756092",
+        "likeCount": "28425",
+        "commentCount": "1298",
+        "url": "https://www.youtube.com/watch?v=j3Thqrcw_Ag"
+      },
+      {
+        "title": "The 10 Best Windows Productivity Apps in 2022",
+        "publishedAt": "2022-02-26T19:16:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/BQKfAxFgi-E/hqdefault.jpg",
+        "viewCount": "825790",
+        "likeCount": "25015",
+        "commentCount": "482",
+        "url": "https://www.youtube.com/watch?v=BQKfAxFgi-E"
+      },
+      {
+        "title": "Watch this if you’re having an “off day”",
+        "publishedAt": "2022-02-01T01:40:57Z",
+        "thumbnail": "https://i.ytimg.com/vi/I6XFCl2lHbg/hqdefault.jpg",
+        "viewCount": "190552",
+        "likeCount": "12477",
+        "commentCount": "342",
+        "url": "https://www.youtube.com/watch?v=I6XFCl2lHbg"
+      },
+      {
+        "title": "Why it's so hard to stick to your workout routine",
+        "publishedAt": "2022-01-31T01:14:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/cNUPmmc5b3c/hqdefault.jpg",
+        "viewCount": "151392",
+        "likeCount": "6867",
+        "commentCount": "222",
+        "url": "https://www.youtube.com/watch?v=cNUPmmc5b3c"
+      }
+    ]
+  },
+  {
+    "channel": "@freecodecamp",
+    "videos": [
+      {
+        "title": "Sliding Window Algorithm for Tech Interviews - Full Course",
+        "publishedAt": "2026-04-23T12:50:32Z",
+        "thumbnail": "https://i.ytimg.com/vi/tLsoelNl3To/hqdefault.jpg",
+        "viewCount": "10633",
+        "likeCount": "542",
+        "commentCount": "13",
+        "url": "https://www.youtube.com/watch?v=tLsoelNl3To"
+      },
+      {
+        "title": "If you're a junior developer, Swyx explains how you need to step up",
+        "publishedAt": "2026-04-23T11:52:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/8wGw-7yHPl0/hqdefault.jpg",
+        "viewCount": "3809",
+        "likeCount": "49",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=8wGw-7yHPl0"
+      },
+      {
+        "title": "Tired of switching between C# for the back end and JS for the front end?",
+        "publishedAt": "2026-04-22T12:29:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/KaKcLgj5GCc/hqdefault.jpg",
+        "viewCount": "7240",
+        "likeCount": "79",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=KaKcLgj5GCc"
+      },
+      {
+        "title": "3D Web Development with Blender and Three.js – Create a Cozy Café Portfolio",
+        "publishedAt": "2026-04-22T10:01:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/ozWrlHQGuvI/hqdefault.jpg",
+        "viewCount": "19350",
+        "likeCount": "1035",
+        "commentCount": "35",
+        "url": "https://www.youtube.com/watch?v=ozWrlHQGuvI"
+      },
+      {
+        "title": "In learning, information often isn't the issue. It's knowing what's useful, and what feels wrong.",
+        "publishedAt": "2026-04-21T12:05:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/8j6C-3FooN8/hqdefault.jpg",
+        "viewCount": "4024",
+        "likeCount": "38",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=8j6C-3FooN8"
+      },
+      {
+        "title": "Automate Your Life in 4 hours – Agent and Automation Zapier Course",
+        "publishedAt": "2026-04-21T10:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/-leIp449qXA/hqdefault.jpg",
+        "viewCount": "29301",
+        "likeCount": "1154",
+        "commentCount": "39",
+        "url": "https://www.youtube.com/watch?v=-leIp449qXA"
+      },
+      {
+        "title": "Here's a little Monday Motivation for you.",
+        "publishedAt": "2026-04-20T12:17:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/6XORL8Bsm9w/hqdefault.jpg",
+        "viewCount": "5725",
+        "likeCount": "48",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=6XORL8Bsm9w"
+      },
+      {
+        "title": "What motivates people to keep contributing to open source projects?",
+        "publishedAt": "2026-04-19T12:43:30Z",
+        "thumbnail": "https://i.ytimg.com/vi/F-d5DyFo3Cg/hqdefault.jpg",
+        "viewCount": "3524",
+        "likeCount": "28",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=F-d5DyFo3Cg"
+      },
+      {
+        "title": "Software itself has no value. It's the solutions that are valuable, and that will sell.",
+        "publishedAt": "2026-04-18T12:32:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/04LPpj7lQlA/hqdefault.jpg",
+        "viewCount": "5101",
+        "likeCount": "47",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=04LPpj7lQlA"
+      },
+      {
+        "title": "If you're job hunting, build software that removes friction from your own work",
+        "publishedAt": "2026-04-17T12:18:39Z",
+        "thumbnail": "https://i.ytimg.com/vi/xGW-g1KIU9M/hqdefault.jpg",
+        "viewCount": "8070",
+        "likeCount": "73",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=xGW-g1KIU9M"
+      }
+    ]
+  },
+  {
+    "channel": "@cs50",
+    "videos": [
+      {
+        "title": "CS50 2D - Lecture 2 - Breakout",
+        "publishedAt": "2026-04-23T13:03:11Z",
+        "thumbnail": "https://i.ytimg.com/vi/TgZBoMRKSzk/hqdefault.jpg",
+        "viewCount": "2889",
+        "likeCount": "97",
+        "commentCount": "3",
+        "url": "https://www.youtube.com/watch?v=TgZBoMRKSzk"
+      },
+      {
+        "title": "CS50 2D - Lecture 1 - Flappy Bird",
+        "publishedAt": "2026-04-22T12:59:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/2rboPz0plD8/hqdefault.jpg",
+        "viewCount": "6979",
+        "likeCount": "303",
+        "commentCount": "10",
+        "url": "https://www.youtube.com/watch?v=2rboPz0plD8"
+      },
+      {
+        "title": "CS50 2D - Lecture 0 - Pong",
+        "publishedAt": "2026-04-21T13:00:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/MY2y3dDwgMk/hqdefault.jpg",
+        "viewCount": "21682",
+        "likeCount": "781",
+        "commentCount": "47",
+        "url": "https://www.youtube.com/watch?v=MY2y3dDwgMk"
+      },
+      {
+        "title": "CS50 2D - Introduction",
+        "publishedAt": "2026-04-20T15:28:16Z",
+        "thumbnail": "https://i.ytimg.com/vi/4oaN94oOdTM/hqdefault.jpg",
+        "viewCount": "25764",
+        "likeCount": "1367",
+        "commentCount": "68",
+        "url": "https://www.youtube.com/watch?v=4oaN94oOdTM"
+      },
+      {
+        "title": "🤫",
+        "publishedAt": "2026-04-17T13:45:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/_wr83DZsKA8/hqdefault.jpg",
+        "viewCount": "7116",
+        "likeCount": "186",
+        "commentCount": "9",
+        "url": "https://www.youtube.com/watch?v=_wr83DZsKA8"
+      },
+      {
+        "title": "Why You're Still Better Than AI at Editing Documents - CS50 Tech Talk",
+        "publishedAt": "2026-04-10T14:12:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/FqB_4QY6x6g/hqdefault.jpg",
+        "viewCount": "4709",
+        "likeCount": "162",
+        "commentCount": "7",
+        "url": "https://www.youtube.com/watch?v=FqB_4QY6x6g"
+      },
+      {
+        "title": "CS50 Outtakes 2013",
+        "publishedAt": "2026-03-30T13:32:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/vYI14RbX-tY/hqdefault.jpg",
+        "viewCount": "5382",
+        "likeCount": "hidden",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=vYI14RbX-tY"
+      },
+      {
+        "title": "CS50 for Business - Lecture 8 - Securing Systems",
+        "publishedAt": "2026-03-22T13:00:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/9KoYnFuHYL8/hqdefault.jpg",
+        "viewCount": "10086",
+        "likeCount": "331",
+        "commentCount": "12",
+        "url": "https://www.youtube.com/watch?v=9KoYnFuHYL8"
+      },
+      {
+        "title": "CS50 for Business - Lecture 7 - Deploying Databases",
+        "publishedAt": "2026-03-21T13:00:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/OZE2t3-M0ps/hqdefault.jpg",
+        "viewCount": "12967",
+        "likeCount": "389",
+        "commentCount": "8",
+        "url": "https://www.youtube.com/watch?v=OZE2t3-M0ps"
+      },
+      {
+        "title": "CS50 for Business - Lecture 6 - Weaving the Web",
+        "publishedAt": "2026-03-20T13:00:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/O3jwILfJXkY/hqdefault.jpg",
+        "viewCount": "6386",
+        "likeCount": "190",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=O3jwILfJXkY"
+      }
+    ]
+  },
+  {
+    "channel": "@crashcourse",
+    "videos": [
+      {
+        "title": "Earth's Crust and Mantle Explained: Crash Course Geology #3",
+        "publishedAt": "2026-04-23T16:01:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/bouvNyq8xCY/hqdefault.jpg",
+        "viewCount": "9636",
+        "likeCount": "964",
+        "commentCount": "41",
+        "url": "https://www.youtube.com/watch?v=bouvNyq8xCY"
+      },
+      {
+        "title": "How did Earth form?: Crash Course Geology #2",
+        "publishedAt": "2026-04-16T16:00:04Z",
+        "thumbnail": "https://i.ytimg.com/vi/3JdpD3X2Md8/hqdefault.jpg",
+        "viewCount": "29605",
+        "likeCount": "1992",
+        "commentCount": "49",
+        "url": "https://www.youtube.com/watch?v=3JdpD3X2Md8"
+      },
+      {
+        "title": "Intro to Geology: Crash Course Geology #1",
+        "publishedAt": "2026-04-09T16:01:44Z",
+        "thumbnail": "https://i.ytimg.com/vi/ypH6dR7YGfU/hqdefault.jpg",
+        "viewCount": "38448",
+        "likeCount": "3325",
+        "commentCount": "192",
+        "url": "https://www.youtube.com/watch?v=ypH6dR7YGfU"
+      },
+      {
+        "title": "Crash Course Geology Preview",
+        "publishedAt": "2026-04-02T16:01:25Z",
+        "thumbnail": "https://i.ytimg.com/vi/YokkwzdZX2A/hqdefault.jpg",
+        "viewCount": "27246",
+        "likeCount": "2376",
+        "commentCount": "158",
+        "url": "https://www.youtube.com/watch?v=YokkwzdZX2A"
+      },
+      {
+        "title": "What Happens When Science Clashes with the Public?: Crash Course Scientific Thinking #7",
+        "publishedAt": "2026-03-17T16:00:30Z",
+        "thumbnail": "https://i.ytimg.com/vi/NaMcw8_10Yg/hqdefault.jpg",
+        "viewCount": "152292",
+        "likeCount": "8059",
+        "commentCount": "146",
+        "url": "https://www.youtube.com/watch?v=NaMcw8_10Yg"
+      },
+      {
+        "title": "Evaluating Sources & Fact Checking: Crash Course Scientific Thinking #6",
+        "publishedAt": "2026-03-10T16:00:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/Fm0MpfKIs5w/hqdefault.jpg",
+        "viewCount": "168015",
+        "likeCount": "9399",
+        "commentCount": "170",
+        "url": "https://www.youtube.com/watch?v=Fm0MpfKIs5w"
+      },
+      {
+        "title": "How Scientists Build Consensus: Crash Course Scientific Thinking #5",
+        "publishedAt": "2026-03-03T17:00:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/9wSAeV0xX0M/hqdefault.jpg",
+        "viewCount": "69290",
+        "likeCount": "3583",
+        "commentCount": "67",
+        "url": "https://www.youtube.com/watch?v=9wSAeV0xX0M"
+      },
+      {
+        "title": "Reading & Writing Latin American literature: Crash Course Latin American Literature #13",
+        "publishedAt": "2026-02-26T17:00:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/AA63Dd58fFc/hqdefault.jpg",
+        "viewCount": "17237",
+        "likeCount": "1041",
+        "commentCount": "42",
+        "url": "https://www.youtube.com/watch?v=AA63Dd58fFc"
+      },
+      {
+        "title": "Film & Literature: Crash Course Latin American Literature #12",
+        "publishedAt": "2026-02-19T17:00:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/-Mewx3GjK2A/hqdefault.jpg",
+        "viewCount": "16883",
+        "likeCount": "891",
+        "commentCount": "25",
+        "url": "https://www.youtube.com/watch?v=-Mewx3GjK2A"
+      },
+      {
+        "title": "Peer Review and the Quest for Truth: Crash Course Scientific Thinking #4",
+        "publishedAt": "2026-02-17T17:01:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/qsgjKBvxnYA/hqdefault.jpg",
+        "viewCount": "89575",
+        "likeCount": "3990",
+        "commentCount": "76",
+        "url": "https://www.youtube.com/watch?v=qsgjKBvxnYA"
+      }
+    ]
+  },
+  {
+    "channel": "@learnskillsdaily",
+    "videos": [
+      {
+        "title": "Illustrator - LIVE",
+        "publishedAt": "2026-04-23T18:56:36Z",
+        "thumbnail": "https://i.ytimg.com/vi/UDysiunRmD0/hqdefault.jpg",
+        "viewCount": "944",
+        "likeCount": "50",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=UDysiunRmD0"
+      },
+      {
+        "title": "Claude For Work - LIVE",
+        "publishedAt": "2026-04-23T00:05:49Z",
+        "thumbnail": "https://i.ytimg.com/vi/weWQYvQ9mOs/hqdefault.jpg",
+        "viewCount": "1378",
+        "likeCount": "61",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=weWQYvQ9mOs"
+      },
+      {
+        "title": "Generative AI For Finance Tutorial",
+        "publishedAt": "2026-04-21T23:58:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/StMulW7SOmM/hqdefault.jpg",
+        "viewCount": "1",
+        "likeCount": "4",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=StMulW7SOmM"
+      },
+      {
+        "title": "Generative AI Basics Tutorial",
+        "publishedAt": "2026-04-21T23:24:56Z",
+        "thumbnail": "https://i.ytimg.com/vi/cocGYL7mRYk/hqdefault.jpg",
+        "viewCount": "4",
+        "likeCount": "3",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=cocGYL7mRYk"
+      },
+      {
+        "title": "Word Intermediate - LIVE",
+        "publishedAt": "2026-04-20T18:06:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/iDBxhxgO3pk/hqdefault.jpg",
+        "viewCount": "1302",
+        "likeCount": "55",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=iDBxhxgO3pk"
+      },
+      {
+        "title": "SharePoint Advanced Tutorial",
+        "publishedAt": "2026-04-17T16:30:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/DKhL8ARZ9NA/hqdefault.jpg",
+        "viewCount": "1313",
+        "likeCount": "49",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=DKhL8ARZ9NA"
+      },
+      {
+        "title": "Illustrator -  LIVE",
+        "publishedAt": "2026-04-16T18:58:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/j4DuFLZlgPk/hqdefault.jpg",
+        "viewCount": "1175",
+        "likeCount": "66",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=j4DuFLZlgPk"
+      },
+      {
+        "title": "Gemini For Work - LIVE",
+        "publishedAt": "2026-04-16T00:08:27Z",
+        "thumbnail": "https://i.ytimg.com/vi/K_lmjrbaRhU/hqdefault.jpg",
+        "viewCount": "1585",
+        "likeCount": "63",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=K_lmjrbaRhU"
+      },
+      {
+        "title": "Word Beginner - LIVE",
+        "publishedAt": "2026-04-13T18:17:53Z",
+        "thumbnail": "https://i.ytimg.com/vi/rOmU3rGEZtg/hqdefault.jpg",
+        "viewCount": "1371",
+        "likeCount": "59",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=rOmU3rGEZtg"
+      },
+      {
+        "title": "SharePoint Full Course Tutorial",
+        "publishedAt": "2026-04-10T23:24:43Z",
+        "thumbnail": "https://i.ytimg.com/vi/biCXRaRBtk0/hqdefault.jpg",
+        "viewCount": "0",
+        "likeCount": "4",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=biCXRaRBtk0"
+      }
+    ]
+  },
+  {
+    "channel": "@GettingMore",
+    "videos": [
+      {
+        "title": "Stuart Diamond Interview: Career Solutions - KDKR",
+        "publishedAt": "2016-03-10T04:24:13Z",
+        "thumbnail": "https://i.ytimg.com/vi/rUHUMswBuio/hqdefault.jpg",
+        "viewCount": "2612",
+        "likeCount": "30",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=rUHUMswBuio"
+      },
+      {
+        "title": "Getting More | Negotiating with Children",
+        "publishedAt": "2015-02-03T05:08:03Z",
+        "thumbnail": "https://i.ytimg.com/vi/4lh1UQ_RnKE/hqdefault.jpg",
+        "viewCount": "2951",
+        "likeCount": "14",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=4lh1UQ_RnKE"
+      },
+      {
+        "title": "Getting More | Getting a Discount at a Store",
+        "publishedAt": "2015-02-03T05:07:48Z",
+        "thumbnail": "https://i.ytimg.com/vi/8KP9Yx_VEfk/hqdefault.jpg",
+        "viewCount": "2220",
+        "likeCount": "20",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=8KP9Yx_VEfk"
+      },
+      {
+        "title": "Getting More | Emotion and Negotiation",
+        "publishedAt": "2015-02-03T05:07:06Z",
+        "thumbnail": "https://i.ytimg.com/vi/wJjVK3ipAMs/hqdefault.jpg",
+        "viewCount": "4203",
+        "likeCount": "17",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=wJjVK3ipAMs"
+      },
+      {
+        "title": "Getting More | Negotiating to Telecommute",
+        "publishedAt": "2014-12-16T05:59:28Z",
+        "thumbnail": "https://i.ytimg.com/vi/fLVrKjR3av0/hqdefault.jpg",
+        "viewCount": "1809",
+        "likeCount": "8",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=fLVrKjR3av0"
+      },
+      {
+        "title": "Getting More | Women and Negotiation",
+        "publishedAt": "2014-12-16T04:21:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/ijxOHS1Uo0Y/hqdefault.jpg",
+        "viewCount": "2665",
+        "likeCount": "10",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=ijxOHS1Uo0Y"
+      },
+      {
+        "title": "Getting More | Negotiating When I Can't Find the Real Decision Maker",
+        "publishedAt": "2014-12-15T09:25:31Z",
+        "thumbnail": "https://i.ytimg.com/vi/sQ20lg0jqyY/hqdefault.jpg",
+        "viewCount": "3519",
+        "likeCount": "14",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=sQ20lg0jqyY"
+      },
+      {
+        "title": "Getting More | Negotiating Over Email, Phone, etc.",
+        "publishedAt": "2014-12-15T09:19:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/90u0e5ScFHY/hqdefault.jpg",
+        "viewCount": "6003",
+        "likeCount": "55",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=90u0e5ScFHY"
+      },
+      {
+        "title": "Getting More | Am I Being Too Nice in Negotiations?",
+        "publishedAt": "2014-12-15T09:19:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/QNutR9Vzedk/hqdefault.jpg",
+        "viewCount": "4546",
+        "likeCount": "26",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=QNutR9Vzedk"
+      },
+      {
+        "title": "Getting More | Negotiating for Salary and Promotion",
+        "publishedAt": "2014-12-15T09:19:34Z",
+        "thumbnail": "https://i.ytimg.com/vi/liCOqUQzpQs/hqdefault.jpg",
+        "viewCount": "6890",
+        "likeCount": "36",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=liCOqUQzpQs"
+      }
+    ]
+  },
+  {
+    "channel": "@ChrisVoss",
+    "videos": [
+      {
+        "title": "Successful Transformational Change in a Fire and EMS Department: How a Focused... by Robert Avsec",
+        "publishedAt": "2026-04-23T23:55:25Z",
+        "thumbnail": "https://i.ytimg.com/vi/nlyzsQEQFgE/hqdefault.jpg",
+        "viewCount": "2",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=nlyzsQEQFgE"
+      },
+      {
+        "title": "\"New Creations\" Affirmations of who we are \"In Christ, \" the Second Adam.: \"In Christ,\"...",
+        "publishedAt": "2026-04-23T20:43:10Z",
+        "thumbnail": "https://i.ytimg.com/vi/EtEvIcr8Cuw/hqdefault_live.jpg",
+        "viewCount": "22",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=EtEvIcr8Cuw"
+      },
+      {
+        "title": "Scott Callaway Folsom",
+        "publishedAt": "2026-04-23T09:45:41Z",
+        "thumbnail": "https://i.ytimg.com/vi/50gs6MqHiRo/hqdefault.jpg",
+        "viewCount": "92",
+        "likeCount": "4",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=50gs6MqHiRo"
+      },
+      {
+        "title": "Julianna Newland",
+        "publishedAt": "2026-04-22T09:11:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/V7dyN4k4b-s/hqdefault.jpg",
+        "viewCount": "11",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=V7dyN4k4b-s"
+      },
+      {
+        "title": "If I Don't Return: A Father's Wartime Journal by Lieutenant General (Ret.) Mark Hertling",
+        "publishedAt": "2026-04-22T06:23:26Z",
+        "thumbnail": "https://i.ytimg.com/vi/lkTTUkWAD1Y/hqdefault.jpg",
+        "viewCount": "21",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=lkTTUkWAD1Y"
+      },
+      {
+        "title": "The Chris Voss Show Podcast – If I Don’t Return: A Father’s Wartime Journal by Lieutenant General...",
+        "publishedAt": "2026-04-22T06:51:44Z",
+        "thumbnail": "https://i.ytimg.com/vi/n7GgZnB7vZA/hqdefault.jpg",
+        "viewCount": "8",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=n7GgZnB7vZA"
+      },
+      {
+        "title": "Pam Mullarkey Robbins",
+        "publishedAt": "2026-04-22T05:49:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/Hafh-lzQy3k/hqdefault.jpg",
+        "viewCount": "20",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=Hafh-lzQy3k"
+      },
+      {
+        "title": "Robert Avsec",
+        "publishedAt": "2026-04-21T10:31:23Z",
+        "thumbnail": "https://i.ytimg.com/vi/kvou4zdRzSc/hqdefault.jpg",
+        "viewCount": "32",
+        "likeCount": "1",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=kvou4zdRzSc"
+      },
+      {
+        "title": "If I Don't Return: A Father's Wartime Journal by Mark Hertling",
+        "publishedAt": "2026-04-21T06:25:12Z",
+        "thumbnail": "https://i.ytimg.com/vi/jP3Eiob1qK8/hqdefault.jpg",
+        "viewCount": "24",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=jP3Eiob1qK8"
+      },
+      {
+        "title": "The Chris Voss Show Podcast – How to Say What You Mean Without Being Mean by Jan D Thomas",
+        "publishedAt": "2026-04-21T06:55:15Z",
+        "thumbnail": "https://i.ytimg.com/vi/pLOhzcE_B3I/hqdefault.jpg",
+        "viewCount": "14",
+        "likeCount": "1",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=pLOhzcE_B3I"
+      }
+    ]
+  },
+  {
+    "channel": "@NegotiateAnything",
+    "videos": [
+      {
+        "title": "How to Negotiate With Fear & Win | Damon \"Coffee Bean\" West",
+        "publishedAt": "2026-04-23T09:44:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/AbamCbQnxlk/hqdefault.jpg",
+        "viewCount": "10",
+        "likeCount": "1",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=AbamCbQnxlk"
+      },
+      {
+        "title": "What Bruce Lee Taught Me About Negotiation",
+        "publishedAt": "2026-04-22T10:04:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/9TRRm4d8KT4/hqdefault.jpg",
+        "viewCount": "8",
+        "likeCount": "1",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=9TRRm4d8KT4"
+      },
+      {
+        "title": "The Tribal Leadership Model Behind DJ Vanas' Work",
+        "publishedAt": "2026-04-21T09:50:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/pdIkv4jdORs/hqdefault.jpg",
+        "viewCount": "1",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=pdIkv4jdORs"
+      },
+      {
+        "title": "Safe Danger: The Leadership Episode That Will Change How You See People",
+        "publishedAt": "2026-04-20T09:59:41Z",
+        "thumbnail": "https://i.ytimg.com/vi/CgEK6u7LNfs/hqdefault.jpg",
+        "viewCount": "1",
+        "likeCount": "0",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=CgEK6u7LNfs"
+      },
+      {
+        "title": "Clients DON’T Want Solutions First… They Want THIS Instead",
+        "publishedAt": "2026-04-19T09:49:44Z",
+        "thumbnail": "https://i.ytimg.com/vi/M1anl4EakQo/hqdefault.jpg",
+        "viewCount": "11",
+        "likeCount": "3",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=M1anl4EakQo"
+      },
+      {
+        "title": "The “Just Do It” Lie No One Talks About",
+        "publishedAt": "2026-04-18T09:41:35Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZfUTSk72YTY/hqdefault.jpg",
+        "viewCount": "12",
+        "likeCount": "1",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=ZfUTSk72YTY"
+      },
+      {
+        "title": "Stop Hiding Your Strengths: How to Stand Out, Get Promoted, and Win",
+        "publishedAt": "2026-04-18T00:23:17Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZQpfgigAgG0/hqdefault.jpg",
+        "viewCount": "7",
+        "likeCount": "2",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=ZQpfgigAgG0"
+      },
+      {
+        "title": "Harvard Negotiation Expert: Stop Selling Ideas. Start Telling Stories.",
+        "publishedAt": "2026-04-16T09:59:59Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZGVjyfaEXyU/hqdefault.jpg",
+        "viewCount": "12",
+        "likeCount": "1",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=ZGVjyfaEXyU"
+      },
+      {
+        "title": "The Key to Being SO VALUABLE You Never Become Irrelevant",
+        "publishedAt": "2026-04-15T09:45:18Z",
+        "thumbnail": "https://i.ytimg.com/vi/W3HZIc1jRRs/hqdefault.jpg",
+        "viewCount": "5",
+        "likeCount": "1",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=W3HZIc1jRRs"
+      },
+      {
+        "title": "Secret Persuasion Tactics from CIA and FBI: Sell Like a Spy with Jeremy Hurewitz",
+        "publishedAt": "2026-04-14T09:45:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/cnNb_iezQVk/hqdefault.jpg",
+        "viewCount": "16",
+        "likeCount": "2",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=cnNb_iezQVk"
+      }
+    ]
+  },
+  {
+    "channel": "@charismaoncommand",
+    "videos": [
+      {
+        "title": "Stop Giving Weak Compliments, Do This Instead",
+        "publishedAt": "2026-02-09T19:00:07Z",
+        "thumbnail": "https://i.ytimg.com/vi/81yjOZXzpEU/hqdefault.jpg",
+        "viewCount": "92957",
+        "likeCount": "4146",
+        "commentCount": "123",
+        "url": "https://www.youtube.com/watch?v=81yjOZXzpEU"
+      },
+      {
+        "title": "Your Dreams Matter More Than You Think",
+        "publishedAt": "2026-01-26T20:51:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/IKYn_g8A0AA/hqdefault.jpg",
+        "viewCount": "71115",
+        "likeCount": "1729",
+        "commentCount": "712",
+        "url": "https://www.youtube.com/watch?v=IKYn_g8A0AA"
+      },
+      {
+        "title": "This Phrase Will Ruin Your Relationships",
+        "publishedAt": "2026-01-15T21:27:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/J8zNIVjWSv4/hqdefault.jpg",
+        "viewCount": "58087",
+        "likeCount": "2750",
+        "commentCount": "269",
+        "url": "https://www.youtube.com/watch?v=J8zNIVjWSv4"
+      },
+      {
+        "title": "The One Skill That Removes Social Fear",
+        "publishedAt": "2025-12-29T19:05:05Z",
+        "thumbnail": "https://i.ytimg.com/vi/oGkqSPfc2NE/hqdefault.jpg",
+        "viewCount": "276001",
+        "likeCount": "16484",
+        "commentCount": "531",
+        "url": "https://www.youtube.com/watch?v=oGkqSPfc2NE"
+      },
+      {
+        "title": "The Missing Archetype In Modern Men",
+        "publishedAt": "2025-12-08T19:01:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/uLYnPqMibmE/hqdefault.jpg",
+        "viewCount": "45349",
+        "likeCount": "2278",
+        "commentCount": "156",
+        "url": "https://www.youtube.com/watch?v=uLYnPqMibmE"
+      },
+      {
+        "title": "4 Jokes That Spark Chemistry With Women",
+        "publishedAt": "2025-11-17T19:00:02Z",
+        "thumbnail": "https://i.ytimg.com/vi/1o2uZYskHNQ/hqdefault.jpg",
+        "viewCount": "187641",
+        "likeCount": "5815",
+        "commentCount": "256",
+        "url": "https://www.youtube.com/watch?v=1o2uZYskHNQ"
+      },
+      {
+        "title": "Do This To Stop People Talking Over You",
+        "publishedAt": "2025-11-03T19:00:39Z",
+        "thumbnail": "https://i.ytimg.com/vi/ZYLqgq29YdY/hqdefault.jpg",
+        "viewCount": "281653",
+        "likeCount": "9445",
+        "commentCount": "457",
+        "url": "https://www.youtube.com/watch?v=ZYLqgq29YdY"
+      },
+      {
+        "title": "6 Conversation Habits to Connect with ANYONE",
+        "publishedAt": "2025-10-20T21:46:01Z",
+        "thumbnail": "https://i.ytimg.com/vi/p9r4XFx5F5g/hqdefault.jpg",
+        "viewCount": "482854",
+        "likeCount": "19287",
+        "commentCount": "384",
+        "url": "https://www.youtube.com/watch?v=p9r4XFx5F5g"
+      },
+      {
+        "title": "This Is How You Can Look More Attractive",
+        "publishedAt": "2025-10-09T20:11:46Z",
+        "thumbnail": "https://i.ytimg.com/vi/XuJsZCaTAn8/hqdefault.jpg",
+        "viewCount": "438912",
+        "likeCount": "10784",
+        "commentCount": "262",
+        "url": "https://www.youtube.com/watch?v=XuJsZCaTAn8"
+      },
+      {
+        "title": "The One Voice Habit Killing Your Confidence",
+        "publishedAt": "2025-09-22T21:00:47Z",
+        "thumbnail": "https://i.ytimg.com/vi/zlP2j5Xq2Qg/hqdefault.jpg",
+        "viewCount": "77831",
+        "likeCount": "3303",
+        "commentCount": "184",
+        "url": "https://www.youtube.com/watch?v=zlP2j5Xq2Qg"
+      }
+    ]
+  },
+  {
+    "channel": "@ThinkFastTalkSmart",
+    "videos": [
+      {
+        "title": "Ask Matt Anything: Authenticity, Anxiety, and Answering Well",
+        "publishedAt": "2026-04-23T13:01:51Z",
+        "thumbnail": "https://i.ytimg.com/vi/wDyKw3siPII/hqdefault.jpg",
+        "viewCount": "271",
+        "likeCount": "13",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=wDyKw3siPII"
+      },
+      {
+        "title": "Luck Isn't Instant, It Compounds - Advice from Tina Seelig",
+        "publishedAt": "2026-04-22T15:00:57Z",
+        "thumbnail": "https://i.ytimg.com/vi/Mn7FJiUiv7g/hqdefault.jpg",
+        "viewCount": "1143",
+        "likeCount": "25",
+        "commentCount": "3",
+        "url": "https://www.youtube.com/watch?v=Mn7FJiUiv7g"
+      },
+      {
+        "title": "Why Some People Get \"Lucky\" (And You Don't)",
+        "publishedAt": "2026-04-20T15:29:33Z",
+        "thumbnail": "https://i.ytimg.com/vi/GlQxosyspJM/hqdefault.jpg",
+        "viewCount": "844",
+        "likeCount": "15",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=GlQxosyspJM"
+      },
+      {
+        "title": "The Language of Luck: Why Fortune Favors Those Who Pay Attention",
+        "publishedAt": "2026-04-20T13:00:21Z",
+        "thumbnail": "https://i.ytimg.com/vi/FTylWeMNvII/hqdefault.jpg",
+        "viewCount": "2883",
+        "likeCount": "132",
+        "commentCount": "6",
+        "url": "https://www.youtube.com/watch?v=FTylWeMNvII"
+      },
+      {
+        "title": "Don't Memorize Your Presentations",
+        "publishedAt": "2026-04-17T15:01:24Z",
+        "thumbnail": "https://i.ytimg.com/vi/wM-IKRNevRI/hqdefault.jpg",
+        "viewCount": "2630",
+        "likeCount": "86",
+        "commentCount": "1",
+        "url": "https://www.youtube.com/watch?v=wM-IKRNevRI"
+      },
+      {
+        "title": "We'd Love Your Feedback!",
+        "publishedAt": "2026-04-16T15:01:50Z",
+        "thumbnail": "https://i.ytimg.com/vi/ftDWxxXZrQU/hqdefault.jpg",
+        "viewCount": "211",
+        "likeCount": "10",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=ftDWxxXZrQU"
+      },
+      {
+        "title": "70% of Your Job Is About to Change",
+        "publishedAt": "2026-04-15T15:01:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/dVPX0mGMMoQ/hqdefault.jpg",
+        "viewCount": "429",
+        "likeCount": "8",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=dVPX0mGMMoQ"
+      },
+      {
+        "title": "These Are The Only Skills That AI Can't Replace",
+        "publishedAt": "2026-04-13T14:00:58Z",
+        "thumbnail": "https://i.ytimg.com/vi/vn6S87cakgI/hqdefault.jpg",
+        "viewCount": "1159",
+        "likeCount": "18",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=vn6S87cakgI"
+      },
+      {
+        "title": "Stay Relevant: Future Proof Your Career in an AI World",
+        "publishedAt": "2026-04-13T13:01:19Z",
+        "thumbnail": "https://i.ytimg.com/vi/emAwXNYY5zk/hqdefault.jpg",
+        "viewCount": "3573",
+        "likeCount": "106",
+        "commentCount": "4",
+        "url": "https://www.youtube.com/watch?v=emAwXNYY5zk"
+      },
+      {
+        "title": "Control Your Voice: Deep Breathing for Public Speaking",
+        "publishedAt": "2026-04-10T15:00:55Z",
+        "thumbnail": "https://i.ytimg.com/vi/DtDEeNCDf1Y/hqdefault.jpg",
+        "viewCount": "2101",
+        "likeCount": "47",
+        "commentCount": "0",
+        "url": "https://www.youtube.com/watch?v=DtDEeNCDf1Y"
+      }
+    ]
+  }
+]

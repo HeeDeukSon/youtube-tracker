@@ -1,6 +1,6 @@
 .env
 node_modules/
-results.json
+# results.json is intentionally tracked so the site always has data as fallback
 report.html
 report.txt
 bookmarks.json

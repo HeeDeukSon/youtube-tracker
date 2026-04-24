@@ -34,7 +34,19 @@ jobs:
         run: npm ci
 
       - name: Fetch YouTube data
-        run: node tracker.js
+        run: |
+          cp results.json results.backup.json
+          if node tracker.js; then
+            COUNT=$(node -e "const r=require('./results.json'); console.log(r.length);")
+            echo "Channels fetched: $COUNT"
+            if [ "$COUNT" -lt "20" ]; then
+              echo "Too few channels ($COUNT), restoring committed results.json"
+              cp results.backup.json results.json
+            fi
+          else
+            echo "tracker.js failed, using committed results.json"
+            cp results.backup.json results.json
+          fi
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
