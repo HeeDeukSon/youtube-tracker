@@ -210,6 +210,17 @@ const html = `<!DOCTYPE html>
       border-radius: 8px; padding: 6px 10px; font-size: 13px; cursor: pointer; outline: none;
     }
 
+    /* ── Mobile: scrollable tabs + compact controls ──── */
+    @media (max-width: 640px) {
+      .tabs-row { flex-direction: column; align-items: stretch; gap: 4px; padding: 8px 12px 0; }
+      .tabs { overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; -ms-overflow-style: none; padding-bottom: 2px; }
+      .tabs::-webkit-scrollbar { display: none; }
+      .tab { padding: 5px 11px; font-size: 13px; white-space: nowrap; }
+      .controls { justify-content: flex-end; flex-wrap: nowrap; }
+      .icon-btn { padding: 5px 9px; font-size: 12px; }
+      select.sort-sel { padding: 5px 8px; font-size: 12px; }
+    }
+
     /* ── Sub-tags ────────────────────────────────────── */
     #subtags {
       display: flex; gap: 6px; flex-wrap: wrap;
