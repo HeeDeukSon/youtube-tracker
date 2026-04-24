@@ -44,3 +44,9 @@ Thomas Frank
 @cs50
 @crashcourse
 @learnskillsdaily
+
+# Negotiation
+@GettingMore
+@ChrisVoss
+@NegotiateAnything
+@charismaoncommand

@@ -52,6 +52,11 @@ const CHANNEL_META = {
   '@cs50':                    { category: 'TRAINING', tags: ['Computer Science', 'Programming', 'Harvard'] },
   '@crashcourse':             { category: 'TRAINING', tags: ['General Learning', 'Science'] },
   '@learnskillsdaily':        { category: 'TRAINING', tags: ['Skills', 'Daily Learning'] },
+  // Negotiation
+  '@GettingMore':             { category: 'NEGOTIATION', tags: ['Stuart Diamond', 'Negotiation'] },
+  '@ChrisVoss':               { category: 'NEGOTIATION', tags: ['Negotiation', 'FBI', 'Tactics'] },
+  '@NegotiateAnything':       { category: 'NEGOTIATION', tags: ['Negotiation', 'Podcast'] },
+  '@charismaoncommand':       { category: 'NEGOTIATION', tags: ['Persuasion', 'Body Language'] },
 };
 
 function getMeta(name) {
@@ -340,6 +345,7 @@ const html = `<!DOCTYPE html>
     <button class="tab" data-cat="AI">AI</button>
     <button class="tab" data-cat="LANGUAGE">Language</button>
     <button class="tab" data-cat="TRAINING">Training</button>
+    <button class="tab" data-cat="NEGOTIATION">Negotiation</button>
   </div>
   <div class="controls">
     <select class="sort-sel" onchange="setSort(this.value)">
