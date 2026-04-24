@@ -57,6 +57,7 @@ const CHANNEL_META = {
   '@ChrisVoss':               { category: 'NEGOTIATION', tags: ['Negotiation', 'FBI', 'Tactics'] },
   '@NegotiateAnything':       { category: 'NEGOTIATION', tags: ['Negotiation', 'Podcast'] },
   '@charismaoncommand':       { category: 'NEGOTIATION', tags: ['Persuasion', 'Body Language'] },
+  '@ThinkFastTalkSmart':      { category: 'NEGOTIATION', tags: ['Communication', 'Public Speaking'] },
 };
 
 function getMeta(name) {

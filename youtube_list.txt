@@ -50,3 +50,4 @@ Thomas Frank
 @ChrisVoss
 @NegotiateAnything
 @charismaoncommand
+@ThinkFastTalkSmart
