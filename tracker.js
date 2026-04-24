@@ -106,17 +106,36 @@ async function main() {
     process.exit(1);
   }
 
+  let ok = 0, failed = 0, quotaHit = false;
   const results = [];
   for (const channel of CHANNELS) {
     try {
       results.push(await trackChannel(channel));
+      ok++;
     } catch (err) {
-      console.error(`Failed to fetch "${channel}": ${err.message}`);
+      const reason = err.response?.data?.error?.errors?.[0]?.reason || err.message;
+      if (reason === 'quotaExceeded' || reason === 'dailyLimitExceeded') {
+        console.error(`QUOTA EXHAUSTED at "${channel}" — stopping early`);
+        quotaHit = true;
+        break;
+      }
+      console.error(`Failed "${channel}": ${reason}`);
+      failed++;
     }
   }
 
   fs.writeFileSync('results.json', JSON.stringify(results, null, 2));
-  console.log('\nResults saved to results.json');
+  console.log(`\nDone: ${ok} fetched, ${failed} failed${quotaHit ? ', QUOTA EXHAUSTED' : ''}`);
+
+  // Prune stale entries from channel ID cache
+  const channelSet = new Set(CHANNELS);
+  let pruned = 0;
+  for (const key of Object.keys(idCache)) {
+    if (!channelSet.has(key)) { delete idCache[key]; pruned++; }
+  }
+  if (pruned) { saveIdCache(); console.log(`Pruned ${pruned} stale cache entries`); }
+
+  if (quotaHit) process.exit(2);
 }
 
 main();
