@@ -1,0 +1,206 @@
+# YouTube Channel Tracker List
+# Last updated: 2026-04-23
+# Total channels: 36 (AI: 20 | Technical: 0 | Language: 16)
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  SECTION 1 — AI                                                             ║
+║  Channels covering AI news, tools, model releases, and workflows            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+[01] todaycode
+     Handle  : todaycode
+     Language: Korean
+     Focus   : AI tools, LLM token efficiency, Claude/Anthropic ecosystem
+     Notes   : Practical AI dev workflows; strong on cost optimization
+
+[02] 평범한 사업가
+     Handle  : 평범한 사업가
+     Language: Korean
+     Focus   : AI podcast interviews, Claude Code, Obsidian, context engineering
+     Notes   : Podcast-format (EP numbered); interviews Korean AI builders
+
+[03] 오후5시
+     Handle  : 오후5시
+     Language: Korean
+     Focus   : Claude AI news and features (Design, Opus, plans, agents)
+     Notes   : Very active — near-daily uploads; first-mover on Claude releases
+
+[04] 코드깎는 노인
+     Handle  : 코드깎는 노인
+     Language: Korean
+     Focus   : Claude Code, vibe coding, practical AI apps
+     Notes   : Beginner-friendly tutorials with strong engagement
+
+[05] 오빠두엑셀
+     Handle  : @Oppadu
+     Language: Korean
+     Focus   : Excel and Office productivity; Microsoft AI features
+     Notes   : Large established channel — 엑셀 강의 대표채널
+
+[06] 노정석
+     Handle  : @chester_roh
+     Language: Korean
+     Focus   : AI/tech entrepreneur perspective, podcast-format (EP numbered)
+     Notes   : ⚠ Handle is @chester_roh — searching by "노정석" returns 404
+
+[07] 실밸개발자
+     Handle  : 실밸개발자
+     Language: Korean
+     Focus   : Dev career advice from a Meta senior engineer; harness engineering
+     Notes   : High engagement; strong opinions on AI's impact on dev careers
+
+[08] 윤자동
+     Handle  : 윤자동
+     Language: Korean
+     Focus   : Claude Code automation, running an AI-first business
+     Notes   : Mix of tutorials, live streams, and business/culture content
+
+[09] Jeff Su
+     Handle  : jeff su
+     Language: English
+     Focus   : Claude Cowork tutorials, AI productivity, tool comparisons
+     Notes   : Breakout video "Learn 80% of Claude Cowork" hit 483K views (Apr 2026)
+
+[10] Greg Isenberg
+     Handle  : Greg Isenberg
+     Language: English
+     Focus   : AI agents, Claude Code/Design, AI lifestyle and business
+     Notes   : High volume; broad AI ecosystem; startup/founder angle
+
+[11] Ali Abdaal
+     Handle  : Ali Abdaal
+     Language: English
+     Focus   : Productivity, business, AI skill gap awareness
+     Notes   : Large general audience; not AI-exclusive but high reach
+
+[12] Lenny's Podcast
+     Handle  : Lenny's Podcast
+     Language: English
+     Focus   : PM industry, tech jobs, building in the AI era
+     Notes   : High-quality guests; deep anxiety about PM/tech job future
+
+[13] Nate B Jones
+     Handle  : Nate B Jones
+     Language: English
+     Focus   : AI impact on developers and jobs; new model reviews
+     Notes   : Very active (multiple videos/day); provocative, high engagement
+
+[14] Julian Goldie
+     Handle  : Julian Goldie
+     Language: English
+     Focus   : AI news firehose — all models and tools daily
+     Notes   : Extremely high volume; good for staying aware of every release
+
+[15] Nick Saraev
+     Handle  : Nick Saraev
+     Language: English
+     Focus   : Claude new feature releases and automation implications
+     Notes   : Exclusively Claude ecosystem; consistently 90K–187K views
+
+[16] Fireship
+     Handle  : Fireship
+     Language: English
+     Focus   : Dev tools and AI news — fast, punchy, opinionated
+     Notes   : Best signal-to-noise ratio for devs; short and sharp format
+
+[17] Andrej Karpathy
+     Handle  : Andrej Karpathy
+     Language: English
+     Focus   : Foundational AI/ML — neural networks, LLM internals
+     Notes   : Posts rarely but every video is essential; cited across other channels
+
+[18] t3dotgg (Theo)
+     Handle  : t3dotgg
+     Language: English
+     Focus   : Honest, critical developer takes on AI tools and web dev
+     Notes   : Great counterbalance to hype channels; no sponsors, no fluff
+
+[19] Matt Wolfe
+     Handle  : Matt Wolfe
+     Language: English
+     Focus   : Broad AI tool reviews and discovery
+     Notes   : Similar to Julian Goldie but more measured and in-depth
+
+[20] Dan Koe
+     Handle  : Dan Koe
+     Language: English
+     Focus   : Solopreneur + AI — one-person business with AI
+     Notes   : Low volume, high depth; English equivalent of 평범한 사업가 angle
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  SECTION 2 — TECHNICAL                                                      ║
+║  Channels covering software engineering, coding, and developer tools        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  (empty — add channels here)
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  SECTION 3 — LANGUAGE                                                       ║
+║  Channels covering language learning or non-English content                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+[21] Adam
+     Handle  : @engvidadam
+     Channel : Adam's English Lessons · engVid
+
+[22] Alex
+     Handle  : @engvidalex
+     Channel : English with Alex · engVid
+
+[23] Ronnie
+     Handle  : @engvidronnie
+     Channel : English with Ronnie · EnglishLessons4U with engVid
+
+[24] Rebecca
+     Handle  : @engvidrebecca
+     Channel : Learn English with Rebecca · engVid
+
+[25] Emma
+     Handle  : @engvidemma
+     Channel : English with Emma · engVid
+
+[26] James
+     Handle  : @engvidjames
+     Channel : ENGLISH with James · engVid
+
+[27] Jade
+     Handle  : @engvidjade
+     Channel : English Jade · Learn English with engVid
+
+[28] Gill
+     Handle  : @engvidgill
+     Channel : Learn English with Gill · engVid
+
+[29] Benjamin
+     Handle  : @engvidbenjamin
+     Channel : Business English Benjamin · engVid
+
+[30] BBC Learning English
+     Handle  : @bbclearningenglish
+     Channel : BBC Learning English
+
+[31] Rachel's English
+     Handle  : @rachelsenglish
+     Channel : Rachel's English
+
+[32] Speak English With Vanessa
+     Handle  : @speakenglishwithvanessa
+     Channel : Speak English With Vanessa
+
+[33] EnglishClass101
+     Handle  : @englishclass101
+     Channel : Learn English with EnglishClass101.com
+
+[34] English with Lucy
+     Handle  : @englishwithlucy
+     Channel : English with Lucy
+
+[35] mmmEnglish
+     Handle  : @mmmenglish_emma
+     Channel : mmmEnglish
+
+[36] VOA Learning English
+     Handle  : @voalearningenglish
+     Channel : VOA Learning English

@@ -1,0 +1,6 @@
+.env
+node_modules/
+results.json
+report.html
+report.txt
+bookmarks.json
