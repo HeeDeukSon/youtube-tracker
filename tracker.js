@@ -11,22 +11,40 @@ const CHANNELS = fs
   .map((line) => line.trim())
   .filter((line) => line.length > 0 && !line.startsWith('#'));
 
+// Channel ID cache — avoids expensive search.list calls on repeated runs
+const ID_CACHE_FILE = 'channel_ids.json';
+const idCache = fs.existsSync(ID_CACHE_FILE)
+  ? JSON.parse(fs.readFileSync(ID_CACHE_FILE, 'utf-8'))
+  : {};
+
+function saveIdCache() {
+  fs.writeFileSync(ID_CACHE_FILE, JSON.stringify(idCache, null, 2));
+}
+
 async function getChannelId(name) {
-  // Try @handle lookup first (works for modern channels)
+  if (idCache[name]) return idCache[name];
+
+  // Try @handle lookup first (works for modern channels, costs 1 unit)
   const handle = name.startsWith('@') ? name : `@${name}`;
   try {
     const res = await axios.get(`${BASE}/channels`, {
       params: { part: 'id', forHandle: handle, key: API_KEY },
     });
-    if (res.data.items?.length) return res.data.items[0].id;
+    if (res.data.items?.length) {
+      idCache[name] = res.data.items[0].id;
+      saveIdCache();
+      return idCache[name];
+    }
   } catch (_) {}
 
-  // Fall back to search
+  // Fall back to search (costs 100 units — only runs once per channel ever)
   const res = await axios.get(`${BASE}/search`, {
     params: { part: 'snippet', type: 'channel', q: name, maxResults: 1, key: API_KEY },
   });
   if (!res.data.items?.length) throw new Error(`Channel not found: ${name}`);
-  return res.data.items[0].snippet.channelId;
+  idCache[name] = res.data.items[0].snippet.channelId;
+  saveIdCache();
+  return idCache[name];
 }
 
 async function getUploadsPlaylistId(channelId) {
