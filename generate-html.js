@@ -4,75 +4,10 @@ const fs = require('fs');
 const data = JSON.parse(fs.readFileSync('results.json', 'utf-8'));
 const today = new Date().toISOString().slice(0, 10);
 
-const CHANNEL_META = {
-  // AI — Korean
-  'todaycode':         { category: 'AI', tags: ['Claude', 'Korean', 'Dev Tools'] },
-  '평범한 사업가':       { category: 'AI', tags: ['Claude', 'Korean', 'Business', 'Podcast'] },
-  '오후5시':            { category: 'AI', tags: ['Claude', 'Korean', 'AI News'] },
-  '코드깎는 노인':       { category: 'AI', tags: ['Claude', 'Korean', 'Coding'] },
-  '오빠두엑셀':          { category: 'AI', tags: ['Korean', 'Productivity', 'Excel'] },
-  '@Oppadu':           { category: 'AI', tags: ['Korean', 'Productivity', 'Excel'] },
-  '노정석':             { category: 'AI', tags: ['Korean', 'Business', 'Podcast'] },
-  '@chester_roh':      { category: 'AI', tags: ['Korean', 'Business', 'Podcast'] },
-  '실밸개발자':          { category: 'AI', tags: ['Korean', 'Dev Career'] },
-  '윤자동':             { category: 'AI', tags: ['Claude', 'Korean', 'Automation', 'Business'] },
-  // AI — English
-  'jeff su':           { category: 'AI', tags: ['Claude', 'English', 'Productivity'] },
-  'Greg Isenberg':     { category: 'AI', tags: ['English', 'Business', 'Startup'] },
-  'Ali Abdaal':        { category: 'AI', tags: ['English', 'Productivity'] },
-  "Lenny's Podcast":   { category: 'AI', tags: ['English', 'Product', 'Podcast'] },
-  'Nate B Jones':      { category: 'AI', tags: ['English', 'AI News', 'Dev Career'] },
-  'Julian Goldie':     { category: 'AI', tags: ['English', 'AI News'] },
-  'Nick Saraev':       { category: 'AI', tags: ['Claude', 'English', 'Automation'] },
-  'Fireship':          { category: 'AI', tags: ['English', 'Dev Tools', 'Coding'] },
-  'Andrej Karpathy':   { category: 'AI', tags: ['English', 'ML Research'] },
-  't3dotgg':           { category: 'AI', tags: ['English', 'Dev Tools', 'Web Dev'] },
-  'Matt Wolfe':        { category: 'AI', tags: ['English', 'AI News'] },
-  'Dan Koe':           { category: 'AI', tags: ['English', 'Business', 'Solopreneur'] },
-  // Language
-  '@engvidadam':              { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidalex':              { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidronnie':            { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidrebecca':           { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidemma':              { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidjames':             { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidjade':              { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidgill':              { category: 'LANGUAGE', tags: ['engVid', 'Grammar'] },
-  '@engvidbenjamin':          { category: 'LANGUAGE', tags: ['engVid', 'Business English'] },
-  '@bbclearningenglish':      { category: 'LANGUAGE', tags: ['BBC', 'Listening'] },
-  '@rachelsenglish':          { category: 'LANGUAGE', tags: ['Pronunciation'] },
-  '@speakenglishwithvanessa': { category: 'LANGUAGE', tags: ['Speaking'] },
-  '@englishclass101':         { category: 'LANGUAGE', tags: ['General'] },
-  '@englishwithlucy':         { category: 'LANGUAGE', tags: ['General'] },
-  '@mmmenglish_emma':         { category: 'LANGUAGE', tags: ['General'] },
-  '@voalearningenglish':      { category: 'LANGUAGE', tags: ['BBC', 'Listening', 'News'] },
-  // Training
-  'Thomas Frank':             { category: 'TRAINING', tags: ['Productivity', 'Study Skills', 'Notion'] },
-  '@freecodecamp':            { category: 'TRAINING', tags: ['Coding', 'Web Dev', 'Programming'] },
-  '@cs50':                    { category: 'TRAINING', tags: ['Computer Science', 'Programming', 'Harvard'] },
-  '@crashcourse':             { category: 'TRAINING', tags: ['General Learning', 'Science'] },
-  '@learnskillsdaily':        { category: 'TRAINING', tags: ['Skills', 'Daily Learning'] },
-  // Negotiation
-  '@GettingMore':             { category: 'NEGOTIATION', tags: ['Stuart Diamond', 'Negotiation'] },
-  '@ChrisVoss':               { category: 'NEGOTIATION', tags: ['Negotiation', 'FBI', 'Tactics'] },
-  '@NegotiateAnything':       { category: 'NEGOTIATION', tags: ['Negotiation', 'Podcast'] },
-  '@charismaoncommand':       { category: 'NEGOTIATION', tags: ['Persuasion', 'Body Language'] },
-  '@ThinkFastTalkSmart':      { category: 'NEGOTIATION', tags: ['Communication', 'Public Speaking'] },
-};
-
-function getMeta(name) {
-  if (CHANNEL_META[name]) return CHANNEL_META[name];
-  const lower = name.toLowerCase();
-  for (const [k, v] of Object.entries(CHANNEL_META)) {
-    if (k.toLowerCase() === lower) return v;
-  }
-  return { category: 'AI', tags: [] };
-}
-
 // Flatten all videos
 const allVideos = [];
 data.forEach(ch => {
-  const meta = getMeta(ch.channel);
+  const meta = { category: ch.category || 'AI', tags: ch.tags || [] };
   ch.videos.forEach(v => {
     allVideos.push({
       title: v.title,
@@ -85,6 +20,9 @@ data.forEach(ch => {
       category: meta.category,
       tags: meta.tags,
       trending: false,
+      embeddable: v.embeddable ?? true,
+      description: v.description || '',
+      comments: v.comments || [],
     });
   });
 });
@@ -96,6 +34,15 @@ allVideos.slice(0, trendCut).forEach(v => { v.trending = true; });
 
 // Default sort: newest first
 allVideos.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+// Split heavy fields into a separate file to keep report.html small
+const videoDetails = {};
+allVideos.forEach(v => {
+  videoDetails[v.url] = { description: v.description, comments: v.comments };
+  delete v.description;
+  delete v.comments;
+});
+fs.writeFileSync('video-details.json', JSON.stringify(videoDetails));
 
 const totalVideos = allVideos.length;
 const totalChannels = data.length;
@@ -291,6 +238,11 @@ const html = `<!DOCTYPE html>
       font-size: 10px; font-weight: 700; padding: 2px 6px;
       border-radius: 4px; letter-spacing: .5px;
     }
+    .ext-badge {
+      position: absolute; bottom: 6px; left: 6px;
+      background: rgba(255,0,0,.82); color: #fff;
+      font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px;
+    }
 
     .info {
       padding: 10px 4px 6px; display: flex; flex-direction: column;
@@ -298,7 +250,7 @@ const html = `<!DOCTYPE html>
     }
     .vid-title {
       font-size: 13px; font-weight: 600; line-height: 1.45; color: var(--text);
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+      display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical;
       overflow: hidden; padding-right: 24px;
     }
     .ch-name { font-size: 12px; color: var(--text2); }
@@ -327,6 +279,163 @@ const html = `<!DOCTYPE html>
       color: var(--text3); font-size: 12px;
       border-top: 1px solid var(--border);
     }
+
+    /* ── Watch page layout ───────────────────────────── */
+    #watch-layout {
+      display: none;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 12px 14px 48px;
+      gap: 24px;
+      grid-template-columns: 2fr 1fr;
+    }
+    #watch-layout.open { display: grid; }
+
+    .watch-player {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .watch-player iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    .watch-meta-row {
+      margin: 10px 0 4px;
+      font-size: 13px;
+      color: var(--text3);
+    }
+    #watch-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 12px 0 4px;
+      line-height: 1.4;
+    }
+    .watch-yt-link {
+      display: inline-block;
+      margin: 6px 0 12px;
+      font-size: 13px;
+      color: #f00;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .watch-yt-link:hover { text-decoration: underline; }
+
+    .watch-section-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 16px 0 8px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    #watch-desc {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.7;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .watch-comment {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .watch-comment:last-child { border-bottom: none; }
+    .watch-comment-author {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .watch-comment-meta {
+      font-size: 11px;
+      color: var(--text3);
+      margin-bottom: 4px;
+    }
+    .watch-comment-text {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    
+    #watch-review-input {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 13px;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      resize: vertical;
+      margin-top: 5px;
+    }
+
+    /* ── Watch sidebar ───────────────────────────────── */
+    #watch-sidebar {
+      overflow-y: auto;
+      max-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: sticky;
+      top: 60px;
+    }
+    .sidebar-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .sidebar-card {
+      display: flex;
+      gap: 8px;
+      cursor: pointer;
+      border-radius: 8px;
+      padding: 6px;
+      transition: background .15s;
+    }
+    .sidebar-card:hover { background: var(--surface); }
+    .sidebar-thumb {
+      width: 120px;
+      min-width: 120px;
+      aspect-ratio: 16/9;
+      border-radius: 4px;
+      object-fit: cover;
+      background: var(--surface);
+    }
+    .sidebar-info { flex: 1; overflow: hidden; }
+    .sidebar-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .sidebar-ch {
+      font-size: 11px;
+      color: var(--text3);
+      margin-top: 3px;
+    }
+
+    @media (max-width: 900px) {
+      #watch-layout.open { display: flex; flex-direction: column; }
+      #watch-sidebar { max-height: none; position: static; }
+      .sidebar-thumb { width: 100px; min-width: 100px; }
+    }
   </style>
 </head>
 <body>
@@ -334,6 +443,7 @@ const html = `<!DOCTYPE html>
 <!-- Sticky top bar -->
 <div class="topbar">
   <button class="icon-btn" id="theme-btn" onclick="toggleTheme()">☀️</button>
+  <button class="icon-btn" id="back-btn" onclick="closeWatch()" style="display:none">← Back</button>
   <div class="search-wrap">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
       <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -354,10 +464,7 @@ const html = `<!DOCTYPE html>
 <div class="tabs-row">
   <div class="tabs">
     <button class="tab active" data-cat="ALL">All</button>
-    <button class="tab" data-cat="AI">AI</button>
-    <button class="tab" data-cat="LANGUAGE">Language</button>
-    <button class="tab" data-cat="TRAINING">Training</button>
-    <button class="tab" data-cat="NEGOTIATION">Negotiation</button>
+    ${Array.from(new Set(allVideos.map(v => v.category))).filter(Boolean).sort().map(cat => `<button class="tab" data-cat="${cat}">${cat}</button>`).join('\n    ')}
   </div>
   <div class="controls">
     <select class="sort-sel" onchange="setSort(this.value)">
@@ -378,6 +485,25 @@ const html = `<!DOCTYPE html>
 
 <!-- Main content -->
 <div id="container" class="grid"></div>
+
+<!-- Watch page -->
+<div id="watch-layout">
+  <div class="watch-main">
+    <div class="watch-player">
+      <iframe id="watch-iframe" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    <p id="watch-title"></p>
+    <div class="watch-meta-row" id="watch-meta"></div>
+    <a id="watch-yt-link" class="watch-yt-link" href="#" target="_blank" rel="noopener">▶ Open in YouTube</a>
+    <p class="watch-section-label">Description</p>
+    <div id="watch-desc"></div>
+    <p class="watch-section-label" id="watch-review-label">My Review</p>
+    <textarea id="watch-review-input" placeholder="Write your private notes or review here..."></textarea>
+    <button id="watch-review-save" class="tab active" style="margin-top: 10px; border-radius: 4px;">Save Review</button>
+    <div id="watch-review-status" style="display:inline-block; margin-left: 10px; font-size: 13px; color: var(--text3);"></div>
+  </div>
+  <div id="watch-sidebar"></div>
+</div>
 
 <footer>YouTube Tracker &nbsp;·&nbsp; ${today}</footer>
 
@@ -427,6 +553,96 @@ function timeAgo(iso) {
 function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+function getVideoId(url) {
+  try { return new URL(url).searchParams.get('v') || ''; } catch(_) { return ''; }
+}
+
+// ── Watch page ──────────────────────────────────────────
+var _detailsCache = null;
+function loadDetails(cb) {
+  if (_detailsCache) { cb(_detailsCache); return; }
+  fetch('video-details.json').then(function(r){ return r.json(); }).then(function(d){
+    _detailsCache = d; cb(d);
+  }).catch(function(){ cb({}); });
+}
+
+function openWatch(v) {
+  var vid = getVideoId(v.url);
+  document.getElementById('watch-iframe').src =
+    'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0';
+
+  document.getElementById('watch-title').textContent = v.title;
+  document.getElementById('watch-meta').textContent =
+    esc(v.channelName) + ' · ' + fmtNum(v.viewCount) + ' views · ' + timeAgo(v.publishedAt);
+  document.getElementById('watch-yt-link').href = v.url;
+
+  document.getElementById('watch-desc').textContent = 'Loading…';
+  loadDetails(function(details) {
+    var d = details[v.url] || {};
+    var desc = (d.description || '').trim();
+    document.getElementById('watch-desc').textContent = desc || 'No description available.';
+  });
+
+  var reviewInput = document.getElementById('watch-review-input');
+  var saveBtn = document.getElementById('watch-review-save');
+  var statusDiv = document.getElementById('watch-review-status');
+  
+  var savedReviews = JSON.parse(localStorage.getItem('yt-reviews') || '{}');
+  reviewInput.value = savedReviews[vid] || '';
+  statusDiv.textContent = '';
+  
+  saveBtn.onclick = function() {
+    var reviews = JSON.parse(localStorage.getItem('yt-reviews') || '{}');
+    reviews[vid] = reviewInput.value;
+    localStorage.setItem('yt-reviews', JSON.stringify(reviews));
+    statusDiv.textContent = 'Saved!';
+    setTimeout(function() { statusDiv.textContent = ''; }, 2000);
+  };
+
+  var sidebar = document.getElementById('watch-sidebar');
+  var vTags = (v.tags || []).filter(function(t) { return t !== 'English' && t !== 'Korean'; });
+  var related = VIDEOS.filter(function(x) { 
+    return x.url !== v.url && x.tags && x.tags.some(function(t) { return vTags.includes(t); }); 
+  });
+  // Fallback to category if no overlapping tags found
+  if (related.length === 0) {
+    related = VIDEOS.filter(function(x) { return x.category === v.category && x.url !== v.url; });
+  }
+  
+  var sidebarTitle = vTags.length ? vTags.join(', ') : v.category;
+  sidebar.innerHTML = '<div class="sidebar-label">Related · ' + sidebarTitle + '</div>' +
+    related.map(function(r) {
+      return '<div class="sidebar-card" data-url="' + esc(r.url) + '">' +
+        '<img class="sidebar-thumb" src="' + esc(r.thumbnail) + '" alt="" loading="lazy" onerror="this.hidden=true">' +
+        '<div class="sidebar-info">' +
+          '<div class="sidebar-title">' + esc(r.title) + '</div>' +
+          '<div class="sidebar-ch">' + esc(r.channelName) + ' · ' + fmtNum(r.viewCount) + ' views</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+  document.getElementById('watch-layout').classList.add('open');
+  document.getElementById('container').style.display = 'none';
+  document.getElementById('back-btn').style.display = '';
+  document.querySelector('.tabs-row').style.display = 'none';
+  document.getElementById('subtags').style.display = 'none';
+  document.getElementById('result-count').style.display = 'none';
+  document.querySelector('header').style.display = 'none';
+  window.scrollTo(0, 0);
+}
+
+function closeWatch() {
+  document.getElementById('watch-layout').classList.remove('open');
+  document.getElementById('watch-iframe').src = '';
+  document.getElementById('container').style.display = '';
+  document.getElementById('back-btn').style.display = 'none';
+  document.querySelector('.tabs-row').style.display = '';
+  document.getElementById('subtags').style.display = '';
+  document.getElementById('result-count').style.display = '';
+  document.querySelector('header').style.display = '';
+}
+
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWatch(); });
 
 // ── Card builder ───────────────────────────────────────
 function cardHtml(v) {
@@ -445,6 +661,7 @@ function cardHtml(v) {
         '<span class="views-badge">'+views+' views</span>' +
         (v.trending ? '<span class="trend-badge">&#x1F525;</span>' : '') +
         (isNew      ? '<span class="new-badge">NEW</span>' : '') +
+        (v.embeddable === false ? '<span class="ext-badge">&#x2197; YT</span>' : '') +
       '</div>' +
       '<div class="info">' +
         '<button class="bm-btn'+(isBm?' active':'')+'" data-url="'+esc(v.url)+'">'+(isBm?'&#9733;':'&#9734;')+'</button>' +
@@ -557,9 +774,27 @@ document.addEventListener('click', function(e) {
     return;
   }
 
-  // Card click → open video
+  // Sidebar card click → switch player
+  var sc = e.target.closest('.sidebar-card');
+  if (sc && sc.dataset.url) {
+    var sv = VIDEOS.find(function(x){ return x.url === sc.dataset.url; });
+    if (sv) openWatch(sv);
+    return;
+  }
+
+  // Card click → open watch page (or YouTube directly if embedding is disabled)
   var card = e.target.closest('.card');
-  if (card && card.dataset.url) window.open(card.dataset.url, '_blank');
+  if (card && card.dataset.url) {
+    var vid = VIDEOS.find(function(x){ return x.url === card.dataset.url; });
+    if (!vid) vid = bmData[card.dataset.url];
+    if (vid) {
+      if (vid.embeddable === false) {
+        window.open(vid.url, '_blank', 'noopener');
+      } else {
+        openWatch(vid);
+      }
+    }
+  }
 });
 
 // ── Action handlers ────────────────────────────────────

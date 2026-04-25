@@ -5,11 +5,41 @@ const API_KEY = process.env.YOUTUBE_API_KEY;
 const BASE = 'https://www.googleapis.com/youtube/v3';
 
 const fs = require('fs');
-const CHANNELS = fs
-  .readFileSync('youtube_list.txt', 'utf-8')
-  .split('\n')
-  .map((line) => line.trim())
-  .filter((line) => line.length > 0 && !line.startsWith('#'));
+const CHANNELS = [];
+const channelMeta = {};
+let _currentCategory = 'AI'; // Default
+let _currentHandle = null;
+
+const _lines = fs.readFileSync('youtube-traker.txt', 'utf-8').split('\n');
+for (let line of _lines) {
+  const trimmed = line.trim();
+  
+  const secMatch = line.match(/SECTION \d+ — ([^║]+)/);
+  if (secMatch) {
+    _currentCategory = secMatch[1].trim();
+  }
+  
+  if (trimmed.startsWith('Handle')) {
+    _currentHandle = trimmed.split(':')[1].trim();
+    CHANNELS.push(_currentHandle);
+    channelMeta[_currentHandle] = { category: _currentCategory, tags: [] };
+  }
+  
+  if (trimmed.startsWith('Language') && _currentHandle) {
+    const lang = trimmed.split(':')[1].trim();
+    if (lang && !channelMeta[_currentHandle].tags.includes(lang)) {
+      channelMeta[_currentHandle].tags.push(lang);
+    }
+  }
+
+  if (trimmed.startsWith('Tags') && _currentHandle) {
+    const tagStr = trimmed.split(':')[1].trim();
+    if (tagStr) {
+      const parsedTags = tagStr.split(',').map(t => t.trim()).filter(Boolean);
+      channelMeta[_currentHandle].tags.push(...parsedTags);
+    }
+  }
+}
 
 // Channel ID cache — avoids expensive search.list calls on repeated runs
 const ID_CACHE_FILE = 'channel_ids.json';
@@ -64,7 +94,7 @@ async function getLatestVideoIds(playlistId, count = 10) {
 async function getVideoDetails(videoIds) {
   const res = await axios.get(`${BASE}/videos`, {
     params: {
-      part: 'snippet,statistics',
+      part: 'snippet,statistics,status',
       id: videoIds.join(','),
       key: API_KEY,
     },
@@ -76,8 +106,34 @@ async function getVideoDetails(videoIds) {
     viewCount: v.statistics.viewCount ?? '0',
     likeCount: v.statistics.likeCount ?? 'hidden',
     commentCount: v.statistics.commentCount ?? 'disabled',
+    description: (v.snippet.description ?? '').slice(0, 2000),
     url: `https://www.youtube.com/watch?v=${v.id}`,
+    embeddable: v.status?.embeddable ?? true,
+    _id: v.id,
   }));
+}
+
+async function getVideoComments(videoId) {
+  try {
+    const res = await axios.get(`${BASE}/commentThreads`, {
+      params: { part: 'snippet', videoId, order: 'relevance', maxResults: 10, key: API_KEY },
+    });
+    return res.data.items.map((item) => {
+      const s = item.snippet.topLevelComment.snippet;
+      return {
+        author: s.authorDisplayName,
+        text: s.textOriginal.slice(0, 500),
+        likeCount: s.likeCount ?? 0,
+        publishedAt: s.publishedAt,
+      };
+    });
+  } catch (err) {
+    const reason = err.response?.data?.error?.errors?.[0]?.reason;
+    if (['quotaExceeded', 'dailyLimitExceeded'].includes(reason)) throw err;
+    if (['commentsDisabled', 'videoNotFound'].includes(reason) ||
+        [403, 404].includes(err.response?.status)) return [];
+    throw err;
+  }
 }
 
 async function trackChannel(name) {
@@ -86,6 +142,18 @@ async function trackChannel(name) {
   const playlistId = await getUploadsPlaylistId(channelId);
   const videoIds = await getLatestVideoIds(playlistId);
   const videos = await getVideoDetails(videoIds);
+
+  for (const v of videos) {
+    try {
+      v.comments = await getVideoComments(v._id);
+    } catch (err) {
+      const reason = err.response?.data?.error?.errors?.[0]?.reason;
+      if (reason === 'quotaExceeded' || reason === 'dailyLimitExceeded') throw err;
+      console.warn(`  Comment fetch failed for ${v._id}: ${reason || err.message}`);
+      v.comments = [];
+    }
+    delete v._id;
+  }
 
   videos.forEach((v, i) => {
     console.log(`\n[${i + 1}] ${v.title}`);
@@ -97,7 +165,8 @@ async function trackChannel(name) {
     console.log(`    URL       : ${v.url}`);
   });
 
-  return { channel: name, videos };
+  const meta = channelMeta[name] || { category: 'AI', tags: [] };
+  return { channel: name, category: meta.category, tags: meta.tags, videos };
 }
 
 async function main() {
@@ -124,7 +193,18 @@ async function main() {
     }
   }
 
-  fs.writeFileSync('results.json', JSON.stringify(results, null, 2));
+  // Merge with existing results.json — preserve data for channels we couldn't reach
+  let finalResults = results;
+  try {
+    const existing = JSON.parse(fs.readFileSync('results.json', 'utf-8'));
+    const fetched = new Set(results.map(r => r.channel));
+    const preserved = existing.filter(r => !fetched.has(r.channel));
+    if (preserved.length) {
+      finalResults = [...results, ...preserved];
+      console.log(`Preserved ${preserved.length} channels from previous results.json`);
+    }
+  } catch (_) {}
+  fs.writeFileSync('results.json', JSON.stringify(finalResults, null, 2));
   console.log(`\nDone: ${ok} fetched, ${failed} failed${quotaHit ? ', QUOTA EXHAUSTED' : ''}`);
 
   // Prune stale entries from channel ID cache

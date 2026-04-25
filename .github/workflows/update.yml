@@ -35,7 +35,7 @@ jobs:
 
       - name: Fetch YouTube data
         run: |
-          EXPECTED=$(grep -v '^#' youtube_list.txt | grep -v '^$' | wc -l | tr -d ' ')
+          EXPECTED=$(grep -c '^\s*Handle' youtube-traker.txt)
           THRESHOLD=$(( EXPECTED * 80 / 100 ))
           echo "Expecting $EXPECTED channels, threshold: $THRESHOLD"
 
@@ -52,6 +52,9 @@ jobs:
           rm -f results.backup.json
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
+      - name: Apply tag enrichment
+        run: node patch.js
 
       - name: Generate HTML report
         run: node generate-html.js
