@@ -366,19 +366,29 @@ const html = `<!DOCTYPE html>
       word-break: break-word;
     }
     
-    #watch-review-input {
-      width: 100%;
-      height: 100px;
-      padding: 10px;
-      font-family: inherit;
-      font-size: 13px;
-      background: var(--surface);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      resize: vertical;
-      margin-top: 5px;
+    #watch-comment-form {
+      display: flex; flex-direction: column; gap: 8px; margin-top: 4px;
     }
+    #watch-comment-form input,
+    #watch-comment-form textarea {
+      width: 100%; padding: 9px 11px; font-family: inherit; font-size: 13px;
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 6px;
+      outline: none; transition: border-color .15s;
+    }
+    #watch-comment-form input::placeholder,
+    #watch-comment-form textarea::placeholder { color: var(--text3); }
+    #watch-comment-form input:focus,
+    #watch-comment-form textarea:focus { border-color: var(--text2); }
+    #watch-comment-form textarea { resize: vertical; min-height: 90px; }
+    #watch-cf-actions { display: flex; align-items: center; gap: 10px; }
+    #watch-cf-submit {
+      background: var(--chip-active); color: var(--chip-active-t);
+      border: none; border-radius: 6px; padding: 8px 18px;
+      font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity .15s;
+    }
+    #watch-cf-submit:disabled { opacity: .5; cursor: not-allowed; }
+    #watch-cf-status { font-size: 13px; color: var(--text3); }
 
     /* ── Watch sidebar ───────────────────────────────── */
     #watch-sidebar {
@@ -497,10 +507,16 @@ const html = `<!DOCTYPE html>
     <a id="watch-yt-link" class="watch-yt-link" href="#" target="_blank" rel="noopener">▶ Open in YouTube</a>
     <p class="watch-section-label">Description</p>
     <div id="watch-desc"></div>
-    <p class="watch-section-label" id="watch-review-label">My Review</p>
-    <textarea id="watch-review-input" placeholder="Write your private notes or review here..."></textarea>
-    <button id="watch-review-save" class="tab active" style="margin-top: 10px; border-radius: 4px;">Save Review</button>
-    <div id="watch-review-status" style="display:inline-block; margin-left: 10px; font-size: 13px; color: var(--text3);"></div>
+    <p class="watch-section-label">Leave a Comment</p>
+    <div id="watch-comment-form">
+      <input  id="watch-cf-name"  type="text"  placeholder="Your name *" />
+      <input  id="watch-cf-email" type="email" placeholder="Email (optional)" />
+      <textarea id="watch-cf-body" placeholder="Your comment…" rows="4"></textarea>
+      <div id="watch-cf-actions">
+        <button id="watch-cf-submit">Send comment</button>
+        <span   id="watch-cf-status"></span>
+      </div>
+    </div>
   </div>
   <div id="watch-sidebar"></div>
 </div>
@@ -510,6 +526,9 @@ const html = `<!DOCTYPE html>
 <script>
 const VIDEOS = ${videosJson};
 const SAVED  = ${savedJson};
+
+// Replace with your deployed GAS web app URL:
+var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz7SFGetH10Jfg8jd0pridPpagpia1gN9KW_vb45JzPsoNXj5o6Bk7AXoyG-AK2ohXJ4g/exec';
 
 // ── State ──────────────────────────────────────────────
 var S = { cat: 'ALL', tag: null, q: '', sort: 'date', view: 'grid', bmOnly: false };
@@ -583,20 +602,46 @@ function openWatch(v) {
     document.getElementById('watch-desc').textContent = desc || 'No description available.';
   });
 
-  var reviewInput = document.getElementById('watch-review-input');
-  var saveBtn = document.getElementById('watch-review-save');
-  var statusDiv = document.getElementById('watch-review-status');
-  
-  var savedReviews = JSON.parse(localStorage.getItem('yt-reviews') || '{}');
-  reviewInput.value = savedReviews[vid] || '';
-  statusDiv.textContent = '';
-  
-  saveBtn.onclick = function() {
-    var reviews = JSON.parse(localStorage.getItem('yt-reviews') || '{}');
-    reviews[vid] = reviewInput.value;
-    localStorage.setItem('yt-reviews', JSON.stringify(reviews));
-    statusDiv.textContent = 'Saved!';
-    setTimeout(function() { statusDiv.textContent = ''; }, 2000);
+  // ── Comment form ────────────────────────────────────
+  var cfName   = document.getElementById('watch-cf-name');
+  var cfEmail  = document.getElementById('watch-cf-email');
+  var cfBody   = document.getElementById('watch-cf-body');
+  var cfSubmit = document.getElementById('watch-cf-submit');
+  var cfStatus = document.getElementById('watch-cf-status');
+
+  cfName.value = ''; cfEmail.value = ''; cfBody.value = '';
+  cfStatus.textContent = ''; cfSubmit.disabled = false;
+
+  cfSubmit.onclick = function() {
+    var name    = cfName.value.trim();
+    var comment = cfBody.value.trim();
+    if (!name)    { cfStatus.textContent = 'Please enter your name.'; return; }
+    if (!comment) { cfStatus.textContent = 'Please enter a comment.'; return; }
+
+    cfSubmit.disabled = true;
+    cfStatus.textContent = 'Sending…';
+
+    fetch(GAS_ENDPOINT, {
+      method: 'POST',
+      mode:   'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        videoTitle:  v.title,
+        channelName: v.channelName,
+        videoUrl:    v.url,
+        publishedAt: v.publishedAt,
+        name:        name,
+        email:       cfEmail.value.trim(),
+        comment:     comment,
+        submittedAt: new Date().toISOString()
+      })
+    }).then(function() {
+      cfStatus.textContent = 'Comment sent! Thank you.';
+      cfName.value = ''; cfEmail.value = ''; cfBody.value = '';
+    }).catch(function() {
+      cfSubmit.disabled = false;
+      cfStatus.textContent = 'Failed to send. Please try again.';
+    });
   };
 
   var sidebar = document.getElementById('watch-sidebar');
