@@ -483,10 +483,49 @@ const html = `<!DOCTYPE html>
       #watch-layout.open { display: flex; flex-direction: column; }
       #watch-sidebar { max-height: none; position: static; }
       .sidebar-thumb { width: 100px; min-width: 100px; }
+      #watch-layout.open .watch-player {
+        position: sticky;
+        top: 52px;
+        z-index: 10;
+      }
+    }
+
+    /* ── Landscape: auto-hide topbar ─────────────────── */
+    #float-back {
+      display: none;
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      z-index: 200;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      align-items: center;
+      gap: 6px;
+    }
+    @media (orientation: landscape) and (max-height: 500px) {
+      .topbar {
+        transition: transform 0.25s ease;
+      }
+      .topbar.hidden {
+        transform: translateY(-100%);
+      }
+      body.watch-open .topbar {
+        display: none;
+      }
+      body.watch-open #float-back {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
+
+<button id="float-back" onclick="closeWatch()">← Back</button>
 
 <!-- Sticky top bar -->
 <div class="topbar">
@@ -762,6 +801,7 @@ function openWatch(v) {
     }).join('');
 
   document.getElementById('watch-layout').classList.add('open');
+  document.body.classList.add('watch-open');
   document.getElementById('container').style.display = 'none';
   document.getElementById('back-btn').style.display = '';
   document.querySelector('.tabs-row').style.display = 'none';
@@ -774,6 +814,7 @@ function openWatch(v) {
 
 function closeWatch() {
   document.getElementById('watch-layout').classList.remove('open');
+  document.body.classList.remove('watch-open');
   document.getElementById('watch-iframe').src = '';
   document.getElementById('container').style.display = '';
   document.getElementById('back-btn').style.display = 'none';
@@ -785,6 +826,19 @@ function closeWatch() {
 }
 
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWatch(); });
+
+(function() {
+  var lastY = 0;
+  var landscape = window.matchMedia('(orientation: landscape) and (max-height: 500px)');
+  window.addEventListener('scroll', function() {
+    var topbar = document.querySelector('.topbar');
+    if (!landscape.matches) { topbar.classList.remove('hidden'); return; }
+    var y = window.scrollY;
+    if (y > lastY + 5) topbar.classList.add('hidden');
+    else if (y < lastY - 5) topbar.classList.remove('hidden');
+    lastY = y;
+  }, { passive: true });
+})();
 
 // ── Card builder ───────────────────────────────────────
 function cardHtml(v) {
