@@ -166,6 +166,9 @@ const html = `<!DOCTYPE html>
       .controls { justify-content: flex-end; flex-wrap: nowrap; }
       .icon-btn { padding: 5px 9px; font-size: 12px; }
       select.sort-sel { padding: 5px 8px; font-size: 12px; }
+      #subtags { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 8px 12px 0; }
+      #subtags::-webkit-scrollbar { display: none; }
+      .subtag { white-space: nowrap; }
     }
 
     /* ── Sub-tags ────────────────────────────────────── */
@@ -366,6 +369,31 @@ const html = `<!DOCTYPE html>
       word-break: break-word;
     }
     
+    #watch-ask-form { margin-top: 4px; }
+    #watch-ask-input-row { display: flex; gap: 8px; }
+    #watch-ask-input {
+      flex: 1; padding: 9px 11px; font-family: inherit; font-size: 13px;
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 6px;
+      outline: none; transition: border-color .15s;
+    }
+    #watch-ask-input::placeholder { color: var(--text3); }
+    #watch-ask-input:focus { border-color: var(--text2); }
+    #watch-ask-submit {
+      background: var(--chip-active); color: var(--chip-active-t);
+      border: none; border-radius: 6px; padding: 8px 18px;
+      font-size: 13px; font-weight: 600; cursor: pointer; transition: opacity .15s;
+      white-space: nowrap;
+    }
+    #watch-ask-submit:disabled { opacity: .5; cursor: not-allowed; }
+    #watch-ask-status { font-size: 13px; color: var(--text3); margin-top: 6px; }
+    #watch-ask-answer {
+      display: none; margin-top: 10px; padding: 12px;
+      background: var(--bg2); border-radius: 8px;
+      font-size: 13px; color: var(--text2); line-height: 1.7;
+      white-space: pre-wrap; word-break: break-word;
+    }
+
     #watch-comment-form {
       display: flex; flex-direction: column; gap: 8px; margin-top: 4px;
     }
@@ -507,6 +535,15 @@ const html = `<!DOCTYPE html>
     <a id="watch-yt-link" class="watch-yt-link" href="#" target="_blank" rel="noopener">▶ Open in YouTube</a>
     <p class="watch-section-label">Description</p>
     <div id="watch-desc"></div>
+    <p class="watch-section-label">Ask AI about this video</p>
+    <div id="watch-ask-form">
+      <div id="watch-ask-input-row">
+        <input id="watch-ask-input" type="text" placeholder="Ask a question about this video…" />
+        <button id="watch-ask-submit">Ask</button>
+      </div>
+      <div id="watch-ask-status"></div>
+      <div id="watch-ask-answer"></div>
+    </div>
     <p class="watch-section-label">Leave a Comment</p>
     <div id="watch-comment-form">
       <input  id="watch-cf-name"  type="text"  placeholder="Your name *" />
@@ -601,6 +638,53 @@ function openWatch(v) {
     var desc = (d.description || '').trim();
     document.getElementById('watch-desc').textContent = desc || 'No description available.';
   });
+
+  // ── Ask AI ───────────────────────────────────────────
+  var askInput  = document.getElementById('watch-ask-input');
+  var askSubmit = document.getElementById('watch-ask-submit');
+  var askStatus = document.getElementById('watch-ask-status');
+  var askAnswer = document.getElementById('watch-ask-answer');
+
+  askInput.value = '';
+  askStatus.textContent = '';
+  askAnswer.style.display = 'none';
+  askAnswer.textContent = '';
+  askSubmit.disabled = false;
+
+  askSubmit.onclick = function() {
+    var question = askInput.value.trim();
+    if (!question) { askStatus.textContent = 'Please enter a question.'; return; }
+
+    askSubmit.disabled = true;
+    askStatus.textContent = 'Thinking…';
+    askAnswer.style.display = 'none';
+
+    loadDetails(function(details) {
+      var d = details[v.url] || {};
+      var description = (d.description || '').slice(0, 500);
+
+      var params = new URLSearchParams({
+        type: 'ask',
+        question: question,
+        videoTitle: v.title,
+        channelName: v.channelName,
+        description: description
+      });
+
+      fetch(GAS_ENDPOINT + '?' + params.toString())
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          askAnswer.textContent = data.answer || 'No answer available.';
+          askAnswer.style.display = 'block';
+          askStatus.textContent = '';
+          askSubmit.disabled = false;
+        })
+        .catch(function() {
+          askStatus.textContent = 'Failed to get answer. Please try again.';
+          askSubmit.disabled = false;
+        });
+    });
+  };
 
   // ── Comment form ────────────────────────────────────
   var cfName   = document.getElementById('watch-cf-name');

@@ -1,6 +1,6 @@
 # YouTube Channel Tracker List
 # Last updated: 2026-04-25
-# Total channels: 41 (AI: 12 | Language: 16 | Training: 8 | Negotiation: 5)
+# Total channels: 47 (AI: 14 | Language: 16 | Training: 12 | Negotiation: 5)
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║  SECTION 1 — AI                                                              ║
@@ -91,88 +91,100 @@
      Notes   : Low volume, high depth; English equivalent of 평범한 사업가 angle
      Tags    : Business, Solopreneur
 
+[13] every.to
+     Handle  : @everyinc
+     Language: English
+     Focus   : AI-native writing, business, and knowledge work
+     Tags    : AI, Business, Writing
+
+[14] Dwarkesh Patel
+     Handle  : @DwarkeshPatel
+     Language: English
+     Focus   : Long-form interviews with top AI researchers, economists, historians
+     Tags    : AI, Interviews, Research
+
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║  SECTION 2 — LANGUAGE                                                        ║
 ║  Channels covering language learning or non-English content                  ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-[13] Adam
+[15] Adam
      Handle  : @engvidadam
      Language: English
      Tags    : Grammar, Vocabulary
 
-[14] Alex
+[16] Alex
      Handle  : @engvidalex
      Language: English
      Tags    : Speaking, Vocabulary
 
-[15] Ronnie
+[17] Ronnie
      Handle  : @engvidronnie
      Language: English
      Tags    : Slang, Speaking
 
-[16] Rebecca
+[18] Rebecca
      Handle  : @engvidrebecca
      Language: English
      Tags    : Grammar, Business English
 
-[17] Emma
+[19] Emma
      Handle  : @engvidemma
      Language: English
      Tags    : Pronunciation, Grammar
 
-[18] James
+[20] James
      Handle  : @engvidjames
      Language: English
      Tags    : Vocabulary, Grammar
 
-[19] Jade
+[21] Jade
      Handle  : @engvidjade
      Language: English
      Tags    : British English, Speaking
 
-[20] Gill
+[22] Gill
      Handle  : @engvidgill
      Language: English
      Tags    : British English, Grammar
 
-[21] Benjamin
+[23] Benjamin
      Handle  : @engvidbenjamin
      Language: English
      Tags    : Business English, British English
 
-[22] BBC Learning English
+[24] BBC Learning English
      Handle  : @bbclearningenglish
      Language: English
      Tags    : British English, Listening, News
 
-[23] Rachel's English
+[25] Rachel's English
      Handle  : @rachelsenglish
      Language: English
      Tags    : Pronunciation, American English
 
-[24] Speak English With Vanessa
+[26] Speak English With Vanessa
      Handle  : @speakenglishwithvanessa
      Language: English
      Tags    : American English, Speaking
 
-[25] EnglishClass101
+[27] EnglishClass101
      Handle  : @englishclass101
      Language: English
      Tags    : Listening, Vocabulary
 
-[26] English with Lucy
+[28] English with Lucy
      Handle  : @englishwithlucy
      Language: English
      Tags    : British English, Pronunciation
 
-[27] mmmEnglish
+[29] mmmEnglish
      Handle  : @mmmenglish_emma
      Language: English
      Tags    : Australian English, Speaking
 
-[28] VOA Learning English
+[30] VOA Learning English
      Handle  : @voalearningenglish
      Language: English
      Tags    : American English, News, Listening
@@ -183,45 +195,65 @@
 ║  Channels covering study skills and programming                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-[29] Thomas Frank
+[31] Thomas Frank
      Handle  : Thomas Frank
      Language: English
      Tags    : Productivity, Study Skills
 
-[30] freeCodeCamp
+[32] freeCodeCamp
      Handle  : @freecodecamp
      Language: English
      Tags    : Programming, Tutorials
 
-[31] CS50
+[33] CS50
      Handle  : @cs50
      Language: English
      Tags    : Programming, Computer Science
 
-[32] CrashCourse
+[34] CrashCourse
      Handle  : @crashcourse
      Language: English
      Tags    : Education, History
 
-[33] Learn Skills Daily
+[35] Learn Skills Daily
      Handle  : @learnskillsdaily
      Language: English
      Tags    : Soft Skills, Education
 
-[34] Cal Newport
+[36] Cal Newport
      Handle  : Cal Newport
      Language: English
      Tags    : Productivity, Deep Work
 
-[35] Adam Grant
+[37] Adam Grant
      Handle  : Adam Grant
      Language: English
      Tags    : Work Psychology, Leadership
 
-[36] Seth Godin
+[38] Seth Godin
      Handle  : Seth Godin
      Language: English
      Tags    : Marketing, Business Strategy
+
+[39] Y Combinator
+     Handle  : @ycombinator
+     Language: English
+     Tags    : Startup, Business, Education
+
+[40] Tim Ferriss
+     Handle  : @timferriss
+     Language: English
+     Tags    : Productivity, Lifestyle, Interviews
+
+[41] Big Think
+     Handle  : @bigthink
+     Language: English
+     Tags    : Education, Science, Ideas
+
+[42] Dean Graziosi
+     Handle  : @deangraziosi
+     Language: English
+     Tags    : Business, Mindset, Success
 
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
@@ -229,27 +261,27 @@
 ║  Channels covering negotiation and communication                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-[37] Getting More
+[43] Getting More
      Handle  : @GettingMore
      Language: English
      Tags    : Negotiation, Soft Skills
 
-[38] Chris Voss
+[44] Chris Voss
      Handle  : @ChrisVoss
      Language: English
      Tags    : Negotiation, Communication
 
-[39] Negotiate Anything
+[45] Negotiate Anything
      Handle  : @NegotiateAnything
      Language: English
      Tags    : Negotiation, Business
 
-[40] Charisma on Command
+[46] Charisma on Command
      Handle  : @charismaoncommand
      Language: English
      Tags    : Communication, Psychology
 
-[41] Think Fast Talk Smart
+[47] Think Fast Talk Smart
      Handle  : @ThinkFastTalkSmart
      Language: English
      Tags    : Communication, Soft Skills
