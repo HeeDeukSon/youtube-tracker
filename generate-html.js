@@ -427,6 +427,15 @@ const html = `<!DOCTYPE html>
     }
     #watch-cf-submit:disabled { opacity: .5; cursor: not-allowed; }
     #watch-cf-status { font-size: 13px; color: var(--text3); }
+    #watch-cf-copy-row {
+      display: none; align-items: center; gap: 7px;
+      font-size: 13px; color: var(--text2);
+    }
+    #watch-cf-copy-row.visible { display: flex; }
+    #watch-cf-copy-row input[type="checkbox"] {
+      width: auto; cursor: pointer; accent-color: var(--chip-active);
+    }
+    #watch-cf-copy-row label { cursor: pointer; user-select: none; }
 
     /* ── Watch sidebar ───────────────────────────────── */
     #watch-sidebar {
@@ -598,6 +607,10 @@ const html = `<!DOCTYPE html>
     <div id="watch-comment-form">
       <input  id="watch-cf-name"  type="text"  placeholder="Your name *" />
       <input  id="watch-cf-email" type="email" placeholder="Email (optional)" />
+      <div id="watch-cf-copy-row">
+        <input type="checkbox" id="watch-cf-copy" />
+        <label for="watch-cf-copy">Send me a copy of this comment</label>
+      </div>
       <textarea id="watch-cf-body" placeholder="Your comment…" rows="4"></textarea>
       <div id="watch-cf-actions">
         <button id="watch-cf-submit">Send comment</button>
@@ -737,14 +750,27 @@ function openWatch(v) {
   };
 
   // ── Comment form ────────────────────────────────────
-  var cfName   = document.getElementById('watch-cf-name');
-  var cfEmail  = document.getElementById('watch-cf-email');
-  var cfBody   = document.getElementById('watch-cf-body');
-  var cfSubmit = document.getElementById('watch-cf-submit');
-  var cfStatus = document.getElementById('watch-cf-status');
+  var cfName    = document.getElementById('watch-cf-name');
+  var cfEmail   = document.getElementById('watch-cf-email');
+  var cfBody    = document.getElementById('watch-cf-body');
+  var cfSubmit  = document.getElementById('watch-cf-submit');
+  var cfStatus  = document.getElementById('watch-cf-status');
+  var cfCopyRow = document.getElementById('watch-cf-copy-row');
+  var cfCopy    = document.getElementById('watch-cf-copy');
 
   cfName.value = ''; cfEmail.value = ''; cfBody.value = '';
   cfStatus.textContent = ''; cfSubmit.disabled = false;
+  cfCopy.checked = false;
+  cfCopyRow.classList.remove('visible');
+
+  cfEmail.oninput = function() {
+    if (cfEmail.value.trim()) {
+      cfCopyRow.classList.add('visible');
+    } else {
+      cfCopyRow.classList.remove('visible');
+      cfCopy.checked = false;
+    }
+  };
 
   cfSubmit.onclick = function() {
     var name    = cfName.value.trim();
@@ -760,18 +786,21 @@ function openWatch(v) {
       mode:   'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        videoTitle:  v.title,
-        channelName: v.channelName,
-        videoUrl:    v.url,
-        publishedAt: v.publishedAt,
-        name:        name,
-        email:       cfEmail.value.trim(),
-        comment:     comment,
-        submittedAt: new Date().toISOString()
+        videoTitle:     v.title,
+        channelName:    v.channelName,
+        videoUrl:       v.url,
+        publishedAt:    v.publishedAt,
+        name:           name,
+        email:          cfEmail.value.trim(),
+        comment:        comment,
+        submittedAt:    new Date().toISOString(),
+        sendCopyToUser: !!(cfEmail.value.trim() && cfCopy.checked)
       })
     }).then(function() {
       cfStatus.textContent = 'Comment sent! Thank you.';
       cfName.value = ''; cfEmail.value = ''; cfBody.value = '';
+      cfCopy.checked = false;
+      cfCopyRow.classList.remove('visible');
     }).catch(function() {
       cfSubmit.disabled = false;
       cfStatus.textContent = 'Failed to send. Please try again.';
