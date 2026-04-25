@@ -193,12 +193,13 @@ async function main() {
     }
   }
 
-  // Merge with existing results.json — preserve data for channels we couldn't reach
+  // Merge with existing results.json — preserve data only for channels still tracked but not fetched this run
   let finalResults = results;
   try {
     const existing = JSON.parse(fs.readFileSync('results.json', 'utf-8'));
     const fetched = new Set(results.map(r => r.channel));
-    const preserved = existing.filter(r => !fetched.has(r.channel));
+    const channelSet = new Set(CHANNELS);
+    const preserved = existing.filter(r => channelSet.has(r.channel) && !fetched.has(r.channel));
     if (preserved.length) {
       finalResults = [...results, ...preserved];
       console.log(`Preserved ${preserved.length} channels from previous results.json`);

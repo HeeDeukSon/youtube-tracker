@@ -1,146 +1,90 @@
 # YouTube Channel Tracker List
-# Last updated: 2026-04-23
-# Total channels: 46 (AI: 20 | Technical: 0 | Language: 16 | Training: 5 | Negotiation: 5)
+# Last updated: 2026-04-25
+# Total channels: 41 (AI: 12 | Language: 16 | Training: 8 | Negotiation: 5)
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║  SECTION 1 — AI                                                             ║
-║  Channels covering AI news, tools, model releases, and workflows            ║
+║  SECTION 1 — AI                                                              ║
+║  Channels covering AI news, tools, model releases, and workflows             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-[01] todaycode
-     Handle  : todaycode
-     Language: Korean
-     Focus   : AI tools, LLM token efficiency, Claude/Anthropic ecosystem
-     Notes   : Practical AI dev workflows; strong on cost optimization
-     Tags    : Tutorials, Workflows
-
-[02] 평범한 사업가
-     Handle  : 평범한 사업가
-     Language: Korean
-     Focus   : AI podcast interviews, Claude Code, Obsidian, context engineering
-     Notes   : Podcast-format (EP numbered); interviews Korean AI builders
-     Tags    : Interviews, Obsidian
-
-[03] 오후5시
-     Handle  : 오후5시
-     Language: Korean
-     Focus   : Claude AI news and features (Design, Opus, plans, agents)
-     Notes   : Very active — near-daily uploads; first-mover on Claude releases
-     Tags    : News, Claude
-
-[04] 코드깎는 노인
-     Handle  : 코드깎는 노인
-     Language: Korean
-     Focus   : Claude Code, vibe coding, practical AI apps
-     Notes   : Beginner-friendly tutorials with strong engagement
-     Tags    : Tutorials, Claude
-
-[05] 오빠두엑셀
-     Handle  : @Oppadu
-     Language: Korean
-     Focus   : Excel and Office productivity; Microsoft AI features
-     Notes   : Large established channel — 엑셀 강의 대표채널
-     Tags    : Tutorials, Office
-
-[06] 노정석
-     Handle  : @chester_roh
-     Language: Korean
-     Focus   : AI/tech entrepreneur perspective, podcast-format (EP numbered)
-     Notes   : ⚠ Handle is @chester_roh — searching by "노정석" returns 404
-     Tags    : Interviews, Tech
-
-[07] 실밸개발자
-     Handle  : 실밸개발자
-     Language: Korean
-     Focus   : Dev career advice from a Meta senior engineer; harness engineering
-     Notes   : High engagement; strong opinions on AI's impact on dev careers
-     Tags    : Career, Tech
-
-[08] 윤자동
-     Handle  : 윤자동
-     Language: Korean
-     Focus   : Claude Code automation, running an AI-first business
-     Notes   : Mix of tutorials, live streams, and business/culture content
-     Tags    : Automation, Business
-
-[09] Jeff Su
+[01] Jeff Su
      Handle  : jeff su
      Language: English
      Focus   : Claude Cowork tutorials, AI productivity, tool comparisons
      Notes   : Breakout video "Learn 80% of Claude Cowork" hit 483K views (Apr 2026)
      Tags    : Tutorials, Productivity
 
-[10] Greg Isenberg
+[02] Greg Isenberg
      Handle  : Greg Isenberg
      Language: English
      Focus   : AI agents, Claude Code/Design, AI lifestyle and business
      Notes   : High volume; broad AI ecosystem; startup/founder angle
      Tags    : Business, Agents
 
-[11] Ali Abdaal
+[03] Ali Abdaal
      Handle  : Ali Abdaal
      Language: English
      Focus   : Productivity, business, AI skill gap awareness
      Notes   : Large general audience; not AI-exclusive but high reach
      Tags    : Productivity, Career
 
-[12] Lenny's Podcast
+[04] Lenny's Podcast
      Handle  : Lenny's Podcast
      Language: English
      Focus   : PM industry, tech jobs, building in the AI era
      Notes   : High-quality guests; deep anxiety about PM/tech job future
      Tags    : PM, Career
 
-[13] Nate B Jones
+[05] Nate B Jones
      Handle  : Nate B Jones
      Language: English
      Focus   : AI impact on developers and jobs; new model reviews
      Notes   : Very active (multiple videos/day); provocative, high engagement
      Tags    : News, Dev
 
-[14] Julian Goldie
+[06] Julian Goldie
      Handle  : Julian Goldie
      Language: English
      Focus   : AI news firehose — all models and tools daily
      Notes   : Extremely high volume; good for staying aware of every release
      Tags    : News, Automation
 
-[15] Nick Saraev
+[07] Nick Saraev
      Handle  : Nick Saraev
      Language: English
      Focus   : Claude new feature releases and automation implications
      Notes   : Exclusively Claude ecosystem; consistently 90K–187K views
      Tags    : Tutorials, Automation
 
-[16] Fireship
+[08] Fireship
      Handle  : Fireship
      Language: English
      Focus   : Dev tools and AI news — fast, punchy, opinionated
      Notes   : Best signal-to-noise ratio for devs; short and sharp format
      Tags    : News, Dev
 
-[17] Andrej Karpathy
+[09] Andrej Karpathy
      Handle  : Andrej Karpathy
      Language: English
      Focus   : Foundational AI/ML — neural networks, LLM internals
      Notes   : Posts rarely but every video is essential; cited across other channels
      Tags    : ML, Tutorials
 
-[18] t3dotgg (Theo)
+[10] t3dotgg (Theo)
      Handle  : t3dotgg
      Language: English
      Focus   : Honest, critical developer takes on AI tools and web dev
      Notes   : Great counterbalance to hype channels; no sponsors, no fluff
      Tags    : Dev, Reviews
 
-[19] Matt Wolfe
+[11] Matt Wolfe
      Handle  : Matt Wolfe
      Language: English
      Focus   : Broad AI tool reviews and discovery
      Notes   : Similar to Julian Goldie but more measured and in-depth
      Tags    : News, Reviews
 
-[20] Dan Koe
+[12] Dan Koe
      Handle  : Dan Koe
      Language: English
      Focus   : Solopreneur + AI — one-person business with AI
@@ -149,155 +93,163 @@
 
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║  SECTION 2 — TECHNICAL                                                      ║
-║  Channels covering software engineering, coding, and developer tools        ║
+║  SECTION 2 — LANGUAGE                                                        ║
+║  Channels covering language learning or non-English content                  ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-  (empty — add channels here)
-
-
-╔══════════════════════════════════════════════════════════════════════════════╗
-║  SECTION 3 — LANGUAGE                                                       ║
-║  Channels covering language learning or non-English content                 ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-
-[21] Adam
+[13] Adam
      Handle  : @engvidadam
      Language: English
      Tags    : Grammar, Vocabulary
 
-[22] Alex
+[14] Alex
      Handle  : @engvidalex
      Language: English
      Tags    : Speaking, Vocabulary
 
-[23] Ronnie
+[15] Ronnie
      Handle  : @engvidronnie
      Language: English
      Tags    : Slang, Speaking
 
-[24] Rebecca
+[16] Rebecca
      Handle  : @engvidrebecca
      Language: English
      Tags    : Grammar, Business English
 
-[25] Emma
+[17] Emma
      Handle  : @engvidemma
      Language: English
      Tags    : Pronunciation, Grammar
 
-[26] James
+[18] James
      Handle  : @engvidjames
      Language: English
      Tags    : Vocabulary, Grammar
 
-[27] Jade
+[19] Jade
      Handle  : @engvidjade
      Language: English
      Tags    : British English, Speaking
 
-[28] Gill
+[20] Gill
      Handle  : @engvidgill
      Language: English
      Tags    : British English, Grammar
 
-[29] Benjamin
+[21] Benjamin
      Handle  : @engvidbenjamin
      Language: English
      Tags    : Business English, British English
 
-[30] BBC Learning English
+[22] BBC Learning English
      Handle  : @bbclearningenglish
      Language: English
      Tags    : British English, Listening, News
 
-[31] Rachel's English
+[23] Rachel's English
      Handle  : @rachelsenglish
      Language: English
      Tags    : Pronunciation, American English
 
-[32] Speak English With Vanessa
+[24] Speak English With Vanessa
      Handle  : @speakenglishwithvanessa
      Language: English
      Tags    : American English, Speaking
 
-[33] EnglishClass101
+[25] EnglishClass101
      Handle  : @englishclass101
      Language: English
      Tags    : Listening, Vocabulary
 
-[34] English with Lucy
+[26] English with Lucy
      Handle  : @englishwithlucy
      Language: English
      Tags    : British English, Pronunciation
 
-[35] mmmEnglish
+[27] mmmEnglish
      Handle  : @mmmenglish_emma
      Language: English
      Tags    : Australian English, Speaking
 
-[36] VOA Learning English
+[28] VOA Learning English
      Handle  : @voalearningenglish
      Language: English
      Tags    : American English, News, Listening
 
+
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║  SECTION 4 — TRAINING                                                       ║
-║  Channels covering study skills and programming                             ║
+║  SECTION 3 — TRAINING                                                        ║
+║  Channels covering study skills and programming                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-[37] Thomas Frank
+[29] Thomas Frank
      Handle  : Thomas Frank
      Language: English
      Tags    : Productivity, Study Skills
 
-[38] freeCodeCamp
+[30] freeCodeCamp
      Handle  : @freecodecamp
      Language: English
      Tags    : Programming, Tutorials
 
-[39] CS50
+[31] CS50
      Handle  : @cs50
      Language: English
      Tags    : Programming, Computer Science
 
-[40] CrashCourse
+[32] CrashCourse
      Handle  : @crashcourse
      Language: English
      Tags    : Education, History
 
-[41] Learn Skills Daily
+[33] Learn Skills Daily
      Handle  : @learnskillsdaily
      Language: English
      Tags    : Soft Skills, Education
 
+[34] Cal Newport
+     Handle  : Cal Newport
+     Language: English
+     Tags    : Productivity, Deep Work
+
+[35] Adam Grant
+     Handle  : Adam Grant
+     Language: English
+     Tags    : Work Psychology, Leadership
+
+[36] Seth Godin
+     Handle  : Seth Godin
+     Language: English
+     Tags    : Marketing, Business Strategy
+
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║  SECTION 5 — NEGOTIATION                                                    ║
-║  Channels covering negotiation and communication                            ║
+║  SECTION 4 — NEGOTIATION                                                     ║
+║  Channels covering negotiation and communication                             ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
-[42] Getting More
+[37] Getting More
      Handle  : @GettingMore
      Language: English
      Tags    : Negotiation, Soft Skills
 
-[43] Chris Voss
+[38] Chris Voss
      Handle  : @ChrisVoss
      Language: English
      Tags    : Negotiation, Communication
 
-[44] Negotiate Anything
+[39] Negotiate Anything
      Handle  : @NegotiateAnything
      Language: English
      Tags    : Negotiation, Business
 
-[45] Charisma on Command
+[40] Charisma on Command
      Handle  : @charismaoncommand
      Language: English
      Tags    : Communication, Psychology
 
-[46] Think Fast Talk Smart
+[41] Think Fast Talk Smart
      Handle  : @ThinkFastTalkSmart
      Language: English
      Tags    : Communication, Soft Skills
