@@ -166,9 +166,8 @@ const html = `<!DOCTYPE html>
       .controls { justify-content: flex-end; flex-wrap: nowrap; }
       .icon-btn { padding: 5px 9px; font-size: 12px; }
       select.sort-sel { padding: 5px 8px; font-size: 12px; }
-      #subtags { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 8px 12px 0; }
-      #subtags::-webkit-scrollbar { display: none; }
-      .subtag { white-space: nowrap; }
+      #subtags { display: none !important; }
+      #subtag-sel.has-tags { display: block; }
     }
 
     /* ── Sub-tags ────────────────────────────────────── */
@@ -183,6 +182,17 @@ const html = `<!DOCTYPE html>
     }
     .subtag:hover { border-color: var(--text2); color: var(--text); }
     .subtag.active { background: var(--chip-active); color: var(--chip-active-t); border-color: transparent; }
+
+    #subtag-sel {
+      display: none;
+      margin: 8px 16px 0;
+      padding: 7px 10px;
+      font-size: 13px;
+      background: var(--surface); color: var(--text);
+      border: 1px solid var(--border); border-radius: 8px;
+      outline: none; cursor: pointer;
+      width: calc(100% - 32px);
+    }
 
     /* ── Result count ────────────────────────────────── */
     #result-count { padding: 10px 16px 0; font-size: 12px; color: var(--text3); }
@@ -517,6 +527,7 @@ const html = `<!DOCTYPE html>
 
 <!-- Contextual sub-tags -->
 <div id="subtags"></div>
+<select id="subtag-sel" onchange="onSubtagSel(this.value)"></select>
 
 <!-- Result count -->
 <div id="result-count"></div>
@@ -755,6 +766,7 @@ function openWatch(v) {
   document.getElementById('back-btn').style.display = '';
   document.querySelector('.tabs-row').style.display = 'none';
   document.getElementById('subtags').style.display = 'none';
+  document.getElementById('subtag-sel').style.display = 'none';
   document.getElementById('result-count').style.display = 'none';
   document.querySelector('header').style.display = 'none';
   window.scrollTo(0, 0);
@@ -767,6 +779,7 @@ function closeWatch() {
   document.getElementById('back-btn').style.display = 'none';
   document.querySelector('.tabs-row').style.display = '';
   document.getElementById('subtags').style.display = '';
+  document.getElementById('subtag-sel').style.display = '';
   document.getElementById('result-count').style.display = '';
   document.querySelector('header').style.display = '';
 }
@@ -857,15 +870,32 @@ function render() {
 
 function updateSubTags() {
   var bar = document.getElementById('subtags');
-  if (S.cat === 'ALL') { bar.innerHTML = ''; return; }
+  var sel = document.getElementById('subtag-sel');
+  if (S.cat === 'ALL') {
+    bar.innerHTML = '';
+    sel.innerHTML = '';
+    sel.classList.remove('has-tags');
+    return;
+  }
   var pool = VIDEOS.filter(function(v){ return v.category === S.cat; });
   var seen = {}, tags = [];
   pool.forEach(function(v){ v.tags.forEach(function(t){ if (!seen[t]) { seen[t]=1; tags.push(t); } }); });
   tags.sort();
-  bar.innerHTML = ['All'].concat(tags).map(function(t) {
+  var allTags = ['All'].concat(tags);
+  bar.innerHTML = allTags.map(function(t) {
     var active = (t==='All' && !S.tag) || S.tag===t;
     return '<button class="subtag'+(active?' active':'')+'" data-tag="'+t+'">'+t+'</button>';
   }).join('');
+  sel.innerHTML = allTags.map(function(t) {
+    var selected = (t==='All' && !S.tag) || S.tag===t;
+    return '<option value="'+t+'"'+(selected?' selected':'')+'>'+t+'</option>';
+  }).join('');
+  sel.classList.add('has-tags');
+}
+
+function onSubtagSel(val) {
+  S.tag = (val === 'All') ? null : val;
+  render();
 }
 
 // ── Event delegation ────────────────────────────────────
