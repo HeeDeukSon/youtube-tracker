@@ -1,5 +1,9 @@
 const fs = require('fs');
 
+const CHANNEL_COL_WIDTH = 22;
+const BAR_SCALE = 2;
+const SECTION_SEPARATOR_WIDTH = 77;
+
 const data = JSON.parse(fs.readFileSync('results.json', 'utf-8'));
 const today = new Date().toISOString().slice(0, 10);
 const currentMonth = today.slice(0, 7);
@@ -39,15 +43,15 @@ out += `
   UPLOAD VOLUME RANKING
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  Rank  ${pad('Channel', 22)} Videos   Bar
+  Rank  ${pad('Channel', CHANNEL_COL_WIDTH)} Videos   Bar
   ────  ──────────────────────   ───────  ────────────────────────────────────
 `;
 
 sorted.forEach((ch, i) => {
   const rank = String(i + 1).padStart(3, ' ');
-  const name = pad(ch.channel, 22);
+  const name = pad(ch.channel, CHANNEL_COL_WIDTH);
   const count = String(ch.videos.length).padStart(4, ' ');
-  out += `  ${rank}  ${name}   ${count}     ${bar(ch.videos.length * 2)}\n`;
+  out += `  ${rank}  ${name}   ${count}     ${bar(ch.videos.length * BAR_SCALE)}\n`;
 });
 
 out += `
@@ -61,7 +65,7 @@ filtered.forEach(ch => {
   const count = ch.videos.length;
   out += `
   ▶ ${ch.channel}  (${count} video${count !== 1 ? 's' : ''})
-  ${'─'.repeat(77)}
+  ${'─'.repeat(SECTION_SEPARATOR_WIDTH)}
 `;
   if (count === 0) {
     out += `  (no uploads this month)\n`;

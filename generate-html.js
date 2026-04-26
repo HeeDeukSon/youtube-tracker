@@ -1,13 +1,16 @@
 'use strict';
 const fs = require('fs');
 
+const TRENDING_PERCENTILE = 0.15;
+const DEFAULT_CATEGORY = 'AI'; // keep in sync with tracker.js
+
 const data = JSON.parse(fs.readFileSync('results.json', 'utf-8'));
 const today = new Date().toISOString().slice(0, 10);
 
 // Flatten all videos
 const allVideos = [];
 data.forEach(ch => {
-  const meta = { category: ch.category || 'AI', tags: ch.tags || [] };
+  const meta = { category: ch.category || DEFAULT_CATEGORY, tags: ch.tags || [] };
   ch.videos.forEach(v => {
     allVideos.push({
       title: v.title,
@@ -29,7 +32,7 @@ data.forEach(ch => {
 
 // Mark trending: top 15% by view count
 allVideos.sort((a, b) => Number(b.viewCount) - Number(a.viewCount));
-const trendCut = Math.floor(allVideos.length * 0.15);
+const trendCut = Math.floor(allVideos.length * TRENDING_PERCENTILE);
 allVideos.slice(0, trendCut).forEach(v => { v.trending = true; });
 
 // Default sort: newest first
@@ -348,6 +351,18 @@ const html = `<!DOCTYPE html>
       padding-top: 12px;
       border-top: 1px solid var(--border);
     }
+    .watch-desc-header {
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border);
+    }
+    .watch-desc-header .watch-section-label { margin: 0; padding-top: 0; border-top: none; }
+    .watch-desc-dl {
+      font-size: 12px; color: var(--text3); text-decoration: none;
+      white-space: nowrap; padding: 3px 8px;
+      border: 1px solid var(--border); border-radius: 6px;
+      transition: color .15s, border-color .15s;
+    }
+    .watch-desc-dl:hover { color: var(--text); border-color: var(--text2); }
     #watch-desc {
       font-size: 13px;
       color: var(--text2);
@@ -355,6 +370,13 @@ const html = `<!DOCTYPE html>
       white-space: pre-wrap;
       word-break: break-word;
     }
+    #watch-desc.collapsed { max-height: 5.1em; overflow: hidden; }
+    #watch-desc-toggle {
+      background: none; border: none; color: var(--text3);
+      font-size: 12px; cursor: pointer; padding: 4px 0; display: none;
+    }
+    #watch-desc-toggle.visible { display: block; }
+    #watch-desc-toggle:hover { color: var(--text); }
 
     .watch-comment {
       padding: 10px 0;
@@ -436,6 +458,16 @@ const html = `<!DOCTYPE html>
       width: auto; cursor: pointer; accent-color: var(--chip-active);
     }
     #watch-cf-copy-row label { cursor: pointer; user-select: none; }
+    #watch-cf-requests {
+      display: flex; flex-wrap: wrap; gap: 8px 16px;
+    }
+    #watch-cf-requests label {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 13px; color: var(--text2); cursor: pointer; user-select: none;
+    }
+    #watch-cf-requests input[type="checkbox"] {
+      width: auto; cursor: pointer; accent-color: var(--chip-active);
+    }
 
     /* ── Watch sidebar ───────────────────────────────── */
     #watch-sidebar {
@@ -486,6 +518,21 @@ const html = `<!DOCTYPE html>
       font-size: 11px;
       color: var(--text3);
       margin-top: 3px;
+    }
+
+    @media (min-width: 901px) {
+      #watch-layout.open {
+        position: fixed;
+        top: 52px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        overflow-y: auto;
+        max-width: none;
+        margin: 0;
+        background: var(--bg);
+      }
     }
 
     @media (max-width: 900px) {
@@ -592,8 +639,12 @@ const html = `<!DOCTYPE html>
     <p id="watch-title"></p>
     <div class="watch-meta-row" id="watch-meta"></div>
     <a id="watch-yt-link" class="watch-yt-link" href="#" target="_blank" rel="noopener">▶ Open in YouTube</a>
-    <p class="watch-section-label">Description</p>
-    <div id="watch-desc"></div>
+    <div class="watch-desc-header">
+      <p class="watch-section-label">Description</p>
+      <a id="watch-desc-dl" class="watch-desc-dl" style="display:none" href="#" download>⬇ Download</a>
+    </div>
+    <div id="watch-desc" class="collapsed"></div>
+    <button id="watch-desc-toggle" onclick="toggleDesc()">Show more</button>
     <p class="watch-section-label">Ask AI about this video</p>
     <div id="watch-ask-form">
       <div id="watch-ask-input-row">
@@ -612,6 +663,12 @@ const html = `<!DOCTYPE html>
         <label for="watch-cf-copy">Send me a copy of this comment</label>
       </div>
       <textarea id="watch-cf-body" placeholder="Your comment…" rows="4"></textarea>
+      <div id="watch-cf-requests">
+        <label><input type="checkbox" value="Conversation" /> Conversation</label>
+        <label><input type="checkbox" value="Need Help" /> Need Help</label>
+        <label><input type="checkbox" value="More Info" /> More Info</label>
+        <label><input type="checkbox" value="Need Lecture" /> Need Lecture</label>
+      </div>
       <div id="watch-cf-actions">
         <button id="watch-cf-submit">Send comment</button>
         <span   id="watch-cf-status"></span>
@@ -626,6 +683,7 @@ const html = `<!DOCTYPE html>
 <script>
 const VIDEOS = ${videosJson};
 const SAVED  = ${savedJson};
+const LANGUAGE_TAGS = ['English', 'Korean']; // keep in sync with patch.js and tracker.js
 
 // Replace with your deployed GAS web app URL:
 var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz7SFGetH10Jfg8jd0pridPpagpia1gN9KW_vb45JzPsoNXj5o6Bk7AXoyG-AK2ohXJ4g/exec';
@@ -695,14 +753,54 @@ function openWatch(v) {
     esc(v.channelName) + ' · ' + fmtNum(v.viewCount) + ' views · ' + timeAgo(v.publishedAt);
   document.getElementById('watch-yt-link').href = v.url;
 
-  document.getElementById('watch-desc').textContent = 'Loading…';
+  var descEl   = document.getElementById('watch-desc');
+  var descDl   = document.getElementById('watch-desc-dl');
+  var descTog  = document.getElementById('watch-desc-toggle');
+  descEl.textContent = 'Loading…';
+  descEl.classList.add('collapsed');
+  descTog.classList.remove('visible');
+  descDl.style.display = 'none';
+  if (descDl._blobUrl) { URL.revokeObjectURL(descDl._blobUrl); descDl._blobUrl = null; }
+
   loadDetails(function(details) {
-    var d = details[v.url] || {};
+    var d    = details[v.url] || {};
     var desc = (d.description || '').trim();
-    document.getElementById('watch-desc').textContent = desc || 'No description available.';
+    descEl.textContent = desc || 'No description available.';
+    descEl.classList.add('collapsed');
+
+    if (descEl.scrollHeight > descEl.clientHeight) {
+      descTog.textContent = 'Show more';
+      descTog.classList.add('visible');
+    }
+
+    if (desc) {
+      var blob = new Blob([desc], { type: 'text/plain' });
+      descDl._blobUrl   = URL.createObjectURL(blob);
+      descDl.href       = descDl._blobUrl;
+      descDl.download   = v.title.replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '_') + '_description.txt';
+      descDl.style.display = '';
+    }
   });
 
-  // ── Ask AI ───────────────────────────────────────────
+  setupAskAiForm(v);
+  setupCommentForm(v);
+  loadRelatedVideos(v);
+
+  document.getElementById('watch-layout').classList.add('open');
+  document.body.classList.add('watch-open');
+  document.getElementById('back-btn').style.display = '';
+  if (window.innerWidth <= 900) {
+    document.getElementById('container').style.display = 'none';
+    document.querySelector('.tabs-row').style.display = 'none';
+    document.getElementById('subtags').style.display = 'none';
+    document.getElementById('subtag-sel').style.display = 'none';
+    document.getElementById('result-count').style.display = 'none';
+    document.querySelector('header').style.display = 'none';
+    window.scrollTo(0, 0);
+  }
+}
+
+function setupAskAiForm(v) {
   var askInput  = document.getElementById('watch-ask-input');
   var askSubmit = document.getElementById('watch-ask-submit');
   var askStatus = document.getElementById('watch-ask-status');
@@ -748,8 +846,9 @@ function openWatch(v) {
         });
     });
   };
+}
 
-  // ── Comment form ────────────────────────────────────
+function setupCommentForm(v) {
   var cfName    = document.getElementById('watch-cf-name');
   var cfEmail   = document.getElementById('watch-cf-email');
   var cfBody    = document.getElementById('watch-cf-body');
@@ -762,10 +861,12 @@ function openWatch(v) {
   cfStatus.textContent = ''; cfSubmit.disabled = false;
   cfCopy.checked = false;
   cfCopyRow.classList.remove('visible');
+  document.querySelectorAll('#watch-cf-requests input').forEach(function(c) { c.checked = false; });
 
   cfEmail.oninput = function() {
     if (cfEmail.value.trim()) {
       cfCopyRow.classList.add('visible');
+      cfCopy.checked = true;
     } else {
       cfCopyRow.classList.remove('visible');
       cfCopy.checked = false;
@@ -781,10 +882,22 @@ function openWatch(v) {
     cfSubmit.disabled = true;
     cfStatus.textContent = 'Sending…';
 
+    var requests = Array.from(
+      document.querySelectorAll('#watch-cf-requests input:checked')
+    ).map(function(c) { return c.value; }).join(', ');
+
+    var emailBody =
+      'Thank you for sharing your thoughts! Rehearsing what you\'ve learned and expressing it in your own words is highly effective for English mastery. ' +
+      'I encourage you to keep building on these concepts to spark your own creative ideas and perspectives.\n\n' +
+      '[Your Thoughts for Today]\n' +
+      comment + '\n\n' +
+      'Remember, language acquisition is all about building consistent habits.\n' +
+      'Great job today!';
+
     fetch(GAS_ENDPOINT, {
       method: 'POST',
       mode:   'no-cors',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify({
         videoTitle:     v.title,
         channelName:    v.channelName,
@@ -793,7 +906,10 @@ function openWatch(v) {
         name:           name,
         email:          cfEmail.value.trim(),
         comment:        comment,
+        emailSubject:   'Your thoughts on: ' + v.title,
+        emailBody:      emailBody,
         submittedAt:    new Date().toISOString(),
+        requests:       requests,
         sendCopyToUser: !!(cfEmail.value.trim() && cfCopy.checked)
       })
     }).then(function() {
@@ -801,22 +917,25 @@ function openWatch(v) {
       cfName.value = ''; cfEmail.value = ''; cfBody.value = '';
       cfCopy.checked = false;
       cfCopyRow.classList.remove('visible');
+      document.querySelectorAll('#watch-cf-requests input').forEach(function(c) { c.checked = false; });
     }).catch(function() {
       cfSubmit.disabled = false;
       cfStatus.textContent = 'Failed to send. Please try again.';
     });
   };
+}
 
+function loadRelatedVideos(v) {
   var sidebar = document.getElementById('watch-sidebar');
-  var vTags = (v.tags || []).filter(function(t) { return t !== 'English' && t !== 'Korean'; });
-  var related = VIDEOS.filter(function(x) { 
-    return x.url !== v.url && x.tags && x.tags.some(function(t) { return vTags.includes(t); }); 
+  var vTags = (v.tags || []).filter(function(t) { return !LANGUAGE_TAGS.includes(t); });
+  var related = VIDEOS.filter(function(x) {
+    return x.url !== v.url && x.tags && x.tags.some(function(t) { return vTags.includes(t); });
   });
   // Fallback to category if no overlapping tags found
   if (related.length === 0) {
     related = VIDEOS.filter(function(x) { return x.category === v.category && x.url !== v.url; });
   }
-  
+
   var sidebarTitle = vTags.length ? vTags.join(', ') : v.category;
   sidebar.innerHTML = '<div class="sidebar-label">Related · ' + sidebarTitle + '</div>' +
     related.map(function(r) {
@@ -828,30 +947,28 @@ function openWatch(v) {
         '</div>' +
       '</div>';
     }).join('');
-
-  document.getElementById('watch-layout').classList.add('open');
-  document.body.classList.add('watch-open');
-  document.getElementById('container').style.display = 'none';
-  document.getElementById('back-btn').style.display = '';
-  document.querySelector('.tabs-row').style.display = 'none';
-  document.getElementById('subtags').style.display = 'none';
-  document.getElementById('subtag-sel').style.display = 'none';
-  document.getElementById('result-count').style.display = 'none';
-  document.querySelector('header').style.display = 'none';
-  window.scrollTo(0, 0);
 }
 
 function closeWatch() {
   document.getElementById('watch-layout').classList.remove('open');
   document.body.classList.remove('watch-open');
   document.getElementById('watch-iframe').src = '';
-  document.getElementById('container').style.display = '';
   document.getElementById('back-btn').style.display = 'none';
-  document.querySelector('.tabs-row').style.display = '';
-  document.getElementById('subtags').style.display = '';
-  document.getElementById('subtag-sel').style.display = '';
-  document.getElementById('result-count').style.display = '';
-  document.querySelector('header').style.display = '';
+  if (window.innerWidth <= 900) {
+    document.getElementById('container').style.display = '';
+    document.querySelector('.tabs-row').style.display = '';
+    document.getElementById('subtags').style.display = '';
+    document.getElementById('subtag-sel').style.display = '';
+    document.getElementById('result-count').style.display = '';
+    document.querySelector('header').style.display = '';
+  }
+}
+
+function toggleDesc() {
+  var el  = document.getElementById('watch-desc');
+  var btn = document.getElementById('watch-desc-toggle');
+  var collapsed = el.classList.toggle('collapsed');
+  btn.textContent = collapsed ? 'Show more' : 'Show less';
 }
 
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWatch(); });

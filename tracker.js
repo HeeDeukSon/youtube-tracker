@@ -4,10 +4,14 @@ const axios = require('axios');
 const API_KEY = process.env.YOUTUBE_API_KEY;
 const BASE = 'https://www.googleapis.com/youtube/v3';
 
+const VIDEOS_PER_CHANNEL = 10;
+const DESCRIPTION_MAX_CHARS = 2000;
+const DEFAULT_CATEGORY = 'AI'; // keep in sync with generate-html.js
+
 const fs = require('fs');
 const CHANNELS = [];
 const channelMeta = {};
-let _currentCategory = 'AI'; // Default
+let _currentCategory = DEFAULT_CATEGORY;
 let _currentHandle = null;
 
 const _lines = fs.readFileSync('youtube-traker.txt', 'utf-8').split('\n');
@@ -39,6 +43,10 @@ for (let line of _lines) {
       channelMeta[_currentHandle].tags.push(...parsedTags);
     }
   }
+}
+
+function getApiErrorReason(err) {
+  return err.response?.data?.error?.errors?.[0]?.reason;
 }
 
 // Channel ID cache — avoids expensive search.list calls on repeated runs
@@ -84,7 +92,7 @@ async function getUploadsPlaylistId(channelId) {
   return res.data.items[0].contentDetails.relatedPlaylists.uploads;
 }
 
-async function getLatestVideoIds(playlistId, count = 10) {
+async function getLatestVideoIds(playlistId, count = VIDEOS_PER_CHANNEL) {
   const res = await axios.get(`${BASE}/playlistItems`, {
     params: { part: 'contentDetails', playlistId, maxResults: count, key: API_KEY },
   });
@@ -106,7 +114,7 @@ async function getVideoDetails(videoIds) {
     viewCount: v.statistics.viewCount ?? '0',
     likeCount: v.statistics.likeCount ?? 'hidden',
     commentCount: v.statistics.commentCount ?? 'disabled',
-    description: (v.snippet.description ?? '').slice(0, 2000),
+    description: (v.snippet.description ?? '').slice(0, DESCRIPTION_MAX_CHARS),
     url: `https://www.youtube.com/watch?v=${v.id}`,
     embeddable: v.status?.embeddable ?? true,
     _id: v.id,
@@ -128,7 +136,7 @@ async function getVideoComments(videoId) {
       };
     });
   } catch (err) {
-    const reason = err.response?.data?.error?.errors?.[0]?.reason;
+    const reason = getApiErrorReason(err);
     if (['quotaExceeded', 'dailyLimitExceeded'].includes(reason)) throw err;
     if (['commentsDisabled', 'videoNotFound'].includes(reason) ||
         [403, 404].includes(err.response?.status)) return [];
@@ -147,7 +155,7 @@ async function trackChannel(name) {
     try {
       v.comments = await getVideoComments(v._id);
     } catch (err) {
-      const reason = err.response?.data?.error?.errors?.[0]?.reason;
+      const reason = getApiErrorReason(err);
       if (reason === 'quotaExceeded' || reason === 'dailyLimitExceeded') throw err;
       console.warn(`  Comment fetch failed for ${v._id}: ${reason || err.message}`);
       v.comments = [];
@@ -165,7 +173,7 @@ async function trackChannel(name) {
     console.log(`    URL       : ${v.url}`);
   });
 
-  const meta = channelMeta[name] || { category: 'AI', tags: [] };
+  const meta = channelMeta[name] || { category: DEFAULT_CATEGORY, tags: [] };
   return { channel: name, category: meta.category, tags: meta.tags, videos };
 }
 
@@ -182,7 +190,7 @@ async function main() {
       results.push(await trackChannel(channel));
       ok++;
     } catch (err) {
-      const reason = err.response?.data?.error?.errors?.[0]?.reason || err.message;
+      const reason = getApiErrorReason(err) || err.message;
       if (reason === 'quotaExceeded' || reason === 'dailyLimitExceeded') {
         console.error(`QUOTA EXHAUSTED at "${channel}" — stopping early`);
         quotaHit = true;

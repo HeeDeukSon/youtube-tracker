@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+const LANGUAGE_TAGS = ['English', 'Korean']; // keep in sync with generate-html.js
+
 const tagMapping = {
   "jeff su": ["Tutorials", "Productivity"],
   "Greg Isenberg": ["Business", "Agents"],
@@ -35,7 +37,7 @@ let data = JSON.parse(fs.readFileSync('results.json', 'utf8'));
 data.forEach(d => {
   if (tagMapping[d.channel]) {
     const existing = d.tags || [];
-    const langTags = existing.filter(t => ['English', 'Korean'].includes(t));
+    const langTags = existing.filter(t => LANGUAGE_TAGS.includes(t));
     d.tags = Array.from(new Set([...langTags, ...tagMapping[d.channel]]));
   }
 });
