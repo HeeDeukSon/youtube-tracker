@@ -817,7 +817,7 @@ function setupAskAiForm(v) {
 
   askInput.addEventListener('focus', function() {
     var self = this;
-    setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 350);
+    setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 350);
   });
 
   askSubmit.onclick = function() {
@@ -874,7 +874,7 @@ function setupCommentForm(v) {
   [cfName, cfEmail, cfBody].forEach(function(el) {
     el.addEventListener('focus', function() {
       var self = this;
-      setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 350);
+      setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 350);
     });
   });
 
