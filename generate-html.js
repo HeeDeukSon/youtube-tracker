@@ -751,7 +751,7 @@ function openWatch(v) {
 
   document.getElementById('watch-title').textContent = v.title;
   document.getElementById('watch-meta').textContent =
-    esc(v.channelName) + ' · ' + fmtNum(v.viewCount) + ' views · ' + timeAgo(v.publishedAt);
+    v.channelName + ' · ' + fmtNum(v.viewCount) + ' views · ' + timeAgo(v.publishedAt);
   document.getElementById('watch-yt-link').href = v.url;
 
   var descEl   = document.getElementById('watch-desc');
@@ -827,10 +827,10 @@ function setupAskAiForm(v) {
   askAnswer.textContent = '';
   askSubmit.disabled = false;
 
-  askInput.addEventListener('focus', function() {
+  askInput.onfocus = function() {
     var self = this;
     setTimeout(function() { scrollFieldIntoView(self); }, 350);
-  });
+  };
 
   askSubmit.onclick = function() {
     var question = askInput.value.trim();
@@ -884,13 +884,13 @@ function setupCommentForm(v) {
   document.querySelectorAll('#watch-cf-requests input').forEach(function(c) { c.checked = false; });
 
   [cfName, cfEmail, cfBody].forEach(function(el) {
-    el.addEventListener('focus', function() {
+    el.onfocus = function() {
       var self = this;
       setTimeout(function() { scrollFieldIntoView(self); }, 350);
-    });
+    };
   });
   document.querySelectorAll('#watch-cf-requests input[type="checkbox"]').forEach(function(cb) {
-    cb.addEventListener('click', function() { scrollFieldIntoView(this); });
+    cb.onclick = function() { scrollFieldIntoView(this); };
   });
 
   cfEmail.oninput = function() {
