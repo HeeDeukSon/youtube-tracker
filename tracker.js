@@ -14,7 +14,7 @@ const channelMeta = {};
 let _currentCategory = DEFAULT_CATEGORY;
 let _currentHandle = null;
 
-const _lines = fs.readFileSync('youtube-traker.txt', 'utf-8').split('\n');
+const _lines = fs.readFileSync('youtube-tracker.txt', 'utf-8').split('\n');
 for (let line of _lines) {
   const trimmed = line.trim();
   

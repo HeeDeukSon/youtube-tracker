@@ -37,8 +37,7 @@ let data = JSON.parse(fs.readFileSync('results.json', 'utf8'));
 data.forEach(d => {
   if (tagMapping[d.channel]) {
     const existing = d.tags || [];
-    const langTags = existing.filter(t => LANGUAGE_TAGS.includes(t));
-    d.tags = Array.from(new Set([...langTags, ...tagMapping[d.channel]]));
+    d.tags = Array.from(new Set([...existing, ...tagMapping[d.channel]]));
   }
 });
 fs.writeFileSync('results.json', JSON.stringify(data, null, 2));

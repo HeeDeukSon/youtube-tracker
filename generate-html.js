@@ -45,11 +45,12 @@ allVideos.forEach(v => {
   delete v.description;
   delete v.comments;
 });
-fs.writeFileSync('video-details.json', JSON.stringify(videoDetails));
+// Removed fs.writeFileSync for video-details.json as we are inlining it now
 
 const totalVideos = allVideos.length;
 const totalChannels = data.length;
 const videosJson = JSON.stringify(allVideos);
+const detailsJson = JSON.stringify(videoDetails);
 
 // Load persisted bookmarks from disk (survives weekly tracker.js regeneration)
 let savedVideos = [];
@@ -686,6 +687,7 @@ const html = `<!DOCTYPE html>
 <script>
 const VIDEOS = ${videosJson};
 const SAVED  = ${savedJson};
+const DETAILS = ${detailsJson};
 const LANGUAGE_TAGS = ['English', 'Korean']; // keep in sync with patch.js and tracker.js
 
 // Replace with your deployed GAS web app URL:
@@ -738,12 +740,8 @@ function getVideoId(url) {
 }
 
 // ── Watch page ──────────────────────────────────────────
-var _detailsCache = null;
 function loadDetails(cb) {
-  if (_detailsCache) { cb(_detailsCache); return; }
-  fetch('video-details.json').then(function(r){ return r.json(); }).then(function(d){
-    _detailsCache = d; cb(d);
-  }).catch(function(){ cb({}); });
+  cb(DETAILS);
 }
 
 function openWatch(v) {
