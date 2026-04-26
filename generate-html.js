@@ -94,6 +94,7 @@ const html = `<!DOCTYPE html>
       --tag-text:     #2a7a2a;
     }
 
+    html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
       color: var(--text);
@@ -408,6 +409,7 @@ const html = `<!DOCTYPE html>
       background: var(--surface); color: var(--text);
       border: 1px solid var(--border); border-radius: 6px;
       outline: none; transition: border-color .15s;
+      scroll-margin-top: 64px;
     }
     #watch-ask-input::placeholder { color: var(--text3); }
     #watch-ask-input:focus { border-color: var(--text2); }
@@ -435,6 +437,7 @@ const html = `<!DOCTYPE html>
       background: var(--surface); color: var(--text);
       border: 1px solid var(--border); border-radius: 6px;
       outline: none; transition: border-color .15s;
+      scroll-margin-top: 64px;
     }
     #watch-comment-form input::placeholder,
     #watch-comment-form textarea::placeholder { color: var(--text3); }
@@ -812,6 +815,11 @@ function setupAskAiForm(v) {
   askAnswer.textContent = '';
   askSubmit.disabled = false;
 
+  askInput.addEventListener('focus', function() {
+    var self = this;
+    setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 350);
+  });
+
   askSubmit.onclick = function() {
     var question = askInput.value.trim();
     if (!question) { askStatus.textContent = 'Please enter a question.'; return; }
@@ -862,6 +870,13 @@ function setupCommentForm(v) {
   cfCopy.checked = false;
   cfCopyRow.classList.remove('visible');
   document.querySelectorAll('#watch-cf-requests input').forEach(function(c) { c.checked = false; });
+
+  [cfName, cfEmail, cfBody].forEach(function(el) {
+    el.addEventListener('focus', function() {
+      var self = this;
+      setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 350);
+    });
+  });
 
   cfEmail.oninput = function() {
     if (cfEmail.value.trim()) {
