@@ -887,12 +887,12 @@ function setupCommentForm(v) {
     ).map(function(c) { return c.value; }).join(', ');
 
     var emailBody =
-      'Thank you for sharing your thoughts! Rehearsing what you\'ve learned and expressing it in your own words is highly effective for English mastery. ' +
-      'I encourage you to keep building on these concepts to spark your own creative ideas and perspectives.\n\n' +
-      '[Your Thoughts for Today]\n' +
-      comment + '\n\n' +
-      'Remember, language acquisition is all about building consistent habits.\n' +
-      'Great job today!';
+      "Thank you for sharing your thoughts! Rehearsing what you've learned and expressing it in your own words is highly effective for English mastery. " +
+      "I encourage you to keep building on these concepts to spark your own creative ideas and perspectives.\\n\\n" +
+      "[Your Thoughts for Today]\\n" +
+      comment + "\\n\\n" +
+      "Remember, language acquisition is all about building consistent habits.\\n" +
+      "Great job today!";
 
     fetch(GAS_ENDPOINT, {
       method: 'POST',
