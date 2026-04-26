@@ -371,6 +371,8 @@ const html = `<!DOCTYPE html>
       line-height: 1.7;
       white-space: pre-wrap;
       word-break: break-word;
+      max-height: 300px;
+      overflow-y: auto;
     }
     #watch-desc a {
       color: var(--accent, #3ea6ff);
@@ -380,11 +382,19 @@ const html = `<!DOCTYPE html>
     #watch-desc a:hover { text-decoration: underline; }
     #watch-desc.collapsed { max-height: 5.1em; overflow: hidden; }
     #watch-desc-toggle {
-      background: none; border: none; color: var(--text3);
-      font-size: 12px; cursor: pointer; padding: 4px 0; display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text2);
+      font-size: 12px;
+      cursor: pointer;
+      padding: 4px 12px;
+      margin-top: 4px;
+      display: none;
+      transition: color .15s, border-color .15s;
     }
-    #watch-desc-toggle.visible { display: block; }
-    #watch-desc-toggle:hover { color: var(--text); }
+    #watch-desc-toggle.visible { display: inline-block; }
+    #watch-desc-toggle:hover { color: var(--text); border-color: var(--text2); }
 
     .watch-comment {
       padding: 10px 0;
