@@ -746,7 +746,7 @@ function getVideoId(url) {
 }
 function renderDesc(el, text) {
   el.textContent = '';
-  var URL_RE = /(https?:\/\/[^\s\])"'<>]+)/g;
+  var URL_RE = /(https?:\\/\\/[^\\s\\])"'<>]+)/g;
   var parts = text.split(URL_RE);
   parts.forEach(function(part) {
     if (URL_RE.test(part)) {
