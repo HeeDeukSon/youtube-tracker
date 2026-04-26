@@ -35,7 +35,7 @@ jobs:
 
       - name: Fetch YouTube data
         run: |
-          EXPECTED=$(grep -c '^\s*Handle' youtube-traker.txt)
+          EXPECTED=$(grep -c '^\s*Handle' youtube-tracker.txt)
           THRESHOLD=$(( EXPECTED * 80 / 100 ))
           echo "Expecting $EXPECTED channels, threshold: $THRESHOLD"
 
@@ -60,7 +60,7 @@ jobs:
         run: node generate-html.js
 
       - name: Prepare deployment folder
-        run: mkdir _site && cp report.html _site/index.html && cp video-details.json _site/
+        run: mkdir _site && cp report.html _site/index.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
