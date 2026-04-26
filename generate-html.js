@@ -372,6 +372,12 @@ const html = `<!DOCTYPE html>
       white-space: pre-wrap;
       word-break: break-word;
     }
+    #watch-desc a {
+      color: var(--accent, #3ea6ff);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    #watch-desc a:hover { text-decoration: underline; }
     #watch-desc.collapsed { max-height: 5.1em; overflow: hidden; }
     #watch-desc-toggle {
       background: none; border: none; color: var(--text3);
@@ -738,6 +744,24 @@ function esc(s) {
 function getVideoId(url) {
   try { return new URL(url).searchParams.get('v') || ''; } catch(_) { return ''; }
 }
+function renderDesc(el, text) {
+  el.textContent = '';
+  var URL_RE = /(https?:\/\/[^\s\])"'<>]+)/g;
+  var parts = text.split(URL_RE);
+  parts.forEach(function(part) {
+    if (URL_RE.test(part)) {
+      var a = document.createElement('a');
+      a.href = part;
+      a.textContent = part;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      el.appendChild(a);
+    } else {
+      el.appendChild(document.createTextNode(part));
+    }
+    URL_RE.lastIndex = 0;
+  });
+}
 
 // ── Watch page ──────────────────────────────────────────
 function loadDetails(cb) {
@@ -766,7 +790,8 @@ function openWatch(v) {
   loadDetails(function(details) {
     var d    = details[v.url] || {};
     var desc = (d.description || '').trim();
-    descEl.textContent = desc || 'No description available.';
+    if (desc) { renderDesc(descEl, desc); }
+    else       { descEl.textContent = 'No description available.'; }
     descEl.classList.add('collapsed');
 
     if (descEl.scrollHeight > descEl.clientHeight) {
