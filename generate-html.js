@@ -371,8 +371,6 @@ const html = `<!DOCTYPE html>
       line-height: 1.7;
       white-space: pre-wrap;
       word-break: break-word;
-      max-height: 300px;
-      overflow-y: auto;
     }
     #watch-desc a {
       color: var(--accent, #3ea6ff);
