@@ -803,6 +803,20 @@ function openWatch(v) {
   }
 }
 
+function scrollFieldIntoView(el) {
+  if (window.innerWidth > 900) return;
+  var vvh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  var rect = el.getBoundingClientRect();
+  var player = document.querySelector('.watch-player');
+  var videoBottom = player ? player.getBoundingClientRect().bottom : 52;
+  var gap = 8;
+  if (rect.top < videoBottom + gap) {
+    window.scrollBy({ top: rect.top - (videoBottom + gap), behavior: 'smooth' });
+  } else if (rect.bottom > vvh - gap) {
+    window.scrollBy({ top: rect.bottom - vvh + gap, behavior: 'smooth' });
+  }
+}
+
 function setupAskAiForm(v) {
   var askInput  = document.getElementById('watch-ask-input');
   var askSubmit = document.getElementById('watch-ask-submit');
@@ -817,7 +831,7 @@ function setupAskAiForm(v) {
 
   askInput.addEventListener('focus', function() {
     var self = this;
-    setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 350);
+    setTimeout(function() { scrollFieldIntoView(self); }, 350);
   });
 
   askSubmit.onclick = function() {
@@ -874,8 +888,11 @@ function setupCommentForm(v) {
   [cfName, cfEmail, cfBody].forEach(function(el) {
     el.addEventListener('focus', function() {
       var self = this;
-      setTimeout(function() { self.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 350);
+      setTimeout(function() { scrollFieldIntoView(self); }, 350);
     });
+  });
+  document.querySelectorAll('#watch-cf-requests input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('click', function() { scrollFieldIntoView(this); });
   });
 
   cfEmail.oninput = function() {
