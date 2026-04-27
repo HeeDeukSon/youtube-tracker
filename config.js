@@ -6,6 +6,7 @@ module.exports = {
     measurementId:    process.env.GA4_MEASUREMENT_ID,
     propertyId:       process.env.GA4_PROPERTY_ID,
     serviceAccountKey: process.env.GA4_SERVICE_ACCOUNT_KEY,
+    apiSecret:        process.env.GA4_API_SECRET,
   },
   ai: {
     apiKey:   process.env.AI_API_KEY,
