@@ -53,11 +53,19 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
+      - name: Fetch GA4 stats
+        run: node ga4-fetch.js
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GA4_SERVICE_ACCOUNT_KEY: ${{ secrets.GA4_SERVICE_ACCOUNT_KEY }}
+
       - name: Apply tag enrichment
         run: node patch.js
 
       - name: Generate HTML report
         run: node generate-html.js
+        env:
+          GA4_MEASUREMENT_ID: ${{ secrets.GA4_MEASUREMENT_ID }}
 
       - name: Prepare deployment folder
         run: mkdir _site && cp report.html _site/index.html

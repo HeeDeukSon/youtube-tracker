@@ -1,6 +1,11 @@
 .env
+.env.local
+.env.*.local
 node_modules/
 # results.json is intentionally tracked so the site always has data as fallback
 report.html
 report.txt
 bookmarks.json
+# 구글 인증 키 파일 제외
+credentials.json
+token.json

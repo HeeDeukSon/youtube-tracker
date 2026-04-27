@@ -1,6 +1,11 @@
 'use strict';
 const fs = require('fs');
 
+const MEASUREMENT_ID = process.env.GA4_MEASUREMENT_ID || '';
+
+let ga4Stats = null;
+try { ga4Stats = JSON.parse(fs.readFileSync('ga4-stats.json', 'utf-8')); } catch (_) {}
+
 const TRENDING_PERCENTILE = 0.15;
 const DEFAULT_CATEGORY = 'AI'; // keep in sync with tracker.js
 
@@ -63,6 +68,14 @@ const html = `<!DOCTYPE html>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Your valuable views for the world</title>
+  ${MEASUREMENT_ID ? `<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${MEASUREMENT_ID}');
+  </script>` : ''}
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -618,7 +631,7 @@ const html = `<!DOCTYPE html>
 <!-- Page title -->
 <header>
   <h1>Your valuable views for the world</h1>
-  <p class="subtitle">Last updated ${today} &nbsp;·&nbsp; ${totalVideos} videos &nbsp;·&nbsp; ${totalChannels} channels</p>
+  <p class="subtitle">Last updated ${today} &nbsp;·&nbsp; ${totalVideos} videos &nbsp;·&nbsp; ${totalChannels} channels${ga4Stats ? ` &nbsp;·&nbsp; ${Number(ga4Stats.activeUsers).toLocaleString()} visitors (7d)` : ''}</p>
 </header>
 
 <!-- Category tabs + sort/bookmark controls -->
