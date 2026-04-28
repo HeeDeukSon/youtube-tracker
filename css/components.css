@@ -802,3 +802,22 @@ body {
   color: var(--ls-accent);
   font-weight: var(--fw-medium);
 }
+
+/* --- 데스크톱 뷰 복구 패치 (모바일 환경 보존) --- */
+@media (min-width: 768px) {
+  /* 메인 컨테이너 이름이 .app-container 나 main 등일 경우 
+     (존님의 실제 클래스명에 맞춰 수정하세요. 보통 body, main, .container 중 하나입니다) */
+  body, main, .app-container {
+    max-width: 1200px !important; /* 데스크톱에서는 시원하게 넓혀줍니다 */
+    margin: 0 auto; /* 화면 중앙 정렬 */
+    padding: 20px 40px; /* 좌우 여백 확보 */
+  }
+
+  /* 비디오 리스트가 모바일처럼 1줄로 나온다면, 
+     PC에서는 그리드로 여러 개가 나오도록 펼쳐줍니다 */
+  .video-list, .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
