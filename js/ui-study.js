@@ -474,15 +474,93 @@
   }
 
   // ══════════════════════════════════
+  // URL → 실제 영상 로드
+  // ══════════════════════════════════
+
+  function getUrlParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function loadVideoFromUrl() {
+    var videoId = getUrlParam('v');
+    if (!videoId) return;
+
+    State.set('currentVideoId', videoId);
+
+    fetch('../results.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var found = null;
+        outer: for (var i = 0; i < data.length; i++) {
+          var ch = data[i];
+          for (var j = 0; j < ch.videos.length; j++) {
+            var v = ch.videos[j];
+            var m = (v.url || '').match(/v=([^&]+)/);
+            if (m && m[1] === videoId) {
+              found = { video: v, channel: ch.channel, category: ch.category };
+              break outer;
+            }
+          }
+        }
+        if (!found) return;
+
+        var v   = found.video;
+        var ch  = found.channel;
+        var cat = found.category;
+
+        // 1. YouTube iframe 삽입
+        var container = document.getElementById('video-player-container');
+        var loading   = document.getElementById('player-loading');
+        if (container) {
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?rel=0';
+          iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;';
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('title', v.title || '');
+          if (loading) container.removeChild(loading);
+          container.appendChild(iframe);
+        }
+
+        // 2. 제목 & 채널 뱃지
+        var titleEl = document.getElementById('video-title');
+        if (titleEl) titleEl.textContent = v.title || '';
+
+        var channelEl = document.getElementById('video-channel');
+        if (channelEl) channelEl.textContent = ch + ' · ' + cat;
+
+        // 3. 메타 (조회수, 날짜)
+        var metaEl = document.getElementById('video-meta');
+        if (metaEl) {
+          var views = Number(v.viewCount);
+          var viewsStr = isNaN(views) ? v.viewCount : (views >= 1000 ? (views / 1000).toFixed(1) + 'K' : views);
+          var d = Math.floor((Date.now() - new Date(v.publishedAt)) / 86400e3);
+          var timeAgo = d < 1 ? 'today' : (d < 7 ? d + 'd ago' : Math.floor(d / 7) + 'w ago');
+          metaEl.textContent = viewsStr + ' views · ' + timeAgo;
+        }
+
+        // 4. 설명
+        var descEl = document.getElementById('video-description');
+        if (descEl) descEl.textContent = v.description || '';
+
+        // 5. 페이지 타이틀
+        document.title = (v.title || 'Study') + ' — Lumina Study';
+      })
+      .catch(function (err) {
+        console.error('[Study] 영상 로드 실패:', err);
+      });
+  }
+
+  // ══════════════════════════════════
   // 초기화
   // ══════════════════════════════════
 
   function init() {
+    loadVideoFromUrl();
     initSections();
     initDiscussionTags();
     initCommentForm();
     initAskAI();
-    initPlayer();
     initBottomNav();
     initFieldReset();
     initAIButtons();
@@ -491,7 +569,7 @@
     // 상태 구독
     State.subscribe('activeSection', syncSectionUI);
     State.subscribe('selectedTags', syncDiscussionTagsUI);
-    State.subscribe('playbackProgress', syncPlayerUI);
+    // playbackProgress 구독 제거 — iframe 플레이어로 대체됨
     State.subscribe('currentPage', syncBottomNavUI);
     State.subscribe('currentStage', function(newVal, prevVal) {
       syncCoachVoice(newVal);

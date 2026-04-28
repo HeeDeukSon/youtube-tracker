@@ -199,7 +199,8 @@
               publishedAt: v.publishedAt,
               url:         v.url,
               videoId:     videoId,
-              thumbnail:   v.thumbnail || ''
+              thumbnail:   v.thumbnail || '',
+              duration:    v.duration || ''
             });
           });
         });
@@ -226,12 +227,12 @@
         _allVideos.forEach(function (v) {
           var article = document.createElement('article');
           article.className = 'ls-video-card';
-          article.dataset.videoId      = v.videoId;
-          article.dataset.videoTitle   = v.title;
-          article.dataset.videoChannel = v.channel;
+          article.dataset.videoId       = v.videoId;
+          article.dataset.videoTitle    = v.title;
+          article.dataset.videoChannel  = v.channel;
           article.dataset.videoCategory = v.category;
-          article.dataset.videoTags    = v.tags.join(' ');
-          article.dataset.videoSource  = 'youtube';
+          article.dataset.videoTags     = v.tags.join(' ');
+          article.dataset.videoSource   = 'youtube';
 
           var d = Math.floor((Date.now() - new Date(v.publishedAt)) / 86400e3);
           var timeAgo = d < 1 ? 'today' : (d < 7 ? d + 'd ago' : Math.floor(d / 7) + 'w ago');
@@ -239,18 +240,25 @@
           var viewsNum = Number(v.views);
           var viewsStr = isNaN(viewsNum) ? v.views : (viewsNum >= 1000 ? (viewsNum / 1000).toFixed(1) + 'K' : viewsNum);
 
+          var durationStr = parseDuration(v.duration || '');
+
           var tagsHtml = v.tags.map(function (t) {
             return '<span class="ls-tag">' + escapeHtml(t) + '</span>';
           }).join('');
 
+          var runtimeHtml = durationStr
+            ? '<span class="ls-runtime">' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2.5" width="11" height="11">' +
+                  '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>' +
+                '</svg>' +
+                escapeHtml(durationStr) +
+              '</span>'
+            : '';
+
           article.innerHTML =
             '<div class="ls-video-card__thumb" style="background:var(--ls-thumb-blue); background-image:url(\'' + escapeHtml(v.thumbnail) + '\'); background-size:cover; background-position:center;">' +
               '<span class="ls-video-card__source">YouTube</span>' +
-              '<span class="ls-runtime">' +
-                '<svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2.5">' +
-                  '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>' +
-                '</svg>' +
-              '</span>' +
+              runtimeHtml +
             '</div>' +
             '<div class="ls-video-card__info">' +
               '<h3 class="ls-video-card__title">' + escapeHtml(v.title) + '</h3>' +
@@ -272,6 +280,19 @@
           mainEl.innerHTML = '<p style="color:var(--ls-muted);text-align:center;padding:40px 16px;">영상 목록을 불러오는 데 실패했습니다.<br>잠시 후 다시 시도해주세요.</p>';
         }
       });
+  }
+
+  // ── ISO 8601 duration 파싱 (PT1H8M32S → 1:08:32) ──
+  function parseDuration(iso) {
+    if (!iso) return '';
+    var m = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+    if (!m) return '';
+    var h   = parseInt(m[1] || 0);
+    var min = parseInt(m[2] || 0);
+    var sec = parseInt(m[3] || 0);
+    var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+    if (h > 0) return h + ':' + pad(min) + ':' + pad(sec);
+    return min + ':' + pad(sec);
   }
 
   // ── XSS 방지 ──

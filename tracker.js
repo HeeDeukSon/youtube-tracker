@@ -102,7 +102,7 @@ async function getLatestVideoIds(playlistId, count = VIDEOS_PER_CHANNEL) {
 async function getVideoDetails(videoIds) {
   const res = await axios.get(`${BASE}/videos`, {
     params: {
-      part: 'snippet,statistics,status',
+      part: 'snippet,statistics,status,contentDetails',
       id: videoIds.join(','),
       key: API_KEY,
     },
@@ -117,6 +117,7 @@ async function getVideoDetails(videoIds) {
     description: (v.snippet.description ?? '').slice(0, DESCRIPTION_MAX_CHARS),
     url: `https://www.youtube.com/watch?v=${v.id}`,
     embeddable: v.status?.embeddable ?? true,
+    duration: v.contentDetails?.duration ?? '',
     _id: v.id,
   }));
 }
