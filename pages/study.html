@@ -9,39 +9,40 @@
 </head>
 <body>
 
-  <!-- ═══ TOP HEADER ═══ -->
-  <header class="ls-header">
-    <div class="ls-header__left">
-      <button class="ls-icon-btn" aria-label="뒤로 가기" onclick="history.back()">
+  <!-- ═══ STICKY TOP: 헤더 + 플레이어 ═══ -->
+  <div class="ls-sticky-player">
+    <header class="ls-header">
+      <div class="ls-header__left">
+        <button class="ls-icon-btn" aria-label="뒤로 가기" onclick="history.back()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <span class="ls-header__logo">Lumina Study</span>
+      </div>
+      <button class="ls-icon-btn" aria-label="테마 전환">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="15 18 9 12 15 6"/>
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22"/>
+          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/>
+          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
         </svg>
       </button>
-      <span class="ls-header__logo">Lumina Study</span>
-    </div>
-    <button class="ls-icon-btn" aria-label="테마 전환">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="4"/>
-        <line x1="12" y1="2" x2="12" y2="4"/>
-        <line x1="12" y1="20" x2="12" y2="22"/>
-        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/>
-        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
-      </svg>
-    </button>
-  </header>
+    </header>
 
-  <!-- ═══ VIDEO PLAYER — JS가 iframe으로 채움 ═══ -->
-  <div class="ls-player" id="video-player-container" style="background:#000;">
-    <!-- 로딩 상태 표시 -->
-    <div id="player-loading" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
-      <div style="text-align:center;">
-        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="var(--ls-accent)" stroke-width="1.5">
-          <polygon points="6 4 20 12 6 20 6 4"/>
-        </svg>
-        <p style="color:var(--ls-muted);font-size:var(--fs-sm);margin-top:8px;">영상을 불러오는 중...</p>
+    <!-- ═══ VIDEO PLAYER — JS가 iframe으로 채움 ═══ -->
+    <div class="ls-player" id="video-player-container" style="background:#000; margin:0; border-radius:0;">
+      <div id="player-loading" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;">
+          <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="var(--ls-accent)" stroke-width="1.5">
+            <polygon points="6 4 20 12 6 20 6 4"/>
+          </svg>
+          <p style="color:var(--ls-muted);font-size:var(--fs-sm);margin-top:8px;">영상을 불러오는 중...</p>
+        </div>
       </div>
     </div>
-  </div>
+  </div><!-- /.ls-sticky-player -->
 
   <!-- ═══ CONTENT HEADER ═══ -->
   <div class="ls-content-header">
@@ -65,11 +66,11 @@
       <span id="coach-msg">엔진을 켤 준비가 되셨나요? 가볍게 시청하며 뇌를 깨워봅시다.</span>
     </div>
 
-    <!-- ═══ DESCRIPTION (collapsible) ═══ -->
-    <section class="ls-section is-open" data-section="description">
+    <!-- ═══ DESCRIPTION (collapsible, 기본 닫힘) ═══ -->
+    <section class="ls-section" data-section="description">
       <div class="ls-section__bar"></div>
       <div class="ls-section__inner">
-        <div class="ls-section__header" role="button" aria-expanded="true" aria-controls="desc-body">
+        <div class="ls-section__header" role="button" aria-expanded="false" aria-controls="desc-body">
           <div class="ls-section__title">
             <svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2">
               <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>

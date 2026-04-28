@@ -731,6 +731,28 @@ body {
 
 
 /* ═══════════════════════════════════════════
+   STICKY WRAPPERS
+   ═══════════════════════════════════════════ */
+
+/* Library: 헤더 + 필터칩 + 서브카테고리 고정 */
+.ls-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--ls-bg);
+  border-bottom: 1px solid var(--ls-border-light);
+}
+
+/* Study: 헤더 + 비디오 플레이어 고정 */
+.ls-sticky-player {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--ls-bg);
+}
+
+
+/* ═══════════════════════════════════════════
    BOTTOM NAVIGATION
    ═══════════════════════════════════════════ */
 

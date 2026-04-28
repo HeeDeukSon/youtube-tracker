@@ -33,7 +33,7 @@ const LuminaState = (() => {
     sortOrder: 'latest',
 
     // Study 페이지
-    activeSection: 'description',  // 'description' | 'discussions' | null
+    activeSection: 'discussions',   // 'description' | 'discussions' | null
     selectedTags: ['conversation'],
     totalComments: savedData.totalComments || 0,
     savedInsights: savedData.savedInsights || [],
