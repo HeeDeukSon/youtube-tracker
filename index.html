@@ -44,14 +44,6 @@
     </div>
   </header>
 
-  <!-- ═══ SEARCH ═══ -->
-  <div class="ls-search">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-    </svg>
-    <input type="text" placeholder="Search videos, channels" aria-label="영상 검색">
-  </div>
-
   <!-- ═══ FILTER CHIPS ═══ -->
   <div class="ls-chips" role="tablist" aria-label="카테고리 필터">
     <button class="ls-chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
@@ -59,6 +51,18 @@
     <button class="ls-chip" data-filter="ai" role="tab" aria-selected="false">AI</button>
     <button class="ls-chip" data-filter="training" role="tab" aria-selected="false">Training</button>
     <button class="ls-chip" data-filter="language" role="tab" aria-selected="false">Language</button>
+  </div>
+
+  <!-- ═══ SUBCATEGORY DROPDOWN (JS가 카테고리 선택 시 채움) ═══ -->
+  <div class="ls-subcategory" id="subcategory-container" style="display:none;">
+    <div class="ls-subcategory__wrapper">
+      <svg class="ls-subcategory__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+      <select class="ls-subcategory__select" id="subcategory-select" aria-label="서브 카테고리 선택">
+        <option value="">All</option>
+      </select>
+    </div>
   </div>
 
   <!-- ═══ SORT BAR ═══ -->

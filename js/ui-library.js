@@ -9,15 +9,14 @@
 
   var State = window.LuminaState;
 
-  // ── 로드 위치에 따라 results.json 경로 결정 ──
-  var isRoot = !window.location.pathname.includes('/pages/');
+  var isRoot      = !window.location.pathname.includes('/pages/');
   var RESULTS_URL = isRoot ? './results.json' : '../results.json';
 
-  // ── 비디오 목록 캐시 ──
-  var _allVideos = [];
+  var _allVideos   = [];
+  var _activeSubTag = '';   // 서브카테고리 드롭다운에서 선택된 태그
 
   // ══════════════════════════════════
-  // 필터 칩 토글 + 실제 카드 필터링
+  // 필터 칩 토글
   // ══════════════════════════════════
 
   function initFilterChips() {
@@ -46,51 +45,87 @@
   function syncFilterChipsUI(activeFilter) {
     var chips = document.querySelectorAll('[data-filter]');
     chips.forEach(function (chip) {
-      if (chip.dataset.filter === activeFilter) {
-        chip.classList.add('is-active');
-      } else {
-        chip.classList.remove('is-active');
-      }
+      chip.classList.toggle('is-active', chip.dataset.filter === activeFilter);
     });
+    updateSubCategoryDropdown(activeFilter);
     applyVisibilityFilters();
   }
 
-  // 검색어 + 필터 칩을 동시에 적용
+  // ══════════════════════════════════
+  // 서브카테고리 드롭다운
+  // ══════════════════════════════════
+
+  function getTagsForCategory(categoryFilter) {
+    var tagSet = {};
+    _allVideos.forEach(function (v) {
+      if (v.category.toLowerCase() === categoryFilter) {
+        v.tags.forEach(function (t) {
+          if (t.toLowerCase() !== 'english') tagSet[t] = true;
+        });
+      }
+    });
+    return Object.keys(tagSet).sort();
+  }
+
+  function updateSubCategoryDropdown(activeFilter) {
+    var container = document.getElementById('subcategory-container');
+    var select    = document.getElementById('subcategory-select');
+    if (!container || !select) return;
+
+    _activeSubTag = '';
+    select.value  = '';
+
+    if (activeFilter === 'all') {
+      container.style.display = 'none';
+      return;
+    }
+
+    var tags  = getTagsForCategory(activeFilter);
+    var label = activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1);
+
+    select.innerHTML = '<option value="">All ' + label + '</option>';
+    tags.forEach(function (tag) {
+      var opt       = document.createElement('option');
+      opt.value     = tag;
+      opt.textContent = tag;
+      select.appendChild(opt);
+    });
+
+    container.style.display = '';
+  }
+
+  function initSubCategoryDropdown() {
+    var select = document.getElementById('subcategory-select');
+    if (!select) return;
+    select.addEventListener('change', function () {
+      _activeSubTag = this.value;
+      applyVisibilityFilters();
+    });
+  }
+
+  // ══════════════════════════════════
+  // 카드 가시성 필터 (메인 + 서브 동시 적용)
+  // ══════════════════════════════════
+
   function applyVisibilityFilters() {
     var activeFilter = State.get('activeFilter') || 'all';
-    var searchInput = document.querySelector('.ls-search input');
-    var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+    var cards        = document.querySelectorAll('[data-video-id]');
 
-    var cards = document.querySelectorAll('[data-video-id]');
     cards.forEach(function (card) {
       var category = (card.dataset.videoCategory || '').toLowerCase();
-      var tags     = (card.dataset.videoTags || '').toLowerCase();
-      var title    = (card.dataset.videoTitle || '').toLowerCase();
-      var channel  = (card.dataset.videoChannel || '').toLowerCase();
+      var tags     = [];
+      try { tags = JSON.parse(card.dataset.videoTags || '[]'); } catch (e) {}
 
-      var passFilter = activeFilter === 'all' || category === activeFilter || tags.indexOf(activeFilter) !== -1;
-      var passSearch = !query || title.indexOf(query) !== -1 || channel.indexOf(query) !== -1;
+      var passFilter = activeFilter === 'all' || category === activeFilter;
+      var passSubTag = !_activeSubTag || tags.indexOf(_activeSubTag) !== -1;
 
-      card.style.display = (passFilter && passSearch) ? '' : 'none';
+      card.style.display = (passFilter && passSubTag) ? '' : 'none';
     });
   }
 
   function syncStageUI(stage) {
     var badge = document.getElementById('lib-stage-badge');
     if (badge) badge.textContent = stage;
-  }
-
-  // ══════════════════════════════════
-  // 검색
-  // ══════════════════════════════════
-
-  function initSearch() {
-    var searchInput = document.querySelector('.ls-search input');
-    if (!searchInput) return;
-
-    searchInput.addEventListener('input', function () {
-      applyVisibilityFilters();
-    });
   }
 
   // ══════════════════════════════════
@@ -162,11 +197,7 @@
   function syncBottomNavUI(currentPage) {
     var items = document.querySelectorAll('[data-nav]');
     items.forEach(function (item) {
-      if (item.dataset.nav === currentPage) {
-        item.classList.add('is-active');
-      } else {
-        item.classList.remove('is-active');
-      }
+      item.classList.toggle('is-active', item.dataset.nav === currentPage);
     });
   }
 
@@ -174,9 +205,29 @@
   // 데이터 연동 및 렌더링
   // ══════════════════════════════════
 
+  function parseDuration(iso) {
+    if (!iso) return '';
+    var m = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+    if (!m) return '';
+    var h   = parseInt(m[1] || 0);
+    var min = parseInt(m[2] || 0);
+    var sec = parseInt(m[3] || 0);
+    var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+    return h > 0 ? h + ':' + pad(min) + ':' + pad(sec) : min + ':' + pad(sec);
+  }
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function fetchAndRenderVideos() {
     fetch(RESULTS_URL)
-      .then(function (response) { return response.json(); })
+      .then(function (r) { return r.json(); })
       .then(function (data) {
         var mainEl = document.querySelector('main');
         if (!mainEl) return;
@@ -221,7 +272,6 @@
           }
           v.score += new Date(v.publishedAt).getTime() / 1e12;
         });
-
         _allVideos.sort(function (a, b) { return b.score - a.score; });
 
         _allVideos.forEach(function (v) {
@@ -231,7 +281,7 @@
           article.dataset.videoTitle    = v.title;
           article.dataset.videoChannel  = v.channel;
           article.dataset.videoCategory = v.category;
-          article.dataset.videoTags     = v.tags.join(' ');
+          article.dataset.videoTags     = JSON.stringify(v.tags);   // 멀티워드 태그 지원
           article.dataset.videoSource   = 'youtube';
 
           var d = Math.floor((Date.now() - new Date(v.publishedAt)) / 86400e3);
@@ -240,12 +290,7 @@
           var viewsNum = Number(v.views);
           var viewsStr = isNaN(viewsNum) ? v.views : (viewsNum >= 1000 ? (viewsNum / 1000).toFixed(1) + 'K' : viewsNum);
 
-          var durationStr = parseDuration(v.duration || '');
-
-          var tagsHtml = v.tags.map(function (t) {
-            return '<span class="ls-tag">' + escapeHtml(t) + '</span>';
-          }).join('');
-
+          var durationStr = parseDuration(v.duration);
           var runtimeHtml = durationStr
             ? '<span class="ls-runtime">' +
                 '<svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2.5" width="11" height="11">' +
@@ -254,6 +299,10 @@
                 escapeHtml(durationStr) +
               '</span>'
             : '';
+
+          var tagsHtml = v.tags.map(function (t) {
+            return '<span class="ls-tag">' + escapeHtml(t) + '</span>';
+          }).join('');
 
           article.innerHTML =
             '<div class="ls-video-card__thumb" style="background:var(--ls-thumb-blue); background-image:url(\'' + escapeHtml(v.thumbnail) + '\'); background-size:cover; background-position:center;">' +
@@ -270,7 +319,9 @@
         });
 
         initVideoCards();
-        // 렌더링 후 현재 필터 적용
+        // 데이터 로드 후 드롭다운 옵션 갱신 (이미 카테고리 선택된 경우)
+        var currentFilter = State.get('activeFilter') || 'all';
+        if (currentFilter !== 'all') updateSubCategoryDropdown(currentFilter);
         applyVisibilityFilters();
       })
       .catch(function (err) {
@@ -282,41 +333,18 @@
       });
   }
 
-  // ── ISO 8601 duration 파싱 (PT1H8M32S → 1:08:32) ──
-  function parseDuration(iso) {
-    if (!iso) return '';
-    var m = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
-    if (!m) return '';
-    var h   = parseInt(m[1] || 0);
-    var min = parseInt(m[2] || 0);
-    var sec = parseInt(m[3] || 0);
-    var pad = function (n) { return n < 10 ? '0' + n : String(n); };
-    if (h > 0) return h + ':' + pad(min) + ':' + pad(sec);
-    return min + ':' + pad(sec);
-  }
-
-  // ── XSS 방지 ──
-  function escapeHtml(str) {
-    return String(str || '')
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-  }
-
   // ══════════════════════════════════
   // 초기화
   // ══════════════════════════════════
 
   function init() {
     initFilterChips();
-    initSearch();
+    initSubCategoryDropdown();
     fetchAndRenderVideos();
     initBottomNav();
 
     State.subscribe('activeFilter', syncFilterChipsUI);
-    State.subscribe('currentPage', syncBottomNavUI);
+    State.subscribe('currentPage',  syncBottomNavUI);
     State.subscribe('currentStage', syncStageUI);
 
     syncFilterChipsUI(State.get('activeFilter'));
