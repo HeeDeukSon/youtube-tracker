@@ -1,0 +1,67 @@
+/* ============================================
+   Lumina Study — Design Tokens
+   모든 디자인 값의 단일 소스 (Single Source of Truth)
+   ============================================ */
+
+:root {
+  /* ── 배경 계층 (어두운 → 밝은) ── */
+  --ls-bg:             #0a0a0a;
+  --ls-surface:        #141414;
+  --ls-input:          #1a1a1a;
+  --ls-border:         #2a2a2a;
+  --ls-border-light:   #1f1f1f;
+
+  /* ── 액센트 (Amber) ── */
+  --ls-accent:         #fbbf24;
+  --ls-accent-bg:      rgba(251, 191, 36, 0.12);
+  --ls-accent-border:  rgba(251, 191, 36, 0.4);
+  --ls-accent-dark:    #422006;
+  --ls-accent-hover:   #f59e0b;
+
+  /* ── 텍스트 ── */
+  --ls-text:           #f5f5f5;
+  --ls-muted:          #a3a3a3;
+  --ls-dim:            #888888;
+  --ls-hint:           #666666;
+
+  /* ── 썸네일 배경 (비디오 소스별) ── */
+  --ls-thumb-blue:     #1f3a52;
+  --ls-thumb-red:      #5b1f1f;
+  --ls-thumb-brown:    #2a2218;
+
+  /* ── 타이포그래피 ── */
+  --font-family:       "Pretendard", "SF Pro Display", system-ui, -apple-system, sans-serif;
+  --fw-regular:        400;
+  --fw-medium:         500;
+  --fs-xs:             10px;
+  --fs-sm:             11px;
+  --fs-base:           12px;
+  --fs-md:             14px;
+  --fs-lg:             16px;
+  --fs-xl:             18px;
+
+  /* ── 간격 ── */
+  --sp-xs:             4px;
+  --sp-sm:             8px;
+  --sp-md:             12px;
+  --sp-lg:             16px;
+  --sp-xl:             24px;
+
+  /* ── 모서리 ── */
+  --radius-sm:         6px;
+  --radius-md:         10px;
+  --radius-lg:         12px;
+  --radius-chip:       12px;
+  --radius-pill:       14px;
+  --radius-search:     20px;
+  --radius-full:       50%;
+
+  /* ── 전환 ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+
+  /* ── 레이아웃 ── */
+  --page-padding:      16px;
+  --bottom-nav-height: 56px;
+  --section-bar-width: 3px;
+}

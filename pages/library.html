@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumina Study</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ═══ TOP HEADER ═══ -->
+  <header class="ls-header">
+    <div class="ls-header__left">
+      <button class="ls-icon-btn" aria-label="메뉴">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div style="display:flex; align-items:center;">
+        <span class="ls-header__logo">Lumina Study</span>
+        <span id="lib-stage-badge" style="font-size: 10px; padding: 2px 6px; background: var(--ls-accent); color: var(--ls-bg); border-radius: 4px; margin-left: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;"></span>
+      </div>
+    </div>
+    <div class="ls-header__icons">
+      <button class="ls-icon-btn" aria-label="검색">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+      <button class="ls-icon-btn" aria-label="테마 전환">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22"/>
+          <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/>
+          <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+          <line x1="2" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22" y2="12"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══ SEARCH ═══ -->
+  <div class="ls-search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input type="text" placeholder="Search videos, channels">
+  </div>
+
+  <!-- ═══ FILTER CHIPS ═══ -->
+  <div class="ls-chips" role="tablist" aria-label="카테고리 필터">
+    <button class="ls-chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+    <button class="ls-chip" data-filter="negotiation" role="tab" aria-selected="false">Negotiation</button>
+    <button class="ls-chip" data-filter="ai" role="tab" aria-selected="false">AI</button>
+    <button class="ls-chip" data-filter="training" role="tab" aria-selected="false">Training</button>
+    <button class="ls-chip" data-filter="language" role="tab" aria-selected="false">Language</button>
+  </div>
+
+  <!-- ═══ SORT BAR ═══ -->
+  <div class="ls-sort-bar">
+    <span style="display:flex;align-items:center;gap:4px;color:var(--ls-muted);">
+      Latest
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
+    <div class="ls-sort-bar__actions">
+      <span class="ls-sort-bar__saved">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        Saved
+      </span>
+      <span>Export</span>
+    </div>
+  </div>
+
+  <!-- ═══ VIDEO CARDS ═══ -->
+  <main>
+  </main>
+
+  <!-- ═══ BOTTOM NAVIGATION ═══ -->
+  <nav class="ls-bottom-nav" role="navigation" aria-label="메인 네비게이션">
+    <button class="ls-nav-item is-active" data-nav="study" role="tab" aria-selected="true" aria-label="Study">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+      <span>Study</span>
+    </button>
+    <button class="ls-nav-item" data-nav="status" role="tab" aria-selected="false" aria-label="Status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Status</span>
+    </button>
+    <button class="ls-nav-item" data-nav="news" role="tab" aria-selected="false" aria-label="News">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      <span>News</span>
+    </button>
+    <button class="ls-nav-item" data-nav="info" role="tab" aria-selected="false" aria-label="Info">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Info</span>
+    </button>
+    <button class="ls-nav-item" data-nav="profile" role="tab" aria-selected="false" aria-label="Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+  </nav>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <!-- <script src="../config.js"></script> -->
+  <!-- <script src="../analytics.js"></script> -->
+  <script src="../js/state.js"></script>
+  <script src="../js/ui-library.js"></script>
+</body>
+</html>

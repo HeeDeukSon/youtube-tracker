@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumina Study — Status</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ═══ TOP HEADER ═══ -->
+  <header class="ls-header">
+    <div class="ls-header__left">
+      <button class="ls-icon-btn" aria-label="메뉴">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div style="display:flex; align-items:center;">
+        <span class="ls-header__logo">Lumina Study</span>
+        <span id="status-stage-badge" style="font-size: 10px; padding: 2px 6px; background: var(--ls-accent); color: var(--ls-bg); border-radius: 4px; margin-left: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main style="padding: 20px; padding-bottom: 80px;">
+    <h1 style="color: var(--ls-text); margin-bottom: 24px; font-size: var(--fs-xl);">My Status Dashboard</h1>
+    
+    <!-- 1. Sync Gauge (Circular Progress) -->
+    <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
+      <h2 style="color: var(--ls-text); font-size: var(--fs-md); margin-bottom: 16px;">English Brain Sync-Stage</h2>
+      
+      <div class="ls-sync-gauge" style="position: relative; width: 180px; height: 180px;">
+        <svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg);">
+          <!-- Background Circle -->
+          <path class="ls-gauge-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="3" />
+          <!-- Foreground Circle (Stroke-dasharray will be updated by JS) -->
+          <path class="ls-gauge-fill" id="status-gauge-fill"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                fill="none" stroke="var(--ls-accent)" stroke-width="3"
+                stroke-dasharray="16.6, 100" style="transition: stroke-dasharray 0.5s ease, stroke 0.5s ease;" />
+        </svg>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <span id="status-stage-label" style="color: var(--ls-text); font-size: var(--fs-lg); font-weight: bold; text-align: center;">Ignition</span>
+          <span id="status-stage-number" style="color: var(--ls-muted); font-size: var(--fs-xs); margin-top: 4px;">Stage 1 / 6</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Activity Metric Cards -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px;">
+      <!-- Time Card -->
+      <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+        <h3 style="color: var(--ls-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Total Exposure</h3>
+        <div id="status-total-time" style="color: var(--ls-accent); font-size: var(--fs-xl); font-family: monospace; font-weight: bold;">0m 0s</div>
+      </div>
+      <!-- Comments Card -->
+      <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
+        <h3 style="color: var(--ls-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Total Comments</h3>
+        <div id="status-total-comments" style="color: var(--ls-accent); font-size: var(--fs-xl); font-family: monospace; font-weight: bold;">0</div>
+      </div>
+    </div>
+
+    <!-- 3. Coach John's Insight -->
+    <div style="background: rgba(107, 203, 107, 0.1); border-left: 4px solid var(--ls-accent); padding: 20px; border-radius: 8px;">
+      <h3 style="color: var(--ls-accent); font-size: var(--fs-sm); font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>
+        </svg>
+        Coach John's Insight
+      </h3>
+      <p id="status-coach-insight" style="color: var(--ls-text); font-size: var(--fs-sm); font-style: italic; line-height: 1.5; margin: 0;">
+        데이터를 분석 중입니다...
+      </p>
+    </div>
+
+    <!-- 4. Insight Vault -->
+    <div style="margin-top: 32px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h2 style="color: var(--ls-text); font-size: var(--fs-md); margin: 0;">My Insight Vault</h2>
+        <button id="btn-export-md" class="ls-btn ls-btn--secondary" style="padding: 6px 12px; font-size: var(--fs-xs);">Export Report</button>
+      </div>
+      <div id="status-insight-vault" style="display: flex; flex-direction: column; gap: 12px;">
+        <!-- Cards will be dynamically injected here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══ BOTTOM NAVIGATION ═══ -->
+  <nav class="ls-bottom-nav" role="navigation" aria-label="메인 네비게이션">
+    <button class="ls-nav-item" data-nav="study" role="tab" aria-selected="false" aria-label="Study">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+      <span>Study</span>
+    </button>
+    <button class="ls-nav-item is-active" data-nav="status" role="tab" aria-selected="true" aria-label="Status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Status</span>
+    </button>
+    <button class="ls-nav-item" data-nav="news" role="tab" aria-selected="false" aria-label="News">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      <span>News</span>
+    </button>
+    <button class="ls-nav-item" data-nav="info" role="tab" aria-selected="false" aria-label="Info">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Info</span>
+    </button>
+    <button class="ls-nav-item" data-nav="profile" role="tab" aria-selected="false" aria-label="Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+  </nav>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="../js/state.js"></script>
+  <script src="../js/ui-status.js"></script>
+</body>
+</html>

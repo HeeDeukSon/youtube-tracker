@@ -62,13 +62,11 @@ jobs:
       - name: Apply tag enrichment
         run: node patch.js
 
-      - name: Generate HTML report
-        run: node generate-html.js
-        env:
-          GA4_MEASUREMENT_ID: ${{ secrets.GA4_MEASUREMENT_ID }}
-
       - name: Prepare deployment folder
-        run: mkdir _site && cp report.html _site/index.html
+        run: |
+          mkdir _site
+          cp -r index.html css js pages results.json _site/ 2>/dev/null || true
+          cp config.js analytics.js _site/ 2>/dev/null || true
 
       - name: Configure Pages
         uses: actions/configure-pages@v4

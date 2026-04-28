@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumina Study — Study</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ═══ TOP HEADER (with Back button) ═══ -->
+  <header class="ls-header">
+    <div class="ls-header__left">
+      <button class="ls-icon-btn" aria-label="뒤로 가기" onclick="history.back()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <span class="ls-header__logo">Lumina Study</span>
+    </div>
+    <button class="ls-icon-btn" aria-label="테마 전환">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="4"/>
+        <line x1="12" y1="20" x2="12" y2="22"/>
+        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/>
+        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- ═══ VIDEO PLAYER ═══ -->
+  <div class="ls-player" style="background:var(--ls-thumb-brown);">
+    <button class="ls-player__play-btn" aria-label="재생">
+      <svg viewBox="0 0 24 24"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+    </button>
+    <div class="ls-player__controls">
+      <div class="ls-player__progress">
+        <div class="ls-player__progress-fill" style="width:62%;"></div>
+      </div>
+      <div class="ls-player__time-row">
+        <div class="ls-player__time">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span class="ls-player__time-current">42:15</span>
+          <span class="ls-player__time-total">/ 1:08:32</span>
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="ls-icon-btn" aria-label="음량" style="min-width:auto;min-height:auto;padding:0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+              <path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            </svg>
+          </button>
+          <button class="ls-icon-btn" aria-label="전체화면" style="min-width:auto;min-height:auto;padding:0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+              <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/>
+              <line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ CONTENT HEADER ═══ -->
+  <div class="ls-content-header">
+    <span class="ls-badge">Research series</span>
+    <h1 class="ls-content-header__title">Keep your job, add income: the smart way to monetize your expertise</h1>
+    <div class="ls-scholars">
+      <div class="ls-scholars__avatars">
+        <div class="ls-scholars__avatar" style="background:#5b4423;"></div>
+        <div class="ls-scholars__avatar" style="background:#3d3d3d;"></div>
+        <div class="ls-scholars__avatar" style="background:#1f3a52;"></div>
+      </div>
+      <span class="ls-scholars__text">1.2K scholars · today</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ═══ COACH'S VOICE ═══ -->
+    <div id="coach-voice-container" style="margin: 0 var(--sp-md) var(--sp-md); padding: 12px; background: rgba(107, 203, 107, 0.1); border-left: 3px solid var(--ls-accent); border-radius: 4px; font-size: var(--fs-sm); color: var(--ls-text); font-style: italic;">
+      <strong style="color: var(--ls-accent); font-style: normal;">Coach John:</strong> <span id="coach-msg">엔진을 켤 준비가 되셨나요? 가볍게 시청하며 뇌를 깨워봅시다.</span>
+    </div>
+
+    <!-- ═══ DESCRIPTION (collapsible) ═══ -->
+    <section class="ls-section is-open" data-section="description">
+      <div class="ls-section__bar"></div>
+      <div class="ls-section__inner">
+        <div class="ls-section__header" role="button" aria-expanded="true" aria-controls="desc-body">
+          <div class="ls-section__title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            Description
+          </div>
+          <svg class="ls-section__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--ls-muted)" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="ls-section__body" id="desc-body">
+          <p>What if the life you want isn't on the other side of a risky leap, but waiting for you to build it step by step, right where you are?</p>
+          <button class="ls-read-more" aria-label="더 보기">
+            Read more
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ASK AI ═══ -->
+    <div class="ls-ask-ai">
+      <div class="ls-ask-ai__icon">
+        <svg viewBox="0 0 24 24" fill="var(--ls-accent)">
+          <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z"/>
+        </svg>
+      </div>
+      <input type="text" placeholder="Ask AI about this video" data-field="ai-question">
+      <button class="ls-btn ls-btn--primary" data-action="ask-ai">Ask</button>
+    </div>
+
+    <!-- ═══ AI INSIGHTS PANEL (Hidden by default) ═══ -->
+    <div id="ai-insights-panel" style="display: none; background: rgba(85, 163, 255, 0.1); border-left: 4px solid var(--ls-thumb-blue); padding: 16px; margin: 0 var(--sp-md) var(--sp-md); border-radius: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+        <h3 style="color: var(--ls-thumb-blue); font-size: var(--fs-sm); font-weight: bold; margin: 0; display: flex; align-items: center; gap: 8px;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z"/>
+          </svg>
+          Lumina AI Insights
+        </h3>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="ls-btn ls-btn--secondary" id="btn-business-translate" style="padding: 4px 8px; font-size: 11px; height: auto;">제조 논리 → 시장 심리</button>
+          <button class="ls-btn ls-btn--secondary" id="btn-negotiation-framing" style="padding: 4px 8px; font-size: 11px; height: auto;">Framing</button>
+          <button class="ls-btn ls-btn--primary" id="btn-negotiation-sim" style="padding: 4px 8px; font-size: 11px; height: auto; background: #ab7ff0; border-color: #ab7ff0;">Start Sim</button>
+          <button class="ls-btn ls-btn--primary" id="btn-save-insight" style="padding: 4px 8px; font-size: 11px; height: auto;">Save</button>
+        </div>
+      </div>
+      <p id="ai-insights-content" style="color: var(--ls-text); font-size: var(--fs-sm); line-height: 1.5; margin: 0;"></p>
+    </div>
+
+    <!-- ═══ DISCUSSIONS (collapsible) ═══ -->
+    <section class="ls-section is-open" data-section="discussions">
+      <div class="ls-section__bar"></div>
+      <div class="ls-section__inner">
+        <div class="ls-section__header" role="button" aria-expanded="true" aria-controls="disc-body">
+          <div class="ls-section__title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            Discussions
+          </div>
+          <svg class="ls-section__chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--ls-muted)" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <div class="ls-section__body" id="disc-body">
+
+          <!-- Discussion Tags -->
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px;">
+            <button class="ls-tag is-active" data-discussion-tag="conversation">Conversation</button>
+            <button class="ls-tag" data-discussion-tag="need-help">Need help</button>
+            <button class="ls-tag" data-discussion-tag="more-info">More info</button>
+            <button class="ls-tag" data-discussion-tag="need-lecture">Need lecture</button>
+          </div>
+
+          <!-- Name + Email (위: 사용자 식별) -->
+          <div class="ls-field-group" style="margin-bottom:9px;">
+            <div class="ls-field">
+              <div class="ls-field__label">
+                Name <span class="ls-field__required">*</span>
+              </div>
+              <input class="ls-field__input" type="text" placeholder="Your name" data-field="name" required>
+            </div>
+            <div class="ls-field">
+              <div class="ls-field__label">Email</div>
+              <input class="ls-field__input" type="email" placeholder="optional" data-field="email">
+            </div>
+          </div>
+
+          <!-- Comment Box (아래: 메시지 입력) -->
+          <div class="ls-comment-box">
+            <textarea class="ls-comment-box__textarea"
+                      placeholder="Share your insights or ask a question…"
+                      data-field="comment"
+                      rows="2"></textarea>
+            <div class="ls-comment-box__toolbar">
+              <div class="ls-comment-box__tools">
+                <button class="ls-icon-btn" aria-label="음성 입력" style="min-width:auto;min-height:auto;padding:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-muted)" stroke-width="2">
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/>
+                  </svg>
+                </button>
+                <button class="ls-icon-btn" aria-label="글쓰기" style="min-width:auto;min-height:auto;padding:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-muted)" stroke-width="2">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                  </svg>
+                </button>
+                <button class="ls-icon-btn" aria-label="파일 첨부" style="min-width:auto;min-height:auto;padding:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-muted)" stroke-width="2">
+                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                  </svg>
+                </button>
+              </div>
+              <button class="ls-btn ls-btn--primary" data-action="post-comment">Post</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ BOTTOM NAVIGATION ═══ -->
+  <nav class="ls-bottom-nav" role="navigation" aria-label="메인 네비게이션">
+    <button class="ls-nav-item is-active" data-nav="study" role="tab" aria-selected="true" aria-label="Study">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+      <span>Study</span>
+    </button>
+    <button class="ls-nav-item" data-nav="status" role="tab" aria-selected="false" aria-label="Status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Status</span>
+    </button>
+    <button class="ls-nav-item" data-nav="news" role="tab" aria-selected="false" aria-label="News">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      <span>News</span>
+    </button>
+    <button class="ls-nav-item" data-nav="info" role="tab" aria-selected="false" aria-label="Info">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Info</span>
+    </button>
+    <button class="ls-nav-item" data-nav="profile" role="tab" aria-selected="false" aria-label="Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+  </nav>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <!-- <script src="../config.js"></script> -->
+  <!-- <script src="../analytics.js"></script> -->
+  <script src="../js/state.js"></script>
+  <script src="../js/ui-study.js"></script>
+</body>
+</html>
