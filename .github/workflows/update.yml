@@ -1,6 +1,8 @@
 name: Update YouTube Tracker
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: '0 9 * * 1'  # Every Monday at 9:00 UTC
   workflow_dispatch:       # Manual trigger button on GitHub Actions tab
@@ -34,6 +36,7 @@ jobs:
         run: npm ci
 
       - name: Fetch YouTube data
+        if: github.event_name != 'push'
         run: |
           EXPECTED=$(grep -c '^\s*Handle' youtube-tracker.txt)
           THRESHOLD=$(( EXPECTED * 80 / 100 ))
@@ -54,12 +57,14 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Fetch GA4 stats
+        if: github.event_name != 'push'
         run: node ga4-fetch.js
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           GA4_SERVICE_ACCOUNT_KEY: ${{ secrets.GA4_SERVICE_ACCOUNT_KEY }}
 
       - name: Apply tag enrichment
+        if: github.event_name != 'push'
         run: node patch.js
 
       - name: Prepare deployment folder
