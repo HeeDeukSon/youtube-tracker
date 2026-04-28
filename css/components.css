@@ -769,6 +769,11 @@ body {
   justify-content: space-around;
   background: var(--ls-bg);
   z-index: 100;
+  transition: transform 0.25s ease;
+}
+
+.ls-bottom-nav--hidden {
+  transform: translateY(100%);
 }
 
 .ls-nav-item {

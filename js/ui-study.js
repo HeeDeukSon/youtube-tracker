@@ -604,6 +604,15 @@
     syncBottomNavUI(State.get('currentPage'));
     syncCoachVoice(State.get('currentStage'));
 
+    // 스크롤 시 하단 nav 자동 숨김 (실수 클릭 방지)
+    var nav = document.querySelector('.ls-bottom-nav');
+    var player = document.querySelector('.ls-sticky-player');
+    if (nav && player) {
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('ls-bottom-nav--hidden', window.scrollY > player.offsetHeight);
+      }, { passive: true });
+    }
+
     // analytics.js 연동 — 페이지 뷰
     trackEvent('page_view', {
       Input_Mode:      '',
