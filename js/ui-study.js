@@ -159,6 +159,8 @@
     });
   }
 
+  var COMMENT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7SFGetH10Jfg8jd0pridPpagpia1gN9KW_vb45JzPsoNXj5o6Bk7AXoyG-AK2ohXJ4g/exec';
+
   var isNegotiationSimActive = false;
 
   function submitComment(data) {
@@ -170,19 +172,39 @@
       return;
     }
 
-    // TODO: config.js에서 API 엔드포인트 가져오기
-    // var apiUrl = getConfig('COMMENT_API_URL');
-
     var currentComments = State.get('totalComments') || 0;
     State.set('totalComments', currentComments + 1);
 
-    console.log('[Comment] 제출 데이터:', data);
-    console.log('Coach John: Ready for next Sync Stage');
-    showAIInsight("AI Insight: 훌륭한 인사이트입니다! 협상 모델의 '표준(Standards)'을 적용해본다면 이 문장을 어떻게 발전시킬 수 있을까요?");
-
-    // 제출 후 폼 초기화
+    // 폼 즉시 초기화 (UX: 응답 기다리지 않음)
     var commentInput = document.querySelector('[data-field="comment"]');
     if (commentInput) commentInput.value = '';
+    showAIInsight("AI Insight: 훌륭한 인사이트입니다! 협상 모델의 '표준(Standards)'을 적용해본다면 이 문장을 어떻게 발전시킬 수 있을까요?");
+
+    // Google Apps Script 웹앱으로 전송
+    var titleEl = document.getElementById('video-title');
+    var payload = {
+      name:        data.name,
+      email:       data.email,
+      comment:     data.comment,
+      tags:        (data.tags || []).join(', '),
+      videoTitle:  titleEl ? titleEl.textContent : '',
+      videoUrl:    'https://www.youtube.com/watch?v=' + (State.get('currentVideoId') || ''),
+      userStage:   State.get('currentStage') || '',
+      submittedAt: new Date().toISOString()
+    };
+
+    fetch(COMMENT_SCRIPT_URL, {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload)
+    })
+    .then(function () {
+      console.log('[Comment] 전송 완료');
+    })
+    .catch(function (err) {
+      console.error('[Comment] 전송 실패:', err);
+    });
   }
 
   // ══════════════════════════════════
