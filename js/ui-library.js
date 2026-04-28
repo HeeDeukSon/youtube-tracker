@@ -291,6 +291,8 @@
           var viewsStr = isNaN(viewsNum) ? v.views : (viewsNum >= 1000 ? (viewsNum / 1000).toFixed(1) + 'K' : viewsNum);
 
           var durationStr = parseDuration(v.duration);
+          if (!durationStr) return; // 시간 정보 없는 영상은 숨김
+
           var runtimeHtml = durationStr
             ? '<span class="ls-runtime">' +
                 '<svg viewBox="0 0 24 24" fill="none" stroke="var(--ls-accent)" stroke-width="2.5" width="11" height="11">' +
