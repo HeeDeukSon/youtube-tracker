@@ -108,6 +108,8 @@
 
         if (page === 'study') {
           window.location.href = '../index.html';
+        } else if (page === 'profile') {
+          window.location.href = 'profile.html';
         }
       });
     });

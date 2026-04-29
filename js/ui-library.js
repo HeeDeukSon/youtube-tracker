@@ -189,6 +189,8 @@
           window.location.href = prefix + 'status.html';
         } else if (page === 'study') {
           window.location.href = isRoot ? 'index.html' : 'library.html';
+        } else if (page === 'profile') {
+          window.location.href = prefix + 'profile.html';
         }
       });
     });

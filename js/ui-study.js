@@ -328,6 +328,8 @@
           window.location.href = 'status.html';
         } else if (page === 'study') {
           window.location.href = '../index.html';
+        } else if (page === 'profile') {
+          window.location.href = 'profile.html';
         }
       });
     });

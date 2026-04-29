@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumina Study — Profile</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <style>
+    /* Profile specific styles to match the Claude design concept */
+    .profile-card {
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .card-dark {
+      background-color: #1a233a; /* Midnight Blue */
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .card-light {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #1e293b;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .card-dark .card-title {
+      color: #94a3b8;
+    }
+    
+    .role-item {
+      margin-bottom: 16px;
+    }
+    
+    .role-item:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .role-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+    
+    .role-subtitle {
+      color: #94a3b8;
+      font-size: 14px;
+      padding-left: 20px;
+    }
+    
+    .dot-orange {
+      width: 8px;
+      height: 8px;
+      background-color: #f97316; /* Sunset Orange */
+      border-radius: 50%;
+      display: inline-block;
+    }
+    
+    .quote-box {
+      font-style: italic;
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 16px;
+    }
+    
+    .framework-desc {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #334155;
+    }
+    
+    .pillar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .pillar-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .pillar-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+    
+    .bg-blue-light { background-color: #e0f2fe; }
+    .bg-yellow-light { background-color: #fef08a; }
+    .bg-pink-light { background-color: #fbcfe8; }
+    
+    .pillar-content {
+      flex: 1;
+    }
+    
+    .pillar-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #0f172a;
+      margin-bottom: 2px;
+    }
+    
+    .pillar-desc {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.4;
+    }
+    
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      color: var(--ls-text);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    .link-button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .link-button-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ TOP HEADER ═══ -->
+  <header class="ls-header">
+    <div class="ls-header__left">
+      <button class="ls-icon-btn" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div style="display:flex; align-items:center;">
+        <span class="ls-header__logo">Lumina Study</span>
+        <span id="profile-stage-badge" style="font-size: 10px; padding: 2px 6px; background: var(--ls-accent); color: var(--ls-bg); border-radius: 4px; margin-left: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Profile</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main style="padding: 20px; padding-bottom: 100px;">
+    
+    <!-- 1. Career Navigator Card (Dark) -->
+    <div class="profile-card card-dark">
+      <div class="card-title">
+        <span>📋</span> CAREER NAVIGATOR
+      </div>
+      
+      <div class="role-item">
+        <div class="role-title">
+          <span class="dot-orange"></span> Cluster
+        </div>
+        <div class="role-subtitle">Global Operations Manager</div>
+      </div>
+      
+      <div class="role-item">
+        <div class="role-title">
+          <span class="dot-orange"></span> NPM (New Frontier Market)
+        </div>
+        <div class="role-subtitle">Senior Strategic Planner</div>
+      </div>
+      
+      <div class="quote-box">
+        "International leadership is built on internal efficiency and external market quality, creating a global unit for better communication."
+      </div>
+    </div>
+
+    <!-- 2. The C.A.R. Framework Card (Light) -->
+    <div class="profile-card card-light">
+      <h3 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Ideas & Attitude: The C.A.R. Framework</h3>
+      
+      <p class="framework-desc">
+        Our methodology moves beyond the linear, focusing on the three pillars for non-native mastery: creating your own language circumstance, building cognitive sequences, and practicing the unique word patterns necessary for confident, impactful, and persuasive global conversation.
+      </p>
+      
+      <div class="pillar-item">
+        <div class="pillar-icon-box bg-blue-light">🔭</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Global Perspective:</div>
+          <div class="pillar-desc">Harness international meetings to gain cultural insight.</div>
+        </div>
+      </div>
+      
+      <div class="pillar-item">
+        <div class="pillar-icon-box bg-yellow-light">🤝</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Social Attention:</div>
+          <div class="pillar-desc">Finding the connections that support your learning journey.</div>
+        </div>
+      </div>
+      
+      <div class="pillar-item">
+        <div class="pillar-icon-box bg-pink-light">🧠</div>
+        <div class="pillar-content">
+          <div class="pillar-title">Fluency Mindset:</div>
+          <div class="pillar-desc">Constant focus on thinking and acting through the language.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Icon Link Buttons -->
+    <div style="margin-top: 32px;">
+      <h3 style="color: var(--ls-text); font-size: 16px; font-weight: bold; margin-bottom: 16px;">Explore More</h3>
+      
+      <button class="link-button" data-action="link" data-target="#">
+        <div class="link-button-content">
+          <span style="font-size: 18px;">📅</span>
+          <span>Book a Consultation</span>
+        </div>
+        <span>→</span>
+      </button>
+      
+      <button class="link-button" data-action="link" data-target="#">
+        <div class="link-button-content">
+          <span style="font-size: 18px;">📚</span>
+          <span>View Curriculum</span>
+        </div>
+        <span>→</span>
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ═══ BOTTOM NAVIGATION ═══ -->
+  <nav class="ls-bottom-nav" role="navigation" aria-label="Main Navigation">
+    <button class="ls-nav-item" data-nav="study" role="tab" aria-selected="false" aria-label="Study">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+      <span>Study</span>
+    </button>
+    <button class="ls-nav-item" data-nav="status" role="tab" aria-selected="false" aria-label="Status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Status</span>
+    </button>
+    <button class="ls-nav-item" data-nav="news" role="tab" aria-selected="false" aria-label="News">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      <span>News</span>
+    </button>
+    <button class="ls-nav-item" data-nav="info" role="tab" aria-selected="false" aria-label="Info">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Info</span>
+    </button>
+    <button class="ls-nav-item is-active" data-nav="profile" role="tab" aria-selected="true" aria-label="Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+  </nav>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="../js/state.js"></script>
+  <script src="../js/ui-profile.js"></script>
+</body>
+</html>
