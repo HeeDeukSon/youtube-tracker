@@ -159,6 +159,80 @@
       align-items: center;
       gap: 12px;
     }
+    
+    /* Hero Banner & Story Card */
+    .hero-banner {
+      position: relative;
+      margin: -20px -20px 20px -20px;
+      padding: 220px 20px 30px;
+      /* Add your image URL here, e.g., url('../images/my-picture.jpg') */
+      background: linear-gradient(to bottom, rgba(26,35,58,0) 0%, rgba(26,35,58,1) 100%), url('../images/john.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .hero-badge {
+      display: inline-block;
+      background-color: #2563eb;
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.2);
+      margin-bottom: 8px;
+    }
+    .hero-title {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.4;
+      max-width: 280px;
+    }
+    .story-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .story-badge {
+      display: inline-block;
+      background-color: #ffedd5;
+      color: #ea580c;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+    .story-text {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #334155;
+      margin-bottom: 20px;
+    }
+    .story-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .story-tag {
+      font-size: 12px;
+      color: #0f172a;
+      background-color: #f8fafc;
+      padding: 6px 12px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
@@ -183,6 +257,26 @@
   <!-- ═══ MAIN CONTENT ═══ -->
   <main style="padding: 20px; padding-bottom: 100px;">
     
+    <!-- Hero Banner -->
+    <div class="hero-banner">
+      <div class="hero-badge">YOUR NAVIGATOR</div>
+      <div class="hero-title">John (Son Hee-deuk)</div>
+      <div class="hero-subtitle">Your trusted navigator through the seas of global business.</div>
+    </div>
+
+    <!-- Story Card -->
+    <div class="story-card">
+      <div class="story-badge">✨ 30-year-old language baby</div>
+      <div class="story-text">
+        I started later than anyone. Beginning English in earnest at 30, the frustration and doubt I faced became the very tools that let me understand your struggles more deeply than most. I learned life first — and then found the language to express it.
+      </div>
+      <div class="story-tags">
+        <span class="story-tag">Delayed Start</span>
+        <span class="story-tag">Deep Empathy</span>
+        <span class="story-tag">Persistence</span>
+      </div>
+    </div>
+
     <!-- 1. Career Navigator Card (Dark) -->
     <div class="profile-card card-dark">
       <div class="card-title">
@@ -193,14 +287,14 @@
         <div class="role-title">
           <span class="dot-orange"></span> Cluster
         </div>
-        <div class="role-subtitle">Global Operations Manager</div>
+        <div class="role-subtitle">Nokia's global supplier network</div>
       </div>
       
       <div class="role-item">
         <div class="role-title">
-          <span class="dot-orange"></span> NPM (New Frontier Market)
+          <span class="dot-orange"></span> NFM (New Frontier Market)
         </div>
-        <div class="role-subtitle">Senior Strategic Planner</div>
+        <div class="role-subtitle">Service Global Quality and Marketing manager</div>
       </div>
       
       <div class="quote-box">
