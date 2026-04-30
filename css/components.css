@@ -694,7 +694,7 @@ body {
 
 .ls-comment-box__textarea {
   width: 100%;
-  min-height: 48px;
+  min-height: 140px;
   background: none;
   border: none;
   outline: none;
