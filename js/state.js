@@ -175,7 +175,7 @@ window.LuminaNav = (function () {
     status:  'status.html',
     news:    'news.html',
     profile: 'profile.html',
-    info:    null
+    info:    'info.html'
   };
 
   function _syncUI(activePage) {

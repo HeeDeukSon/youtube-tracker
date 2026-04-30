@@ -169,7 +169,6 @@
     items.forEach(function (item) {
       item.addEventListener('click', function () {
         var page = this.dataset.nav;
-        if (page === 'info') return;
         State.set('currentPage', page);
 
         trackEvent('nav_tap', {
@@ -195,7 +194,7 @@
         } else if (page === 'news') {
           window.location.href = prefix + 'news.html';
         } else if (page === 'info') {
-          // placeholder — page not yet built
+          window.location.href = prefix + 'info.html';
         }
       });
     });

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumina Study — Info</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <style>
+    .info-card {
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+
+    .info-card-dark {
+      background-color: #1a233a;
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .info-card-surface {
+      background-color: var(--ls-surface);
+      color: var(--ls-text);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    /* ── Hero ── */
+    .info-hero {
+      border-top: 3px solid var(--ls-accent);
+    }
+
+    .info-hero__label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ls-accent);
+      margin-bottom: 12px;
+    }
+
+    .info-hero__quote {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #f1f5f9;
+      margin-bottom: 14px;
+    }
+
+    .info-hero__body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #94a3b8;
+    }
+
+    /* ── Two Pillars ── */
+    .info-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .info-pillar {
+      background-color: #1a233a;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .info-pillar__icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .info-pillar__title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .info-pillar__body {
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    /* ── Language Bridge ── */
+    .info-bridge {
+      border-left: 4px solid var(--ls-accent);
+      padding-left: 16px;
+    }
+
+    .info-bridge__lead {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .info-bridge__body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #94a3b8;
+    }
+
+    /* ── Disclaimer ── */
+    .info-disclaimer {
+      background-color: rgba(251, 191, 36, 0.07);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-left: 4px solid var(--ls-accent);
+    }
+
+    .info-disclaimer__label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ls-accent);
+      margin-bottom: 10px;
+    }
+
+    .info-disclaimer__body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    /* ── Section label ── */
+    .info-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ls-accent);
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    /* ── Principles ── */
+    .info-principle {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px;
+      background-color: #1a233a;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .info-principle__num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--ls-accent);
+      line-height: 1;
+      min-width: 32px;
+      text-align: right;
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    .info-principle__content {
+      flex: 1;
+    }
+
+    .info-principle__title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .info-principle__body {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 420px) {
+      .info-pillars {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ TOP HEADER ═══ -->
+  <header class="ls-header">
+    <div class="ls-header__left">
+      <button class="ls-icon-btn" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <div style="display:flex; align-items:center;">
+        <span class="ls-header__logo">Lumina Study</span>
+        <span style="font-size:10px; padding:2px 6px; background:var(--ls-accent); color:var(--ls-bg); border-radius:4px; margin-left:8px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">Info</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT ═══ -->
+  <main style="padding: 20px; padding-bottom: 100px;">
+
+    <!-- ── 1. Hero ── -->
+    <div class="info-card info-card-dark info-hero">
+      <div class="info-hero__label">Attention First</div>
+      <div class="info-hero__quote">Attention is the only thing we actually own.</div>
+      <div class="info-hero__body">
+        I want to help people focus on their own attention. In the AI era, attention is the only thing we actually own. Information is popping up from every direction, and our focus loses its way.
+      </div>
+    </div>
+
+    <!-- ── 2. Two Dimensions ── -->
+    <div class="info-section-label">So we train on two dimensions</div>
+    <div class="info-pillars">
+      <div class="info-pillar">
+        <div class="info-pillar__icon">🛡️</div>
+        <div class="info-pillar__title">Build your inner world deeply.</div>
+        <div class="info-pillar__body">That's what protects you through the great shift. You don't need to be perfect — just keep shaping your own view.</div>
+      </div>
+      <div class="info-pillar">
+        <div class="info-pillar__icon">📡</div>
+        <div class="info-pillar__title">Keep your ears open.</div>
+        <div class="info-pillar__body">Things move fast. You need steady input to make sense of it.</div>
+      </div>
+    </div>
+
+    <!-- ── 3. Language Bridge ── -->
+    <div class="info-card info-card-dark">
+      <div class="info-bridge">
+        <div class="info-bridge__lead">"English isn't really my subject — attention is."</div>
+        <div class="info-bridge__body">
+          This is where language comes in. Practicing English in international settings happens to be one of the best attention workouts you can do. Every conversation forces you to choose what to focus on, what to let go, and what to commit to.
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 4. Disclaimer ── -->
+    <div class="info-card info-disclaimer">
+      <div class="info-disclaimer__label">One thing upfront</div>
+      <div class="info-disclaimer__body">
+        I'm not an English teacher. If you want one, go find a trained educator. What I do is help you use English in the real world. You don't come to me to learn the language — you come to practice attention through it.
+      </div>
+    </div>
+
+    <!-- ── 5. Here's what I've learned ── -->
+    <div class="info-section-label" style="margin-top: 8px;">Here's what I've learned</div>
+
+    <div class="info-principle">
+      <div class="info-principle__num">1</div>
+      <div class="info-principle__content">
+        <div class="info-principle__title">Stop chasing textbook English.</div>
+        <div class="info-principle__body">Even Korean speakers who sound almost native lose the thread in real meetings — because their attention is on sounding correct, not on the room. 1.5 billion people use English; 1.12 billion are non-native. Aim your attention at them, not at the textbook.</div>
+      </div>
+    </div>
+
+    <div class="info-principle">
+      <div class="info-principle__num">2</div>
+      <div class="info-principle__content">
+        <div class="info-principle__title">Find your own unit.</div>
+        <div class="info-principle__body">We can only hold 3–4 chunks at once. Don't fixate on words — that scatters your attention. Stretch your unit instead: word → phrase → sentence → paragraph → story. The size of your unit is the size of your attention.</div>
+      </div>
+    </div>
+
+    <div class="info-principle">
+      <div class="info-principle__num">3</div>
+      <div class="info-principle__content">
+        <div class="info-principle__title">Learn like a baby — but smarter.</div>
+        <div class="info-principle__body">Babies don't use books. They learn through emotion and interaction, with full attention on one thing at a time. Adults can't actually become babies again, but we can borrow the principle: pick one word or pattern a day and give it your real attention. Play with it.</div>
+      </div>
+    </div>
+
+    <div class="info-principle">
+      <div class="info-principle__num">4</div>
+      <div class="info-principle__content">
+        <div class="info-principle__title">Sit with the discomfort.</div>
+        <div class="info-principle__body">American-style English forces you to take a position before you fully understand the topic. That feels wrong to us — Korean attention likes to circle, gather, then decide. Notice the discomfort. Stay in it. That's the training.</div>
+      </div>
+    </div>
+
+    <div class="info-principle">
+      <div class="info-principle__num">5</div>
+      <div class="info-principle__content">
+        <div class="info-principle__title">Use AI as a mirror.</div>
+        <div class="info-principle__body">Write something in Korean. Ask AI to translate it. Then ask it to rewrite it the American way. Feel the difference. Korean attention balances first, then decides. English attention decides first, then supports. Practicing the flip is practicing attentional flexibility.</div>
+      </div>
+    </div>
+
+    <div class="info-principle">
+      <div class="info-principle__num">6</div>
+      <div class="info-principle__content">
+        <div class="info-principle__title">Language isn't about intelligence.</div>
+        <div class="info-principle__body">It's about familiarity, and familiarity is just attention repeated over time. Chunk it. Memorize it. Repeat it. That's the whole entry into the language world — and the whole training for the AI one.</div>
+      </div>
+    </div>
+
+    <div class="info-principle">
+      <div class="info-principle__num">7</div>
+      <div class="info-principle__content">
+        <div class="info-principle__title">Use two different spaces.</div>
+        <div class="info-principle__body">Keep talking to AI — that's where your language patterns surface and get refined. It's safe, endlessly patient, and free of judgment. Conversations with people are different. That's where you go to understand emotions and ideas. Don't try to fix your English there. Look at the person instead.</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══ BOTTOM NAVIGATION ═══ -->
+  <nav class="ls-bottom-nav" role="navigation" aria-label="Main Navigation">
+    <button class="ls-nav-item" data-nav="study" role="tab" aria-selected="false" aria-label="Study">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+      <span>Study</span>
+    </button>
+    <button class="ls-nav-item" data-nav="status" role="tab" aria-selected="false" aria-label="Status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Status</span>
+    </button>
+    <button class="ls-nav-item" data-nav="news" role="tab" aria-selected="false" aria-label="News">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      <span>News</span>
+    </button>
+    <button class="ls-nav-item is-active" data-nav="info" role="tab" aria-selected="true" aria-label="Info">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Info</span>
+    </button>
+    <button class="ls-nav-item" data-nav="profile" role="tab" aria-selected="false" aria-label="Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+  </nav>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="../js/state.js"></script>
+  <script src="../js/ui-info.js"></script>
+</body>
+</html>
