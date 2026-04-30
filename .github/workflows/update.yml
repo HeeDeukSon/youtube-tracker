@@ -70,7 +70,7 @@ jobs:
       - name: Prepare deployment folder
         run: |
           mkdir _site
-          cp -r index.html css js pages results.json _site/ 2>/dev/null || true
+          cp -r index.html css js pages images results.json _site/ 2>/dev/null || true
           cp config.js analytics.js _site/ 2>/dev/null || true
 
       - name: Configure Pages
