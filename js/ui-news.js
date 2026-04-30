@@ -158,7 +158,9 @@
 
     stats.recentVideos.forEach(function (v) {
       var color = CATEGORY_COLORS[v.category] || 'var(--ls-accent)';
-      html += '<a href="' + escapeHtml(v.url) + '" target="_blank" rel="noopener noreferrer"'
+      var vidMatch = (v.url || '').match(/[?&]v=([^&]+)/);
+      var studyHref = vidMatch ? 'study.html?v=' + vidMatch[1] : escapeHtml(v.url);
+      html += '<a href="' + studyHref + '"'
             + ' style="display:flex;gap:10px;background:var(--ls-surface);border-radius:var(--radius-md);padding:10px;text-decoration:none;">';
       html += '<img src="' + escapeHtml(v.thumbnail) + '" alt="" loading="lazy"'
             + ' style="width:88px;height:50px;object-fit:cover;border-radius:var(--radius-sm);flex-shrink:0;">';
