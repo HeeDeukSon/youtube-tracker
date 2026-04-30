@@ -216,6 +216,66 @@
   }
 
   // ══════════════════════════════════
+  // Skeleton loader
+  // ══════════════════════════════════
+
+  function injectSkeletonStyles() {
+    if (document.getElementById('ls-skel-style')) return;
+    var style = document.createElement('style');
+    style.id = 'ls-skel-style';
+    style.textContent = '@keyframes ls-skel-pulse{0%,100%{opacity:.35}50%{opacity:.65}}'
+      + '.ls-skel{background:var(--ls-surface);border-radius:var(--radius-sm);animation:ls-skel-pulse 1.4s ease-in-out infinite}';
+    document.head.appendChild(style);
+  }
+
+  function renderSkeleton() {
+    var html = '';
+
+    // Title + subtitle bars
+    html += '<div class="ls-skel" style="height:18px;width:160px;margin-bottom:8px;"></div>';
+    html += '<div class="ls-skel" style="height:11px;width:200px;margin-bottom:24px;"></div>';
+
+    // 3 stat boxes
+    html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:32px;">';
+    for (var i = 0; i < 3; i++) {
+      html += '<div style="background:var(--ls-surface);border-radius:var(--radius-md);padding:14px;text-align:center;">';
+      html += '<div class="ls-skel" style="height:26px;width:40px;margin:0 auto 6px;"></div>';
+      html += '<div class="ls-skel" style="height:10px;width:56px;margin:0 auto;"></div>';
+      html += '</div>';
+    }
+    html += '</div>';
+
+    // Category section
+    html += '<div class="ls-skel" style="height:14px;width:100px;margin-bottom:12px;"></div>';
+    html += '<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:32px;">';
+    for (var j = 0; j < 4; j++) {
+      html += '<div style="background:var(--ls-surface);border-radius:var(--radius-md);padding:14px;">';
+      html += '<div class="ls-skel" style="height:11px;width:70px;margin-bottom:8px;"></div>';
+      html += '<div class="ls-skel" style="height:22px;width:36px;margin-bottom:4px;"></div>';
+      html += '<div class="ls-skel" style="height:10px;width:90px;"></div>';
+      html += '</div>';
+    }
+    html += '</div>';
+
+    // Latest videos section
+    html += '<div class="ls-skel" style="height:14px;width:110px;margin-bottom:12px;"></div>';
+    html += '<div style="display:flex;flex-direction:column;gap:10px;">';
+    for (var k = 0; k < 5; k++) {
+      html += '<div style="display:flex;gap:10px;background:var(--ls-surface);border-radius:var(--radius-md);padding:10px;">';
+      html += '<div class="ls-skel" style="width:88px;height:50px;flex-shrink:0;border-radius:var(--radius-sm);"></div>';
+      html += '<div style="flex:1;min-width:0;">';
+      html += '<div class="ls-skel" style="height:11px;width:90%;margin-bottom:6px;"></div>';
+      html += '<div class="ls-skel" style="height:11px;width:65%;margin-bottom:8px;"></div>';
+      html += '<div class="ls-skel" style="height:10px;width:50%;"></div>';
+      html += '</div>';
+      html += '</div>';
+    }
+    html += '</div>';
+
+    return html;
+  }
+
+  // ══════════════════════════════════
   // Bottom navigation
   // ══════════════════════════════════
 
@@ -255,6 +315,10 @@
   function init() {
     syncBottomNavUI('news');
     initBottomNav();
+    injectSkeletonStyles();
+
+    var main = document.getElementById('news-main');
+    if (main) main.innerHTML = renderSkeleton();
 
     fetch('../results.json')
       .then(function (r) { return r.json(); })
