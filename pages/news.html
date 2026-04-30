@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumina Study — News</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <!-- ═══ TOP HEADER ═══ -->
+  <header class="ls-header">
+    <div class="ls-header__left">
+      <button class="ls-icon-btn" aria-label="메뉴">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <span class="ls-header__logo">Lumina Study</span>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN CONTENT (filled by ui-news.js) ═══ -->
+  <main id="news-main" style="padding: 20px; padding-bottom: 80px;">
+    <p style="color: var(--ls-muted); text-align: center; padding: 60px 0;">Loading report...</p>
+  </main>
+
+  <!-- ═══ BOTTOM NAVIGATION ═══ -->
+  <nav class="ls-bottom-nav" role="navigation" aria-label="메인 네비게이션">
+    <button class="ls-nav-item" data-nav="study" role="tab" aria-selected="false" aria-label="Study">
+      <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+      <span>Study</span>
+    </button>
+    <button class="ls-nav-item" data-nav="status" role="tab" aria-selected="false" aria-label="Status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span>Status</span>
+    </button>
+    <button class="ls-nav-item is-active" data-nav="news" role="tab" aria-selected="true" aria-label="News">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+      <span>News</span>
+    </button>
+    <button class="ls-nav-item" data-nav="info" role="tab" aria-selected="false" aria-label="Info">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Info</span>
+    </button>
+    <button class="ls-nav-item" data-nav="profile" role="tab" aria-selected="false" aria-label="Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </button>
+  </nav>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="../js/state.js"></script>
+  <script src="../js/ui-news.js"></script>
+</body>
+</html>

@@ -32,8 +32,7 @@
         } else if (page === 'status') {
           window.location.href = 'status.html';
         } else if (page === 'news') {
-          // Placeholder for future news page
-          console.log('Navigate to News');
+          window.location.href = 'news.html';
         } else if (page === 'info') {
           // Placeholder for future info page
           console.log('Navigate to Info');

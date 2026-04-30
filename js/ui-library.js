@@ -192,6 +192,10 @@
           window.location.href = isRoot ? 'index.html' : 'library.html';
         } else if (page === 'profile') {
           window.location.href = prefix + 'profile.html';
+        } else if (page === 'news') {
+          window.location.href = prefix + 'news.html';
+        } else if (page === 'info') {
+          // placeholder — page not yet built
         }
       });
     });

@@ -330,6 +330,10 @@
           window.location.href = '../index.html';
         } else if (page === 'profile') {
           window.location.href = 'profile.html';
+        } else if (page === 'news') {
+          window.location.href = 'news.html';
+        } else if (page === 'info') {
+          // placeholder — page not yet built
         }
       });
     });
