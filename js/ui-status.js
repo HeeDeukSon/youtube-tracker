@@ -86,50 +86,6 @@
     if (badge) badge.textContent = stage;
   }
 
-  function initBottomNav() {
-    var items = document.querySelectorAll('[data-nav]');
-    items.forEach(function (item) {
-      item.addEventListener('click', function () {
-        var page = this.dataset.nav;
-        State.set('currentPage', page);
-
-        trackEvent('nav_tap', {
-          Input_Mode:      'tap',
-          Duration_Seconds: State.get('timerSeconds') || 0,
-          Content_Id:      '',
-          Content_Title:   '',
-          Content_Source:  '',
-          User_Stage:      State.get('currentStage'),
-          Page_Name:       'status',
-          Action_Type:     'navigate',
-          Timestamp:       Date.now(),
-          Session_Context: ''
-        });
-
-        if (page === 'study') {
-          window.location.href = '../index.html';
-        } else if (page === 'profile') {
-          window.location.href = 'profile.html';
-        } else if (page === 'news') {
-          window.location.href = 'news.html';
-        } else if (page === 'info') {
-          // placeholder — page not yet built
-        }
-      });
-    });
-  }
-
-  function syncBottomNavUI(currentPage) {
-    var items = document.querySelectorAll('[data-nav]');
-    items.forEach(function (item) {
-      if (item.dataset.nav === currentPage) {
-        item.classList.add('is-active');
-      } else {
-        item.classList.remove('is-active');
-      }
-    });
-  }
-
   // ══════════════════════════════════
   // Export — HTML 비즈니스 리포트
   // ══════════════════════════════════
@@ -306,14 +262,13 @@
   }
 
   function init() {
-    initBottomNav();
+    LuminaNav.init('status');
     initExportBtn();
 
     State.subscribe('currentStage',   syncDashboardUI);
     State.subscribe('timerSeconds',   syncDashboardUI);
     State.subscribe('totalComments',  syncDashboardUI);
     State.subscribe('savedInsights',  syncDashboardUI);
-    State.subscribe('currentPage',    syncBottomNavUI);
 
     syncDashboardUI();
     State.set('currentPage', 'status');

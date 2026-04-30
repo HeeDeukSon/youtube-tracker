@@ -169,7 +169,7 @@
     items.forEach(function (item) {
       item.addEventListener('click', function () {
         var page = this.dataset.nav;
-        if (page !== 'study' && page !== 'status' && page !== 'profile') return;
+        if (page === 'info') return;
         State.set('currentPage', page);
 
         trackEvent('nav_tap', {

@@ -216,45 +216,11 @@
   }
 
   // ══════════════════════════════════
-  // Bottom navigation
-  // ══════════════════════════════════
-
-  function initBottomNav() {
-    var items = document.querySelectorAll('[data-nav]');
-    items.forEach(function (item) {
-      item.addEventListener('click', function () {
-        var page = this.dataset.nav;
-        State.set('currentPage', page);
-
-        if (page === 'study') {
-          window.location.href = '../index.html';
-        } else if (page === 'status') {
-          window.location.href = 'status.html';
-        } else if (page === 'profile') {
-          window.location.href = 'profile.html';
-        } else if (page === 'news') {
-          // already here
-        } else if (page === 'info') {
-          // placeholder — page not yet built
-        }
-      });
-    });
-  }
-
-  function syncBottomNavUI(currentPage) {
-    var items = document.querySelectorAll('[data-nav]');
-    items.forEach(function (item) {
-      item.classList.toggle('is-active', item.dataset.nav === currentPage);
-    });
-  }
-
-  // ══════════════════════════════════
   // Init
   // ══════════════════════════════════
 
   function init() {
-    syncBottomNavUI('news');
-    initBottomNav();
+    LuminaNav.init('news');
 
     fetch('../results.json')
       .then(function (r) { return r.json(); })

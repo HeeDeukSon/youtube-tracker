@@ -161,3 +161,62 @@ const LuminaState = (() => {
 
 // 전역 등록 (script 태그 환경)
 window.LuminaState = LuminaState;
+
+/* ============================================
+   Lumina Study — Shared Bottom Nav
+   pages/* context only (library uses its own)
+   ============================================ */
+
+window.LuminaNav = (function () {
+  'use strict';
+
+  var ROUTES = {
+    study:   '../index.html',
+    status:  'status.html',
+    news:    'news.html',
+    profile: 'profile.html',
+    info:    null
+  };
+
+  function _syncUI(activePage) {
+    var items = document.querySelectorAll('[data-nav]');
+    items.forEach(function (item) {
+      item.classList.toggle('is-active', item.dataset.nav === activePage);
+    });
+  }
+
+  function _wireClicks(pageName) {
+    var State = window.LuminaState;
+    var items = document.querySelectorAll('[data-nav]');
+    items.forEach(function (item) {
+      item.addEventListener('click', function () {
+        var page = this.dataset.nav;
+        State.set('currentPage', page);
+
+        trackEvent('nav_tap', {
+          Input_Mode:       'tap',
+          Duration_Seconds: 0,
+          Content_Id:       '',
+          Content_Title:    '',
+          Content_Source:   '',
+          User_Stage:       State.get('currentStage'),
+          Page_Name:        pageName,
+          Action_Type:      'navigate',
+          Timestamp:        Date.now(),
+          Session_Context:  ''
+        });
+
+        var href = ROUTES[page];
+        if (href) { window.location.href = href; }
+      });
+    });
+  }
+
+  return {
+    init: function (pageName) {
+      _syncUI(pageName);
+      _wireClicks(pageName);
+      window.LuminaState.subscribe('currentPage', _syncUI);
+    }
+  };
+})();

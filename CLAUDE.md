@@ -42,5 +42,18 @@ fetches weekly via YouTube Data API, deploys to GitHub Pages automatically.
 | `tracker.js` | YouTube API fetch — core data pipeline |
 | `generate-html.js` | Builds the deployed dashboard from results.json |
 | `config.js` | All env vars live here — never use process.env directly elsewhere |
-| `js/state.js` | Browser state manager (localStorage, maturity stage, filters) |
+| `js/state.js` | Browser state manager + `window.LuminaNav` shared bottom nav |
 | `dev-log.md` | Full architectural decision history — read this for background context |
+
+## Bottom navigation — do not duplicate
+
+`window.LuminaNav` (defined at the end of `js/state.js`) handles bottom nav for
+all `pages/*` pages: study, status, news, profile.
+
+- In each page's `init()`, call `LuminaNav.init('pagename')` **once**.
+- When adding a new page under `pages/`, add its route to the `ROUTES` table in
+  `state.js` and call `LuminaNav.init('newpage')` from its `ui-*.js` file.
+- **Do not use LuminaNav in `ui-library.js`** — library has its own `isRoot`-aware
+  nav because it serves both `index.html` (root) and `pages/library.html`.
+- Routing map (pages/* only): study → `'../index.html'`, status/news/profile/info →
+  same-directory `.html`. `info: null` is a no-op placeholder until that page exists.

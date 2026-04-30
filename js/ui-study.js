@@ -300,57 +300,6 @@
   }
 
   // ══════════════════════════════════
-  // 하단 네비게이션
-  // ══════════════════════════════════
-
-  function initBottomNav() {
-    var items = document.querySelectorAll('[data-nav]');
-    items.forEach(function (item) {
-      item.addEventListener('click', function () {
-        var page = this.dataset.nav;
-        State.set('currentPage', page);
-
-        // analytics.js 연동
-        trackEvent('nav_tap', {
-          Input_Mode:      'tap',
-          Duration_Seconds: 0,
-          Content_Id:      '',
-          Content_Title:   '',
-          Content_Source:  '',
-          User_Stage:      State.get('currentStage'),
-          Page_Name:       page,
-          Action_Type:     'navigate',
-          Timestamp:       Date.now(),
-          Session_Context: ''
-        });
-
-        if (page === 'status') {
-          window.location.href = 'status.html';
-        } else if (page === 'study') {
-          window.location.href = '../index.html';
-        } else if (page === 'profile') {
-          window.location.href = 'profile.html';
-        } else if (page === 'news') {
-          window.location.href = 'news.html';
-        } else if (page === 'info') {
-          // placeholder — page not yet built
-        }
-      });
-    });
-  }
-
-  function syncBottomNavUI(currentPage) {
-    var items = document.querySelectorAll('[data-nav]');
-    items.forEach(function (item) {
-      if (item.dataset.nav === currentPage) {
-        item.classList.add('is-active');
-      } else {
-        item.classList.remove('is-active');
-      }
-    });
-  }
-
-  // ══════════════════════════════════
   // 입력 필드 테두리 리셋
   // ══════════════════════════════════
 
@@ -589,7 +538,7 @@
     initDiscussionTags();
     initCommentForm();
     initAskAI();
-    initBottomNav();
+    LuminaNav.init('study');
     initFieldReset();
     initAIButtons();
     initProactiveAgent();
@@ -598,7 +547,6 @@
     State.subscribe('activeSection', syncSectionUI);
     State.subscribe('selectedTags', syncDiscussionTagsUI);
     // playbackProgress 구독 제거 — iframe 플레이어로 대체됨
-    State.subscribe('currentPage', syncBottomNavUI);
     State.subscribe('currentStage', function(newVal, prevVal) {
       syncCoachVoice(newVal);
       showStageTransitionModal(newVal, prevVal);
@@ -607,7 +555,6 @@
     // 초기 상태 반영
     syncSectionUI(State.get('activeSection'));
     syncDiscussionTagsUI(State.get('selectedTags'));
-    syncBottomNavUI(State.get('currentPage'));
     syncCoachVoice(State.get('currentStage'));
 
     // 스크롤 시 하단 nav 자동 숨김 (실수 클릭 방지)
