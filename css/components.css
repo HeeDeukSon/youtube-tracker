@@ -855,3 +855,46 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ── Community Status / Looker Studio embed ── */
+.status-header { margin-bottom: 24px; }
+.status-title { color: var(--ls-accent); font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+.status-subtitle { color: var(--ls-muted); font-size: 14px; }
+
+.status-card {
+  background: var(--ls-surface);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border: 1px solid var(--ls-border);
+}
+
+.iframe-responsive-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+  background-color: var(--ls-surface);
+}
+
+.iframe-responsive-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+}
+
+/* ── Community Stat Cards ── */
+.community-stat-card {
+  padding: 16px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.csc-icon { font-size: 20px; }
+.csc-label { color: var(--ls-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 1px; }
+.csc-bar-wrap { width: 100%; background: rgba(255,255,255,0.07); border-radius: 4px; height: 6px; overflow: hidden; }
+.csc-bar { height: 100%; background: var(--ls-accent); border-radius: 4px; width: 0%; transition: width 0.6s ease; }
+.csc-value { color: var(--ls-muted); font-size: var(--fs-xs); }
+.csc-streak-num { color: var(--ls-accent); font-size: 28px; font-weight: 700; font-family: monospace; }

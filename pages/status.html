@@ -32,7 +32,7 @@
     
     <!-- 1. Sync Gauge (Circular Progress) -->
     <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
-      <h2 style="color: var(--ls-text); font-size: var(--fs-md); margin-bottom: 16px;">English Brain Sync-Stage</h2>
+      <h2 style="color: var(--ls-text); font-size: var(--fs-md); margin-bottom: 16px;">Community Activity</h2>
       
       <div class="ls-sync-gauge" style="position: relative; width: 180px; height: 180px;">
         <svg viewBox="0 0 36 36" style="width: 100%; height: 100%; transform: rotate(-90deg);">
@@ -47,8 +47,8 @@
                 stroke-dasharray="16.6, 100" style="transition: stroke-dasharray 0.5s ease, stroke 0.5s ease;" />
         </svg>
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-          <span id="status-stage-label" style="color: var(--ls-text); font-size: var(--fs-lg); font-weight: bold; text-align: center;">Ignition</span>
-          <span id="status-stage-number" style="color: var(--ls-muted); font-size: var(--fs-xs); margin-top: 4px;">Stage 1 / 6</span>
+          <span id="status-stage-label" style="color: var(--ls-text); font-size: var(--fs-lg); font-weight: bold; text-align: center;">—</span>
+          <span id="status-stage-number" style="color: var(--ls-muted); font-size: var(--fs-xs); margin-top: 4px;">active / 50 goal</span>
         </div>
       </div>
     </div>
@@ -57,13 +57,13 @@
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px;">
       <!-- Time Card -->
       <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
-        <h3 style="color: var(--ls-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Total Exposure</h3>
-        <div id="status-total-time" style="color: var(--ls-accent); font-size: var(--fs-xl); font-family: monospace; font-weight: bold;">0m 0s</div>
+        <h3 style="color: var(--ls-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Weekly Views</h3>
+        <div id="status-weekly-views" style="color: var(--ls-accent); font-size: var(--fs-xl); font-family: monospace; font-weight: bold;">—</div>
       </div>
       <!-- Comments Card -->
       <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid rgba(255,255,255,0.05);">
-        <h3 style="color: var(--ls-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Total Comments</h3>
-        <div id="status-total-comments" style="color: var(--ls-accent); font-size: var(--fs-xl); font-family: monospace; font-weight: bold;">0</div>
+        <h3 style="color: var(--ls-muted); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Active Users</h3>
+        <div id="status-active-users" style="color: var(--ls-accent); font-size: var(--fs-xl); font-family: monospace; font-weight: bold;">—</div>
       </div>
     </div>
 
@@ -88,6 +88,38 @@
       </div>
       <div id="status-insight-vault" style="display: flex; flex-direction: column; gap: 12px;">
         <!-- Cards will be dynamically injected here -->
+      </div>
+    </div>
+
+    <!-- 5. Community Status — Native Cards -->
+    <div style="margin-top: 40px;">
+      <div class="status-header">
+        <h2 class="status-title">Community Status</h2>
+        <p class="status-subtitle">Real-time data tracking our collective English progress.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+
+        <div class="status-card community-stat-card">
+          <div class="csc-icon">📈</div>
+          <div class="csc-label">Weekly Views</div>
+          <div class="csc-bar-wrap"><div id="csc-views-bar" class="csc-bar"></div></div>
+          <div id="csc-views-text" class="csc-value">— / 200</div>
+        </div>
+
+        <div class="status-card community-stat-card">
+          <div class="csc-icon">📡</div>
+          <div class="csc-label">Ch. Freshness</div>
+          <div class="csc-bar-wrap"><div id="csc-fresh-bar" class="csc-bar"></div></div>
+          <div id="csc-fresh-text" class="csc-value">— / 47</div>
+        </div>
+
+        <div class="status-card community-stat-card">
+          <div class="csc-icon">🔥</div>
+          <div class="csc-label">Study Streak</div>
+          <div id="csc-streak-num" class="csc-streak-num">—</div>
+          <div class="csc-value">days in a row</div>
+        </div>
+
       </div>
     </div>
   </main>

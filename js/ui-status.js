@@ -20,35 +20,6 @@
     var timer    = State.get('timerSeconds') || 0;
     var comments = State.get('totalComments') || 0;
 
-    // 1. Sync Gauge
-    var stageIndex = STAGES.indexOf(stage);
-    var stageNum   = stageIndex > -1 ? stageIndex + 1 : 1;
-    var percentage = (stageNum / 6) * 100;
-
-    var fill = document.getElementById('status-gauge-fill');
-    if (fill) fill.setAttribute('stroke-dasharray', percentage.toFixed(1) + ', 100');
-
-    var stageLabel = document.getElementById('status-stage-label');
-    if (stageLabel) stageLabel.textContent = stage;
-
-    var stageNumLabel = document.getElementById('status-stage-number');
-    if (stageNumLabel) stageNumLabel.textContent = 'Stage ' + stageNum + ' / 6';
-
-    var colors = ['#6bcb6b', '#5ba3ff', '#ab7ff0', '#ff8b4d', '#ff5b5b', '#ffcc00'];
-    var stageColor = colors[stageIndex] || 'var(--ls-accent)';
-    if (fill) fill.style.stroke = stageColor;
-
-    // 2. Metrics
-    var timeEl = document.getElementById('status-total-time');
-    if (timeEl) {
-      var m = Math.floor(timer / 60);
-      var s = timer % 60;
-      timeEl.textContent = m + 'm ' + s + 's';
-    }
-
-    var commentsEl = document.getElementById('status-total-comments');
-    if (commentsEl) commentsEl.textContent = comments;
-
     // 3. Coach Insight
     var insightEl = document.getElementById('status-coach-insight');
     if (insightEl) {
@@ -83,7 +54,7 @@
 
     // Header badge
     var badge = document.getElementById('status-stage-badge');
-    if (badge) badge.textContent = stage;
+    if (badge) badge.textContent = 'COMMUNITY';
   }
 
   // ══════════════════════════════════
@@ -261,6 +232,80 @@
     });
   }
 
+  function loadGA4Stats() {
+    var TARGET = 50;
+    fetch('../ga4-stats.json')
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(stats) {
+        if (!stats) return;
+        var users = Number(stats.activeUsers) || 0;
+        var views = Number(stats.pageViews) || 0;
+
+        // Community Activity Ring
+        var pct = Math.min((users / TARGET) * 100, 100);
+        var fill = document.getElementById('status-gauge-fill');
+        if (fill) {
+          fill.setAttribute('stroke-dasharray', pct.toFixed(1) + ', 100');
+          fill.style.stroke = 'var(--ls-accent)';
+        }
+        var label = document.getElementById('status-stage-label');
+        if (label) label.textContent = users;
+
+        // Metric Cards
+        var viewsEl = document.getElementById('status-weekly-views');
+        if (viewsEl) viewsEl.textContent = views.toLocaleString();
+        var usersEl = document.getElementById('status-active-users');
+        if (usersEl) usersEl.textContent = users.toLocaleString();
+
+        // Community Status — Card 1: Weekly Views progress bar
+        var VIEWS_GOAL = 200;
+        var viewsPct = Math.min((views / VIEWS_GOAL) * 100, 100);
+        var vBar = document.getElementById('csc-views-bar');
+        if (vBar) vBar.style.width = viewsPct.toFixed(1) + '%';
+        var vTxt = document.getElementById('csc-views-text');
+        if (vTxt) vTxt.textContent = views.toLocaleString() + ' / ' + VIEWS_GOAL;
+      })
+      .catch(function() {});
+  }
+
+  function loadChannelFreshness() {
+    var TOTAL = 47;
+    var cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    fetch('../results.json')
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(data) {
+        if (!data) return;
+        var fresh = data.filter(function(ch) {
+          return (ch.videos || []).some(function(v) {
+            return v.publishedAt && new Date(v.publishedAt) >= cutoff;
+          });
+        }).length;
+        var pct = Math.min((fresh / TOTAL) * 100, 100);
+        var bar = document.getElementById('csc-fresh-bar');
+        if (bar) bar.style.width = pct.toFixed(1) + '%';
+        var txt = document.getElementById('csc-fresh-text');
+        if (txt) txt.textContent = fresh + ' / ' + TOTAL;
+      })
+      .catch(function() {});
+  }
+
+  function updateStudyStreak() {
+    var today = new Date().toISOString().slice(0, 10);
+    var last   = localStorage.getItem('studyLastVisit');
+    var streak = parseInt(localStorage.getItem('studyStreak') || '0', 10);
+    if (!last) {
+      streak = 1;
+    } else {
+      var diff = Math.round((new Date(today) - new Date(last)) / 86400000);
+      if (diff === 1) { streak += 1; }
+      else if (diff > 1) { streak = 1; }
+    }
+    localStorage.setItem('studyLastVisit', today);
+    localStorage.setItem('studyStreak', streak);
+    var el = document.getElementById('csc-streak-num');
+    if (el) el.textContent = streak;
+  }
+
   function init() {
     LuminaNav.init('status');
     initExportBtn();
@@ -271,6 +316,9 @@
     State.subscribe('savedInsights',  syncDashboardUI);
 
     syncDashboardUI();
+    loadGA4Stats();
+    loadChannelFreshness();
+    updateStudyStreak();
     State.set('currentPage', 'status');
 
     trackEvent('page_view', {

@@ -71,7 +71,7 @@ jobs:
         run: |
           mkdir _site
           cp -r index.html css js pages images results.json _site/ 2>/dev/null || true
-          cp config.js analytics.js _site/ 2>/dev/null || true
+          cp config.js analytics.js ga4-stats.json _site/ 2>/dev/null || true
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
