@@ -555,6 +555,94 @@
     });
   }
 
+  // ══════════════════════════════════
+  // 음성 입력 (Voice-to-Text)
+  // ══════════════════════════════════
+
+  function initMicButton() {
+    var btn = document.getElementById('mic-btn');
+    if (!btn) return;
+
+    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      btn.style.display = 'none';
+      return;
+    }
+
+    var recognition = new SpeechRecognition();
+    recognition.continuous     = true;
+    recognition.interimResults = true;
+    recognition.lang           = 'en-US';
+
+    var isRecording   = false;
+    var shouldRestart = false;
+    var committedText = '';
+    var baseText      = '';
+
+    function getTextarea() {
+      return document.querySelector('.ls-comment-box__textarea');
+    }
+
+    function setRecordingState(active) {
+      isRecording = active;
+      btn.classList.toggle('is-recording', active);
+      btn.setAttribute('aria-label', active ? '음성 입력 중지' : '음성 입력');
+    }
+
+    recognition.onresult = function (e) {
+      var textarea = getTextarea();
+      if (!textarea) return;
+      var interim = '';
+      for (var i = e.resultIndex; i < e.results.length; i++) {
+        if (e.results[i].isFinal) {
+          committedText += e.results[i][0].transcript;
+        } else {
+          interim += e.results[i][0].transcript;
+        }
+      }
+      textarea.value = baseText + committedText + interim;
+    };
+
+    recognition.onend = function () {
+      if (shouldRestart && isRecording) {
+        try { recognition.start(); } catch (err) { /* already running */ }
+      } else {
+        setRecordingState(false);
+      }
+    };
+
+    recognition.onerror = function (e) {
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        shouldRestart = false;
+        setRecordingState(false);
+        alert('마이크 접근 권한이 필요합니다. 브라우저 설정에서 허용해 주세요.');
+      } else if (e.error === 'audio-capture') {
+        shouldRestart = false;
+        setRecordingState(false);
+        alert('마이크를 찾을 수 없습니다. 장치를 연결하고 다시 시도해 주세요.');
+      }
+      // 'no-speech' and 'aborted' are handled naturally by onend
+    };
+
+    btn.addEventListener('click', function () {
+      if (isRecording) {
+        shouldRestart = false;
+        recognition.stop();
+      } else {
+        var textarea = getTextarea();
+        baseText      = textarea ? textarea.value : '';
+        committedText = '';
+        shouldRestart = true;
+        setRecordingState(true);
+        try { recognition.start(); } catch (err) { /* already running */ }
+      }
+    });
+
+    window.addEventListener('beforeunload', function () {
+      if (isRecording) { shouldRestart = false; recognition.abort(); }
+    });
+  }
+
   function initDiscussionFocus() {
     var btn = document.querySelector('.ls-discussion-expand-btn');
     if (!btn) return;
@@ -594,6 +682,7 @@
     initProactiveAgent();
     initDiscussionFocus();
     initCommentTextareaFocus();
+    initMicButton();
 
     // 상태 구독
     State.subscribe('activeSection', syncSectionUI);
