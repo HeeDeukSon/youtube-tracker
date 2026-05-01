@@ -607,8 +607,8 @@
     };
 
     recognition.onend = function () {
-      if (shouldRestart && isRecording) {
-        if (!isAndroid) baseText += committedText;
+      if (shouldRestart && isRecording && !isAndroid) {
+        baseText += committedText;
         committedText = '';
         try { recognition.start(); } catch (err) { /* already running */ }
       } else {
