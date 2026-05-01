@@ -585,8 +585,9 @@
     }
 
     function startRecognition() {
-      var r     = new SpeechRecognition();
-      var ended = false; // guard against onresult firing after onend on Android
+      var r            = new SpeechRecognition();
+      var ended        = false;
+      var sessionFinals = ''; // only isFinal text — never contains interim
       recognition = r;
       r.continuous     = true;
       r.interimResults = true;
@@ -596,23 +597,28 @@
         if (ended) return;
         var textarea = getTextarea();
         if (!textarea) return;
-        var committed = '';
-        var interim   = '';
+        sessionFinals = '';
+        var sessionInterim = '';
         for (var i = 0; i < e.results.length; i++) {
+          var transcript = e.results[i][0].transcript;
           if (e.results[i].isFinal) {
-            committed += e.results[i][0].transcript;
+            sessionFinals += transcript;
           } else {
-            interim += e.results[i][0].transcript;
+            sessionInterim += transcript;
           }
         }
-        textarea.value = baseText + committed + interim;
+        textarea.value = baseText + sessionFinals + sessionInterim;
+        textarea.scrollTop = textarea.scrollHeight;
       };
 
       r.onend = function () {
         if (ended) return;
         ended = true;
+        // Append only finalized text — never interim — to prevent compounding
+        baseText += sessionFinals;
+        sessionFinals = '';
         var textarea = getTextarea();
-        if (textarea) baseText = textarea.value;
+        if (textarea) textarea.value = baseText; // clear lingering interim
         recognition = null;
         if (isRecording && !isAndroid) {
           // Desktop: restart automatically for continuous experience
