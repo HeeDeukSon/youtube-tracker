@@ -539,12 +539,17 @@
 
   function initCommentTextareaFocus() {
     var textarea = document.querySelector('[data-field="comment"]');
-    if (!textarea) return;
+    var player   = document.getElementById('video-player-container');
+    if (!textarea || !player) return;
+
     textarea.addEventListener('focus', function () {
-      document.body.classList.add('textarea-focused');
+      var miniH = Math.round(player.offsetWidth * 9 / 16 / 4);
+      player.style.height   = miniH + 'px';
+      player.style.overflow = 'hidden';
     });
     textarea.addEventListener('blur', function () {
-      document.body.classList.remove('textarea-focused');
+      player.style.height   = '';
+      player.style.overflow = '';
     });
   }
 
