@@ -576,8 +576,9 @@
 
     var isRecording   = false;
     var shouldRestart = false;
-    var committedText = '';
-    var baseText      = '';
+    var committedText       = '';
+    var baseText            = '';
+    var processedFinalCount = 0;
 
     function getTextarea() {
       return document.querySelector('.ls-comment-box__textarea');
@@ -595,7 +596,10 @@
       var interim = '';
       for (var i = e.resultIndex; i < e.results.length; i++) {
         if (e.results[i].isFinal) {
-          committedText += e.results[i][0].transcript;
+          if (i >= processedFinalCount) {
+            committedText += e.results[i][0].transcript;
+            processedFinalCount = i + 1;
+          }
         } else {
           interim += e.results[i][0].transcript;
         }
@@ -631,7 +635,8 @@
       } else {
         var textarea = getTextarea();
         baseText      = textarea ? textarea.value : '';
-        committedText = '';
+        committedText       = '';
+        processedFinalCount = 0;
         shouldRestart = true;
         setRecordingState(true);
         try { recognition.start(); } catch (err) { /* already running */ }
