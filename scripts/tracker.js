@@ -1,12 +1,11 @@
-require('dotenv').config();
+const { youtubeApiKey: API_KEY } = require('../config');
 const axios = require('axios');
 
-const API_KEY = process.env.YOUTUBE_API_KEY;
 const BASE = 'https://www.googleapis.com/youtube/v3';
 
 const VIDEOS_PER_CHANNEL = 10;
 const DESCRIPTION_MAX_CHARS = 2000;
-const DEFAULT_CATEGORY = 'AI'; // keep in sync with generate-html.js
+const { DEFAULT_CATEGORY } = require('../constants');
 
 const fs = require('fs');
 const CHANNELS = [];

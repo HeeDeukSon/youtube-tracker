@@ -1,13 +1,14 @@
 'use strict';
 const fs = require('fs');
+const { ga4 } = require('../config');
+const { DEFAULT_CATEGORY, LANGUAGE_TAGS } = require('../constants');
 
-const MEASUREMENT_ID = process.env.GA4_MEASUREMENT_ID || '';
+const MEASUREMENT_ID = ga4.measurementId || '';
 
 let ga4Stats = null;
 try { ga4Stats = JSON.parse(fs.readFileSync('ga4-stats.json', 'utf-8')); } catch (_) {}
 
 const TRENDING_PERCENTILE = 0.15;
-const DEFAULT_CATEGORY = 'AI'; // keep in sync with tracker.js
 
 const data = JSON.parse(fs.readFileSync('results.json', 'utf-8'));
 const today = new Date().toISOString().slice(0, 10);
@@ -715,7 +716,7 @@ const html = `<!DOCTYPE html>
 const VIDEOS = ${videosJson};
 const SAVED  = ${savedJson};
 const DETAILS = ${detailsJson};
-const LANGUAGE_TAGS = ['English', 'Korean']; // keep in sync with patch.js and tracker.js
+const LANGUAGE_TAGS = ${JSON.stringify(LANGUAGE_TAGS)};
 
 // Replace with your deployed GAS web app URL:
 var GAS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz7SFGetH10Jfg8jd0pridPpagpia1gN9KW_vb45JzPsoNXj5o6Bk7AXoyG-AK2ohXJ4g/exec';

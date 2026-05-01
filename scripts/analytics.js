@@ -1,11 +1,11 @@
 const axios = require('axios');
-const { ga4 } = require('./config');
+const { ga4 } = require('../config');
 
 const MP_ENDPOINT = 'https://www.googletagmanager.com/mp/collect';
 
 // GA4_API_SECRET must be added to .env and config.js (ga4.apiSecret) before use.
 // Generate it in GA4 Admin → Data Streams → Measurement Protocol API secrets.
-const GA4_API_SECRET = process.env.GA4_API_SECRET;
+const GA4_API_SECRET = ga4.apiSecret;
 
 async function sendStudyLog(data) {
   const {

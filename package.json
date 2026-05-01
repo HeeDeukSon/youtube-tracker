@@ -4,7 +4,8 @@
   "description": "YouTube competitor tracker using Data API v3",
   "main": "tracker.js",
   "scripts": {
-    "start": "node tracker.js"
+    "start": "node scripts/tracker.js",
+    "report": "node scripts/generate-report.js"
   },
   "dependencies": {
     "@google-cloud/local-auth": "^3.0.1",

@@ -1,6 +1,5 @@
 const fs = require('fs');
-
-const LANGUAGE_TAGS = ['English', 'Korean']; // keep in sync with generate-html.js
+const { LANGUAGE_TAGS } = require('../constants');
 
 const tagMapping = {
   "jeff su": ["Tutorials", "Productivity"],

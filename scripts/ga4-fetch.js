@@ -1,9 +1,10 @@
 'use strict';
 const { google } = require('googleapis');
 const fs = require('fs');
+const { ga4 } = require('../config');
 
-const PROPERTY_ID = process.env.GA4_PROPERTY_ID;
-const KEY_JSON    = process.env.GA4_SERVICE_ACCOUNT_KEY;
+const PROPERTY_ID = ga4.propertyId;
+const KEY_JSON    = ga4.serviceAccountKey;
 
 async function main() {
   if (!PROPERTY_ID || !KEY_JSON) {

@@ -43,7 +43,7 @@ jobs:
           echo "Expecting $EXPECTED channels, threshold: $THRESHOLD"
 
           cp results.json results.backup.json
-          node tracker.js || true
+          node scripts/tracker.js || true
 
           COUNT=$(node -e "const r=require('./results.json'); console.log(r.length);" 2>/dev/null || echo 0)
           echo "Fetched: $COUNT / $EXPECTED channels"
@@ -58,20 +58,20 @@ jobs:
 
       - name: Fetch GA4 stats
         if: github.event_name != 'push'
-        run: node ga4-fetch.js
+        run: node scripts/ga4-fetch.js
         env:
           GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
           GA4_SERVICE_ACCOUNT_KEY: ${{ secrets.GA4_SERVICE_ACCOUNT_KEY }}
 
       - name: Apply tag enrichment
         if: github.event_name != 'push'
-        run: node patch.js
+        run: node scripts/patch.js
 
       - name: Prepare deployment folder
         run: |
           mkdir _site
           cp -r index.html css js pages images results.json _site/ 2>/dev/null || true
-          cp config.js analytics.js ga4-stats.json _site/ 2>/dev/null || true
+          cp ga4-stats.json _site/ 2>/dev/null || true
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
