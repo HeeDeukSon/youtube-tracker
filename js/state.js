@@ -46,6 +46,9 @@ const LuminaState = (() => {
 
     // 현재 페이지
     currentPage: 'study',       // 'study' | 'status' | 'news' | 'info' | 'profile'
+
+    // Study 페이지 — 토론 집중 모드
+    discussionFocused: false,
   };
 
   // ── 구독자 저장소 ──

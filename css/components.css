@@ -898,3 +898,32 @@ body {
 .csc-bar { height: 100%; background: var(--ls-accent); border-radius: 4px; width: 0%; transition: width 0.6s ease; }
 .csc-value { color: var(--ls-muted); font-size: var(--fs-xs); }
 .csc-streak-num { color: var(--ls-accent); font-size: 28px; font-weight: 700; font-family: monospace; }
+
+/* ═══════════════════════════════════════════
+   DISCUSSION FOCUS MODE
+   ═══════════════════════════════════════════ */
+
+body.discussion-focused .ls-sticky-player,
+body.discussion-focused .ls-content-header,
+body.discussion-focused #coach-voice-container,
+body.discussion-focused .ls-section[data-section="description"],
+body.discussion-focused .ls-ask-ai,
+body.discussion-focused #ai-insights-panel {
+  display: none;
+}
+
+body.discussion-focused .ls-section[data-section="discussions"] {
+  margin-top: var(--sp-md);
+}
+
+body.discussion-focused .ls-section[data-section="discussions"] .ls-section__body {
+  display: block;
+}
+
+.ls-discussion-expand-btn {
+  min-width: auto;
+  min-height: auto;
+  padding: 4px;
+  margin-left: 2px;
+  color: var(--ls-muted);
+}

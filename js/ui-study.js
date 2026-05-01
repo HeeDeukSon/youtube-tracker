@@ -181,23 +181,28 @@
     showAIInsight("AI Insight: 훌륭한 인사이트입니다! 협상 모델의 '표준(Standards)'을 적용해본다면 이 문장을 어떻게 발전시킬 수 있을까요?");
 
     // Google Apps Script 웹앱으로 전송
-    var titleEl = document.getElementById('video-title');
+    var titleEl   = document.getElementById('video-title');
+    var channelEl = document.getElementById('video-channel');
+    var videoTitle = titleEl ? titleEl.textContent.trim() : '';
     var payload = {
-      name:        data.name,
-      email:       data.email,
-      comment:     data.comment,
-      tags:        (data.tags || []).join(', '),
-      videoTitle:  titleEl ? titleEl.textContent : '',
-      videoUrl:    'https://www.youtube.com/watch?v=' + (State.get('currentVideoId') || ''),
-      userStage:   State.get('currentStage') || '',
-      submittedAt: new Date().toISOString()
+      name:           data.name,
+      email:          data.email,
+      comment:        data.comment,
+      tags:           (data.tags || []).join(', '),
+      videoTitle:     videoTitle,
+      channelName:    channelEl ? channelEl.textContent.trim() : '',
+      videoUrl:       'https://www.youtube.com/watch?v=' + (State.get('currentVideoId') || ''),
+      userStage:      State.get('currentStage') || '',
+      submittedAt:    new Date().toISOString(),
+      sendCopyToUser: !!data.email,
+      emailSubject:   'Your Lumina Study comment — ' + videoTitle,
+      emailBody:      'Hi ' + data.name + ',\n\nThank you for your comment:\n\n"' + data.comment + '"\n\nVideo: https://www.youtube.com/watch?v=' + (State.get('currentVideoId') || '')
     };
 
     fetch(COMMENT_SCRIPT_URL, {
-      method:  'POST',
-      mode:    'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify(payload)
+      method: 'POST',
+      mode:   'no-cors',
+      body:   JSON.stringify(payload)
     })
     .then(function () {
       console.log('[Comment] 전송 완료');
@@ -529,6 +534,33 @@
   }
 
   // ══════════════════════════════════
+  // 토론 집중 모드
+  // ══════════════════════════════════
+
+  function initDiscussionFocus() {
+    var btn = document.querySelector('.ls-discussion-expand-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation(); // 섹션 토글과 분리
+      handleDiscussionFocusToggle();
+    });
+  }
+
+  function handleDiscussionFocusToggle() {
+    var isFocused = State.get('discussionFocused');
+    State.set('discussionFocused', !isFocused);
+    if (!isFocused) State.set('activeSection', 'discussions');
+  }
+
+  function syncDiscussionFocusUI(isFocused) {
+    document.body.classList.toggle('discussion-focused', isFocused);
+    var btn = document.querySelector('.ls-discussion-expand-btn');
+    if (!btn) return;
+    btn.querySelector('.icon-expand').style.display  = isFocused ? 'none'  : '';
+    btn.querySelector('.icon-collapse').style.display = isFocused ? '' : 'none';
+  }
+
+  // ══════════════════════════════════
   // 초기화
   // ══════════════════════════════════
 
@@ -542,10 +574,12 @@
     initFieldReset();
     initAIButtons();
     initProactiveAgent();
+    initDiscussionFocus();
 
     // 상태 구독
     State.subscribe('activeSection', syncSectionUI);
     State.subscribe('selectedTags', syncDiscussionTagsUI);
+    State.subscribe('discussionFocused', syncDiscussionFocusUI);
     // playbackProgress 구독 제거 — iframe 플레이어로 대체됨
     State.subscribe('currentStage', function(newVal, prevVal) {
       syncCoachVoice(newVal);
@@ -556,6 +590,7 @@
     syncSectionUI(State.get('activeSection'));
     syncDiscussionTagsUI(State.get('selectedTags'));
     syncCoachVoice(State.get('currentStage'));
+    syncDiscussionFocusUI(State.get('discussionFocused'));
 
     // 스크롤 시 하단 nav 자동 숨김 (실수 클릭 방지)
     var nav = document.querySelector('.ls-bottom-nav');
