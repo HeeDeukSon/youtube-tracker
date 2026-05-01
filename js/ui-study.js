@@ -585,12 +585,15 @@
     }
 
     function startRecognition() {
-      recognition = new SpeechRecognition();
-      recognition.continuous     = true;
-      recognition.interimResults = true;
-      recognition.lang           = 'en-US';
+      var r     = new SpeechRecognition();
+      var ended = false; // guard against onresult firing after onend on Android
+      recognition = r;
+      r.continuous     = true;
+      r.interimResults = true;
+      r.lang           = 'en-US';
 
-      recognition.onresult = function (e) {
+      r.onresult = function (e) {
+        if (ended) return;
         var textarea = getTextarea();
         if (!textarea) return;
         var committed = '';
@@ -605,7 +608,9 @@
         textarea.value = baseText + committed + interim;
       };
 
-      recognition.onend = function () {
+      r.onend = function () {
+        if (ended) return;
+        ended = true;
         var textarea = getTextarea();
         if (textarea) baseText = textarea.value;
         recognition = null;
@@ -617,7 +622,9 @@
         }
       };
 
-      recognition.onerror = function (e) {
+      r.onerror = function (e) {
+        if (ended) return;
+        ended = true;
         if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
           setRecordingState(false);
           recognition = null;
@@ -630,7 +637,7 @@
         // 'no-speech' and 'aborted' are handled naturally by onend
       };
 
-      try { recognition.start(); } catch (err) { /* already running */ }
+      try { r.start(); } catch (err) { /* already running */ }
     }
 
     btn.addEventListener('click', function () {
