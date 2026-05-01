@@ -927,3 +927,9 @@ body.discussion-focused .ls-section[data-section="discussions"] .ls-section__bod
   margin-left: 2px;
   color: var(--ls-muted);
 }
+
+/* Mini player when comment textarea is active */
+body.textarea-focused #video-player-container {
+  height: 14vw;
+  overflow: hidden;
+}

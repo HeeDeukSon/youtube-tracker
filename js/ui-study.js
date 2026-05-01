@@ -537,6 +537,17 @@
   // 토론 집중 모드
   // ══════════════════════════════════
 
+  function initCommentTextareaFocus() {
+    var textarea = document.querySelector('[data-field="comment"]');
+    if (!textarea) return;
+    textarea.addEventListener('focus', function () {
+      document.body.classList.add('textarea-focused');
+    });
+    textarea.addEventListener('blur', function () {
+      document.body.classList.remove('textarea-focused');
+    });
+  }
+
   function initDiscussionFocus() {
     var btn = document.querySelector('.ls-discussion-expand-btn');
     if (!btn) return;
@@ -575,6 +586,7 @@
     initAIButtons();
     initProactiveAgent();
     initDiscussionFocus();
+    initCommentTextareaFocus();
 
     // 상태 구독
     State.subscribe('activeSection', syncSectionUI);
