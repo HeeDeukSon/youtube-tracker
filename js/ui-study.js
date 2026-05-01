@@ -585,11 +585,10 @@
     }
 
     function startRecognition() {
-      var r            = new SpeechRecognition();
-      var ended        = false;
-      var sessionFinals = ''; // only isFinal text — never contains interim
+      var r     = new SpeechRecognition();
+      var ended = false;
       recognition = r;
-      r.continuous     = true;
+      r.continuous     = isAndroid ? false : true;
       r.interimResults = true;
       r.lang           = 'en-US';
 
@@ -597,35 +596,29 @@
         if (ended) return;
         var textarea = getTextarea();
         if (!textarea) return;
-        sessionFinals = '';
-        var latestInterim = '';
-        for (var i = 0; i < e.results.length; i++) {
-          var transcript = e.results[i][0].transcript;
+        var committed = '';
+        var interim   = '';
+        for (var i = e.resultIndex; i < e.results.length; i++) {
           if (e.results[i].isFinal) {
-            sessionFinals += transcript;
+            committed += e.results[i][0].transcript;
           } else {
-            latestInterim = transcript; // = not += : keep only the last interim to avoid Android stale-history duplication
+            interim += e.results[i][0].transcript;
           }
         }
-        var currentText = baseText + sessionFinals;
-        if (currentText.length > 0 && !currentText.endsWith(' ') && latestInterim.length > 0) {
-          currentText += ' ';
+        if (baseText.length > 0 && !baseText.endsWith(' ') && committed.length > 0) {
+          baseText += ' ';
         }
-        textarea.value = currentText + latestInterim;
+        textarea.value = baseText + committed + interim;
         textarea.scrollTop = textarea.scrollHeight;
       };
 
       r.onend = function () {
         if (ended) return;
         ended = true;
-        // Append only finalized text — never interim — to prevent compounding
-        baseText += sessionFinals;
-        sessionFinals = '';
         var textarea = getTextarea();
-        if (textarea) textarea.value = baseText; // clear lingering interim
+        if (textarea) baseText = textarea.value;
         recognition = null;
-        if (isRecording && !isAndroid) {
-          // Desktop: restart automatically for continuous experience
+        if (isRecording) {
           startRecognition();
         } else {
           setRecordingState(false);
