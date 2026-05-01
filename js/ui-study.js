@@ -576,9 +576,8 @@
 
     var isRecording   = false;
     var shouldRestart = false;
-    var committedText       = '';
-    var baseText            = '';
-    var processedFinalCount = 0;
+    var committedText = '';
+    var baseText      = '';
 
     function getTextarea() {
       return document.querySelector('.ls-comment-box__textarea');
@@ -594,21 +593,22 @@
       var textarea = getTextarea();
       if (!textarea) return;
       var interim = '';
-      for (var i = e.resultIndex; i < e.results.length; i++) {
+      var sessionCommitted = '';
+      for (var i = 0; i < e.results.length; i++) {
         if (e.results[i].isFinal) {
-          if (i >= processedFinalCount) {
-            committedText += e.results[i][0].transcript;
-            processedFinalCount = i + 1;
-          }
+          sessionCommitted += e.results[i][0].transcript;
         } else {
           interim += e.results[i][0].transcript;
         }
       }
+      committedText = sessionCommitted;
       textarea.value = baseText + committedText + interim;
     };
 
     recognition.onend = function () {
       if (shouldRestart && isRecording) {
+        baseText += committedText;
+        committedText = '';
         try { recognition.start(); } catch (err) { /* already running */ }
       } else {
         setRecordingState(false);
@@ -635,8 +635,7 @@
       } else {
         var textarea = getTextarea();
         baseText      = textarea ? textarea.value : '';
-        committedText       = '';
-        processedFinalCount = 0;
+        committedText = '';
         shouldRestart = true;
         setRecordingState(true);
         try { recognition.start(); } catch (err) { /* already running */ }
