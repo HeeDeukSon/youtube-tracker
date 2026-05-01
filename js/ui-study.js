@@ -538,18 +538,20 @@
   // ══════════════════════════════════
 
   function initCommentTextareaFocus() {
-    var textarea = document.querySelector('[data-field="comment"]');
-    var player   = document.getElementById('video-player-container');
-    if (!textarea || !player) return;
+    var player = document.getElementById('video-player-container');
+    if (!player) return;
 
-    textarea.addEventListener('focus', function () {
-      var miniH = Math.round(player.offsetWidth * 9 / 16 / 4);
-      player.style.height   = miniH + 'px';
-      player.style.overflow = 'hidden';
-    });
-    textarea.addEventListener('blur', function () {
-      player.style.height   = '';
-      player.style.overflow = '';
+    var fields = document.querySelectorAll('[data-field="name"], [data-field="email"], [data-field="comment"]');
+    fields.forEach(function (field) {
+      field.addEventListener('focus', function () {
+        var miniH = Math.round(player.offsetWidth * 9 / 16 / 4);
+        player.style.height   = miniH + 'px';
+        player.style.overflow = 'hidden';
+      });
+      field.addEventListener('blur', function () {
+        player.style.height   = '';
+        player.style.overflow = '';
+      });
     });
   }
 
