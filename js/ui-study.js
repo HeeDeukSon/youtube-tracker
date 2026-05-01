@@ -598,16 +598,20 @@
         var textarea = getTextarea();
         if (!textarea) return;
         sessionFinals = '';
-        var sessionInterim = '';
+        var latestInterim = '';
         for (var i = 0; i < e.results.length; i++) {
           var transcript = e.results[i][0].transcript;
           if (e.results[i].isFinal) {
             sessionFinals += transcript;
           } else {
-            sessionInterim += transcript;
+            latestInterim = transcript; // = not += : keep only the last interim to avoid Android stale-history duplication
           }
         }
-        textarea.value = baseText + sessionFinals + sessionInterim;
+        var currentText = baseText + sessionFinals;
+        if (currentText.length > 0 && !currentText.endsWith(' ') && latestInterim.length > 0) {
+          currentText += ' ';
+        }
+        textarea.value = currentText + latestInterim;
         textarea.scrollTop = textarea.scrollHeight;
       };
 
