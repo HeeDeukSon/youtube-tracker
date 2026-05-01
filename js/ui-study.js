@@ -569,10 +569,18 @@
       return;
     }
 
-    var isAndroid   = /Android/i.test(navigator.userAgent);
-    var isRecording = false;
-    var recognition = null;
-    var baseText    = '';
+    var isAndroid    = /Android/i.test(navigator.userAgent);
+    var isRecording  = false;
+    var recognition  = null;
+    var baseText     = '';
+    var activeStream = null; // getUserMedia stream held for audio constraint hints
+
+    function stopActiveStream() {
+      if (activeStream) {
+        activeStream.getTracks().forEach(function(t) { t.stop(); });
+        activeStream = null;
+      }
+    }
 
     function getTextarea() {
       return document.querySelector('.ls-comment-box__textarea');
@@ -585,6 +593,22 @@
     }
 
     function startRecognition() {
+      if (isAndroid && navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        stopActiveStream(); // release any prior stream before requesting a new one
+        navigator.mediaDevices.getUserMedia({
+          audio: { echoCancellation: true, noiseSuppression: true }
+        }).then(function(stream) {
+          activeStream = stream; // held alive but NOT connected to any output — no speaker playback
+          doStartRecognition();
+        }).catch(function() {
+          doStartRecognition(); // constraints unavailable — proceed without
+        });
+      } else {
+        doStartRecognition();
+      }
+    }
+
+    function doStartRecognition() {
       var r     = new SpeechRecognition();
       var ended = false;
       recognition = r;
@@ -647,6 +671,7 @@
       if (isRecording) {
         setRecordingState(false); // set false before stop so onend skips restart
         if (recognition) { recognition.stop(); recognition = null; }
+        stopActiveStream();
       } else {
         var textarea = getTextarea();
         baseText = textarea ? textarea.value : '';
@@ -657,6 +682,7 @@
 
     window.addEventListener('beforeunload', function () {
       if (recognition) { recognition.abort(); recognition = null; }
+      stopActiveStream();
     });
   }
 
