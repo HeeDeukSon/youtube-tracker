@@ -570,10 +570,11 @@
     }
 
     var recognition = new SpeechRecognition();
-    recognition.continuous     = false;
+    recognition.continuous     = true;
     recognition.interimResults = true;
     recognition.lang           = 'en-US';
 
+    var isAndroid     = /Android/i.test(navigator.userAgent);
     var isRecording   = false;
     var shouldRestart = false;
     var committedText = '';
@@ -607,7 +608,7 @@
 
     recognition.onend = function () {
       if (shouldRestart && isRecording) {
-        baseText += committedText;
+        if (!isAndroid) baseText += committedText;
         committedText = '';
         try { recognition.start(); } catch (err) { /* already running */ }
       } else {
