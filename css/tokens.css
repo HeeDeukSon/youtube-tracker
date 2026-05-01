@@ -65,3 +65,18 @@
   --bottom-nav-height: 56px;
   --section-bar-width: 3px;
 }
+
+[data-theme="light"] {
+  --ls-bg:           #ffffff;
+  --ls-surface:      #f5f5f5;
+  --ls-input:        #efefef;
+  --ls-border:       #e0e0e0;
+  --ls-border-light: #ebebeb;
+  --ls-text:         #111111;
+  --ls-muted:        #555555;
+  --ls-dim:          #777777;
+  --ls-hint:         #999999;
+  --ls-thumb-blue:   #d0e4f5;
+  --ls-thumb-red:    #f5d0d0;
+  --ls-thumb-brown:  #f0e8d8;
+}
