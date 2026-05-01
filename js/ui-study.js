@@ -569,16 +569,10 @@
       return;
     }
 
-    var recognition = new SpeechRecognition();
-    recognition.continuous     = true;
-    recognition.interimResults = true;
-    recognition.lang           = 'en-US';
-
-    var isAndroid     = /Android/i.test(navigator.userAgent);
-    var isRecording   = false;
-    var shouldRestart = false;
-    var committedText = '';
-    var baseText      = '';
+    var isAndroid   = /Android/i.test(navigator.userAgent);
+    var isRecording = false;
+    var recognition = null;
+    var baseText    = '';
 
     function getTextarea() {
       return document.querySelector('.ls-comment-box__textarea');
@@ -590,61 +584,69 @@
       btn.setAttribute('aria-label', active ? '음성 입력 중지' : '음성 입력');
     }
 
-    recognition.onresult = function (e) {
-      var textarea = getTextarea();
-      if (!textarea) return;
-      var interim = '';
-      var sessionCommitted = '';
-      for (var i = 0; i < e.results.length; i++) {
-        if (e.results[i].isFinal) {
-          sessionCommitted += e.results[i][0].transcript;
-        } else {
-          interim += e.results[i][0].transcript;
+    function startRecognition() {
+      recognition = new SpeechRecognition();
+      recognition.continuous     = true;
+      recognition.interimResults = true;
+      recognition.lang           = 'en-US';
+
+      recognition.onresult = function (e) {
+        var textarea = getTextarea();
+        if (!textarea) return;
+        var committed = '';
+        var interim   = '';
+        for (var i = 0; i < e.results.length; i++) {
+          if (e.results[i].isFinal) {
+            committed += e.results[i][0].transcript;
+          } else {
+            interim += e.results[i][0].transcript;
+          }
         }
-      }
-      committedText = sessionCommitted;
-      textarea.value = baseText + committedText + interim;
-    };
+        textarea.value = baseText + committed + interim;
+      };
 
-    recognition.onend = function () {
-      if (shouldRestart && isRecording && !isAndroid) {
-        baseText += committedText;
-        committedText = '';
-        try { recognition.start(); } catch (err) { /* already running */ }
-      } else {
-        setRecordingState(false);
-      }
-    };
+      recognition.onend = function () {
+        var textarea = getTextarea();
+        if (textarea) baseText = textarea.value;
+        recognition = null;
+        if (isRecording && !isAndroid) {
+          // Desktop: restart automatically for continuous experience
+          startRecognition();
+        } else {
+          setRecordingState(false);
+        }
+      };
 
-    recognition.onerror = function (e) {
-      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
-        shouldRestart = false;
-        setRecordingState(false);
-        alert('마이크 접근 권한이 필요합니다. 브라우저 설정에서 허용해 주세요.');
-      } else if (e.error === 'audio-capture') {
-        shouldRestart = false;
-        setRecordingState(false);
-        alert('마이크를 찾을 수 없습니다. 장치를 연결하고 다시 시도해 주세요.');
-      }
-      // 'no-speech' and 'aborted' are handled naturally by onend
-    };
+      recognition.onerror = function (e) {
+        if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+          setRecordingState(false);
+          recognition = null;
+          alert('마이크 접근 권한이 필요합니다. 브라우저 설정에서 허용해 주세요.');
+        } else if (e.error === 'audio-capture') {
+          setRecordingState(false);
+          recognition = null;
+          alert('마이크를 찾을 수 없습니다. 장치를 연결하고 다시 시도해 주세요.');
+        }
+        // 'no-speech' and 'aborted' are handled naturally by onend
+      };
+
+      try { recognition.start(); } catch (err) { /* already running */ }
+    }
 
     btn.addEventListener('click', function () {
       if (isRecording) {
-        shouldRestart = false;
-        recognition.stop();
+        setRecordingState(false); // set false before stop so onend skips restart
+        if (recognition) { recognition.stop(); recognition = null; }
       } else {
         var textarea = getTextarea();
-        baseText      = textarea ? textarea.value : '';
-        committedText = '';
-        shouldRestart = true;
+        baseText = textarea ? textarea.value : '';
         setRecordingState(true);
-        try { recognition.start(); } catch (err) { /* already running */ }
+        startRecognition();
       }
     });
 
     window.addEventListener('beforeunload', function () {
-      if (isRecording) { shouldRestart = false; recognition.abort(); }
+      if (recognition) { recognition.abort(); recognition = null; }
     });
   }
 
