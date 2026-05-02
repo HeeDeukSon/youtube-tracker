@@ -35,6 +35,7 @@ class SpeechTracker {
     this._pendingChunks  = 0;
     this._mediaRecorder  = null;
     this._stream         = null;
+    this._chunks         = []; // raw MediaRecorder blobs, concatenated on stop
 
     // Visualizer state — separate AudioContext from the resampling one
     this._vizCtx    = null;
@@ -85,16 +86,15 @@ class SpeechTracker {
 
     this._startViz();
 
+    this._chunks        = [];
     this._mediaRecorder = new MediaRecorder(this._stream);
 
+    // Collect every raw blob — do NOT process mid-session because only the first
+    // WebM chunk contains the codec header; subsequent chunks cannot be decoded
+    // independently by decodeAudioData. We concatenate everything on stop.
     this._mediaRecorder.ondataavailable = (e) => {
       if (e.data && e.data.size > 0) {
-        this._pendingChunks++;
-        // Signal a mid-session chunk only while user is still recording
-        if (this._isRecording) {
-          this._onStateChange('chunk-sent', null);
-        }
-        this._processChunk(e.data);
+        this._chunks.push(e.data);
       }
     };
 
@@ -103,14 +103,19 @@ class SpeechTracker {
         this._stream.getTracks().forEach(function(t) { t.stop(); });
         this._stream = null;
       }
-      if (this._pendingChunks === 0) {
-        this._onStateChange('idle', null);
-      } else {
+      if (this._chunks.length > 0) {
+        // One complete, independently-decodable audio file
+        var fullBlob = new Blob(this._chunks, { type: this._mediaRecorder.mimeType });
+        this._chunks = [];
+        this._pendingChunks = 1;
         this._onStateChange('transcribing', null);
+        this._processChunk(fullBlob);
+      } else {
+        this._onStateChange('idle', null);
       }
     };
 
-    this._mediaRecorder.start(6000); // ondataavailable fires every 6 s
+    this._mediaRecorder.start(); // no timeslice — full recording sent at once
     this._onStateChange('recording', null);
   }
 
@@ -135,6 +140,7 @@ class SpeechTracker {
 
   destroy() {
     this._isRecording = false;
+    this._chunks      = [];
     this._stopViz();
     if (this._mediaRecorder && this._mediaRecorder.state !== 'inactive') {
       try { this._mediaRecorder.stop(); } catch (_) {}
