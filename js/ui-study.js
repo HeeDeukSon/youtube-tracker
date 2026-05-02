@@ -556,107 +556,96 @@
   }
 
   // ══════════════════════════════════
-  // 음성 입력 (Voice-to-Text)
+  // 음성 입력 (Whisper via Web Worker)
   // ══════════════════════════════════
 
   function initMicButton() {
-    var btn = document.getElementById('mic-btn');
+    var btn         = document.getElementById('mic-btn');
+    var label       = document.getElementById('mic-model-label');
+    var chunkStatus = document.getElementById('mic-chunk-status');
     if (!btn) return;
 
-    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
+    if (!window.MediaRecorder || !navigator.mediaDevices) {
       btn.style.display = 'none';
       return;
     }
 
-    var isAndroid   = /Android/i.test(navigator.userAgent);
     var isRecording = false;
-    var recognition = null;
-    var baseText    = '';
-
-    function getTextarea() {
-      return document.querySelector('.ls-comment-box__textarea');
-    }
-
-    function setRecordingState(active) {
-      isRecording = active;
-      btn.classList.toggle('is-recording', active);
-      btn.setAttribute('aria-label', active ? '음성 입력 중지' : '음성 입력');
-    }
-
-    function startRecognition() {
-      var r     = new SpeechRecognition();
-      var ended = false;
-      recognition = r;
-      r.continuous     = isAndroid ? false : true;
-      r.interimResults = true;
-      r.lang           = 'en-US';
-
-      r.onresult = function (e) {
-        if (ended) return;
-        var textarea = getTextarea();
-        if (!textarea) return;
-        var committed = '';
-        var interim   = '';
-        for (var i = e.resultIndex; i < e.results.length; i++) {
-          if (e.results[i].isFinal) {
-            committed += e.results[i][0].transcript;
-          } else {
-            interim += e.results[i][0].transcript;
-          }
+    var tracker = new SpeechTracker({
+      onTranscript: function (text) {
+        // Clear the mid-session "Processing…" indicator the moment text lands
+        if (chunkStatus) { chunkStatus.textContent = ''; chunkStatus.classList.remove('is-visible'); }
+        var ta = document.querySelector('.ls-comment-box__textarea');
+        if (!ta) return;
+        var cur = ta.value;
+        if (cur.length > 0 && !cur.endsWith(' ')) cur += ' ';
+        ta.value = cur + text;
+        ta.scrollTop = ta.scrollHeight;
+      },
+      onStateChange: function (state, data) {
+        switch (state) {
+          case 'loading':
+            btn.classList.add('is-loading');
+            if (label) { label.textContent = 'Loading…'; label.classList.add('is-visible'); }
+            break;
+          case 'progress':
+            if (label && data && data.total) {
+              label.textContent = Math.round((data.loaded / data.total) * 100) + '%';
+            }
+            break;
+          case 'ready':
+            btn.classList.remove('is-loading');
+            if (label) { label.textContent = ''; label.classList.remove('is-visible'); }
+            break;
+          case 'recording':
+            isRecording = true;
+            btn.classList.remove('is-loading'); // clear pending-click guard if set
+            btn.classList.add('is-recording');
+            btn.setAttribute('aria-label', '음성 입력 중지');
+            if (chunkStatus) { chunkStatus.textContent = ''; chunkStatus.classList.remove('is-visible'); }
+            break;
+          case 'chunk-sent':
+            if (chunkStatus) { chunkStatus.textContent = 'Processing…'; chunkStatus.classList.add('is-visible'); }
+            break;
+          case 'transcribing':
+            btn.classList.remove('is-recording');
+            btn.classList.add('is-loading');
+            if (label) { label.textContent = '…'; label.classList.add('is-visible'); }
+            if (chunkStatus) { chunkStatus.textContent = ''; chunkStatus.classList.remove('is-visible'); }
+            break;
+          case 'idle':
+            isRecording = false;
+            btn.classList.remove('is-recording', 'is-loading');
+            btn.setAttribute('aria-label', '음성 입력');
+            if (label) { label.textContent = ''; label.classList.remove('is-visible'); }
+            if (chunkStatus) { chunkStatus.textContent = ''; chunkStatus.classList.remove('is-visible'); }
+            break;
         }
-        if (baseText.length > 0 && !baseText.endsWith(' ') && committed.length > 0) {
-          baseText += ' ';
-        }
-        textarea.value = baseText + committed + interim;
-        textarea.scrollTop = textarea.scrollHeight;
-      };
-
-      r.onend = function () {
-        if (ended) return;
-        ended = true;
-        var textarea = getTextarea();
-        if (textarea) baseText = textarea.value;
-        recognition = null;
-        if (isRecording) {
-          startRecognition();
-        } else {
-          setRecordingState(false);
-        }
-      };
-
-      r.onerror = function (e) {
-        if (ended) return;
-        ended = true;
-        if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
-          setRecordingState(false);
-          recognition = null;
-          alert('마이크 접근 권한이 필요합니다. 브라우저 설정에서 허용해 주세요.');
-        } else if (e.error === 'audio-capture') {
-          setRecordingState(false);
-          recognition = null;
-          alert('마이크를 찾을 수 없습니다. 장치를 연결하고 다시 시도해 주세요.');
-        }
-        // 'no-speech' and 'aborted' are handled naturally by onend
-      };
-
-      try { r.start(); } catch (err) { /* already running */ }
-    }
+      }
+    });
 
     btn.addEventListener('click', function () {
       if (isRecording) {
-        setRecordingState(false); // set false before stop so onend skips restart
-        if (recognition) { recognition.stop(); recognition = null; }
+        tracker.stop();
       } else {
-        var textarea = getTextarea();
-        baseText = textarea ? textarea.value : '';
-        setRecordingState(true);
-        startRecognition();
+        btn.classList.add('is-loading'); // block double-click while getUserMedia is pending
+        tracker.start().catch(function (err) {
+          if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
+            alert('마이크 접근 권한이 필요합니다. 브라우저 설정에서 허용해 주세요.');
+          } else if (err.name === 'NotFoundError') {
+            alert('마이크를 찾을 수 없습니다. 장치를 연결하고 다시 시도해 주세요.');
+          } else {
+            console.error('[mic] getUserMedia failed:', err);
+          }
+          isRecording = false;
+          btn.classList.remove('is-recording', 'is-loading');
+          btn.setAttribute('aria-label', '음성 입력');
+        });
       }
     });
 
     window.addEventListener('beforeunload', function () {
-      if (recognition) { recognition.abort(); recognition = null; }
+      tracker.destroy();
     });
   }
 

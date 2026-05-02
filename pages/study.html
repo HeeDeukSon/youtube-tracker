@@ -169,6 +169,7 @@
                       placeholder="Share your insights or ask a question…"
                       data-field="comment"
                       rows="2"></textarea>
+            <div id="mic-chunk-status" class="mic-chunk-status"></div>
             <div class="ls-comment-box__toolbar">
               <div class="ls-comment-box__tools">
                 <button id="mic-btn" class="ls-icon-btn" aria-label="음성 입력" style="min-width:auto;min-height:auto;padding:0;">
@@ -177,10 +178,13 @@
                     <path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/>
                   </svg>
                 </button>
+                <canvas id="audio-visualizer" width="100" height="30" style="display:none;"></canvas>
+                <span class="mic-model-label" id="mic-model-label"></span>
               </div>
               <button class="ls-btn ls-btn--primary" data-action="post-comment">Post</button>
             </div>
           </div>
+          <p class="mic-hint">Speak naturally. The AI transcribes your speech every few seconds to accurately track your immersion time.</p>
 
         </div>
       </div>
@@ -214,6 +218,7 @@
 
   <!-- ═══ SCRIPTS ═══ -->
   <script src="../js/state.js"></script>
+  <script src="../js/speech-tracker.js"></script>
   <script src="../js/ui-study.js"></script>
 </body>
 </html>

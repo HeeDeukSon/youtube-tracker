@@ -743,6 +743,64 @@ body {
   stroke: #dc2626;
 }
 
+@keyframes ls-spin {
+  to { transform: rotate(360deg); }
+}
+
+#mic-btn.is-loading {
+  opacity: 0.55;
+  cursor: wait;
+  pointer-events: none;
+}
+
+#mic-btn.is-loading svg {
+  animation: ls-spin 1s linear infinite;
+  stroke: var(--ls-muted);
+}
+
+.mic-model-label {
+  display: none;
+  font-size: 0.65rem;
+  color: var(--ls-muted);
+  text-align: center;
+  line-height: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+.mic-model-label.is-visible {
+  display: block;
+}
+
+/* Canvas sits in the flex tools row; hidden by JS until recording starts */
+#audio-visualizer {
+  align-self: center;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Mid-session "Processing…" feedback between textarea and toolbar */
+.mic-chunk-status {
+  display: none;
+  font-size: 0.7rem;
+  color: var(--ls-muted);
+  padding: 2px 8px 0;
+  font-style: italic;
+}
+
+.mic-chunk-status.is-visible {
+  display: block;
+}
+
+/* Instructional microcopy below the comment box */
+.mic-hint {
+  margin: 5px 0 0;
+  font-size: 0.68rem;
+  color: var(--ls-muted);
+  line-height: 1.45;
+  opacity: 0.75;
+}
+
 
 /* ═══════════════════════════════════════════
    STICKY WRAPPERS
