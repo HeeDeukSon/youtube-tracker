@@ -72,6 +72,10 @@ function doPost(e) {
       return jsonResponse({ error: result.error.message }, 502);
     }
 
+    if (!result.candidates || !result.candidates[0] || !result.candidates[0].content) {
+      return jsonResponse({ error: 'Gemini returned no candidates (possibly safety filter)' });
+    }
+
     var text = result.candidates[0].content.parts[0].text;
     return jsonResponse({ text: text });
 
