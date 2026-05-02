@@ -160,7 +160,7 @@
   }
 
   var COMMENT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7SFGetH10Jfg8jd0pridPpagpia1gN9KW_vb45JzPsoNXj5o6Bk7AXoyG-AK2ohXJ4g/exec';
-  var AI_SCRIPT_URL = 'YOUR_GAS_WEB_APP_URL_HERE';
+  var AI_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJOchzzRt-cR5UNuruhPHQv_KStKV6IPV-ktfKf1Vj4kiwX2NWB8LfIPkwTrfQ8wCx/exec';
 
   var isNegotiationSimActive = false;
 
