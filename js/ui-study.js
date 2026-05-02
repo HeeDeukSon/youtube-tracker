@@ -235,7 +235,6 @@
 
       fetch(AI_SCRIPT_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: question })
       })
       .then(function (res) { return res.json(); })
