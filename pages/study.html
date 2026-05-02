@@ -98,25 +98,6 @@
       <button class="ls-btn ls-btn--primary" data-action="ask-ai">Ask</button>
     </div>
 
-    <!-- ═══ AI INSIGHTS PANEL ═══ -->
-    <div id="ai-insights-panel" style="display: none; background: rgba(85, 163, 255, 0.1); border-left: 4px solid var(--ls-thumb-blue); padding: 16px; margin: 0 var(--sp-md) var(--sp-md); border-radius: 8px;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
-        <h3 style="color: var(--ls-thumb-blue); font-size: var(--fs-sm); font-weight: bold; margin: 0; display: flex; align-items: center; gap: 8px;">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-            <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z"/>
-          </svg>
-          Lumina AI Insights
-        </h3>
-        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <button class="ls-btn ls-btn--secondary" id="btn-business-translate" style="padding: 4px 8px; font-size: 11px; min-height: auto;">제조 논리 → 시장 심리</button>
-          <button class="ls-btn ls-btn--secondary" id="btn-negotiation-framing" style="padding: 4px 8px; font-size: 11px; min-height: auto;">Framing</button>
-          <button class="ls-btn ls-btn--primary" id="btn-negotiation-sim" style="padding: 4px 8px; font-size: 11px; min-height: auto; background: #ab7ff0;">Start Sim</button>
-          <button class="ls-btn ls-btn--primary" id="btn-save-insight" style="padding: 4px 8px; font-size: 11px; min-height: auto;">Save</button>
-        </div>
-      </div>
-      <p id="ai-insights-content" style="color: var(--ls-text); font-size: var(--fs-sm); line-height: 1.5; margin: 0;"></p>
-    </div>
-
     <!-- ═══ DISCUSSIONS (collapsible) ═══ -->
     <section class="ls-section is-open" data-section="discussions">
       <div class="ls-section__bar"></div>
@@ -168,7 +149,7 @@
             <textarea class="ls-comment-box__textarea"
                       placeholder="Share your insights or ask a question…"
                       data-field="comment"
-                      rows="2"></textarea>
+                      rows="5"></textarea>
             <div id="mic-chunk-status" class="mic-chunk-status"></div>
             <div class="ls-comment-box__toolbar">
               <div class="ls-comment-box__tools">

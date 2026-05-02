@@ -160,6 +160,7 @@
   }
 
   var COMMENT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7SFGetH10Jfg8jd0pridPpagpia1gN9KW_vb45JzPsoNXj5o6Bk7AXoyG-AK2ohXJ4g/exec';
+  var AI_SCRIPT_URL = 'YOUR_GAS_WEB_APP_URL_HERE';
 
   var isNegotiationSimActive = false;
 
@@ -225,25 +226,48 @@
       var question = input ? input.value.trim() : '';
 
       if (!question) {
-        input.focus();
+        if (input) input.focus();
         return;
       }
 
-      console.log('[AI] 질문:', question);
-      showAIInsight("AI Insight: '" + question + "'에 대한 분석입니다. 상대의 '감정(Emotion)'을 읽어내는 키워드를 더해보세요.");
+      askBtn.disabled = true;
+      askBtn.textContent = 'Thinking…';
 
-      // analytics.js 연동
-      trackEvent('ai_question', {
-        Input_Mode:      'tap',
-        Duration_Seconds: 0,
-        Content_Id:      State.get('currentVideoId') || '',
-        Content_Title:   question,
-        Content_Source:  '',
-        User_Stage:      State.get('currentStage'),
-        Page_Name:       'study',
-        Action_Type:     'ask',
-        Timestamp:       Date.now(),
-        Session_Context: ''
+      fetch(AI_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: question })
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var aiText = (data && data.text) ? data.text : '';
+        var textarea = document.querySelector('[data-field="comment"]');
+        if (textarea && aiText) {
+          textarea.value = textarea.value
+            ? textarea.value + '\n' + aiText
+            : aiText;
+          textarea.scrollTop = textarea.scrollHeight;
+        }
+        trackEvent('ai_question', {
+          Input_Mode:      'tap',
+          Duration_Seconds: 0,
+          Content_Id:      State.get('currentVideoId') || '',
+          Content_Title:   question,
+          Content_Source:  '',
+          User_Stage:      State.get('currentStage'),
+          Page_Name:       'study',
+          Action_Type:     'ask',
+          Timestamp:       Date.now(),
+          Session_Context: ''
+        });
+      })
+      .catch(function (err) {
+        console.error('[AI] 요청 실패:', err);
+        alert('AI 응답을 가져오지 못했습니다. 잠시 후 다시 시도해주세요.');
+      })
+      .finally(function () {
+        askBtn.disabled = false;
+        askBtn.textContent = 'Ask';
       });
     });
   }
@@ -318,7 +342,7 @@
   }
 
   // ══════════════════════════════════
-  // AI Insight & Proactive Agent
+  // AI Insight (no-op stub — panel removed; kept for submitComment compat)
   // ══════════════════════════════════
 
   function showAIInsight(text) {
@@ -327,67 +351,6 @@
     if (panel && content) {
       content.textContent = text;
       panel.style.display = 'block';
-    }
-  }
-
-  function initProactiveAgent() {
-    var stage = State.get('currentStage') || 'Ignition';
-    var question = "";
-    if (stage === 'Ignition' || stage === 'Contact') {
-      question = "이 영상에서 귀에 꽂히는 3가지 표현은 무엇인가요?";
-    } else {
-      question = "이 비즈니스 상황에서 상대방의 '표준(Standards)'은 무엇이라고 생각하시나요?";
-    }
-    showAIInsight("Proactive Coach: " + question);
-  }
-
-  function initAIButtons() {
-    var btnTranslate = document.getElementById('btn-business-translate');
-    var btnFraming = document.getElementById('btn-negotiation-framing');
-    var btnSim = document.getElementById('btn-negotiation-sim');
-    var btnSave = document.getElementById('btn-save-insight');
-
-    if (btnTranslate) {
-      btnTranslate.addEventListener('click', function() {
-        showAIInsight("AI Translation: 제조 논리(Feature) 대신 시장 심리(Benefit)로 프레이밍 해보세요. 예: '우리 시스템은 빠릅니다' → '당신의 소중한 시간을 지켜드립니다.'");
-      });
-    }
-
-    if (btnFraming) {
-      btnFraming.addEventListener('click', function() {
-        showAIInsight("AI Framing: Stuart Diamond의 '표준(Standards)'과 '감정(Emotion)'을 활용해 보세요. '우리가 이걸 해야 합니다' → '우리가 합의한 목표(표준)에 도달하기 위해, 이 방식이 서로에게 가장 안정적(감정)일 것입니다.'");
-      });
-    }
-
-    if (btnSim) {
-      btnSim.addEventListener('click', function() {
-        isNegotiationSimActive = true;
-        showAIInsight("AI Simulation [가격 협상]: 상대가 '우리 예산은 천만 원뿐입니다'라고 강하게 나옵니다. 어떻게 대응하시겠습니까? (댓글 창에 입력해주세요)");
-      });
-    }
-
-    if (btnSave) {
-      btnSave.addEventListener('click', function() {
-        var contentEl = document.getElementById('ai-insights-content');
-        var text = contentEl ? contentEl.textContent : '';
-        
-        var saved = State.get('savedInsights') || [];
-        var newInsight = {
-          Content_Title: document.title,
-          Insight_Text: text,
-          User_Stage: State.get('currentStage'),
-          Timestamp: Date.now()
-        };
-        saved.push(newInsight);
-        State.set('savedInsights', saved);
-
-        console.log('[Toolkit] 인사이트 저장됨:', newInsight);
-        
-        var originalText = this.textContent;
-        this.textContent = 'Saved!';
-        var btn = this;
-        setTimeout(function() { btn.textContent = originalText; }, 2000);
-      });
     }
   }
 
@@ -708,8 +671,6 @@
     initAskAI();
     LuminaNav.init('study');
     initFieldReset();
-    initAIButtons();
-    initProactiveAgent();
     initDiscussionFocus();
     initCommentTextareaFocus();
     initMicButton();

@@ -2,6 +2,7 @@ require('dotenv').config();
 
 module.exports = {
   youtubeApiKey: process.env.YOUTUBE_API_KEY,
+  geminiApiKey: process.env.GEMINI_API_KEY,
   ga4: {
     measurementId:    process.env.GA4_MEASUREMENT_ID,
     propertyId:       process.env.GA4_PROPERTY_ID,
