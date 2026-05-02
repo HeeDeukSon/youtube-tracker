@@ -109,6 +109,8 @@
 
   function applyVisibilityFilters() {
     var activeFilter = State.get('activeFilter') || 'all';
+    var searchEl     = document.getElementById('videoSearch');
+    var searchQuery  = searchEl ? searchEl.value.trim().toLowerCase() : '';
     var cards        = document.querySelectorAll('[data-video-id]');
 
     cards.forEach(function (card) {
@@ -118,8 +120,11 @@
 
       var passFilter = activeFilter === 'all' || category === activeFilter;
       var passSubTag = !_activeSubTag || tags.indexOf(_activeSubTag) !== -1;
+      var passSearch = !searchQuery ||
+        (card.dataset.videoTitle   || '').toLowerCase().indexOf(searchQuery) !== -1 ||
+        (card.dataset.videoChannel || '').toLowerCase().indexOf(searchQuery) !== -1;
 
-      card.style.display = (passFilter && passSubTag) ? '' : 'none';
+      card.style.display = (passFilter && passSubTag && passSearch) ? '' : 'none';
     });
   }
 
@@ -344,9 +349,15 @@
   // 초기화
   // ══════════════════════════════════
 
+  function initSearch() {
+    var input = document.getElementById('videoSearch');
+    if (input) input.addEventListener('input', applyVisibilityFilters);
+  }
+
   function init() {
     initFilterChips();
     initSubCategoryDropdown();
+    initSearch();
     fetchAndRenderVideos();
     initBottomNav();
 
