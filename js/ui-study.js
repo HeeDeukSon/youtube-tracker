@@ -233,34 +233,27 @@
       askBtn.disabled = true;
       askBtn.textContent = 'Thinking…';
 
-      var titleEl   = document.getElementById('video-title');
-      var channelEl = document.getElementById('video-channel');
-      var descEl    = document.getElementById('video-description');
-      var videoTitle   = titleEl   ? titleEl.textContent.trim()   : '';
-      var videoChannel = channelEl ? channelEl.textContent.trim() : '';
-      var videoDesc    = descEl    ? descEl.textContent.trim().slice(0, 500) : '';
-
-      var contextPrompt = 'You are an English learning coach analyzing a YouTube video.\n\n' +
-        'Video title: ' + videoTitle + '\n' +
-        'Channel: ' + videoChannel + '\n' +
-        (videoDesc ? 'Description: ' + videoDesc + '\n' : '') +
-        '\nStudent\'s question: ' + question + '\n\n' +
-        'Give a concise, practical answer to help the student learn from this video.';
+      var titleEl     = document.getElementById('video-title');
+      var channelEl   = document.getElementById('video-channel');
+      var descEl      = document.getElementById('video-description');
+      var videoTitle  = (titleEl   && titleEl.textContent.trim())              || 'Not provided';
+      var channelName = (channelEl && channelEl.textContent.trim())            || 'Not provided';
+      var description = (descEl    && descEl.textContent.trim().slice(0, 600)) || 'Not provided';
 
       fetch(AI_SCRIPT_URL, {
         method: 'POST',
-        body: JSON.stringify({ prompt: contextPrompt })
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ prompt: question, videoTitle: videoTitle, channelName: channelName, description: description })
       })
       .then(function (res) { return res.json(); })
       .then(function (data) {
         var aiText = (data && data.text) ? data.text : '';
         var textarea = document.querySelector('[data-field="comment"]');
         if (textarea && aiText) {
-          textarea.value = textarea.value
-            ? textarea.value + '\n' + aiText
-            : aiText;
+          textarea.value += (textarea.value ? '\n\n' : '') + '[Lumina AI]: ' + aiText;
           textarea.scrollTop = textarea.scrollHeight;
         }
+        if (input) input.value = '';
         trackEvent('ai_question', {
           Input_Mode:      'tap',
           Duration_Seconds: 0,
@@ -276,7 +269,11 @@
       })
       .catch(function (err) {
         console.error('[AI] 요청 실패:', err);
-        alert('AI 응답을 가져오지 못했습니다. 잠시 후 다시 시도해주세요.');
+        var textarea = document.querySelector('[data-field="comment"]');
+        if (textarea) {
+          textarea.value += '\n\n[Lumina AI]: 응답을 가져오지 못했습니다. 잠시 후 다시 시도해주세요.';
+          textarea.scrollTop = textarea.scrollHeight;
+        }
       })
       .finally(function () {
         askBtn.disabled = false;
