@@ -233,9 +233,23 @@
       askBtn.disabled = true;
       askBtn.textContent = 'Thinking…';
 
+      var titleEl   = document.getElementById('video-title');
+      var channelEl = document.getElementById('video-channel');
+      var descEl    = document.getElementById('video-description');
+      var videoTitle   = titleEl   ? titleEl.textContent.trim()   : '';
+      var videoChannel = channelEl ? channelEl.textContent.trim() : '';
+      var videoDesc    = descEl    ? descEl.textContent.trim().slice(0, 500) : '';
+
+      var contextPrompt = 'You are an English learning coach analyzing a YouTube video.\n\n' +
+        'Video title: ' + videoTitle + '\n' +
+        'Channel: ' + videoChannel + '\n' +
+        (videoDesc ? 'Description: ' + videoDesc + '\n' : '') +
+        '\nStudent\'s question: ' + question + '\n\n' +
+        'Give a concise, practical answer to help the student learn from this video.';
+
       fetch(AI_SCRIPT_URL, {
         method: 'POST',
-        body: JSON.stringify({ prompt: question })
+        body: JSON.stringify({ prompt: contextPrompt })
       })
       .then(function (res) { return res.json(); })
       .then(function (data) {
