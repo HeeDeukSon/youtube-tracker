@@ -403,6 +403,7 @@ body {
 
 .ls-content-header {
   padding: var(--sp-md) var(--sp-lg) 6px;
+  margin-top: var(--sp-sm);
 }
 
 .ls-badge {

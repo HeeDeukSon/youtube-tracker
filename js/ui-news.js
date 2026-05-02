@@ -92,9 +92,9 @@
       return b.count - a.count;
     });
 
-    var dates   = allVideos.map(function (v) { return new Date(v.publishedAt); });
-    var minDate = dates.length ? new Date(Math.min.apply(null, dates)) : new Date();
-    var maxDate = dates.length ? new Date(Math.max.apply(null, dates)) : new Date();
+    var recentDates = allVideos.slice(0, 15).map(function (v) { return new Date(v.publishedAt); });
+    var minDate = recentDates.length ? new Date(Math.min.apply(null, recentDates)) : new Date();
+    var maxDate = recentDates.length ? new Date(Math.max.apply(null, recentDates)) : new Date();
 
     return {
       totalChannels: data.length,

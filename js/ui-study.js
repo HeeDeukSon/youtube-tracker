@@ -500,6 +500,9 @@
 
         // 5. 페이지 타이틀
         document.title = (v.title || 'Study') + ' — Lumina Study';
+
+        // 6. 콘텐츠 헤더가 항상 보이도록 최상단으로 스크롤
+        window.scrollTo(0, 0);
       })
       .catch(function (err) {
         console.error('[Study] 영상 로드 실패:', err);
