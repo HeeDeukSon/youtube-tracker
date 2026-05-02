@@ -563,7 +563,28 @@
     var btn         = document.getElementById('mic-btn');
     var label       = document.getElementById('mic-model-label');
     var chunkStatus = document.getElementById('mic-chunk-status');
+    var timerEl     = document.getElementById('mic-timer');
     if (!btn) return;
+
+    var timerInterval = null;
+    var timerSecs     = 0;
+
+    function startTimer() {
+      timerSecs = 0;
+      if (timerEl) { timerEl.textContent = '● 0:00'; timerEl.classList.add('is-visible'); }
+      timerInterval = setInterval(function () {
+        timerSecs++;
+        var m = Math.floor(timerSecs / 60);
+        var s = timerSecs % 60;
+        if (timerEl) timerEl.textContent = '● ' + m + ':' + (s < 10 ? '0' : '') + s;
+      }, 1000);
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      if (timerEl) { timerEl.textContent = ''; timerEl.classList.remove('is-visible'); }
+    }
 
     if (!window.MediaRecorder || !navigator.mediaDevices) {
       btn.style.display = 'none';
@@ -599,21 +620,24 @@
             break;
           case 'recording':
             isRecording = true;
-            btn.classList.remove('is-loading'); // clear pending-click guard if set
+            btn.classList.remove('is-loading');
             btn.classList.add('is-recording');
             btn.setAttribute('aria-label', '음성 입력 중지');
             if (chunkStatus) { chunkStatus.textContent = ''; chunkStatus.classList.remove('is-visible'); }
+            startTimer();
             break;
           case 'chunk-sent':
             if (chunkStatus) { chunkStatus.textContent = 'Processing…'; chunkStatus.classList.add('is-visible'); }
             break;
           case 'transcribing':
+            stopTimer();
             btn.classList.remove('is-recording');
             btn.classList.add('is-loading');
             if (label) { label.textContent = '…'; label.classList.add('is-visible'); }
             if (chunkStatus) { chunkStatus.textContent = ''; chunkStatus.classList.remove('is-visible'); }
             break;
           case 'idle':
+            stopTimer();
             isRecording = false;
             btn.classList.remove('is-recording', 'is-loading');
             btn.setAttribute('aria-label', '음성 입력');

@@ -772,6 +772,20 @@ body {
   display: block;
 }
 
+/* Live recording timer — counts up while mic is active */
+.mic-timer {
+  display: none;
+  font-size: 0.7rem;
+  color: #dc2626;
+  font-variant-numeric: tabular-nums;
+  align-self: center;
+  letter-spacing: 0.01em;
+}
+
+.mic-timer.is-visible {
+  display: inline;
+}
+
 /* Canvas sits in the flex tools row; hidden by JS until recording starts */
 #audio-visualizer {
   align-self: center;
