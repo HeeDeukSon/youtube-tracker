@@ -517,7 +517,7 @@
     var player = document.getElementById('video-player-container');
     if (!player) return;
 
-    var fields = document.querySelectorAll('[data-field="name"], [data-field="email"], [data-field="comment"]');
+    var fields = document.querySelectorAll('[data-field="name"], [data-field="email"], [data-field="comment"], [data-field="ai-question"]');
     fields.forEach(function (field) {
       field.addEventListener('focus', function () {
         var miniH = Math.round(player.offsetWidth * 9 / 16 / 4);
