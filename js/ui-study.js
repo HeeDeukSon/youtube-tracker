@@ -254,6 +254,24 @@
           textarea.scrollTop = textarea.scrollHeight;
         }
         if (input) input.value = '';
+        if (aiText) {
+          fetch(COMMENT_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify({
+              type:        'ai_log',
+              question:    question,
+              answer:      aiText,
+              videoTitle:  videoTitle,
+              channelName: channelName,
+              userStage:   State.get('currentStage') || '',
+              submittedAt: new Date().toISOString()
+            })
+          }).catch(function (err) {
+            console.error('[AI Log] 전송 실패:', err);
+          });
+        }
         trackEvent('ai_question', {
           Input_Mode:      'tap',
           Duration_Seconds: 0,
