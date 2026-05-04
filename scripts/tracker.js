@@ -214,6 +214,7 @@ async function main() {
     }
   } catch (_) {}
   fs.writeFileSync('results.json', JSON.stringify(finalResults, null, 2));
+  fs.writeFileSync('fetch-stats.json', JSON.stringify({ ok, failed, quotaHit }));
   console.log(`\nDone: ${ok} fetched, ${failed} failed${quotaHit ? ', QUOTA EXHAUSTED' : ''}`);
 
   // Prune stale entries from channel ID cache

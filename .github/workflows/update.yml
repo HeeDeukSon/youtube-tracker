@@ -8,7 +8,7 @@ on:
   workflow_dispatch:       # Manual trigger button on GitHub Actions tab
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -45,14 +45,22 @@ jobs:
           cp results.json results.backup.json
           node scripts/tracker.js || true
 
-          COUNT=$(node -e "const r=require('./results.json'); console.log(r.length);" 2>/dev/null || echo 0)
-          echo "Fetched: $COUNT / $EXPECTED channels"
+          OK=$(node -e "try{const s=require('./fetch-stats.json');console.log(s.ok)}catch(_){console.log(0)}")
+          QUOTA=$(node -e "try{const s=require('./fetch-stats.json');console.log(s.quotaHit)}catch(_){console.log(false)}")
+          echo "Freshly fetched: $OK / $EXPECTED (quota hit: $QUOTA)"
 
-          if [ "$COUNT" -lt "$THRESHOLD" ]; then
-            echo "Below threshold ($COUNT < $THRESHOLD) — restoring committed results.json"
+          if [ "$OK" -lt "$THRESHOLD" ]; then
+            echo "⚠️  Below threshold ($OK < $THRESHOLD) — restoring committed results.json"
             cp results.backup.json results.json
+          else
+            echo "✅ Fresh data OK — committing results.json"
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add results.json
+            git diff --cached --quiet || git commit -m "data: auto-update results.json [skip ci]"
+            git push
           fi
-          rm -f results.backup.json
+          rm -f results.backup.json fetch-stats.json
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
