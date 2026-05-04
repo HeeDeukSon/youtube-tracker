@@ -17,8 +17,7 @@
           });
         }
         
-        console.log('Navigating to:', target);
-        // window.location.href = target; // Uncomment when targets are valid
+        if (target && target !== '#') { window.location.href = target; }
       });
     });
   }

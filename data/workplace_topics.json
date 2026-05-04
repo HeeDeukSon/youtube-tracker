@@ -1,0 +1,23 @@
+[
+  {
+    "id": "topic-1",
+    "weekId": "2026-W19",
+    "dayContext": "Day 1 of the Week",
+    "title": "Handling Conflicting Priorities",
+    "prompt": "Your manager gives you a new urgent task while you are already at full capacity. How do you communicate this situation professionally in English?"
+  },
+  {
+    "id": "topic-2",
+    "weekId": "2026-W19",
+    "dayContext": "Day 3 of the Week",
+    "title": "Giving Feedback Upward",
+    "prompt": "You notice a process inefficiency that affects your team's output. How would you raise this with your manager in an international meeting?"
+  },
+  {
+    "id": "topic-3",
+    "weekId": "2026-W19",
+    "dayContext": "Day 5 of the Week",
+    "title": "Closing a Weekly Sync",
+    "prompt": "You are the last speaker in a Friday team sync. Write your two-sentence closing statement that summarizes the week and sets direction for next week."
+  }
+]

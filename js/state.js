@@ -212,11 +212,12 @@ window.LuminaNav = (function () {
   'use strict';
 
   var ROUTES = {
-    study:   '../index.html',
-    status:  'status.html',
-    news:    'news.html',
-    profile: 'profile.html',
-    info:    'info.html'
+    study:     '../index.html',
+    status:    'status.html',
+    news:      'news.html',
+    profile:   'profile.html',
+    info:      'info.html',
+    simulator: 'simulator.html'
   };
 
   function _syncUI(activePage) {
