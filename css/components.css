@@ -1000,11 +1000,43 @@ body.discussion-focused #ai-insights-panel {
 }
 
 body.discussion-focused .ls-section[data-section="discussions"] {
-  margin-top: var(--sp-md);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom, 0px));
+  margin: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  z-index: 100;
+}
+
+body.discussion-focused .ls-section[data-section="discussions"] .ls-section__inner {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 body.discussion-focused .ls-section[data-section="discussions"] .ls-section__body {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+}
+
+body.discussion-focused .ls-comment-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+body.discussion-focused .ls-comment-box__textarea {
+  flex: 1;
+  min-height: 0;
+  resize: none;
 }
 
 .ls-discussion-expand-btn {
