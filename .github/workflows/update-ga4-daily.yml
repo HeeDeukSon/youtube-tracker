@@ -1,0 +1,58 @@
+name: Update GA4 Stats Daily
+
+on:
+  schedule:
+    - cron: '0 5 * * *'  # Every day at 05:00 UTC
+  workflow_dispatch:       # Manual trigger button on GitHub Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch GA4 stats
+        run: node scripts/ga4-fetch.js
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GA4_SERVICE_ACCOUNT_KEY: ${{ secrets.GA4_SERVICE_ACCOUNT_KEY }}
+
+      - name: Prepare deployment folder
+        run: |
+          mkdir _site
+          cp -r index.html css js pages images results.json _site/ 2>/dev/null || true
+          cp ga4-stats.json _site/ 2>/dev/null || true
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
