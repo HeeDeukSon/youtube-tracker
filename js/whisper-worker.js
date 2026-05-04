@@ -24,7 +24,11 @@ let transcriber = null;
 self.addEventListener('message', async ({ data }) => {
   if (data.type !== 'transcribe' || !transcriber) return;
   try {
-    const out = await transcriber(data.audio, { sampling_rate: 16000 });
+    const out = await transcriber(data.audio, {
+      sampling_rate: 16000,
+      no_repeat_ngram_size: 3,
+      repetition_penalty: 1.3
+    });
     self.postMessage({ type: 'result', text: out.text });
   } catch (err) {
     self.postMessage({ type: 'result', text: '' });
