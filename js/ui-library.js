@@ -83,7 +83,11 @@
     var tags  = getTagsForCategory(activeFilter);
     var label = activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1);
 
-    select.innerHTML = '<option value="">All ' + label + '</option>';
+    select.textContent = '';
+    var defaultOpt = document.createElement('option');
+    defaultOpt.value = '';
+    defaultOpt.textContent = 'All ' + label;
+    select.appendChild(defaultOpt);
     tags.forEach(function (tag) {
       var opt       = document.createElement('option');
       opt.value     = tag;
